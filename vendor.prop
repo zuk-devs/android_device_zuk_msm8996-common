@@ -82,6 +82,7 @@ vendor.audio.hw.aac.encoder=true
 
 # Media
 vendor.vidc.enc.disable.pq=true
+vidc.enc.dcvs.extra-buff-count=2
 vendor.audio.flac.sw.decoder.24bit=true
 media.aac_51_output_enabled=true
 mm.enable.smoothstreaming=true
