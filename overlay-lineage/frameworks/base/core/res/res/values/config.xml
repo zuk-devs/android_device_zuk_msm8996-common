@@ -46,6 +46,9 @@
     -->
     <integer name="config_doubleTapOnHomeBehavior">6</integer>
 
+    <!-- Disable button backlight settings. -->
+    <integer name="config_buttonBrightnessSettingDefault">0</integer>
+
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <!--bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool-->
 </resources>
