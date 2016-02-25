@@ -65,7 +65,8 @@ on early-boot
     write /sys/kernel/boot_slpi/boot 1
 
 on fs
-    wait /dev/block/bootdevice
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     mount_all fstab.qcom
     swapon_all fstab.qcom
 
