@@ -165,6 +165,7 @@
          should be empty.  An example would be "softap.*" -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
         <item>"wlan0"</item>
+        <item>"wigig0"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
