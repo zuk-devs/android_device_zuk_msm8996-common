@@ -141,3 +141,6 @@ persist.data.df.dev_name=rmnet_usb0
 
 # TimeService
 persist.timed.enable=true
+
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
