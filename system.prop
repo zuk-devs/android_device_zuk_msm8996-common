@@ -78,6 +78,7 @@ media.aac_51_output_enabled=true
 mm.enable.smoothstreaming=true
 vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
+vendor.vidc.enc.disable.pq=true
 
 # Miracast
 persist.debug.wfd.enable=1
