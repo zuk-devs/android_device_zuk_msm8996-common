@@ -384,7 +384,8 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.0-service.zuk
+    android.hardware.biometrics.fingerprint@2.0-service.zuk \
+    ZukPocketMode
 
 # Thermal
 PRODUCT_PACKAGES += \
