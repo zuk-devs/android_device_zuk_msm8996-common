@@ -7,6 +7,7 @@
 # Devices
 /dev/fpc1020                          u:object_r:fpc1020_device:s0
 /dev/tfa9890                          u:object_r:audio_device:s0
+/sys/devices/soc/soc:fpc_fpc1020/proximity_state                u:object_r:sysfs_fpc_proximity:s0
 
 # Data files
 /data/fpc(/.*)?                       u:object_r:fpc_data_file:s0
