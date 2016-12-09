@@ -239,6 +239,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     sensors.msm8996
 
+# WiFi HAL
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service
+
 # Wifi
 PRODUCT_PACKAGES += \
     ipacm \
