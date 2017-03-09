@@ -57,22 +57,6 @@
             android:key="hardware_keys_disable"
             android:title="@string/hardware_keys_disable_title" />
 
-        <com.dirtyunicorns.dutweaks.preference.CustomSeekBarPreference
-            android:key="button_brightness"
-            android:title="@string/button_brightness_title"
-            android:max="255"
-            settings:min="0"
-            settings:units=""
-            android:persistent="false" />
-
-        <ListPreference
-            android:dialogTitle="@string/backlight_timeout_title"
-            android:entries="@array/backlight_timeout_entries"
-            android:entryValues="@array/backlight_timeout_values"
-            android:key="backlight_timeout"
-            android:persistent="false"
-            android:title="@string/backlight_timeout_title" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
