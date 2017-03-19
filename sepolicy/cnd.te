@@ -1,2 +1,5 @@
 allow cnd diag_prop:property_service set;
 get_prop(cnd, diag_prop);
+allow cnd diag_device:chr_file { read write };
+allow cnd diag_device:chr_file open;
+allow cnd diag_device:chr_file ioctl;

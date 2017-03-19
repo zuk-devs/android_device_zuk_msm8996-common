@@ -6,4 +6,14 @@ allow system_server sensors_persist_file:dir search;
 allow system_server proc_stat:file r_file_perms;
 allow system_server unlabeled:file unlink;
 get_prop(system_server, diag_prop);
-
+allow system_server diag_device:chr_file { read write };
+allow system_server drmserver:process setsched;
+allow system_server keystore:process setsched;
+allow system_server mediacodec:process setsched;
+allow system_server mediadrmserver:process setsched;
+allow system_server mediaextractor:process setsched;
+allow system_server sdcardd:process setsched;
+allow system_server vold:process setsched;
+allow system_server zygote:process setsched;
+allow system_server diag_device:chr_file open;
+allow system_server diag_device:chr_file ioctl;

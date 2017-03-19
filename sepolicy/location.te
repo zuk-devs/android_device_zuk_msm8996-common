@@ -1,1 +1,4 @@
 allow location permission_service:service_manager find;
+allow location diag_device:chr_file { read write };
+allow location diag_device:chr_file open;
+allow location diag_device:chr_file ioctl;

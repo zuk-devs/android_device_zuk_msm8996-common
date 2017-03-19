@@ -5,3 +5,6 @@ allow wcnss_service self:capability {
     net_raw
 };
 get_prop(wcnss_service, diag_prop);
+allow wcnss_service diag_device:chr_file { read write };
+allow wcnss_service diag_device:chr_file open;
+allow wcnss_service diag_device:chr_file ioctl;

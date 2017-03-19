@@ -1,1 +1,4 @@
 set_prop(audioserver, diag_prop);
+allow audioserver diag_device:chr_file { read write };
+allow audioserver diag_device:chr_file open;
+allow audioserver diag_device:chr_file ioctl;
