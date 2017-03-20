@@ -17,3 +17,4 @@ allow system_server vold:process setsched;
 allow system_server zygote:process setsched;
 allow system_server diag_device:chr_file open;
 allow system_server diag_device:chr_file ioctl;
+allow system_server kernel:system syslog_read;

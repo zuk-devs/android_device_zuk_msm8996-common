@@ -1,0 +1,16 @@
+allow sysinit adsprpcd_file:dir getattr;
+allow sysinit cache_file:dir getattr;
+allow sysinit proc:file write;
+allow sysinit proc_dirty_ratio:file write;
+allow sysinit self:capability { dac_override dac_read_search };
+allow sysinit storage_file:dir getattr;
+allow sysinit system_block_device:blk_file read;
+allow sysinit proc:file open;
+allow sysinit proc_dirty_ratio:file open;
+allow sysinit system_block_device:blk_file open;
+allow sysinit proc:file read;
+allow sysinit proc_dirty_ratio:file read;
+allow sysinit system_block_device:blk_file ioctl;
+allow sysinit proc:file getattr;
+allow sysinit proc_dirty_ratio:file getattr;
+allow sysinit self:capability sys_admin;
