@@ -14,63 +14,58 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.settings.doze;
+package com.du.settings.doze;
 
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.PowerManager;
+import android.os.PowerManager.WakeLock;
+import android.os.SystemClock;
 import android.util.Log;
 
-public class ProximitySensor implements SensorEventListener {
+public class TiltSensor implements SensorEventListener {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "ProximitySensor";
+    private static final String TAG = "TiltSensor";
 
-    private static final int POCKET_DELTA_NS = 1000 * 1000 * 1000;
+    private static final int SENSOR_WAKELOCK_DURATION = 200;
+    private static final int BATCH_LATENCY_IN_MS = 100;
+    private static final int MIN_PULSE_INTERVAL_MS = 2500;
 
+    private PowerManager mPowerManager;
     private SensorManager mSensorManager;
     private Sensor mSensor;
+    private WakeLock mSensorWakeLock;
     private Context mContext;
 
-    private boolean mSawNear = false;
-    private long mInPocketTime = 0;
+    private long mEntryTimestamp;
 
-    public ProximitySensor(Context context) {
+    public TiltSensor(Context context) {
         mContext = context;
-        mSensorManager = (SensorManager)
-                mContext.getSystemService(Context.SENSOR_SERVICE);
-        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+        mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+        mSensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
+        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_TILT_DETECTOR);
+        mSensorWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
+                "SensorWakeLock");
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        boolean isNear = event.values[0] < mSensor.getMaximumRange();
-        if (mSawNear && !isNear) {
-            if (shouldPulse(event.timestamp)) {
-                Utils.launchDozePulse(mContext);
-            }
+        if (DEBUG) Log.d(TAG, "Got sensor event: " + event.values[0]);
+
+        long delta = SystemClock.elapsedRealtime() - mEntryTimestamp;
+        if (delta < MIN_PULSE_INTERVAL_MS) {
+            return;
         } else {
-            mInPocketTime = event.timestamp;
+            mEntryTimestamp = SystemClock.elapsedRealtime();
         }
-        mSawNear = isNear;
-    }
 
-    private boolean shouldPulse(long timestamp) {
-        long delta = timestamp - mInPocketTime;
-
-        if (Utils.handwaveGestureEnabled(mContext)
-                    && Utils.pocketGestureEnabled(mContext)) {
-            return true;
-        } else if (Utils.handwaveGestureEnabled(mContext)
-                    && !Utils.pocketGestureEnabled(mContext)) {
-            return delta < POCKET_DELTA_NS;
-        } else if (!Utils.handwaveGestureEnabled(mContext)
-                    && Utils.pocketGestureEnabled(mContext)) {
-            return delta >= POCKET_DELTA_NS;
+        if (event.values[0] == 1) {
+            Utils.launchDozePulse(mContext);
         }
-        return false;
     }
 
     @Override
@@ -81,7 +76,8 @@ public class ProximitySensor implements SensorEventListener {
     protected void enable() {
         if (DEBUG) Log.d(TAG, "Enabling");
         mSensorManager.registerListener(this, mSensor,
-                SensorManager.SENSOR_DELAY_NORMAL);
+                SensorManager.SENSOR_DELAY_NORMAL, BATCH_LATENCY_IN_MS * 1000);
+        mEntryTimestamp = SystemClock.elapsedRealtime();
     }
 
     protected void disable() {
