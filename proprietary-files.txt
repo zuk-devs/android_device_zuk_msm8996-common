@@ -24,7 +24,6 @@ bin/imsqmidaemon
 bin/dpmd
 bin/qseecomd
 bin/energy-awareness
-bin/btnvtool
 bin/xtwifi-inet-agent
 etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
