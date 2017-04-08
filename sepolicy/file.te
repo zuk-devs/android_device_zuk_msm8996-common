@@ -4,3 +4,7 @@ type sysfs_fpc_irq, sysfs_type, fs_type;
 type sysfs_fpc_proximity, sysfs_type, fs_type;
 type sysfs_fpc_utouch_disable, fs_type, sysfs_type;
 type thermal_data_file, data_file_type, file_type;
+
+# /vendor
+type idc_file, file_type, vendor_file_type;
+type keylayout_file, file_type, vendor_file_type;
