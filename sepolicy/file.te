@@ -5,6 +5,10 @@ type sysfs_fpc_irq, sysfs_type, fs_type;
 type sysfs_fpc_proximity, sysfs_type, fs_type;
 type sysfs_fpc_utouch_disable, fs_type, sysfs_type;
 type thermal_data_file, data_file_type, file_type;
+type netmgr_data_file, file_type, data_file_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;
+type sysfs_msm_subsys_restart, sysfs_type, fs_type;
+type sysfs_net, sysfs_type, fs_type, mlstrustedobject;
 
 # /vendor
 type idc_file, file_type, vendor_file_type;
