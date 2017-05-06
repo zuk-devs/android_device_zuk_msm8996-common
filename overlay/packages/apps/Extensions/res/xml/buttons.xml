@@ -62,14 +62,6 @@
         android:defaultValue="true"
         android:dependency="volume_rocker_wake" />
 
-    <ListPreference
-        android:key="volume_key_cursor_control"
-        android:dialogTitle="@string/volbtn_cursor_control_title"
-        android:title="@string/volbtn_cursor_control_title"
-        android:entries="@array/volbtn_cursor_control_entries"
-        android:entryValues="@array/volbtn_cursor_control_values"
-        android:persistent="false" />
- 
     </PreferenceCategory>
 
      <PreferenceCategory
