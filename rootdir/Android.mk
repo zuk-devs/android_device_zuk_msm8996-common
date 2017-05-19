@@ -16,7 +16,7 @@ LOCAL_MODULE_TAGS	:= optional eng
 LOCAL_MODULE_CLASS	:= ETC
 LOCAL_SRC_FILES		:= etc/init.qcom.power.rc
 LOCAL_VENDOR_MODULE	:= true
-LOCAL_MODULE_RELATIVE_PATH	:= init/hw
+LOCAL_MODULE_PATH       := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -25,7 +25,7 @@ LOCAL_MODULE_TAGS	:= optional eng
 LOCAL_MODULE_CLASS	:= ETC
 LOCAL_SRC_FILES		:= etc/init.qcom.rc
 LOCAL_VENDOR_MODULE	:= true
-LOCAL_MODULE_RELATIVE_PATH	:= init/hw
+LOCAL_MODULE_PATH       := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -34,7 +34,7 @@ LOCAL_MODULE_TAGS	:= optional eng
 LOCAL_MODULE_CLASS	:= ETC
 LOCAL_SRC_FILES		:= etc/init.qcom.usb.rc
 LOCAL_VENDOR_MODULE	:= true
-LOCAL_MODULE_RELATIVE_PATH	:= init/hw
+LOCAL_MODULE_PATH       := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
