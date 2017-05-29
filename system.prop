@@ -122,12 +122,14 @@ persist.radio.apm_sim_not_pwdn=1
 persist.radio.custom_ecc=1
 persist.radio.flexmap_type=dds
 persist.radio.force_on_dc=true
+persist.radio.hw_mbn_update=1
 persist.radio.multisim.config=dsds
 persist.radio.primarycard=true
 persist.radio.rat_on=combine
 persist.radio.sib16_support=1
 persist.radio.sw_mbn_volte=1
 persist.radio.sw_mbn_openmkt=1
+persist.radio.sw_mbn_update=1
 
 # RmNet Data
 persist.rmnet.data.enable=true
