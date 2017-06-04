@@ -483,4 +483,8 @@
 
     <!-- Enable full screen DT2S in lockscreen -->
     <bool name="fullScreenDT2S">true</bool>
+
+    <!-- The duration (in milliseconds) that the radio will scan for a signal
+         when there's no network connection. If the scan doesn't timeout, use zero -->
+    <integer name="config_radioScanningTimeout">5000</integer>
 </resources>
