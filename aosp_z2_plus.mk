@@ -39,5 +39,5 @@ TARGET_VENDOR := zuk
 
 # Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="ZUK/z2_plus/z2_plus:6.0.1/MMB29M/1.9.077_160617:user/release-keys" \
-    PRIVATE_BUILD_DESC="z2_plus-user 6.0.1 MMB29M 1.9.077_160617 release-keys"
+    BUILD_FINGERPRINT="ZUK/z2_plus/z2_plus:7.0/NRD90M/2.5.412_170428:user/release-keys" \
+    PRIVATE_BUILD_DESC="z2_plus-user 7.0 NRD90M 2.5.412_170428 release-keys"
