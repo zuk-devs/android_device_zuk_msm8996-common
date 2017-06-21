@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.du.settings.doze;
+package com.cyanogenmod.settings.device;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -34,7 +34,7 @@ import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class DozeSettings extends PreferenceActivity implements OnPreferenceChangeListener {
+public class TouchscreenGestureSettings extends PreferenceActivity implements OnPreferenceChangeListener {
 
     private Context mContext;
     private SharedPreferences mPreferences;
