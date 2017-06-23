@@ -80,7 +80,6 @@ on fs
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     restorecon_recursive /dev/block/platform/soc/${ro.boot.bootdevice}
     mount_all fstab.qcom
-    swapon_all fstab.qcom
 
     # Restorecon
     restorecon_recursive /persist
@@ -708,6 +707,9 @@ service qcomsysd /system/bin/qcom-system-daemon
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
+
+    # Enable ZRAM on boot_complete
+    swapon_all fstab.qcom
 
     # end boot time fs tune
     write /sys/block/sda/queue/read_ahead_kb 128
