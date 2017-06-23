@@ -20,6 +20,7 @@ ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
 vendor.audio.tunnel.encode=false
 vendor.voice.path.for.pcm.voip=true
+ro.config.media_vol_steps=25
 
 # Bluetooth
 bt.max.hfpclient.connections=1
