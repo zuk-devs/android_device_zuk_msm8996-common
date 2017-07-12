@@ -1,0 +1,17 @@
+[
+  {
+    "repository": "android_kernel_zuk_msm8996",
+    "target_path": "kernel/zuk/msm8996",
+    "branch": "staging/noog-caf"
+  },
+  {
+    "repository": "android_vendor_zuk_z2_plus",
+    "target_path": "vendor/zuk/z2_plus",
+    "branch": "XOS-7.1"
+  },  
+  {
+    "repository": "android_vendor_qcom_binaries",
+    "target_path": "vendor/qcom/binaries",
+    "branch": "XOS-7.1"
+  },
+] 

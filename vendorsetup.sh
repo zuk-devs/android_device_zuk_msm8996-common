@@ -1,2 +1,2 @@
-add_lunch_combo aosp_z2_plus-userdebug
-add_lunch_combo aosp_z2_plus-eng
+add_lunch_combo XOS_z2_plus-userdebug
+add_lunch_combo XOS_z2_plus-eng
