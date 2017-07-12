@@ -1,3 +1,4 @@
+type sysinit, domain;
 allow sysinit adsprpcd_file:dir getattr;
 allow sysinit cache_file:dir getattr;
 allow sysinit proc:file write;
