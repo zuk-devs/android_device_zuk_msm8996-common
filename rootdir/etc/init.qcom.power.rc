@@ -1,3 +1,37 @@
+# Copyright (c) 2016, Code Aurora Forum. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above copyright
+#       notice, this list of conditions and the following disclaimer in the
+#       documentation and/or other materials provided with the distribution.
+#     * Neither the name of Code Aurora nor
+#       the names of its contributors may be used to endorse or promote
+#       products derived from this software without specific prior written
+#       permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NON-INFRINGEMENT ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+# OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+# ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+
+on init
+    # Disable UFS powersaving
+    write /sys/devices/soc/624000.ufshc/clkscale_enable 0
+    write /sys/devices/soc/624000.ufshc/clkgate_enable 0
+    write /sys/devices/soc/624000.ufshc/624000.ufshc:ufs_variant/pm_qos_enable 0
+    write /sys/module/lpm_levels/parameters/sleep_disabled "Y"
+
 on boot
     # Bring back main cores CPU 0,2
     write /sys/devices/system/cpu/cpu0/online 1
@@ -110,6 +144,12 @@ on enable-low-power
     write /sys/class/devfreq/soc:qcom,memlat-cpu2/polling_interval 10
     write /sys/class/devfreq/soc:qcom,mincpubw/governor "cpufreq"
 
+    # Enable UFS powersaving
+    write /sys/devices/soc/624000.ufshc/clkscale_enable 1
+    write /sys/devices/soc/624000.ufshc/clkgate_enable 1
+    write /sys/devices/soc/624000.ufshc/624000.ufshc:ufs_variant/pm_qos_enable 1
+
+    # Enable all LPMs (this will enable C4, D4, D3, E4 and M3 LPMs)
     write /sys/module/lpm_levels/parameters/sleep_disabled "N"
 
     # Set perfd properties
