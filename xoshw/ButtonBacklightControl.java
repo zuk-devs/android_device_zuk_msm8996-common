@@ -24,7 +24,7 @@ import org.halogenos.hardware.buttons.IButtonBacklightControl;
 public class ButtonBacklightControl extends IButtonBacklightControl {
 
     public ButtonBacklightControl() {
-        CONTROL_TYPE = CONTROL_TYPE_PARTIAL;
+        CONTROL_TYPE = CONTROL_TYPE_NONE;
     }
 
 }
