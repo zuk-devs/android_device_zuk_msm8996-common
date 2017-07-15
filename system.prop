@@ -165,6 +165,3 @@ ro.device.gpu=Qualcomm Adreno 530
 ro.device.rear_cam=13 MP, f/2.2
 ro.device.front_cam=8 MP, f/2.0
 ro.device.screen_res=1080 x 1920, 5.0"
-
-# sdcardFS
-ro.sys.sdcardfs=true
