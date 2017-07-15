@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2008 The Android Open Source Project
  * Copyright (C) 2014 The Linux Foundation. All rights reserved.
- * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2015 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -47,8 +47,23 @@ char const*const RED_LED_FILE
 char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
 
+char const*const RED_DUTY_PCTS_FILE
+        = "/sys/class/leds/led:rgb_red/duty_pcts";
+
+char const*const RED_START_IDX_FILE
+        = "/sys/class/leds/led:rgb_red/start_idx";
+
+char const*const RED_PAUSE_LO_FILE
+        = "/sys/class/leds/led:rgb_red/pause_lo";
+
+char const*const RED_PAUSE_HI_FILE
+        = "/sys/class/leds/led:rgb_red/pause_hi";
+
+char const*const RED_RAMP_STEP_MS_FILE
+        = "/sys/class/leds/led:rgb_red/ramp_step_ms";
+
 char const*const RED_BLINK_FILE
-        = "/sys/class/leds/led:rgb_red/rgbbreath";
+        = "/sys/class/leds/led:rgb_red/blink";
 
 #define RAMP_SIZE 8
 static int BRIGHTNESS_RAMP[RAMP_SIZE]
@@ -138,6 +153,26 @@ set_light_backlight(struct light_device_t* dev,
     return err;
 }
 
+
+static char*
+get_scaled_duty_pcts(int brightness)
+{
+    char *buf = malloc(5 * RAMP_SIZE * sizeof(char));
+    char *pad = "";
+    int i = 0;
+
+    memset(buf, 0, 5 * RAMP_SIZE * sizeof(char));
+
+    for (i = 0; i < RAMP_SIZE; i++) {
+        char temp[5] = "";
+        snprintf(temp, sizeof(temp), "%s%d", pad, (BRIGHTNESS_RAMP[i] * brightness / 255));
+        strcat(buf, temp);
+        pad = ",";
+    }
+    ALOGV("%s: brightness=%d duty=%s", __func__, brightness, buf);
+    return buf;
+}
+
 static int
 set_speaker_light_locked(struct light_device_t* dev,
         struct light_state_t const* state)
@@ -183,6 +218,17 @@ set_speaker_light_locked(struct light_device_t* dev,
             stepDuration = onMS / (RAMP_SIZE * 2);
             pauseHi = 0;
         }
+
+        // red
+        write_int(RED_START_IDX_FILE, 0);
+        duty = get_scaled_duty_pcts(red);    
+        write_str(RED_DUTY_PCTS_FILE, duty);
+        write_int(RED_PAUSE_LO_FILE, offMS);
+        // The led driver is configured to ramp up then ramp
+        // down the lut. This effectively doubles the ramp duration.
+        write_int(RED_PAUSE_HI_FILE, pauseHi);
+        write_int(RED_RAMP_STEP_MS_FILE, stepDuration);
+        free(duty);
 
         // start the party
         write_int(RED_BLINK_FILE, red);
