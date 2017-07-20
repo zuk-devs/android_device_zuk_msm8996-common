@@ -22,9 +22,9 @@
 /vendor/bin/hw/android\.hardware\.light@2\.0-service.zuk_8996 u:object_r:hal_light_default_exec:s0
 
 # persist
-/dev/block/mmcblk0p40                                           u:object_r:persist_block_device:s0
-/persist/rfs(/.*)?                                              u:object_r:rfs_file:s0
-/persist/sensors/gyro_sensitity_cal                             u:object_r:sensors_persist_file:s0
+/dev/block/platform/soc/(624000\.ufshc|7464900\.sdhci)/by-name/persist  u:object_r:persist_block_device:s0
+/persist/rfs(/.*)?                                                      u:object_r:rfs_file:s0
+/persist/sensors/gyro_sensitity_cal                                     u:object_r:sensors_persist_file:s0
 
 # readmac
 /vendor/bin/readmac                                             u:object_r:readmac_exec:s0
