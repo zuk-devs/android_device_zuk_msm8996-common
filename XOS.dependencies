@@ -9,4 +9,10 @@
     "target_path": "vendor/zuk/z2_plus",
     "branch": "n7x-caf"
   },
+  {
+    "repository": "android_prebuilts_clang_linux-x86_arm-multiarch-linux-android-llvm-3.8",
+    "target_path": "prebuilts/clang/linux-x86/arm-multiarch-linux-android-llvm-3.8",
+    "remote": "XOS",
+    "branch": "XOS-7.1"
+  }
 ] 

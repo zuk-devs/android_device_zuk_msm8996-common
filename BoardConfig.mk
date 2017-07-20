@@ -62,6 +62,14 @@ ENABLE_CPUSETS := true
 
 TARGET_USES_64_BIT_BINDER := true
 
+# SDclang
+LLVM_PREBUILTS_PATH := $(realpath $(TOP))/prebuilts/clang/linux-x86/arm-multiarch-linux-android-llvm-3.8/bin
+LLVM_RTLIB_PATH := $(realpath $(TOP))/prebuilts/clang/linux-x86/arm-multiarch-linux-android-llvm-3.8/lib/clang/3.8.2/lib/linux
+CLANG := $(LLVM_PREBUILTS_PATH)/clang
+CLANG_CXX := $(LLVM_PREBUILTS_PATH)/clang++
+LLVM_AS := $(LLVM_PREBUILTS_PATH)/llvm-as
+LLVM_LINK := $(LLVM_PREBUILTS_PATH)/llvm-link
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=tty60,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=16M@0-0xffffffff
 BOARD_KERNEL_BASE := 0x80000000
