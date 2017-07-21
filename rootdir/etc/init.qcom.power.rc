@@ -149,3 +149,8 @@ on property:dev.bootcomplete=1
     write /proc/sys/vm/vfs_cache_pressure 5
 
     setprop sys.io.scheduler "bfq"
+    
+# It's set in "bootanimation_main.cpp" when shutdown charging.
+# service "qcom-post-boot" is defined in [init.qcom.rc] on Qcom platform for CPU frequence configuration.
+on property:sys.shutdown_charging=1
+    start qcom-post-boot
