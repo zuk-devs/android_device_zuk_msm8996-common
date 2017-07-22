@@ -1,5 +1,6 @@
 # Copyright (C) 2013-2016, The CyanogenMod Project
 # Copyright (C) 2017, The LineageOS Project
+# Copyright (C) 2017 The halogenOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from z2_plus device
 $(call inherit-product, device/zuk/z2_plus/device.mk)
 
-# Inherit some common AOSP-OMS stuff.
+# Inherit some common halogenOS stuff.
 $(call inherit-product, vendor/xos/config/common.mk)
 
 PRODUCT_NAME := XOS_z2_plus
