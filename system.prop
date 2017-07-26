@@ -59,6 +59,7 @@ ro.opa.eligible_device=true
 
 # Graphics
 debug.gralloc.enable_fb_ubwc=1
+debug.sf.latch_unsignaled=1
 persist.hwc.enable_vds=1
 ro.opengles.version=196610
 ro.sf.lcd_density=480
