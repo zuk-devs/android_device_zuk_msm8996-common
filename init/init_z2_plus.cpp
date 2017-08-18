@@ -32,12 +32,15 @@
 #include <stdlib.h>
 #include <sys/sysinfo.h>
 #include <cutils/properties.h>
+#include <android-base/properties.h>
+#include "property_service.h"
 #include "vendor_init.h"
-#include "log.h"
-#include "util.h"
 
-char const *heapminfree;
-char const *heapmaxfree;
+using android::base::GetProperty;
+using android::base::SetProperty;
+
+std::string heapminfree;
+std::string heapmaxfree;
 
 static void init_alarm_boot_properties()
 {
@@ -63,11 +66,7 @@ static void init_alarm_boot_properties()
      * 7 -> CBLPWR_N pin toggled (for external power supply)
      * 8 -> KPDPWR_N pin toggled (power key pressed)
      */
-     if (boot_reason == 3) {
-        property_set("ro.alarm_boot", "true");
-     } else {
-        property_set("ro.alarm_boot", "false");
-     }
+    SetProperty("ro.alarm_boot", boot_reason == 3 ? "true" : "false");
 }
 
 void check_ram()
@@ -88,24 +87,20 @@ void check_ram()
 }
 
 void vendor_load_properties() {
-    char device[PROP_VALUE_MAX];
-    char rf_version[PROP_VALUE_MAX];
-    int rc;
-
-    rc = property_get("ro.product.device", device, NULL);
-    if (!rc || strncmp(device, "z2_plus", PROP_VALUE_MAX))
+    std::string platform;
+    
+    platform = GetProperty("ro.board.platform", "");
+    if (platform != ANDROID_TARGET)
         return;
-
-        property_set("ro.product.model", "Zuk Z2 Plus");
     
     check_ram();
 
-    property_set("dalvik.vm.heapstartsize", "8m");
-    property_set("dalvik.vm.heapgrowthlimit", "256m");
-    property_set("dalvik.vm.heapsize", "512m");
-    property_set("dalvik.vm.heaptargetutilization", "0.75");
-    property_set("dalvik.vm.heapminfree", heapminfree);
-    property_set("dalvik.vm.heapmaxfree", heapmaxfree);
+    SetProperty("dalvik.vm.heapstartsize", "8m");
+    SetProperty("dalvik.vm.heapgrowthlimit", "256m");
+    SetProperty("dalvik.vm.heapsize", "512m");
+    SetProperty("dalvik.vm.heaptargetutilization", "0.75");
+    SetProperty("dalvik.vm.heapminfree", heapminfree);
+    SetProperty("dalvik.vm.heapmaxfree", heapmaxfree);
 
     init_alarm_boot_properties();
 }
