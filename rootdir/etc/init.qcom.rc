@@ -35,6 +35,7 @@ on early-init
     write /sys/module/msm_performance/parameters/cpu_max_freq "0:1300000 1:1300000 2:1300000 3:1300000"
 
 on init
+    export LD_SHIM_LIBS /system/vendor/lib64/libizat_core.so|libshims_get_process_name.so
 
     # Set permissions for persist partition
     mkdir /persist 0771 system system
