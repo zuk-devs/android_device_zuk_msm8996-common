@@ -116,10 +116,16 @@ on enable-low-power
 
     # update cpusets now that boot is complete and we want better load balancing
     write /dev/cpuset/top-app/cpus 0-3
-    write /dev/cpuset/foreground/boost/cpus 0-2
+    write /dev/cpuset/foreground/boost/cpus 0-1
     write /dev/cpuset/foreground/cpus 0-2
-    write /dev/cpuset/background/cpus 0
-    write /dev/cpuset/system-background/cpus 0-2
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/system-background/cpus 0-1
+
+    write /proc/sys/vm/dirty_ratio 90
+    write /proc/sys/vm/dirty_background_ratio 85
+    write /proc/sys/vm/dirty_writeback_centisecs 900
+    write /proc/sys/vm/dirty_expire_centisecs 10
+    write /proc/sys/vm/vfs_cache_pressure 5
 
     # Set thermal restrictions
     write /sys/kernel/msm_thermal/enabled 0
