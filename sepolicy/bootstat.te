@@ -1,0 +1,1 @@
+allow bootstat rootfs:lnk_file { getattr }; 
