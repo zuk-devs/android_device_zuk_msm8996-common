@@ -115,6 +115,10 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne \
     services-ext
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8996 \
