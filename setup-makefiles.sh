@@ -3,7 +3,7 @@ VENDOR=zuk
 DEVICE=z2_plus
 
 OUTDIR=vendor/$VENDOR/$DEVICE
-MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
+MAKEFILE=../../../$OUTDIR/$DEVICE-vendor.mk
 
 (cat << EOF) > $MAKEFILE
 # Copyright (C) 2016 The CyanogenMod Project
@@ -19,6 +19,8 @@ MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+ifeq (\$(TARGET_DEVICE),$DEVICE)
 
 PRODUCT_COPY_FILES += \\
 EOF
@@ -44,28 +46,8 @@ for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
   fi
 done
 
-(cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
-# Copyright (C) 2016 The CyanogenMod Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-# Pick up overlay for features that depend on non-open-source files
-
-\$(call inherit-product, vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk)
-EOF
-
 OUTDIR=vendor/$VENDOR/$DEVICE
-MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
+MAKEFILE=../../../$OUTDIR/$DEVICE-vendor.mk
 
 (cat << EOF) >> $MAKEFILE
 
@@ -84,6 +66,7 @@ MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 # limitations under the License.
 
 # Pick up overlay for features that depend on non-open-source files
+
 PRODUCT_PACKAGES += \\
     libloc_api_v02 \\
     libtime_genoff \\
@@ -100,6 +83,7 @@ PRODUCT_PACKAGES += \\
     libqti_performance \\
     QPerformance
 
+endif
 EOF
 
 (cat << EOF) > ../../../$OUTDIR/BoardConfigVendor.mk
@@ -134,6 +118,8 @@ EOF
 # limitations under the License.
 
 LOCAL_PATH := \$(call my-dir)
+
+ifeq (\$(TARGET_DEVICE),$DEVICE)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libloc_api_v02
@@ -297,4 +283,5 @@ include \$(BUILD_PREBUILT)
 \$(shell mkdir -p \$(PRODUCT_OUT)/proprietary/lib/egl && pushd \$(PRODUCT_OUT)/proprietary/lib > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
 \$(shell mkdir -p \$(PRODUCT_OUT)/proprietary/lib64/egl && pushd \$(PRODUCT_OUT)/proprietary/lib64 > /dev/null && ln -s egl/libEGL_adreno.so libEGL_adreno.so && popd > /dev/null)
 
+endif
 EOF
