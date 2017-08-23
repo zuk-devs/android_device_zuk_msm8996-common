@@ -624,7 +624,6 @@ etc/camera/s5k2m8sx_chromatix.xml
 etc/cne/andsfCne.xml
 etc/cne/SwimConfig.xml
 etc/capability.xml
-etc/init.qcom.post_boot.sh
 lib/libmm-qcamera.so
 lib/libvpplibrary.so
 lib/libOmxVpp.so
