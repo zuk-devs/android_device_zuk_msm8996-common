@@ -156,7 +156,5 @@ on property:sys.boot_completed=1
 on property:init.svc.recovery=running
     trigger enable-low-power
 
-# It's set in "bootanimation_main.cpp" when shutdown charging.
-# service "qcom-post-boot" is defined in [init.qcom.rc] on Qcom platform for CPU frequence configuration.
 on property:sys.shutdown_charging=1
-    start qcom-post-boot
+# just going to let it there for the future
