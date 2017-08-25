@@ -96,7 +96,7 @@ void vendor_load_properties() {
     if (!rc || strncmp(device, "z2_plus", PROP_VALUE_MAX))
         return;
 
-        property_set("ro.product.model", "Z2 Plus");
+        property_set("ro.product.model", "Zuk Z2 Plus");
     
     check_ram();
 
