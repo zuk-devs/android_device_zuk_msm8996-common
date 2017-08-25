@@ -1,8 +1,3 @@
-on early-init
-    # Enable sched boost
-    write /proc/sys/kernel/sched_boost 1
-    setprop sys.io.scheduler noop
-
 on boot
     # Update foreground and background cpusets
     write /dev/cpuset/foreground/cpus 0-3
@@ -20,15 +15,17 @@ on boot
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
 
-    # Set light thermal restrictions while optimizing apps
-    # [throttle_freq_LITTLE, throttle_freq_big, throttle_temp, unthrottle_temp]
-    write /sys/kernel/msm_thermal/zone0 "1228800 1632000 46 44"
-    write /sys/kernel/msm_thermal/zone1 "1228800 1555200 50 47"
-    write /sys/kernel/msm_thermal/zone2 "1036800 1248000 55 53"
-    write /sys/kernel/msm_thermal/zone3 "729600 729600 65 63"
-    write /sys/kernel/msm_thermal/enabled 1
+    # Enable sched boost
+    write /proc/sys/kernel/sched_boost 1
 
 on enable-low-power
+    # Disable thermal bcl hotplug to switch governor
+    write /sys/module/msm_thermal/core_control/enabled 0
+    write /sys/devices/soc/soc:qcom,bcl/mode "disable"
+    write /sys/devices/soc/soc:qcom,bcl/hotplug_mask 0
+    write /sys/devices/soc/soc:qcom,bcl/hotplug_soc_mask 0
+    write /sys/devices/soc/soc:qcom,bcl/mode "enable"
+
     # Enable Adaptive LMK
 
     write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
@@ -68,6 +65,13 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 307200
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif 1
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/enable_prediction 1
+
+    # Re-enable thermal and BCL hotplug
+    write /sys/module/msm_thermal/core_control/enabled 1
+    write /sys/devices/soc/soc:qcom,bcl/mode "disable"
+    write /sys/devices/soc/soc:qcom,bcl/hotplug_mask 12
+    write /sys/devices/soc/soc:qcom,bcl/hotplug_soc_mask 8
+    write /sys/devices/soc/soc:qcom,bcl/mode "enable"
 
     # Input boost configuration
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800 2:1324800"
@@ -112,9 +116,26 @@ on enable-low-power
     # Starting io prefetcher service
     start iop
 
-    setprop sys.io.scheduler cfq
+on charger
+    write /sys/module/msm_thermal/core_control/cpus_offlined 14
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
-    # update cpusets now that boot is complete and we want better load balancing
+on class_start:late_start
+    write /proc/sys/kernel/sched_boost 1
+
+
+    trigger enable-low-power
+
+on property:init.svc.recovery=running
+    trigger enable-low-power
+
+on property:dev.bootcomplete=1
+    write /proc/sys/kernel/sched_boost 0
+
     write /dev/cpuset/top-app/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 0-1
     write /dev/cpuset/foreground/cpus 0-2
@@ -127,27 +148,7 @@ on enable-low-power
     write /proc/sys/vm/dirty_expire_centisecs 10
     write /proc/sys/vm/vfs_cache_pressure 5
 
-    # Set thermal restrictions
-    write /sys/kernel/msm_thermal/enabled 0
-    write /sys/kernel/msm_thermal/zone0 "1401600 1785600 40 38"
-    write /sys/kernel/msm_thermal/zone1 "1324800 1555200 41 40"
-    write /sys/kernel/msm_thermal/zone2 "1228800 1478400 42 41"
-    write /sys/kernel/msm_thermal/zone3 "1228800 1401600 43 42"
-    write /sys/kernel/msm_thermal/zone4 "1190400 1324800 44 43"
-    write /sys/kernel/msm_thermal/zone5 "1190400 1248000 46 44"
-    write /sys/kernel/msm_thermal/zone6 "1113600 1190400 48 46"
-    write /sys/kernel/msm_thermal/zone7 "1036800 940800 53 50"
-    write /sys/kernel/msm_thermal/zone8 "729600 729600 65 60"
-    write /sys/kernel/msm_thermal/sampling_ms 8000
-    write /sys/kernel/msm_thermal/enabled 1
-
-on charger
-    write /sys/module/msm_thermal/core_control/cpus_offlined 14
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
-    write /sys/devices/system/cpu/cpu1/online 0
-    write /sys/devices/system/cpu/cpu2/online 0
-    write /sys/devices/system/cpu/cpu3/online 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+    setprop sys.io.scheduler "cfq"
 
 on property:sys.boot_completed=1
     trigger enable-low-power
