@@ -1164,7 +1164,8 @@ service hcidump /system/bin/sh /system/etc/hcidump.sh
 service charger /charger
     class charger
     group system graphics
-    #seclabel u:r:healthd:s0
+    #seclabel u:r:charger:s0
+    writepid /dev/cpuset/system-background/tasks
 
 service ssr_diag /system/bin/ssr_diag
     class late_start
