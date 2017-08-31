@@ -1,6 +1,5 @@
 vendor/bin/qseeproxydaemon
 vendor/bin/perfd
-vendor/bin/slim_daemon
 vendor/bin/qti
 vendor/bin/thermal-engine
 vendor/bin/pd-mapper
