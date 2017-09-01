@@ -192,3 +192,6 @@ ro.device.screen_res=1080 x 1920, 5.0"
 
 # SafetyNet
 ro.boot.verifiedbootstate=green
+
+# Hack
+debug.sf.disable_backpressure=1
