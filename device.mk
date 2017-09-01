@@ -250,7 +250,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Power
-PRODUCT_PACKAGES += \
+# PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
     power.msm8996
 
