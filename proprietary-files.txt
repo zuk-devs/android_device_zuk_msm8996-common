@@ -535,7 +535,6 @@ bin/pm-service
 bin/hci_qcomm_init
 bin/port-bridge
 bin/time_daemon
-bin/cnss_diag
 bin/cnss-daemon
 bin/imscmservice
 bin/loc_launcher

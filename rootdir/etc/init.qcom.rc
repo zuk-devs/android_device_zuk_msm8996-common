@@ -318,9 +318,6 @@ on boot
     # Allow access for CCID command/response timeout configuration
     chown system system /sys/module/ccid_bridge/parameters/bulk_msg_timeout
 
-    # bond0 used by FST Manager
-    chown wifi wifi /sys/class/net/bond0/bonding/queue_id
-
     # change this when HAL3 is working
     setprop persist.camera.HAL3.enabled 0
 
@@ -1030,20 +1027,6 @@ service wigig_supplicant /system/bin/wpa_supplicant \
     disabled
     oneshot
 
-# FST Manager with hostapd (softap) - all settings inside ini file
-service fstman /system/bin/fstman -B -ddd -c /data/misc/wifi/fstman.ini
-    user wifi
-    group wifi net_admin net_raw
-    class main
-    disabled
-    oneshot
-
-on property:netd.fstman.start=true
-    start fstman
-
-on property:netd.fstman.start=false
-    stop fstman
-
 service ptt_socket_app /system/bin/ptt_socket_app -d
     class main
     user root
@@ -1065,16 +1048,6 @@ service wifi_fccutild /system/bin/wifi_fccutild
 
 on property:wifi.fccutild.load.qcacld=true
     insmod /system/lib/modules/qca_cld/qca_cld_wlan.ko con_mode=5
-
-service cnss_diag /system/bin/cnss_diag -q -f
-    class main
-    user root
-    group root
-    #ifdef VENDOR_EDIT
-    # cnss diag cause power consumption bigger sometimes, so disable it until solve it
-    disabled
-    #endif
-    oneshot
 
 service cnss-daemon /system/bin/cnss-daemon -n -l
     class late_start
