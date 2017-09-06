@@ -511,9 +511,6 @@ vendor/lib64/libFidoCrypto.so
 vendor/lib64/libTimeService.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/libfastcvopt.so
-vendor/app/imssettings/imssettings.apk
-vendor/app/colorservice/colorservice.apk
-vendor/app/ims/ims.apk
 vendor/qcril.db
 bin/adsprpcd
 bin/pm-proxy
@@ -640,10 +637,6 @@ lib64/libtfa98xx.so
 lib64/libloc_eng.so
 lib64/libloc_api_v02.so
 lib64/hw/fingerprint.qcom.so
-app/shutdownlistener/shutdownlistener.apk
-app/QtiTelephonyService/QtiTelephonyService.apk
-app/datastatusnotification/datastatusnotification.apk
-app/TimeService/TimeService.apk
 proprietary-files.txt
 framework/qcrilhook.jar
 framework/dpmapi.jar
@@ -659,6 +652,3 @@ framework/tcmclient.jar
 usr/idc/usf_tsc_ptr.idc
 usr/idc/usf_tsc.idc
 usr/idc/usf_tsc_ext.idc
-priv-app/com.qualcomm.location/com.qualcomm.location.apk
-priv-app/CNEService/CNEService.apk
-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
