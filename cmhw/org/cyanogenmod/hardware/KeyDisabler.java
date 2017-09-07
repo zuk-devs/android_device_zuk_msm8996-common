@@ -16,7 +16,7 @@
 
 package org.cyanogenmod.hardware;
 
-import org.halogenos.io.FileUtils;
+import org.cyanogenmod.internal.util.FileUtils;
 
 /*
  * Disable capacitive keys
@@ -27,8 +27,6 @@ import org.halogenos.io.FileUtils;
  * otherwise visible-when-inactive keys
  */
 
-import java.io.File;
-
 public class KeyDisabler {
 
     private static String CONTROL_PATH = "/sys/devices/soc/soc:fpc1020/utouch_disable";
@@ -38,10 +36,10 @@ public class KeyDisabler {
     }
 
     public static boolean isActive() {
-        return FileUtils.readString(new File(CONTROL_PATH), true).equals("1");
+        return FileUtils.readOneLine(CONTROL_PATH).equals("1");
     }
 
     public static boolean setActive(boolean state) {
-        return FileUtils.writeString(CONTROL_PATH, (state ? "1" : "0"));
+        return FileUtils.writeLine(CONTROL_PATH, (state ? "1" : "0"));
     }
 }

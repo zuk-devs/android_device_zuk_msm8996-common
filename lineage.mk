@@ -1,6 +1,5 @@
 # Copyright (C) 2013-2016, The CyanogenMod Project
 # Copyright (C) 2017, The LineageOS Project
-# Copyright (C) 2017 The halogenOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,24 +20,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from z2_plus device
 $(call inherit-product, device/zuk/z2_plus/device.mk)
 
-# Inherit some common halogenOS stuff.
-$(call inherit-product, vendor/xos/config/common.mk)
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := XOS_z2_plus
+# Device identifier. This must come after all inclusions.
+PRODUCT_NAME := lineage_z2_plus
 PRODUCT_DEVICE := z2_plus
-PRODUCT_MANUFACTURER := ZUK
-PRODUCT_BRAND := ZUK
+PRODUCT_BRAND := Zuk
 PRODUCT_MODEL := Z2 Plus
-
+PRODUCT_MANUFACTURER := Zuk
 PRODUCT_GMS_CLIENTID_BASE := android-zuk
-
-TARGET_VENDOR_PRODUCT_NAME := z2_plus
-TARGET_VENDOR_DEVICE_NAME := z2_plus
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=z2_plus PRODUCT_NAME=z2_plus
-
-TARGET_VENDOR := zuk
 
 # Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE="z2_plus" \
+    PRODUCT_NAME="z2_plus" \
     BUILD_FINGERPRINT="ZUK/z2_plus/z2_plus:7.0/NRD90M/2.5.412_170428:user/release-keys" \
     PRIVATE_BUILD_DESC="z2_plus-user 7.0 NRD90M 2.5.412_170428 release-keys"
+
+TARGET_VENDOR := Zuk

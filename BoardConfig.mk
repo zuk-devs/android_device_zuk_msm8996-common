@@ -22,8 +22,6 @@
 # definition file).
 #
 
-#TARGET_BUILD_VARIANT:=user
-
 TARGET_OTA_ASSERT_DEVICE := z2,Z2,z2plus,z2_plus
 
 PLATFORM_PATH := device/zuk/z2_plus
@@ -34,19 +32,6 @@ BOARD_VENDOR := zuk
 
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
-
-# SDclang
-LLVM_PREBUILTS_PATH := $(realpath $(TOP))/prebuilts/clang/linux-x86/arm-multiarch-linux-android-llvm-3.8/bin
-LLVM_RTLIB_PATH := $(realpath $(TOP))/prebuilts/clang/linux-x86/arm-multiarch-linux-android-llvm-3.8/lib/clang/3.8.2/lib/linux
-CLANG := $(LLVM_PREBUILTS_PATH)/clang
-CLANG_CXX := $(LLVM_PREBUILTS_PATH)/clang++
-LLVM_AS := $(LLVM_PREBUILTS_PATH)/llvm-as
-LLVM_LINK := $(LLVM_PREBUILTS_PATH)/llvm-link
-
-# Bootanimaion
-TARGET_BOOTANIMATION_MULTITHREAD_DECODE := true
-TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8996
@@ -64,16 +49,15 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := kryo
+TARGET_CPU_VARIANT := generic
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := kryo
+TARGET_2ND_CPU_VARIANT := krait
 
 ENABLE_CPUSETS := true
-
 TARGET_USES_64_BIT_BINDER := true
 
 
@@ -83,9 +67,7 @@ BOARD_KERNEL_CMDLINE := \
 	ehci-hcd.park=3 \
 	lpm_levels.sleep_disabled=1 \
 	cma=32M@0-0xffffffff \
-	androidboot.selinux=enforcing \
-	androidboot.verifiedbootstate=green \
-	androidboot.veritymode=enforcing
+	androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -176,9 +158,6 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
 
-# Enable dexpreopt to speed boot time
-# WITH_DEXPREOPT := true
-
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_z2_plus
 TARGET_RECOVERY_DEVICE_MODULES := libinit_z2_plus
@@ -210,9 +189,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
-
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+# include device/qcom/sepolicy/sepolicy.mk
+# BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 # Sensors
 USE_SENSOR_MULTI_HAL := true
