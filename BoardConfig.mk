@@ -30,9 +30,6 @@ TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
 BOARD_VENDOR := zuk
 
-# Use Snapdragon LLVM, if available
-TARGET_USE_SDCLANG := true
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8996
 TARGET_NO_BOOTLOADER := true
@@ -80,9 +77,6 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_CONFIG := z2_plus_defconfig
 TARGET_KERNEL_SOURCE := kernel/zuk/msm8996
 TARGET_KERNEL_BUILD_VARIANT := user
-
-# QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
 
 # Webview defs
 PREBUILT_WEBVIEW_VERSION := chromium
@@ -179,9 +173,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 # SELinux
 # include device/qcom/sepolicy/sepolicy.mk
 # BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
-
-# Timeservice
-BOARD_USES_QC_TIME_SERVICES := true
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
