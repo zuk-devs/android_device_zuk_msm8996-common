@@ -351,6 +351,9 @@ on boot
     write /sys/bus/msm_subsys/devices/subsys4/restart_level "related"
     write /sys/bus/msm_subsys/devices/subsys5/restart_level "related"
 
+    # Allow access for WLAN firmware
+    chown system system /sys/module/cnss_common/parameters/bdwlan_file
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /tombstones/modem 0771 system system
@@ -1047,6 +1050,16 @@ service wifi_fccutild /system/bin/wifi_fccutild
 
 service cnss-daemon /system/bin/cnss-daemon -n -l
     class late_start
+    user system
+    group system inet net_admin wifi
+
+service cnss-sh /system/bin/init.cnss.sh
+    class core
+    user system
+    oneshot
+
+on property:sys.shutdown.requested=*
+    stop cnss-daemon
 
 service loc_launcher /system/bin/loc_launcher
     # loc_launcher will start as root and set its uid to gps
