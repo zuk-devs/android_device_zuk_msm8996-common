@@ -1008,10 +1008,6 @@ service amp_unload /system/bin/amploader -u
     disabled
     oneshot
 
-on property:wlan.driver.config=*
-    insmod /system/lib/modules/wlan.ko
-    chown wifi wifi /sys/module/wlan/parameters/fwpath
-    
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
     -I/system/etc/wifi/p2p_supplicant_overlay.conf -N \
@@ -1046,6 +1042,9 @@ service wifi_fccutild /system/bin/wifi_fccutild
     socket wififccutild_server dgram 0660 system system
     disabled
     oneshot
+
+on property:wifi.fccutild.load.qcacld=true
+    insmod /system/lib/modules/qca_cld/qca_cld_wlan.ko con_mode=5
 
 service cnss-daemon /system/bin/cnss-daemon -n -l
     class late_start
