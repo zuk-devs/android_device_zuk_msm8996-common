@@ -1043,9 +1043,6 @@ service wifi_fccutild /system/bin/wifi_fccutild
     disabled
     oneshot
 
-on property:wifi.fccutild.load.qcacld=true
-    insmod /system/lib/modules/qca_cld/qca_cld_wlan.ko con_mode=5
-
 service cnss-daemon /system/bin/cnss-daemon -n -l
     class late_start
     user system
@@ -1071,10 +1068,6 @@ service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     group system
     disabled
     oneshot
-
-on property:crypto.driver.load=1
-    insmod /system/lib/modules/qce.ko
-    insmod /system/lib/modules/qcedev.ko
 
 service drmdiag /system/bin/drmdiagapp
     class late_start
