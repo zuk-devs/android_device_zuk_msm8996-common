@@ -177,21 +177,5 @@ persist.service.adb.enable=1
 persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
 
-# Higher fling velocities
-# for smoother scrolling and better responsiveness
-ro.min.fling_velocity=160
-ro.max.fling_velocity=20000
-
-# Hardware Info
-ro.device.chipset=Qualcomm MSM8996 Snapdragon 820
-ro.device.cpu=Quad-core (2x2.15 GHz Kryo & 2x1.6 GHz Kryo)
-ro.device.gpu=Qualcomm Adreno 530
-ro.device.rear_cam=13 MP, f/2.2
-ro.device.front_cam=8 MP, f/2.0
-ro.device.screen_res=1080 x 1920, 5.0"
-
 # SafetyNet
 ro.boot.verifiedbootstate=green
-
-# Hack
-debug.sf.disable_backpressure=1
