@@ -118,9 +118,9 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    Camera2 \
     android.hardware.camera.provider@2.4-impl \
     camera.device@3.2-impl \
-    Snap
 
 # DRM
 PRODUCT_PACKAGES += \
