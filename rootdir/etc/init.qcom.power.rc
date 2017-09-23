@@ -18,9 +18,17 @@ on boot
     # Enable sched boost
     write /proc/sys/kernel/sched_boost 1
 
+on charger
+    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/module/msm_thermal/parameters/enabled "N"
+    write /sys/module/msm_thermal/core_control/cpus_offlined 14
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
+
 on enable-low-power
     # Disable thermal hotplug to switch governor
-	
+
     write /sys/module/msm_thermal/core_control/enabled 0
 
     # Enable Adaptive LMK
@@ -118,13 +126,11 @@ on enable-low-power
     write /proc/sys/vm/dirty_expire_centisecs 10
     write /proc/sys/vm/vfs_cache_pressure 5
 
-on charger
-    write /sys/module/msm_thermal/core_control/cpus_offlined 14
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
-    write /sys/devices/system/cpu/cpu1/online 0
-    write /sys/devices/system/cpu/cpu2/online 0
-    write /sys/devices/system/cpu/cpu3/online 0
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+service charger /charger
+    class charger
+    group log system graphics
+    seclabel u:r:charger:s0
+    writepid /dev/cpuset/system-background/tasks
 
 on property:init.svc.recovery=running
     trigger enable-low-power
