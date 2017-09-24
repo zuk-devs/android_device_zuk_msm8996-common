@@ -67,9 +67,6 @@ ro.qcom.ad.sensortype=2
 # Fingerprint
 persist.qfp=false
 
-# Flip panel
-ro.sf.hwrotation=180
-
 # Google
 ro.opa.eligible_device=true
 
