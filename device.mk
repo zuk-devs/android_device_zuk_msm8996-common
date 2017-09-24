@@ -238,8 +238,7 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \
-    libxml2 \
-    rild_socket
+    libxml2
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
