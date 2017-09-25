@@ -1,5 +1,6 @@
 cc_library_shared {
-    name: "camera.device@1.0-impl.zuk",
+    name: "camera.device@1.0-impl.z2_plus",
+    defaults: ["hidl_z2_plus"],
     proprietary: true,
     srcs: [
         "CameraDevice.cpp",

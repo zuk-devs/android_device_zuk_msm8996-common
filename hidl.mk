@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
     
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl.zuk \
+    android.hardware.camera.provider@2.4-impl.z2_plus \
     camera.device@3.2-impl
 
 # Display

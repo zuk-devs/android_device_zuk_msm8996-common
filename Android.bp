@@ -3,6 +3,7 @@ subdirs = [
 ]
  
 cc_defaults {
+    name: "hidl_z2_plus",
     cflags: [
         "-Wall",
         "-Werror",

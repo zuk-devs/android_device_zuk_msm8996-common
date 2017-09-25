@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "CamProvider@2.4-impl.zuk"
+#define LOG_TAG "CamProvider@2.4-impl.z2_plus"
 #include <android/log.h>
 
 #include "CameraProvider.h"

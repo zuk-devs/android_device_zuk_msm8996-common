@@ -1,4 +1,4 @@
 subdirs = [
-    "zuk",
+    "z2_plus",
     "provider",
 ]
