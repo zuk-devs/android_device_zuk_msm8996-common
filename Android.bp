@@ -1,0 +1,10 @@
+subdirs = [
+    "camera"
+]
+ 
+cc_defaults {
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+}

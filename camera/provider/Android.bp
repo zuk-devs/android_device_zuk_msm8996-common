@@ -1,6 +1,5 @@
 cc_library_shared {
     name: "android.hardware.camera.provider@2.4-impl.zuk",
-    defaults: ["hidl_defaults"],
     proprietary: true,
     relative_install_path: "hw",
     srcs: ["CameraProvider.cpp"],
