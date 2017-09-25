@@ -33,8 +33,7 @@ PRODUCT_PACKAGES += \
     
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl.z2_plus \
-    camera.device@3.2-impl
+    android.hardware.camera.provider@2.4-impl.z2_plus
 
 # Display
 PRODUCT_PACKAGES += \
@@ -47,7 +46,6 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl
-    
 
 # Fingerprint
 PRODUCT_PACKAGES += \
