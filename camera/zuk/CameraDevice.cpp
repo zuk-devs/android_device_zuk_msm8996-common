@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "CamDev@1.0-impl"
+#define LOG_TAG "CamDev@1.0-impl.zuk"
 #include <hardware/camera.h>
 #include <hardware/gralloc1.h>
 #include <hidlmemory/mapping.h>

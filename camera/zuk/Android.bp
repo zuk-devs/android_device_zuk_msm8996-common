@@ -1,5 +1,5 @@
 cc_library_shared {
-    name: "camera.device@1.0-impl",
+    name: "camera.device@1.0-impl.zuk",
     defaults: ["hidl_defaults"],
     proprietary: true,
     srcs: [
