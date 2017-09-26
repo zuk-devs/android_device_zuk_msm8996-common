@@ -155,6 +155,3 @@ on property:sys.boot_completed=1
 
 on property:init.svc.recovery=running
     trigger enable-low-power
-
-on property:sys.shutdown_charging=1
-# just going to let it there for the future
