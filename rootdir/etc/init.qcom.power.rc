@@ -27,7 +27,6 @@ on enable-low-power
     write /sys/devices/soc/soc:qcom,bcl/mode "enable"
 
     # Enable Adaptive LMK
-
     write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 81250
 
@@ -49,6 +48,9 @@ on enable-low-power
 
     # Online CPU2
     write /sys/devices/system/cpu/cpu2/online 1
+    
+    # Set ioscheduler
+    setprop sys.io.scheduler "cfq"
 
     # Configure governor settings for big cluster
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
@@ -116,6 +118,13 @@ on enable-low-power
     # Starting io prefetcher service
     start iop
 
+    # Setting vm parameters
+    write /proc/sys/vm/dirty_ratio 90
+    write /proc/sys/vm/dirty_background_ratio 85
+    write /proc/sys/vm/dirty_writeback_centisecs 900
+    write /proc/sys/vm/dirty_expire_centisecs 10
+    write /proc/sys/vm/vfs_cache_pressure 5
+
 on charger
     write /sys/module/msm_thermal/core_control/cpus_offlined 14
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
@@ -125,33 +134,15 @@ on charger
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
 on class_start:late_start
-    write /proc/sys/kernel/sched_boost 1
-
-
     trigger enable-low-power
 
 on property:init.svc.recovery=running
     trigger enable-low-power
-
+    
 on property:dev.bootcomplete=1
-    write /proc/sys/kernel/sched_boost 0
-
+    # update cpusets now that boot is complete and we want better load balancing
     write /dev/cpuset/top-app/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 0-1
     write /dev/cpuset/foreground/cpus 0-2
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-1
-
-    write /proc/sys/vm/dirty_ratio 90
-    write /proc/sys/vm/dirty_background_ratio 85
-    write /proc/sys/vm/dirty_writeback_centisecs 900
-    write /proc/sys/vm/dirty_expire_centisecs 10
-    write /proc/sys/vm/vfs_cache_pressure 5
-
-    setprop sys.io.scheduler "cfq"
-
-on property:sys.boot_completed=1
-    trigger enable-low-power
-
-on property:init.svc.recovery=running
-    trigger enable-low-power
