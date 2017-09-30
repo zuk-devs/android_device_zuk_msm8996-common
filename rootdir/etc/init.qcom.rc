@@ -32,7 +32,6 @@ on early-init
     mkdir /bt_firmware 0771 system system
     symlink /data/tombstones /tombstones
     mkdir /dsp 0771 media media
-    write /sys/module/msm_performance/parameters/cpu_max_freq "0:1300000 1:1300000 2:1300000 3:1300000"
 
 on init
 
