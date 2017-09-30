@@ -133,9 +133,6 @@ on charger
     write /sys/devices/system/cpu/cpu3/online 0
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
-on class_start:late_start
-    trigger enable-low-power
-
 on property:init.svc.recovery=running
     trigger enable-low-power
     
@@ -146,3 +143,4 @@ on property:dev.bootcomplete=1
     write /dev/cpuset/foreground/cpus 0-2
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-1
+    trigger enable-low-power
