@@ -217,7 +217,7 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Power
-# PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     power.msm8996
 
 # QMI
