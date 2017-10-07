@@ -47,7 +47,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/online 1
     
     # Set ioscheduler
-    setprop sys.io.scheduler "cfq"
+    setprop sys.io.scheduler "noop"
 
     # Configure governor settings for big cluster
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
