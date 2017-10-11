@@ -120,13 +120,6 @@ TARGET_CAMERASERVICE_CLOSES_NATIVE_HANDLES := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
-# CM Hardware
-BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw
-
 # CNE and DPM
 BOARD_USES_QCNE := true
 
@@ -160,6 +153,10 @@ TARGET_FS_CONFIG_GEN := $(PLATFORM_PATH)/config.fs
 # TARGET_RECOVERY_DEVICE_MODULES := libinit_z2_plus
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
+# Lineage Hardware
+BOARD_HARDWARE_CLASS += \
+    $(PLATFORM_PATH)/lineagehw
+
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
 
@@ -182,6 +179,9 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # QCOM Power
 TARGET_POWERHAL_VARIANT := qcom
+
+# Tap to wake node
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
