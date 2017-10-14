@@ -469,7 +469,7 @@
     <!--bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool-->
 
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
-    <!--bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool-->
+    <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
 
     <!-- Device configuration setting the minfree tunable in the lowmemorykiller in the kernel.
          A high value will cause the lowmemorykiller to fire earlier, keeping more memory
