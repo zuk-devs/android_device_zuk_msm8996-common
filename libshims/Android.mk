@@ -14,11 +14,31 @@
 
 LOCAL_PATH := $(call my-dir)
 
+# get_process_name shim
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := get_process_name.c
 
 LOCAL_MODULE := libshims_get_process_name
 LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+# camera shim
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+    camera_shim.cpp
+
+LOCAL_SHARED_LIBRARIES := \
+    libgui \
+    libui
+
+LOCAL_C_INCLUDES := \
+    frameworks/native/include
+
+LOCAL_MODULE := libshim_camera
+LOCAL_MODULE_TAGS := optional
+LOCAL_MULTILIB := 32
 
 include $(BUILD_SHARED_LIBRARY)

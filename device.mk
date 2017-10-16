@@ -119,7 +119,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     Camera2 \
-    camera.msm8996
+    camera.msm8996 \
+    libshim_camera
 
 # Display
 PRODUCT_PACKAGES += \
