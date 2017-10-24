@@ -20,8 +20,6 @@ MAKEFILE=../../../$OUTDIR/$DEVICE-vendor.mk
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (\$(TARGET_DEVICE),$DEVICE)
-
 PRODUCT_COPY_FILES += \\
 EOF
 
@@ -51,39 +49,21 @@ MAKEFILE=../../../$OUTDIR/$DEVICE-vendor.mk
 
 (cat << EOF) >> $MAKEFILE
 
-# Copyright (C) 2016 The CyanogenMod Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-# Pick up overlay for features that depend on non-open-source files
-
 PRODUCT_PACKAGES += \\
     libloc_api_v02 \\
+    libsdm-disp-vndapis \\
+    libgpustats \\
     libtime_genoff \\
     datastatusnotification \\
     QtiTelephonyService \\
     shutdownlistener \\
     TimeService \\
-    CNEService \\
     com.qualcomm.location \\
     qcrilmsgtunnel \\
     colorservice \\
     qcrilhook \\
-    com.qualcomm.qti.Performance.xml \\
-    libqti_performance \\
-    QPerformance
-
-endif
+    ims \\
+    imssettings
 EOF
 
 (cat << EOF) > ../../../$OUTDIR/BoardConfigVendor.mk
@@ -188,18 +168,6 @@ LOCAL_MODULE_SUFFIX := .apk
 include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
-LOCAL_MODULE := CNEService
-LOCAL_MODULE_OWNER := zuk
-LOCAL_SRC_FILES := proprietary/priv-app/CNEService/CNEService.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-LOCAL_PRIVILEGED_MODULE := true
-include \$(BUILD_PREBUILT)
-
-include \$(CLEAR_VARS)
 LOCAL_MODULE := com.qualcomm.location
 LOCAL_MODULE_OWNER := zuk
 LOCAL_SRC_FILES := proprietary/priv-app/com.qualcomm.location/com.qualcomm.location.apk
@@ -269,10 +237,22 @@ LOCAL_PROPRIETARY_MODULE := true
 include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
-LOCAL_MODULE := libsdm-disp-apis
+LOCAL_MODULE := libsdm-disp-vndapis
 LOCAL_MODULE_OWNER := zuk
-LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libsdm-disp-apis.so
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libsdm-disp-apis.so
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libsdm-disp-vndapis.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libsdm-disp-vndapis.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_PROPRIETARY_MODULE := true
+include \$(BUILD_PREBUILT)
+
+include \$(CLEAR_VARS)
+LOCAL_MODULE := libgpustats
+LOCAL_MODULE_OWNER := zuk
+LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libgpustats.so
+LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libgpustats.so
 LOCAL_MULTILIB := both
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
