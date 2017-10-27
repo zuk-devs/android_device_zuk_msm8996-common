@@ -1,4 +1,0 @@
-subdirs = [
-    "z2_plus",
-    "provider",
-]
