@@ -204,7 +204,6 @@ vendor/lib/libtsvideoprocess.so
 vendor/lib/libmmcamera_ov8856.so
 vendor/lib/libchromatix_s5k2m8sx_default_video.so
 vendor/lib/libchromatix_ov8865_hfr_90.so
-vendor/lib/libHui.so
 vendor/lib/libdpmfdmgr.so
 vendor/lib/libmmcamera_isp_bpc47.so
 vendor/lib/libchromatix_s5k2m8sx_hfr_60_dw9767.so
@@ -319,7 +318,6 @@ vendor/lib/libcne.so
 vendor/lib/libmmcamera_hvx_add_constant.so
 vendor/lib/libmmcamera_isp_scaler_video46.so
 vendor/lib/libtzdrmgenprov.so
-vendor/lib/libHu.so
 vendor/lib/libvpphvx.so
 vendor/lib/libmmcamera_isp_fovcrop_viewfinder46.so
 vendor/lib/libdiag.so
