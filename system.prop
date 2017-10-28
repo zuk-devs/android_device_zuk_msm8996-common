@@ -65,7 +65,7 @@ ro.qcom.ad.sensortype=2
 persist.qfp=false
 
 # Flip panel
-ro.sf.hwrotation=180
+ro.panel.mountflip=3
 
 # Google
 ro.opa.eligible_device=true
