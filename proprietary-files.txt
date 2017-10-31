@@ -147,7 +147,7 @@ framework/ConnectivityExt.jar
 framework/com.qti.dpmframework.jar
 framework/tcmclient.jar
 framework/com.qti.location.sdk.jar
-framework/qcrilhook.jar
+-framework/qcrilhook.jar
 framework/dpmapi.jar
 framework/com.qti.snapdragon.sdk.display.jar
 framework/com.quicinc.cne.jar
@@ -171,7 +171,7 @@ lib64/lib_fpc_tac_shared.so
 lib64/vendor.display.postproc@1.0.so
 lib64/libloc_core.so
 lib64/libloc_eng.so
-lib64/libloc_api_v02.so
+-lib64/libloc_api_v02.so
 lib64/libextmedia_jni.so
 usr/idc/usf_tsc_ptr.idc
 usr/idc/usf_tsc_ext.idc
@@ -267,7 +267,7 @@ vendor/lib/libaudiodevarb.so
 vendor/lib/libNimsWrap.so
 vendor/lib/libsmwrapper.so
 vendor/lib/libmmcamera_ppbase_module.so
-vendor/lib/libgpustats.so
+-vendor/lib/libgpustats.so
 vendor/lib/libthermalclient.so
 vendor/lib/libchromatix_ov8865_cpp_us_chromatix.so
 vendor/lib/libchromatix_s5k2m8sx_liveshot.so
@@ -371,7 +371,7 @@ vendor/lib/lib-imsrcs.so
 vendor/lib/libqseed3.so
 vendor/lib/libmmcamera_sw2d_lib.so
 vendor/lib/libc2d30_bltlib.so
-vendor/lib/libtime_genoff.so
+-vendor/lib/libtime_genoff.so
 vendor/lib/libmmcamera_isp_abf47.so
 vendor/lib/libqdp.so
 vendor/lib/libchromatix_ov8865_cpp_preview.so
@@ -457,7 +457,7 @@ vendor/lib/libmmcamera_isp_color_xform_video46.so
 vendor/lib/libconnctrl.so
 vendor/lib/libmmcamera_pdafcamif.so
 vendor/lib/libchromatix_ov8865_common.so
-vendor/lib/libsdm-disp-vndapis.so
+-vendor/lib/libsdm-disp-vndapis.so
 vendor/lib/libmmcamera_pdaf.so
 vendor/lib/libprotobuf-cpp-Hlit.so
 vendor/lib/libgsl.so
@@ -564,7 +564,7 @@ vendor/lib64/libaudiodevarb.so
 vendor/lib64/librpmb.so
 vendor/lib64/libNimsWrap.so
 vendor/lib64/libconfigdb.so
-vendor/lib64/libgpustats.so
+-vendor/lib64/libgpustats.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libsettings.so
 vendor/lib64/libOmxAlacDec.so
@@ -630,7 +630,7 @@ vendor/lib64/lib-imsrcs.so
 vendor/lib64/libqseed3.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libtime_genoff.so
+-vendor/lib64/libtime_genoff.so
 vendor/lib64/libqdp.so
 vendor/lib64/libalarmservice_jni.so
 vendor/lib64/lib-imss.so
@@ -681,7 +681,7 @@ vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libqti-iop-client.so
 vendor/lib64/librs_adreno.so
 vendor/lib64/libconnctrl.so
-vendor/lib64/libsdm-disp-vndapis.so
+-vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libprotobuf-cpp-Hlit.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libgsl.so
@@ -737,3 +737,15 @@ vendor/etc/qcril_fancy.db
 vendor/etc/perf-profile3.conf
 vendor/etc/msm_irqbalance.conf
 vendor/qcril.db
+
+# APKs
+-app/datastatusnotification/datastatusnotification.apk
+-app/QtiTelephonyService/QtiTelephonyService.apk
+-app/shutdownlistener/shutdownlistener.apk
+-app/TimeService/TimeService.apk
+-priv-app/CNEService/CNEService.apk
+-priv-app/com.qualcomm.location/com.qualcomm.location.apk
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-vendor/app/colorservice/colorservice.apk
+-vendor/app/imssettings/imssettings.apk
+-vendor/app/ims/ims.apk
