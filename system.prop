@@ -83,7 +83,6 @@ persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
 
 # Hdmi
-persist.vendor.audio.speaker.prot.enable=true
 vendor.audio.hw.aac.encoder=true
 
 # HWUI properties

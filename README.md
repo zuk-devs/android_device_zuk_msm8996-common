@@ -1,1 +1,1 @@
-Device configuration for ZUK Z2
+Common device tree for ZUK msm8996 devices
