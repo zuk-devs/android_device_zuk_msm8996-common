@@ -22,6 +22,9 @@
 # definition file).
 #
 
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/zuk/msm8996-common/msm8996-common-vendor.mk)
+
 # Hidl HALs
 $(call inherit-product, $(LOCAL_PATH)/hidl.mk)
 
