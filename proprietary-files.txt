@@ -28,8 +28,11 @@ bin/dpmd
 bin/qseecomd
 bin/energy-awareness
 bin/btnvtool
+bin/xtwifi-client
+bin/xtwifi-inet-agent
 etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
+etc/xtra_root_cert.pem
 etc/firmware/a225_pm4.fw
 etc/firmware/a420_pm4.fw
 etc/firmware/a225_pfp.fw
@@ -133,6 +136,8 @@ etc/permissions/cneapiclient.xml
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 etc/permissions/dpmapi.xml
 etc/permissions/qcrilhook.xml
+etc/permissions/com.qualcomm.location.vzw_library.xml
+etc/permissions/izat.xt.srv.xml
 framework/ConnectivityExt.jar
 framework/com.qti.dpmframework.jar
 framework/tcmclient.jar
@@ -144,6 +149,8 @@ framework/com.quicinc.cne.jar
 framework/cneapiclient.jar
 framework/QtiTelephonyServicelibrary.jar
 framework/qti-telephony-common.jar
+framework/izat.xt.srv.jar
+framework/com.qualcomm.location.vzw_library.jar
 lib/libOmxVpp.so
 lib/vendor.display.color@1.0.so
 lib/libtfa98xx.so
@@ -159,8 +166,6 @@ lib64/libtfa98xx.so
 lib64/libloc_ds_api.so
 lib64/lib_fpc_tac_shared.so
 lib64/vendor.display.postproc@1.0.so
-lib64/libloc_core.so
-lib64/libloc_eng.so
 -lib64/libloc_api_v02.so
 lib64/libextmedia_jni.so
 usr/idc/usf_tsc_ptr.idc
@@ -476,7 +481,6 @@ vendor/lib64/libqc-opt.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/lib-imsxml.so
 vendor/lib64/libmmcamera_dbg.so
-vendor/lib64/libloc_xtra.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/libI420colorconvert.so
 vendor/lib64/libcneconn.so
