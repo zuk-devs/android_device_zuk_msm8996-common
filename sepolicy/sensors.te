@@ -1,4 +1,0 @@
-set_prop(sensors, diag_prop)
-allow sensors diag_device:chr_file { read write };
-allow sensors diag_device:chr_file open;
-allow sensors diag_device:chr_file ioctl;

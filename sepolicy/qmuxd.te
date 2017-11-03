@@ -1,4 +1,0 @@
-set_prop(qmuxd, diag_prop)
-allow qmuxd diag_device:chr_file { read write };
-allow qmuxd diag_device:chr_file open;
-allow qmuxd diag_device:chr_file ioctl;

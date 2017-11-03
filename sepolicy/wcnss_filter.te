@@ -1,2 +1,0 @@
-get_prop(wcnss_filter, diag_prop);
-allow wcnss_filter diag_device:chr_file { ioctl open read write };

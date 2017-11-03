@@ -1,4 +1,0 @@
-get_prop(surfaceflinger, diag_prop);
-allow surfaceflinger diag_device:chr_file { read write };
-allow surfaceflinger diag_device:chr_file open;
-allow surfaceflinger diag_device:chr_file ioctl;

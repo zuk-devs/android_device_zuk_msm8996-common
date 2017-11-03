@@ -1,5 +1,0 @@
-set_prop(ipacm-diag, diag_prop)
-set_prop(ipacm-diag, system_prop)
-allow ipacm-diag diag_device:chr_file { read write };
-allow ipacm-diag diag_device:chr_file open;
-allow ipacm-diag diag_device:chr_file ioctl;

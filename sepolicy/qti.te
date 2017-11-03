@@ -1,4 +1,0 @@
-set_prop(qti, diag_prop)
-allow qti diag_device:chr_file { read write };
-allow qti diag_device:chr_file open;
-allow qti diag_device:chr_file ioctl;
