@@ -1,0 +1,1 @@
+allow energyawareness sysfs:{ dir file } { read open getattr };

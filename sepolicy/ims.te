@@ -1,0 +1,1 @@
+allow ims ims:capability net_raw;

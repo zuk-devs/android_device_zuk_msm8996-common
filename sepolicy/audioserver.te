@@ -1,0 +1,2 @@
+allow audioserver socket_device:sock_file write;
+allow audioserver thermal-engine:unix_stream_socket connectto;

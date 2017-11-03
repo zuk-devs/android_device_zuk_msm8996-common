@@ -1,0 +1,2 @@
+allow init socket_device:sock_file { create unlink setattr };
+allow init proc_dirty_ratio:file write;
