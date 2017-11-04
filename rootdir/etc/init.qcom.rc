@@ -928,18 +928,6 @@ service netmgrd /system/bin/netmgrd
     group radio system wakelock
     writepid /dev/cpuset/system-background/tasks
 
-service ipacm-diag /system/bin/ipacm-diag
-    class main
-    user radio
-    socket ipacm_log_file dgram 660 radio radio
-    group radio diag
-
-service ipacm /system/vendor/bin/ipacm
-    class main
-    user radio
-    group radio inet
-    writepid /dev/cpuset/system-background/tasks
-
 service qti /system/vendor/bin/qti
     class main
     user radio

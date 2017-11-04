@@ -20,7 +20,6 @@ bin/adsprpcd
 bin/netmgrd
 bin/ims_rtp_daemon
 bin/sensors.qcom
-bin/ipacm-diag
 bin/mm-qcamera-daemon
 bin/imsqmidaemon
 bin/dpmd
