@@ -505,7 +505,7 @@ on post-fs-data
     mkdir /data/nfc/param 0770 nfc nfc
 
     #Create IOP  deamon related dirs
-    mkdir /data/misc/iop 0770 root system
+    mkdir /data/vendor/iop 0770 root system
 
     # Mark the copy complete flag to not completed
     write /data/misc/radio/copy_complete 0
@@ -714,7 +714,7 @@ service iop /system/vendor/bin/iop
 service qcomsysd /system/bin/qcom-system-daemon
     class main
     user root
-    group root oem_2901
+    group root diag
 
 service ssr_setup /system/bin/ssr_setup
     oneshot
@@ -798,12 +798,6 @@ service cnd /system/vendor/bin/cnd
     group root wakelock
     writepid /dev/cpuset/system-background/tasks
 
-service dpmd /system/vendor/bin/dpmd
-    class late_start
-    socket dpmd stream 660 root system
-    group system readproc
-    writepid /dev/cpuset/system-background/tasks
-
 service irsc_util /system/vendor/bin/irsc_util "/etc/sec_config"
     class core
     user root
@@ -829,36 +823,8 @@ on property:wc_transport.start_hci=false
 service start_hci_filter /system/vendor/bin/wcnss_filter
     class late_start
     user bluetooth
-    group bluetooth oem_2901
-    disabled
-on property:wc_transport.start_root=true
-    start hci_filter_root
-
-on property:wc_transport.start_root=false
-    stop hci_filter_root
-
-service hci_filter_root /system/bin/wcnss_filter
-    class late_start
-    user bluetooth
-    group bluetooth diag system
-    disabled
-
-service config_bt_addr /system/vendor/bin/btnvtool -O
-    class core
-    user bluetooth
-    group bluetooth radio
-    oneshot
-
-on property:wc_transport.start_root=true
-    start hci_filter_root
-
-on property:wc_transport.start_root=false
-    stop hci_filter_root
-
-service hci_filter_root /system/bin/wcnss_filter
-    class late_start
-    user bluetooth
-    group bluetooth oem_2901 system
+    group bluetooth diag system wakelock
+    seclabel u:r:bluetooth:s0
     disabled
 
 on property:bluetooth.hciattach=true
@@ -891,33 +857,27 @@ service btsnoop /system/bin/btsnoop
 service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     class late_start
     user root
-    group bluetooth net_bt_admin misc net_bt_stack oem_2901 net_bt
+    group bluetooth net_bt_admin misc net_bt_stack diag net_bt
     disabled
     oneshot
 
-service bridgemgrd /system/bin/bridgemgrd
-    class late_start
-    user radio
-    group radio oem_2901
-    disabled
-
 service port-bridge /system/vendor/bin/port-bridge
     class main
-    user radio
+    user radio system
     group radio system inet
     oneshot
 
 service qmiproxy /system/bin/qmiproxy
     class main
     user radio
-    group radio oem_2901
+    group radio diag
     disabled
 
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/vendor/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps nfc oem_2901 wakelock
+    group radio audio bluetooth gps nfc diag
     writepid /dev/cpuset/system-background/tasks
 
 service netmgrd /system/vendor/bin/netmgrd
@@ -927,20 +887,22 @@ service netmgrd /system/vendor/bin/netmgrd
 
 service ipacm-diag /system/vendor/bin/ipacm-diag
     class main
-    user system
-    socket ipacm_log_file dgram 660 system net_admin
-    group net_admin oem_2901
+    user radio
+    socket ipacm_log_file dgram 660 radio radio
+    group radio diag
+    disabled
 
-service ipacm /system/bin/ipacm
+service ipacm /system/vendor/bin/ipacm
     class main
-    user net_admin
-    group net_admin inet
+    user radio
+    group radio inet
+    disabled
     writepid /dev/cpuset/system-background/tasks
 
 service qti /system/vendor/bin/qti
     class main
     user radio
-    group radio net_raw oem_2901 usb net_admin
+    group radio net_raw diag usb net_admin
     writepid /dev/cpuset/system-background/tasks
 
 service sensors /system/vendor/bin/sensors.qcom
@@ -1028,9 +990,9 @@ on property:sys.shutdown.requested=*
     stop cnss-daemon
 
 service loc_launcher /system/vendor/bin/loc_launcher
-    # loc_launcher will start as root and set its uid to gps
+    #loc_launcher will start as root and set its uid to gps
     class late_start
-    group gps inet oem_2901 wifi
+    group gps inet diag wifi
     writepid /dev/cpuset/system-background/tasks
 
 service drmdiag /system/bin/drmdiagapp
@@ -1080,8 +1042,10 @@ service battery_monitor /system/bin/battery_monitor
 
 service ril-daemon2 /vendor/bin/hw/rild -c 2
     class main
+    socket rild2 stream 660 root radio
+    socket rild-debug2 stream 660 radio system
     user radio
-    group radio cache inet misc audio log oem_2901 net_raw wifi compass
+    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service usb_uicc_daemon /system/bin/usb_uicc_client
@@ -1140,17 +1104,17 @@ on property:sys.qbcharger.enable=true
 on property:sys.qbcharger.enable=false
     stop qbcharger
 
-service diag_mdlog_start /system/bin/diag_mdlog -c
+service diag_mdlog_start /system/bin/diag_mdlog
     class late_start
     user shell
-    group system oem_2901 sdcard_rw sdcard_r media_rw
+    group system diag sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 
 service diag_mdlog_stop /system/bin/diag_mdlog -k
     class late_start
     user shell
-    group system oem_2901 sdcard_rw sdcard_r media_rw
+    group system diag sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 
