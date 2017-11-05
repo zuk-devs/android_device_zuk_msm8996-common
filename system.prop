@@ -28,10 +28,6 @@ ro.bluetooth.emb_wp_mode=true
 ro.bluetooth.wipower=true
 
 # Camera
-persist.camera.imglib.fddsp=1
-persist.camera.llc=1
-persist.camera.llnoise=1
-persist.camera.stats.test=0
 camera.disable_zsl_mode=1
 
 # CNE
