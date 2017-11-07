@@ -28,6 +28,9 @@ ro.bluetooth.emb_wp_mode=true
 ro.bluetooth.wipower=true
 
 # Camera
+persist.camera.preview.ubwc=0
+persist.camera.video.ubwc=0
+ro.persist.qcapb=1
 camera.disable_zsl_mode=1
 
 # CNE
