@@ -521,7 +521,7 @@ on post-fs-data
     chmod 0660 /data/misc/radio/db_check_done
 
 # start camera server as daemon
-service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
+service qcamerasvr /system/bin/mm-qcamera-daemon
     class main
     user camera
     group camera system inet input graphics
@@ -533,13 +533,13 @@ service qvop-daemon /system/bin/qvop-daemon
     group system drmrpc
 
 # start up peripheral manager
-service per_mgr system/vendor/bin/pm-service
+service per_mgr system/bin/pm-service
     class late_start
     user system
     group system
     writepid /dev/cpuset/system-background/tasks
 
-service per_proxy /system/vendor/bin/pm-proxy
+service per_proxy /system/bin/pm-proxy
     class late_start
     user system
     group system
@@ -552,7 +552,7 @@ on property:init.svc.per_mgr=running
 on property:sys.shutdown.requested=*
     stop per_proxy
 
-service qseecomd /system/vendor/bin/qseecomd
+service qseecomd /system/bin/qseecomd
    class core
    user root
    group root
@@ -578,13 +578,13 @@ service thermal-engine /system/vendor/bin/thermal-engine
    group root
    writepid /dev/cpuset/system-background/tasks
 
-service time_daemon /system/vendor/bin/time_daemon
+service time_daemon /system/bin/time_daemon
    class late_start
    user root
    group root
    writepid /dev/cpuset/system-background/tasks
 
-service adsprpcd /system/vendor/bin/adsprpcd
+service adsprpcd /system/bin/adsprpcd
    class main
    user media
    group media
@@ -594,14 +594,14 @@ service audiod /system/bin/audiod
    user system
    group system
 
-service imsqmidaemon /system/vendor/bin/imsqmidaemon
+service imsqmidaemon /system/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
     group radio net_raw log diag
     writepid /dev/cpuset/system-background/tasks
 
-service imsdatadaemon /system/vendor/bin/imsdatadaemon
+service imsdatadaemon /system/bin/imsdatadaemon
     class main
     user system
     socket ims_datad stream 0660 system radio
@@ -623,14 +623,14 @@ on property:persist.sys.pd_enable=0
 on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
 
-service ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
+service ims_rtp_daemon /system/bin/ims_rtp_daemon
     class main
     user system
     socket ims_rtpd stream 0660 system radio
     group radio net_raw diag inet log
     disabled
 
-service imscmservice /system/vendor/bin/imscmservice
+service imscmservice /system/bin/imscmservice
     class main
     user system
     group radio net_raw diag diag log
@@ -692,7 +692,7 @@ service readmac /system/bin/readmac
     group root
     oneshot
 
-service energy-awareness /system/vendor/bin/energy-awareness
+service energy-awareness /system/bin/energy-awareness
     class main
     user root
     group system
@@ -784,24 +784,24 @@ on property:vold.decrypt=trigger_restart_framework
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
-service cnd /system/vendor/bin/cnd
+service cnd /system/bin/cnd
     class main
     socket cnd stream 660 root inet
     group root wakelock
     writepid /dev/cpuset/system-background/tasks
 
-service irsc_util /system/vendor/bin/irsc_util "/etc/sec_config"
+service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class core
     user root
     oneshot
 
-service rmt_storage /system/vendor/bin/rmt_storage
+service rmt_storage /system/bin/rmt_storage
     class core
     user root
     group system wakelock
     writepid /dev/cpuset/system-background/tasks
 
-service tftp_server /system/vendor/bin/tftp_server
+service tftp_server /system/bin/tftp_server
     class main
     user root
     writepid /dev/cpuset/system-background/tasks
@@ -812,7 +812,7 @@ on property:wc_transport.start_hci=true
 on property:wc_transport.start_hci=false
     stop start_hci_filter
 
-service start_hci_filter /system/vendor/bin/wcnss_filter
+service start_hci_filter /system/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth diag system wakelock
@@ -853,7 +853,7 @@ service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     disabled
     oneshot
 
-service port-bridge /system/vendor/bin/port-bridge
+service port-bridge /system/bin/port-bridge
     class main
     user radio system
     group radio system inet
@@ -866,18 +866,18 @@ service qmiproxy /system/bin/qmiproxy
     disabled
 
 # QMUX must be in multiple groups to support external process connections
-service qmuxd /system/vendor/bin/qmuxd
+service qmuxd /system/bin/qmuxd
     class main
     user root
     group radio audio bluetooth gps nfc diag
     writepid /dev/cpuset/system-background/tasks
 
-service netmgrd /system/vendor/bin/netmgrd
+service netmgrd /system/bin/netmgrd
     class main
     group radio system wakelock
     writepid /dev/cpuset/system-background/tasks
 
-service ipacm-diag /system/vendor/bin/ipacm-diag
+service ipacm-diag /system/bin/ipacm-diag
     class main
     user radio
     socket ipacm_log_file dgram 660 radio radio
@@ -897,7 +897,7 @@ service qti /system/vendor/bin/qti
     group radio net_raw diag usb net_admin
     writepid /dev/cpuset/system-background/tasks
 
-service sensors /system/vendor/bin/sensors.qcom
+service sensors /system/bin/sensors.qcom
     class core
     user root
     group root wakelock
@@ -968,7 +968,7 @@ service wifi_fccutild /system/bin/wifi_fccutild
     disabled
     oneshot
 
-service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
+service cnss-daemon /system/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
@@ -981,8 +981,8 @@ service cnss-sh /system/bin/init.cnss.sh
 on property:sys.shutdown.requested=*
     stop cnss-daemon
 
-service loc_launcher /system/vendor/bin/loc_launcher
-    #loc_launcher will start as root and set its uid to gps
+service loc_launcher /system/bin/loc_launcher
+    # loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet diag wifi
     writepid /dev/cpuset/system-background/tasks
@@ -1115,7 +1115,7 @@ service vm_bms /system/bin/vm_bms
     group root
     disabled
 
-service msm_irqbalance /system/vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
+service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
     class main
     user root
     group root
