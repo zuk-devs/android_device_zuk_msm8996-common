@@ -871,13 +871,6 @@ on property:bluetooth.hciattach=true
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off
 
-service hciattach_ath3k /system/bin/sh /system/etc/init.ath3k.bt.sh
-    class late_start
-    user bluetooth
-    group system bluetooth net_bt_admin misc
-    disabled
-    oneshot
-
 service bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
     class late_start
     user bluetooth
@@ -972,13 +965,6 @@ on property:ro.data.large_tcp_window_size=true
 on property:sys.sysctl.tcp_adv_win_scale=*
     write /proc/sys/net/ipv4/tcp_adv_win_scale ${sys.sysctl.tcp_adv_win_scale}
 
-service btwlancoex /system/bin/sh /system/etc/init.qcom.coex.sh
-    class late_start
-    user bluetooth
-    group bluetooth net_bt_admin inet net_admin net_raw
-    disabled
-    oneshot
-
 service amp_init /system/bin/amploader -i
     class late_start
     user root
@@ -1037,11 +1023,6 @@ service cnss-daemon /system/bin/cnss-daemon -n -l
     user system
     group system inet net_admin wifi
 
-service cnss-sh /system/bin/init.cnss.sh
-    class core
-    user system
-    oneshot
-
 on property:sys.shutdown.requested=*
     stop cnss-daemon
 
@@ -1050,13 +1031,6 @@ service loc_launcher /system/bin/loc_launcher
     class late_start
     group gps inet oem_2901 wifi
     writepid /dev/cpuset/system-background/tasks
-
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
-    class late_start
-    user system
-    group system
-    disabled
-    oneshot
 
 service drmdiag /system/bin/drmdiagapp
     class late_start
@@ -1068,12 +1042,6 @@ on property:drmdiag.load=1
     start drmdiag
 on property:drmdiag.load=0
     stop drmdiag
-
-service config-zram /system/bin/sh /system/etc/init.qcom.zram.sh
-   class late_start
-   user root
-   disabled
-   oneshot
 
 on property:sys.boot_completed=1
     start config-zram
@@ -1115,12 +1083,6 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
     group radio cache inet misc audio log oem_2901 net_raw wifi compass
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
-service usb_uicc_enable /system/bin/sh /system/etc/init.qcom.uicc.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-
 service usb_uicc_daemon /system/bin/usb_uicc_client
     class main
     user system
@@ -1138,12 +1100,6 @@ service profiler_daemon /system/bin/profiler_daemon
     user root
     group root
     disabled
-
-service hcidump /system/bin/sh /system/etc/hcidump.sh
-    user bluetooth
-    group bluetooth system net_bt_admin net_admin
-    disabled
-    oneshot
 
 service charger /charger
     class charger
@@ -1215,27 +1171,6 @@ service wfdservice /system/bin/wfdservice
     group audio camera inet net_bt_stack drmrpc media_rw media input net_admin
     # removed these because of limit of 12 groups
     #graphics net_bt net_bt_admin bluetooth
-
-# Coresight early boot service
-service cs-early-boot /system/bin/sh /persist/coresight/qdss.agent.sh early-boot /system/etc/init.qcom.debug.sh
-    class core
-    user root
-    oneshot
-
-# Coresight post boot servive
-service cs-post-boot /system/bin/sh /persist/coresight/qdss.agent.sh
-    user root
-    disabled
-    oneshot
-
-on property:sys.boot_completed=1
-    start cs-post-boot
-
-on property:sys.dbg.coresight.enable=1
-    write /persist/coresight/enable 1
-
-on property:sys.dbg.coresight.enable=0
-    write /persist/coresight/enable 0
 
 service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
     class late_start
