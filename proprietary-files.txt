@@ -27,7 +27,6 @@ bin/dpmd
 bin/qseecomd
 bin/energy-awareness
 bin/btnvtool
-bin/xtwifi-client
 bin/xtwifi-inet-agent
 etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
@@ -149,6 +148,7 @@ lib64/libextmedia_jni.so
 usr/idc/usf_tsc_ptr.idc
 usr/idc/usf_tsc_ext.idc
 usr/idc/usf_tsc.idc
+vendor/bin/xtwifi-client
 vendor/bin/pd-mapper
 vendor/bin/qseeproxydaemon
 vendor/bin/qti
