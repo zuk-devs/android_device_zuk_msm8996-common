@@ -6,7 +6,7 @@ on boot
     # selinux nodes, hide permissive state
     chmod 0640 /sys/fs/selinux/enforce
     chmod 0440 /sys/fs/selinux/policy
-   
+
     # Props
     setprop ro.boot.verifiedbootstate green
     setprop ro.boot.flash.locked 1
@@ -17,4 +17,3 @@ on boot
     setprop ro.secure 1
     setprop ro.build.type user
     setprop ro.build.tags release-keys
-    setprop ro.build.selinux 0
