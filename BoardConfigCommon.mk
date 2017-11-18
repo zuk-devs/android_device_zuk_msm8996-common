@@ -140,6 +140,9 @@ SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/config.fs
 
+# Hidl manifests
+DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
+
 # Init
 # TARGET_INIT_VENDOR_LIB := libinit_msm8996
 # TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8996
