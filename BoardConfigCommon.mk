@@ -184,9 +184,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
-# Timeservice
-BOARD_USES_QC_TIME_SERVICES := true
-
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
