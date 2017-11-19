@@ -9,11 +9,17 @@ caps: BLOCK_SUSPEND
 
 [system/bin/cnss-daemon]
 mode: 0755
+user: AID_BLUETOOTH
+group: AID_BLUETOOTH
+caps: NET_BIND_SERVICE
+
+[system/bin/pm-service]
+mode: 0755
 user: AID_SYSTEM
 group: AID_SYSTEM
 caps: NET_BIND_SERVICE
 
-[system/bin/pm-service]
+[vendor/bin/pd-mapper]
 mode: 0755
 user: AID_SYSTEM
 group: AID_SYSTEM
@@ -30,6 +36,12 @@ mode: 0755
 user: AID_SYSTEM
 group: AID_RADIO
 caps: NET_BIND_SERVICE
+
+[system/bin/cnd]
+mode: 0755
+user: AID_SYSTEM
+group: AID_SYSTEM
+caps: NET_BIND_SERVICE BLOCK_SUSPEND NET_ADMIN
 
 [system/bin/xtwifi-client]
 mode: 0755
