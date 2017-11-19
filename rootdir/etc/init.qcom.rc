@@ -709,7 +709,7 @@ service mdtpd /system/vendor/bin/mdtpd
 service qcomsysd /system/bin/qcom-system-daemon
     class main
     user root
-    group root oem_2901
+    group root diag
 
 service ssr_setup /system/bin/ssr_setup
     oneshot
@@ -824,7 +824,8 @@ on property:wc_transport.start_hci=false
 service start_hci_filter /system/bin/wcnss_filter
     class late_start
     user bluetooth
-    group bluetooth oem_2901
+    group bluetooth diag system wakelock
+    seclabel u:r:bluetooth:s0
     disabled
 on property:wc_transport.start_root=true
     start hci_filter_root
@@ -853,7 +854,7 @@ on property:wc_transport.start_root=false
 service hci_filter_root /system/bin/wcnss_filter
     class late_start
     user bluetooth
-    group bluetooth oem_2901 system
+    group bluetooth diag system
     disabled
 
 service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
@@ -898,33 +899,27 @@ service btsnoop /system/bin/btsnoop
 service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     class late_start
     user root
-    group bluetooth net_bt_admin misc net_bt_stack oem_2901 net_bt
+    group bluetooth net_bt_admin misc net_bt_stack diag net_bt
     disabled
     oneshot
 
-service bridgemgrd /system/bin/bridgemgrd
-    class late_start
-    user radio
-    group radio oem_2901
-    disabled
-
 service port-bridge /system/bin/port-bridge
     class main
-    user radio
+    user radio system
     group radio system inet
     oneshot
 
 service qmiproxy /system/bin/qmiproxy
     class main
     user radio
-    group radio oem_2901
+    group radio diag
     disabled
 
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps nfc oem_2901 wakelock
+    group radio audio bluetooth gps nfc diag
     writepid /dev/cpuset/system-background/tasks
 
 service netmgrd /system/bin/netmgrd
@@ -934,20 +929,20 @@ service netmgrd /system/bin/netmgrd
 
 service ipacm-diag /system/bin/ipacm-diag
     class main
-    user system
-    socket ipacm_log_file dgram 660 system net_admin
-    group net_admin oem_2901
+    user radio
+    socket ipacm_log_file dgram 660 radio radio
+    group radio diag
 
 service ipacm /system/vendor/bin/ipacm
     class main
-    user net_admin
-    group net_admin inet
+    user radio
+    group radio inet
     writepid /dev/cpuset/system-background/tasks
 
 service qti /system/vendor/bin/qti
     class main
     user radio
-    group radio net_raw oem_2901 usb net_admin
+    group radio net_raw diag usb net_admin
     writepid /dev/cpuset/system-background/tasks
 
 service sensors /system/bin/sensors.qcom
@@ -1032,7 +1027,7 @@ on property:sys.shutdown.requested=*
 service loc_launcher /system/bin/loc_launcher
     # loc_launcher will start as root and set its uid to gps
     class late_start
-    group gps inet oem_2901 wifi
+    group gps inet diag wifi
     writepid /dev/cpuset/system-background/tasks
 
 service drmdiag /system/bin/drmdiagapp
@@ -1083,7 +1078,7 @@ service battery_monitor /system/bin/battery_monitor
 service ril-daemon2 /vendor/bin/hw/rild -c 2
     class main
     user radio
-    group radio cache inet misc audio log oem_2901 net_raw wifi compass
+    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service usb_uicc_daemon /system/bin/usb_uicc_client
@@ -1145,14 +1140,14 @@ on property:sys.qbcharger.enable=false
 service diag_mdlog_start /system/bin/diag_mdlog -c
     class late_start
     user shell
-    group system oem_2901 sdcard_rw sdcard_r media_rw
+    group system diag sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 
 service diag_mdlog_stop /system/bin/diag_mdlog -k
     class late_start
     user shell
-    group system oem_2901 sdcard_rw sdcard_r media_rw
+    group system diag sdcard_rw sdcard_r media_rw
     disabled
     oneshot
 
