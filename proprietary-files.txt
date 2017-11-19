@@ -382,7 +382,6 @@ vendor/lib/libconnctrl.so
 vendor/lib/libmmcamera_pdafcamif.so
 -vendor/lib/libsdm-disp-vndapis.so
 vendor/lib/libmmcamera_pdaf.so
-vendor/lib/libprotobuf-cpp-Hlit.so
 vendor/lib/libgsl.so
 vendor/lib/libwqe.so
 vendor/lib/libRSDriver_adreno.so
@@ -443,7 +442,6 @@ vendor/lib64/libaudcal.so
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libdpmfdmgr.so
-vendor/lib64/libprotobuf-cpp-fool.so
 vendor/lib64/libxtwifi_ulp_adaptor.so
 vendor/lib64/lib-rtpcore.so
 vendor/lib64/liblowi_client.so
