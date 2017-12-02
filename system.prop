@@ -171,6 +171,3 @@ ro.allow.mock.location=1
 persist.service.adb.enable=1
 persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
-
-# SafetyNet
-ro.boot.verifiedbootstate=green
