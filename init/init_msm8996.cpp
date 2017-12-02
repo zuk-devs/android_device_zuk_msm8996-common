@@ -32,15 +32,9 @@
 #include <stdlib.h>
 #include <sys/sysinfo.h>
 #include <cutils/properties.h>
-#include <android-base/properties.h>
-#include "property_service.h"
 #include "vendor_init.h"
-
-using android::base::GetProperty;
-using android::base::SetProperty;
-
-std::string heapminfree;
-std::string heapmaxfree;
+#include "log.h"
+#include "util.h"
 
 static void init_alarm_boot_properties()
 {
@@ -66,41 +60,23 @@ static void init_alarm_boot_properties()
      * 7 -> CBLPWR_N pin toggled (for external power supply)
      * 8 -> KPDPWR_N pin toggled (power key pressed)
      */
-    SetProperty("ro.alarm_boot", boot_reason == 3 ? "true" : "false");
-}
-
-void check_ram()
-{
-    struct sysinfo sys;
-
-    sysinfo(&sys);
-
-    if (sys.totalram > 3072ull * 1024 * 1024) {
-        // from - phone-xxxhdpi-4096-dalvik-heap.mk
-        heapminfree = "4m";
-        heapmaxfree = "16m";
-    } else {
-        // from - phone-xxhdpi-3072-dalvik-heap.mk
-        heapminfree = "512k";
-        heapmaxfree = "8m";
-    }
+     if (boot_reason == 3) {
+        property_set("ro.alarm_boot", "true");
+     } else {
+        property_set("ro.alarm_boot", "false");
+     }
 }
 
 void vendor_load_properties() {
-    std::string platform;
-    
-    platform = GetProperty("ro.board.platform", "");
-    if (platform != ANDROID_TARGET)
-        return;
-    
-    check_ram();
+    char device[PROP_VALUE_MAX];
+    char rf_version[PROP_VALUE_MAX];
+    int rc;
 
-    SetProperty("dalvik.vm.heapstartsize", "8m");
-    SetProperty("dalvik.vm.heapgrowthlimit", "256m");
-    SetProperty("dalvik.vm.heapsize", "512m");
-    SetProperty("dalvik.vm.heaptargetutilization", "0.75");
-    SetProperty("dalvik.vm.heapminfree", heapminfree);
-    SetProperty("dalvik.vm.heapmaxfree", heapmaxfree);
+    rc = property_get("ro.product.device", device, NULL);
+    if (!rc || strncmp(device, "z2_plus", PROP_VALUE_MAX))
+        return;
+
+        property_set("ro.product.model", "Z2 Plus");
 
     init_alarm_boot_properties();
 }
