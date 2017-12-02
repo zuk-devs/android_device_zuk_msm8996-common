@@ -31,7 +31,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/sysinfo.h>
-#include <cutils/properties.h>
+#include "property_service.h"
 #include "vendor_init.h"
 #include "log.h"
 #include "util.h"
@@ -87,18 +87,15 @@ void check_device()
 	}
 }
 
-void vendor_load_properties() {
-    char device[PROP_VALUE_MAX];
-    char rf_version[PROP_VALUE_MAX];
-    int rc;
+void vendor_load_properties() 
+{
+    std::string platform;
 
-    rc = property_get("ro.product.device", device, NULL);
-    if (!rc || strncmp(device, "z2_plus", PROP_VALUE_MAX))
+    platform = property_get("ro.board.platform");
+    if (platform != ANDROID_TARGET)
         return;
 
-        property_set("ro.product.model", "Z2 Plus");
-
-	check_device();
+    check_device();
 
 	property_set("dalvik.vm.heapstartsize", "8m");
 	property_set("dalvik.vm.heapgrowthlimit", "384m");
