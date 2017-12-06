@@ -260,6 +260,8 @@ on boot
     mkdir /persist/misc 0770 system system
     mkdir /persist/alarm 0770 system system
     mkdir /persist/time 0770 system system
+    mkdir /persist/rfs 0770 system system
+    mkdir /persist/hlos_rfs 0770 system system
 
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
@@ -378,6 +380,10 @@ on post-fs-data
     chown media_rw media_rw /data/media
 
     mkdir /data/misc/ipa 0700 net_admin net_admin
+
+    # Create directory for tftp
+    mkdir /data/vendor/tombstones 0771 system system
+    mkdir /data/vendor/tombstones/rfs 0771 system system
 
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
 

@@ -46,7 +46,7 @@ $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MSM ADSP folder structure: $@"
 	@rm -rf $@/*
 	@mkdir -p $(dir $@)/readonly
-	$(hide) ln -sf /data/tombstones/lpass $@/ramdumps
+	$(hide) ln -sf /data/vendor/tombstones/lpass $@/ramdumps
 	$(hide) ln -sf /persist/rfs/msm/adsp $@/readwrite
 	$(hide) ln -sf /persist/rfs/shared $@/shared
 	$(hide) ln -sf /persist/hlos_rfs/shared $@/hlos
@@ -57,7 +57,7 @@ $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MSM MPSS folder structure: $@"
 	@rm -rf $@/*
 	@mkdir -p $(dir $@)/readonly
-	$(hide) ln -sf /data/tombstones/modem $@/ramdumps
+	$(hide) ln -sf /data/vendor/tombstones/modem $@/ramdumps
 	$(hide) ln -sf /persist/rfs/msm/mpss $@/readwrite
 	$(hide) ln -sf /persist/rfs/shared $@/shared
 	$(hide) ln -sf /persist/hlos_rfs/shared $@/hlos
