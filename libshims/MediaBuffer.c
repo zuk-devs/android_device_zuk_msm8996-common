@@ -17,3 +17,5 @@
 /* TODO: Actually provide implementations for these functions! */
 
 void _ZNK7android11MediaBuffer8refcountEv() {}
+void _ZN7android13GraphicBufferC1EP19ANativeWindowBufferb() {}
+void _ZN7android11BufferQueue17createBufferQueueEPNS_2spINS_22IGraphicBufferProducerEEEPNS1_INS_22IGraphicBufferConsumerEEERKNS1_INS_19IGraphicBufferAllocEEE () {}
