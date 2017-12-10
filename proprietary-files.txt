@@ -633,7 +633,6 @@ vendor/lib64/libvoice-svc.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libStDrvInt.so
 vendor/lib64/sensors.oem.so
-vendor/lib64/libprotobuf-cpp-shit.so
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/etc/RIDL/qdss.cfg
 vendor/etc/sensors/hals.conf
