@@ -710,10 +710,10 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so|193bd9cc89f6ff208ec5e5fa62e553e7f797c485
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so|1d948a6c9b1993b8d8543b7a778b27d3f9408fb0
 
-# Widevine DRM
-vendor/bin/hw/android.hardware.drm@1.0-service.widevine
-vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
-vendor/lib/libwvhidl.so
+# Widevine DRM - from marlin - OPM1.171019.011
+vendor/bin/hw/android.hardware.drm@1.0-service.widevine|fd6e14710c196fdd4131afe2ce10c4a5be1b309c
+vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
+vendor/lib/libwvhidl.so|f7288f7a7ed6765bd1d80d639a0aeb0c31eda795
 
 # WiFi
 vendor/bin/cnss-daemon
