@@ -92,6 +92,9 @@ mm.enable.smoothstreaming=true
 vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 
+# Miracast
+persist.debug.wfd.enable=1
+
 # NITZ
 persist.rild.nitz_plmn=""
 persist.rild.nitz_long_ons_0=""
