@@ -14,7 +14,6 @@ bin/imsdatadaemon
 bin/pm-service
 bin/wcnss_filter
 bin/time_daemon
-bin/loc_launcher
 bin/qmuxd
 bin/adsprpcd
 bin/netmgrd
@@ -101,23 +100,18 @@ etc/cne/andsfCne.xml
 etc/dhcpcd/dhcpcd.conf
 etc/camera/ov8865_chromatix.xml
 etc/sensors/sensor_def_qcomdev.conf
-etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.quicinc.cne.xml
 etc/permissions/telephonyservice.xml
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/ConnectivityExt.xml
 etc/permissions/qti_permissions.xml
-etc/permissions/com.qualcomm.location.xml
 etc/permissions/cneapiclient.xml
 etc/permissions/com.qti.snapdragon.sdk.display.xml
 etc/permissions/dpmapi.xml
 etc/permissions/qcrilhook.xml
-etc/permissions/com.qualcomm.location.vzw_library.xml
-etc/permissions/izat.xt.srv.xml
 framework/ConnectivityExt.jar
 framework/com.qti.dpmframework.jar
 framework/tcmclient.jar
-framework/com.qti.location.sdk.jar
 -framework/qcrilhook.jar
 framework/dpmapi.jar
 framework/com.qti.snapdragon.sdk.display.jar
@@ -125,8 +119,6 @@ framework/com.quicinc.cne.jar
 framework/cneapiclient.jar
 framework/QtiTelephonyServicelibrary.jar
 framework/qti-telephony-common.jar
-framework/izat.xt.srv.jar
-framework/com.qualcomm.location.vzw_library.jar
 lib/libOmxVpp.so
 lib/vendor.display.color@1.0.so
 lib/libtfa98xx.so
@@ -139,10 +131,8 @@ lib/libvpplibrary.so
 lib/libqomx_core.so
 lib64/vendor.display.color@1.0.so
 lib64/libtfa98xx.so
-lib64/libloc_ds_api.so
 lib64/lib_fpc_tac_shared.so
 lib64/vendor.display.postproc@1.0.so
--lib64/libloc_api_v02.so
 lib64/libextmedia_jni.so
 usr/idc/usf_tsc_ptr.idc
 usr/idc/usf_tsc_ext.idc
@@ -445,7 +435,6 @@ vendor/lib64/libxtwifi_ulp_adaptor.so
 vendor/lib64/lib-rtpcore.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/libslimclient.so
-vendor/lib64/libasn1crt.so
 vendor/lib64/libbtnv.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libqc-opt.so
@@ -458,14 +447,12 @@ vendor/lib64/libcneconn.so
 vendor/lib64/libqvop-service.so
 vendor/lib64/libdpmtcm.so
 vendor/lib64/libevent_observer.so
-vendor/lib64/libasn1crtx.so
 vendor/lib64/libmmcamera2_memleak.so
 vendor/lib64/lib-imsSDP.so
 vendor/lib64/vendor.display.color@1.0_vendor.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/lib_drplugin_server.so
 vendor/lib64/libsecureui.so
-vendor/lib64/libasn1cper.so
 vendor/lib64/lib-rcsjni.so
 vendor/lib64/libxml.so
 vendor/lib64/libFidoCryptoJNI.so
@@ -487,7 +474,6 @@ vendor/lib64/libidl.so
 vendor/lib64/libOmxEvrcDec.so
 vendor/lib64/libllvm-qgl.so
 vendor/lib64/vendor.display.postproc@1.0_vendor.so
-vendor/lib64/liblowi_wifihal_nl.so
 vendor/lib64/libimscamera_jni.so
 vendor/lib64/libSecureUILib.so
 vendor/lib64/libril-qc-qmi-1.so
@@ -606,7 +592,6 @@ vendor/lib64/libc2d30-a5xx.so
 vendor/lib64/lib-imsrcscmclient.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libdrmfs.so
-vendor/lib64/hw/flp.default.so
 vendor/lib64/hw/fingerprint.vendor.msm8996.so
 vendor/lib64/hw/gatekeeper.msm8996.so
 vendor/lib64/hw/vulkan.msm8996.so
@@ -619,7 +604,6 @@ vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libnetmgr.so
-vendor/lib64/libxt_native.so
 vendor/lib64/libdpmframework.so
 vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/lib-sec-disp.so
@@ -667,7 +651,6 @@ vendor/qcril.db
 -app/shutdownlistener/shutdownlistener.apk
 -app/TimeService/TimeService.apk
 -priv-app/CNEService/CNEService.apk
--priv-app/com.qualcomm.location/com.qualcomm.location.apk
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -vendor/app/colorservice/colorservice.apk
 -vendor/app/imssettings/imssettings.apk
@@ -710,3 +693,9 @@ vendor/lib64/libqti-util.so
 vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
+
+# GPS
+-vendor/lib64/libloc_api_v02.so
+vendor/lib64/libloc_ds_api.so
+vendor/bin/slim_daemon
+vendor/bin/loc_launcher
