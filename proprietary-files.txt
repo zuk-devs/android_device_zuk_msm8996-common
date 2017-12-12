@@ -498,7 +498,6 @@ vendor/lib64/libOmxApeDecSw.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libOmxApeDec.so
-vendor/lib64/libloc_ext.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqti_performance.so
 vendor/lib64/librilqmiservices.so
@@ -697,5 +696,11 @@ vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
 # GPS
 -vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_ds_api.so
+vendor/bin/hw/vendor.qti.gnss@1.0-service
 vendor/bin/slim_daemon
 vendor/bin/loc_launcher
+vendor/etc/init/vendor.qti.gnss@1.0-service.rc
+vendor/lib/hw/vendor.qti.gnss@1.0-impl.so
+vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so
+vendor/lib64/libloc_externalDr.so
+vendor/lib64/vendor.qti.gnss@1.0_vendor.so
