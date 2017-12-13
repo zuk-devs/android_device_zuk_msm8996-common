@@ -694,12 +694,15 @@ vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
 
 # GPS
+lib/vendor.qti.gnss@1.0.so
+lib64/vendor.qti.gnss@1.0.so
 -vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_ds_api.so
 vendor/bin/hw/vendor.qti.gnss@1.0-service
 vendor/bin/slim_daemon
 vendor/bin/loc_launcher
 vendor/etc/init/vendor.qti.gnss@1.0-service.rc
+vendor/lib/vendor.qti.gnss@1.0_vendor.so
 vendor/lib/hw/vendor.qti.gnss@1.0-impl.so
 vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so
 vendor/lib64/libloc_externalDr.so
