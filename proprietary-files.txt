@@ -282,7 +282,6 @@ vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/libadiertac.so
 vendor/lib/libmmcamera_isp_pedestal_correct46.so
 vendor/lib/libmmcamera2_is.so
-vendor/lib/libQtiTether.so
 vendor/lib/libmmcamera_tuning_lookup.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libOpenCL.so
@@ -309,7 +308,6 @@ vendor/lib/libmmcamera_faceproc2.so
 vendor/lib/libmmcamera_isp_gamma44.so
 vendor/lib/librs_adreno.so
 vendor/lib/libmmcamera_isp_color_xform_video46.so
-vendor/lib/libconnctrl.so
 vendor/lib/libmmcamera_pdafcamif.so
 -vendor/lib/libsdm-disp-vndapis.so
 vendor/lib/libmmcamera_pdaf.so
@@ -485,7 +483,6 @@ vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libmmcamera2_is.so
 vendor/lib64/liblqe.so
-vendor/lib64/libQtiTether.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libqisl.so
@@ -503,7 +500,6 @@ vendor/lib64/libscalar.so
 vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmm-disp-apis.so
 vendor/lib64/librs_adreno.so
-vendor/lib64/libconnctrl.so
 -vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libgsl.so
