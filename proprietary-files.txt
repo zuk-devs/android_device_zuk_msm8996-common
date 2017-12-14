@@ -119,7 +119,6 @@ framework/com.quicinc.cne.jar
 framework/cneapiclient.jar
 framework/QtiTelephonyServicelibrary.jar
 framework/qti-telephony-common.jar
-lib/libOmxVpp.so
 lib/vendor.display.color@1.0.so
 lib/libtfa98xx.so
 lib/vendor.display.postproc@1.0.so
@@ -127,7 +126,6 @@ lib/libmmjpeg_interface.so
 lib/libmmcamera_interface.so
 lib/libextmedia_jni.so
 lib/libmm-qcamera.so
-lib/libvpplibrary.so
 lib/libqomx_core.so
 lib64/vendor.display.color@1.0.so
 lib64/libtfa98xx.so
@@ -232,7 +230,6 @@ vendor/lib/libmmcamera_isp_color_correct46.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmcamera_isp_mesh_rolloff44.so
 vendor/lib/libmpbase.so
-vendor/lib/libmmosal.so
 vendor/lib/libtm_interface.so
 vendor/lib/lib-dplmedia.so
 vendor/lib/lib-imsvt.so
@@ -290,7 +287,6 @@ vendor/lib/libseemore.so
 vendor/lib/libsensor1.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libperipheral_client.so
-vendor/lib/libOmxMux.so
 vendor/lib/libacdbloader.so
 vendor/lib/libmmcamera_isp_clamp_viewfinder40.so
 vendor/lib/libacdbrtac.so
@@ -476,7 +472,6 @@ vendor/lib64/vendor.display.postproc@1.0_vendor.so
 vendor/lib64/libimscamera_jni.so
 vendor/lib64/libSecureUILib.so
 vendor/lib64/libril-qc-qmi-1.so
-vendor/lib64/libmmosal.so
 vendor/lib64/lib-dplmedia.so
 vendor/lib64/lib-imsvt.so
 vendor/lib64/libOmxWmaDec.so
@@ -517,7 +512,6 @@ vendor/lib64/libCommandSvc.so
 vendor/lib64/libqmi_cci.so
 vendor/lib64/libgdtap.so
 vendor/lib64/libperipheral_client.so
-vendor/lib64/libOmxMux.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/liblocationservice_glue.so
@@ -653,6 +647,15 @@ vendor/qcril.db
 -vendor/app/colorservice/colorservice.apk
 -vendor/app/imssettings/imssettings.apk
 -vendor/app/ims/ims.apk
+
+# OMX
+vendor/lib/libOmxAmrDec.so
+vendor/lib/libOmxVpp.so
+vendor/lib/libvpplibrary.so
+vendor/lib64/libOmxAmrDec.so
+vendor/lib64/libOmxVpp.so
+vendor/lib64/libvpplibrary.so
+vendor/lib64/libmm-color-convertor.so
 
 # Perf
 lib/libqti_performance.so
