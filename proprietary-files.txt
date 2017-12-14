@@ -13,7 +13,6 @@ bin/msm_irqbalance
 bin/imsdatadaemon
 bin/pm-service
 bin/wcnss_filter
-bin/time_daemon
 bin/qmuxd
 bin/adsprpcd
 bin/netmgrd
@@ -641,7 +640,6 @@ vendor/qcril.db
 -app/datastatusnotification/datastatusnotification.apk
 -app/QtiTelephonyService/QtiTelephonyService.apk
 -app/shutdownlistener/shutdownlistener.apk
--app/TimeService/TimeService.apk
 -priv-app/CNEService/CNEService.apk
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -vendor/app/colorservice/colorservice.apk
@@ -701,6 +699,10 @@ vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
 vendor/lib/libwvhidl.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib64/mediadrm/libwvdrmengine.so
+
+# Timeservices
+-vendor/app/TimeService/TimeService.apk
+vendor/bin/time_daemon
 
 # GPS
 lib/vendor.qti.gnss@1.0.so
