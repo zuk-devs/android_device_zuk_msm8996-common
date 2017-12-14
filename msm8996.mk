@@ -139,10 +139,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ZukDoze
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    fingerprint.msm8996
-
 # For config.fs
 PRODUCT_PACKAGES += \
     fs_config_files

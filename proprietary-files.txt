@@ -590,7 +590,7 @@ vendor/lib64/libc2d30-a5xx.so
 vendor/lib64/lib-imsrcscmclient.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libdrmfs.so
-vendor/lib64/hw/fingerprint.vendor.msm8996.so
+vendor/lib64/hw/fingerprint.msm8996.so
 vendor/lib64/hw/gatekeeper.msm8996.so
 vendor/lib64/hw/vulkan.msm8996.so
 vendor/lib64/hw/keystore.msm8996.so
