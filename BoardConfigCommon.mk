@@ -146,6 +146,7 @@ USE_DEVICE_SPECIFIC_GPS := true
 
 # Hidl manifests
 DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(VENDOR_PATH)/compatibility_matrix.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8996
