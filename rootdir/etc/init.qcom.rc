@@ -510,13 +510,13 @@ service qvop-daemon /system/bin/qvop-daemon
     group system drmrpc
 
 # start up peripheral manager
-service per_mgr system/bin/pm-service
+service per_mgr /vendor/bin/pm-service
     class late_start
     user system
     group system
     writepid /dev/cpuset/system-background/tasks
 
-service per_proxy /system/bin/pm-proxy
+service per_proxy /vendor/bin/pm-proxy
     class late_start
     user system
     group system

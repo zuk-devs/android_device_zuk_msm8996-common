@@ -1,5 +1,4 @@
 bin/rmt_storage
-bin/pm-proxy
 bin/radish
 bin/mm-qcamera-app
 bin/port-bridge
@@ -10,7 +9,6 @@ bin/imscmservice
 bin/irsc_util
 bin/msm_irqbalance
 bin/imsdatadaemon
-bin/pm-service
 bin/wcnss_filter
 bin/time_daemon
 bin/adsprpcd
@@ -680,6 +678,10 @@ vendor/lib64/libqti-util.so
 vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
+
+# permgr
+vendor/bin/pm-proxy
+vendor/bin/pm-service
 
 # GPS
 lib/vendor.qti.gnss@1.0.so
