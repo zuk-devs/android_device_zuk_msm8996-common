@@ -552,7 +552,7 @@ service secotad /system/bin/secotad
    user system
    group system
 
-service thermal-engine /system/vendor/bin/thermal-engine
+service thermal-engine /vendor/bin/thermal-engine
    class main
    user root
    socket thermal-send-client stream 0666 system system
@@ -666,7 +666,7 @@ service readmac /system/vendor/bin/readmac
     group root
     oneshot
 
-service energy-awareness /system/bin/energy-awareness
+service energy-awareness /vendor/bin/energy-awareness
     class main
     user root
     group system
@@ -742,7 +742,7 @@ service cnd /vendor/bin/cnd
     group root wakelock
     writepid /dev/cpuset/system-background/tasks
 
-service irsc_util /system/bin/irsc_util "/vendor/etc/sec_config"
+service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
     oneshot
@@ -902,9 +902,9 @@ service ssr_diag /system/bin/ssr_diag
     class late_start
     user system
     group system
-    disabled
+<!--     disabled -->
 
-service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
+service msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     class main
     user root
     group root

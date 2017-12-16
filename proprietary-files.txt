@@ -2,14 +2,11 @@ bin/mm-qcamera-app
 bin/port-bridge
 bin/hci_qcomm_init
 bin/cnss-daemon
-bin/irsc_util
-bin/msm_irqbalance
 bin/wcnss_filter
 bin/time_daemon
 bin/adsprpcd
 bin/sensors.qcom
 bin/qseecomd
-bin/energy-awareness
 bin/xtwifi-inet-agent
 etc/xtra_root_cert.pem
 etc/firmware/a225_pm4.fw
@@ -81,6 +78,9 @@ lib64/libextmedia_jni.so
 usr/idc/usf_tsc_ptr.idc
 usr/idc/usf_tsc_ext.idc
 usr/idc/usf_tsc.idc
+vendor/bin/energy-awareness
+vendor/bin/irsc_util
+vendor/bin/msm_irqbalance
 vendor/bin/xtwifi-client
 vendor/bin/pd-mapper
 vendor/bin/qseeproxydaemon
@@ -330,6 +330,7 @@ vendor/lib/libsmemlog.so
 vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_hdr_be_stats46.so
 vendor/lib/libmmcamera_isp_gtm46.so
+vendor/lib/libqcmaputils.so
 vendor/lib64/libulp2.so
 vendor/lib64/libcneqmiutils.so
 vendor/lib64/lib-rtpsl.so
@@ -503,6 +504,7 @@ vendor/lib64/libgeofence.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/libStDrvInt.so
+vendor/lib64/lib-uceservice.so
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/etc/RIDL/qdss.cfg
 vendor/etc/sensors/hals.conf
