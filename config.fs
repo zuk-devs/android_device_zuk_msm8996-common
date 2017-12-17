@@ -55,7 +55,7 @@ user:  AID_GPS
 group: AID_GPS
 caps: NET_BIND_SERVICE
 
-[system/bin/xtwifi-client]
+[vendor/bin/xtwifi-client]
 mode: 0755
 user:  AID_GPS
 group: AID_GPS
