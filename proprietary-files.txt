@@ -708,6 +708,7 @@ vendor/lib64/libloc_ds_api.so
 vendor/bin/hw/vendor.qti.gnss@1.0-service
 vendor/bin/slim_daemon
 vendor/bin/loc_launcher
+vendor/bin/xtra-daemon
 vendor/etc/init/vendor.qti.gnss@1.0-service.rc
 vendor/lib/vendor.qti.gnss@1.0_vendor.so
 vendor/lib/hw/vendor.qti.gnss@1.0-impl.so
