@@ -265,6 +265,7 @@ vendor/lib/libqmi_encdec.so
 vendor/lib/libqti_performance.so
 vendor/lib/libquipc_os_api.so
 vendor/lib/libmorpho_image_stab4.so
+vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_isp_black_level47.so
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libadsprpc.so
