@@ -653,7 +653,7 @@ service dtseagleservice /system/bin/dts_eagle_service
 on property:init.svc.dts_configurator=stopped
     start dtseagleservice
 
-service ppd /system/vendor/bin/mm-pp-dpps
+service ppd /vendor/bin/mm-pp-dpps
     class late_start
     user system
     group system graphics
@@ -678,9 +678,9 @@ on property:init.svc.zygote=running
 on property:init.svc.zygote=restarting
     stop ppd
 
-service tlocd /system/bin/tloc_daemon		
-    class late_start		
-    user system		
+service tlocd /system/bin/tloc_daemon
+    class late_start
+    user system
     group drmrpc gps net_raw
 
 service readmac /system/vendor/bin/readmac

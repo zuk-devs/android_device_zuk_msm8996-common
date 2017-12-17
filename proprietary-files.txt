@@ -105,7 +105,6 @@ etc/permissions/com.qti.dpmframework.xml
 etc/permissions/ConnectivityExt.xml
 etc/permissions/qti_permissions.xml
 etc/permissions/cneapiclient.xml
-etc/permissions/com.qti.snapdragon.sdk.display.xml
 etc/permissions/dpmapi.xml
 etc/permissions/qcrilhook.xml
 framework/ConnectivityExt.jar
@@ -113,7 +112,6 @@ framework/com.qti.dpmframework.jar
 framework/tcmclient.jar
 -framework/qcrilhook.jar
 framework/dpmapi.jar
-framework/com.qti.snapdragon.sdk.display.jar
 framework/com.quicinc.cne.jar
 framework/cneapiclient.jar
 framework/QtiTelephonyServicelibrary.jar
@@ -371,7 +369,6 @@ vendor/lib/libRSDriver_adreno.so
 vendor/lib/libmmcamera_isp_rs_stats46.so
 vendor/lib/libdsutils.so
 vendor/lib/libmm-qdcm.so
-vendor/lib/libdisp-aba.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libc2d30-a5xx.so
 vendor/lib/libmmcamera_faceproc.so
@@ -577,7 +574,6 @@ vendor/lib64/libwqe.so
 vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libmm-qdcm.so
-vendor/lib64/libdisp-aba.so
 vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libc2d30-a5xx.so
 vendor/lib64/lib-imsrcscmclient.so
@@ -642,9 +638,14 @@ vendor/qcril.db
 -app/shutdownlistener/shutdownlistener.apk
 -priv-app/CNEService/CNEService.apk
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
--vendor/app/colorservice/colorservice.apk
 -vendor/app/imssettings/imssettings.apk
 -vendor/app/ims/ims.apk
+
+# Display
+vendor/bin/mm-pp-dpps
+vendor/etc/permissions/com.qti.snapdragon.sdk.display.xml
+vendor/lib/libdisp-aba.so
+vendor/lib64/libdisp-aba.so
 
 # OMX
 vendor/lib/libOmxAmrDec.so
