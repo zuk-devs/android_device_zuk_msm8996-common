@@ -225,6 +225,7 @@ vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera_isp_scaler_encoder46.so
 vendor/lib/libmmcamera_isp_color_correct46.so
 vendor/lib/libmm-color-convertor.so
+vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libmmcamera_isp_mesh_rolloff44.so
 vendor/lib/libmpbase.so
 vendor/lib/libtm_interface.so
@@ -694,13 +695,6 @@ vendor/lib64/libqti-util.so
 vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
-
-# Widevine
-vendor/bin/hw/android.hardware.drm@1.0-service.widevine
-vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
-vendor/lib/libwvhidl.so
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib64/mediadrm/libwvdrmengine.so
 
 # Timeservices
 -vendor/app/TimeService/TimeService.apk
