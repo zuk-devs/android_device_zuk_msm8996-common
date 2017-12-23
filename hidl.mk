@@ -46,7 +46,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    android.hardware.broadcastradio@1.0-impl \
     vendor.display.color@1.0-impl \
     vendor.display.color@1.0-service
 
