@@ -253,6 +253,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libwpa_client \
     wificond \
+    wifilogd \
+    wlutil \
     hostapd \
     readmac \
     wpa_supplicant \
