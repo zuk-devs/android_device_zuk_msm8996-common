@@ -517,7 +517,7 @@ on post-fs-data
     chmod 0660 /data/misc/radio/db_check_done
 
 # start camera server as daemon
-service qcamerasvr /system/bin/mm-qcamera-daemon
+service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class main
     user camera
     group camera system inet input graphics
