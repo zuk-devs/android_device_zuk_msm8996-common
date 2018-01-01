@@ -19,7 +19,6 @@ bin/adsprpcd
 bin/netmgrd
 bin/ims_rtp_daemon
 bin/sensors.qcom
-bin/mm-qcamera-daemon
 bin/imsqmidaemon
 bin/dpmd
 bin/qseecomd
@@ -119,11 +118,8 @@ framework/qti-telephony-common.jar
 lib/vendor.display.color@1.0.so
 lib/libtfa98xx.so
 lib/vendor.display.postproc@1.0.so
-lib/libmmjpeg_interface.so
-lib/libmmcamera_interface.so
 lib/libextmedia_jni.so
 lib/libmm-qcamera.so
-lib/libqomx_core.so
 lib64/vendor.display.color@1.0.so
 lib64/libtfa98xx.so
 lib64/lib_fpc_tac_shared.so
@@ -275,7 +271,6 @@ vendor/lib/libqti-gt.so
 vendor/lib/libOmxAmrwbplusDec.so
 vendor/lib/libmmcamera_isp_demosaic47.so
 vendor/lib/libqcci_legacy.so
-vendor/lib/libtrueportrait.so
 vendor/lib/libmmcamera_isp_clamp_encoder40.so
 vendor/lib/libmmcamera_isp_chroma_enhan40.so
 vendor/lib/libmmcamera2_frame_algorithm.so
@@ -640,6 +635,13 @@ vendor/qcril.db
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -vendor/app/imssettings/imssettings.apk
 -vendor/app/ims/ims.apk
+
+# Camera
+lib/libtrueportrait.so
+vendor/bin/mm-qcamera-daemon
+vendor/lib/libmmcamera_interface.so
+vendor/lib/libmmjpeg_interface.so
+vendor/lib/libqomx_core.so
 
 # Display
 vendor/bin/mm-pp-dpps
