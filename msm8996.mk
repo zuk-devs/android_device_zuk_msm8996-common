@@ -172,6 +172,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libsdm-disp-apis
 
+
+# IMS
+PRODUCT_PACKAGES += \
+    ims-ext-common
+
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
