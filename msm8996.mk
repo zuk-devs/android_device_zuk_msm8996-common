@@ -213,10 +213,6 @@ PRODUCT_PACKAGES += \
     libOmxVdecHevc \
     libstagefrighthw
 
-# Power
-PRODUCT_PACKAGES += \
-    power.msm8996
-
 # QMI
 PRODUCT_PACKAGES += \
     libjson
