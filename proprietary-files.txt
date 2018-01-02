@@ -509,7 +509,6 @@ vendor/lib64/libmm-disp-apis.so
 vendor/lib64/librs_adreno.so
 vendor/lib64/libconnctrl.so
 -vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libprotobuf-cpp-Hlit.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libgsl.so
 vendor/lib64/libwqe.so
