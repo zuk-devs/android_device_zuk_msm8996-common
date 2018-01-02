@@ -30,7 +30,6 @@
 /system/bin/rmt_storage                                         u:object_r:rmt_storage_exec:s0
 /system/bin/sensors.qcom                                        u:object_r:sensors_exec:s0
 /system/bin/adsprpcd                                            u:object_r:adsprpcd_exec:s0
-/system/bin/cnd                                                 u:object_r:cnd_exec:s0
 /system/bin/imsqmidaemon                                        u:object_r:ims_exec:s0
 /system/bin/imsdatadaemon                                       u:object_r:ims_exec:s0
 /system/bin/energy-awareness                                    u:object_r:energyawareness_exec:s0

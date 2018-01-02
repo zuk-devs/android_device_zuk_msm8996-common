@@ -7,7 +7,6 @@ bin/tftp_server
 bin/hci_qcomm_init
 bin/cnss-daemon
 bin/imscmservice
-bin/cnd
 bin/irsc_util
 bin/msm_irqbalance
 bin/imsdatadaemon
@@ -19,12 +18,9 @@ bin/netmgrd
 bin/ims_rtp_daemon
 bin/sensors.qcom
 bin/imsqmidaemon
-bin/dpmd
 bin/qseecomd
 bin/energy-awareness
 bin/xtwifi-inet-agent
-etc/dpm/dpm.conf
-etc/dpm/nsrm/NsrmConfiguration.xml
 etc/xtra_root_cert.pem
 etc/firmware/a225_pm4.fw
 etc/firmware/a420_pm4.fw
@@ -76,40 +72,12 @@ etc/firmware/cpp_firmware_v1_10_0.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/data/dsi_config.xml
 etc/data/netmgr_config.xml
-etc/cne/wqeclient/ROW/ROW_profile3.xml
-etc/cne/wqeclient/ROW/ROW_profile4.xml
-etc/cne/wqeclient/ROW/ROW_profile5.xml
-etc/cne/wqeclient/ROW/ROW_profile1.xml
-etc/cne/wqeclient/ROW/ROW_profile2.xml
-etc/cne/wqeclient/ATT/ATT_profile1.xml
-etc/cne/wqeclient/ATT/ATT_profile2.xml
-etc/cne/wqeclient/ATT/ATT_profile4.xml
-etc/cne/wqeclient/ATT/ATT_profile3.xml
-etc/cne/wqeclient/VZW/VZW_profile5.xml
-etc/cne/wqeclient/VZW/VZW_profile2.xml
-etc/cne/wqeclient/VZW/VZW_profile4.xml
-etc/cne/wqeclient/VZW/VZW_profile6.xml
-etc/cne/wqeclient/VZW/VZW_profile1.xml
-etc/cne/wqeclient/VZW/VZW_profile3.xml
-etc/cne/SwimConfig.xml
-etc/cne/andsfCne.xml
 etc/camera/ov8865_chromatix.xml
 etc/sensors/sensor_def_qcomdev.conf
-etc/permissions/com.quicinc.cne.xml
 etc/permissions/telephonyservice.xml
-etc/permissions/com.qti.dpmframework.xml
-etc/permissions/ConnectivityExt.xml
 etc/permissions/qti_permissions.xml
-etc/permissions/cneapiclient.xml
-etc/permissions/dpmapi.xml
 etc/permissions/qcrilhook.xml
-framework/ConnectivityExt.jar
-framework/com.qti.dpmframework.jar
-framework/tcmclient.jar
 -framework/qcrilhook.jar
-framework/dpmapi.jar
-framework/com.quicinc.cne.jar
-framework/cneapiclient.jar
 framework/QtiTelephonyServicelibrary.jar
 framework/qti-telephony-common.jar
 lib/vendor.display.color@1.0.so
@@ -150,7 +118,6 @@ vendor/lib/libmmcamera_dummyalgo.so
 vendor/lib/libaudcal.so
 vendor/lib/libtsvideoprocess.so
 vendor/lib/libmmcamera_ov8856.so
-vendor/lib/libdpmfdmgr.so
 vendor/lib/libmmcamera_isp_bpc47.so
 vendor/lib/lib-rtpcore.so
 vendor/lib/libadpcmdec.so
@@ -165,7 +132,6 @@ vendor/lib/libmmcamera_dbg.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmcamera_eeprom_util.so
 vendor/lib/libqvop-service.so
-vendor/lib/libdpmtcm.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 vendor/lib/rfsa/adsp/us-syncproximity.so
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
@@ -191,7 +157,6 @@ vendor/lib/libFidoCryptoJNI.so
 vendor/lib/libmmcamera_isp_demux40.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libllvm-qcom.so
-vendor/lib/libvendorconn.so
 vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libaudiodevarb.so
@@ -297,8 +262,6 @@ vendor/lib/egl/libQTapGLES.so
 vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/libmdmdetect.so
 vendor/lib/lib-imsdpl.so
-vendor/lib/libdpmnsrm.so
-vendor/lib/libdpmctmgr.so
 vendor/lib/lib-imsqimf.so
 vendor/lib/libmmcamera_isp_ltm47.so
 vendor/lib/libTimeService.so
@@ -382,7 +345,6 @@ vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libmmcamera_isp_clamp_video40.so
-vendor/lib/libdpmframework.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/lib-sec-disp.so
 vendor/lib/libqti-at.so
@@ -410,7 +372,6 @@ vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libaudcal.so
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libizat_client_api.so
-vendor/lib64/libdpmfdmgr.so
 vendor/lib64/libxtwifi_ulp_adaptor.so
 vendor/lib64/lib-rtpcore.so
 vendor/lib64/liblowi_client.so
@@ -423,7 +384,6 @@ vendor/lib64/libmmcamera_dbg.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/libI420colorconvert.so
 vendor/lib64/libqvop-service.so
-vendor/lib64/libdpmtcm.so
 vendor/lib64/libevent_observer.so
 vendor/lib64/libmmcamera2_memleak.so
 vendor/lib64/lib-imsSDP.so
@@ -436,7 +396,6 @@ vendor/lib64/libxml.so
 vendor/lib64/libFidoCryptoJNI.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/libllvm-qcom.so
-vendor/lib64/libvendorconn.so
 vendor/lib64/libmmcamera2_q3a_core.so
 vendor/lib64/libaudiodevarb.so
 vendor/lib64/librpmb.so
@@ -515,8 +474,6 @@ vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/egl/libGLESv2_adreno.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/lib-imsdpl.so
-vendor/lib64/libdpmnsrm.so
-vendor/lib64/libdpmctmgr.so
 vendor/lib64/lib-imsqimf.so
 vendor/lib64/libTimeService.so
 vendor/lib64/lib-ims-rcscmjni.so
@@ -576,7 +533,6 @@ vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libnetmgr.so
-vendor/lib64/libdpmframework.so
 vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/lib-sec-disp.so
 vendor/lib64/libqti-at.so
@@ -621,7 +577,6 @@ vendor/qcril.db
 -app/QtiTelephonyService/QtiTelephonyService.apk
 -app/shutdownlistener/shutdownlistener.apk
 -app/TimeService/TimeService.apk
--priv-app/CNEService/CNEService.apk
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -vendor/app/imssettings/imssettings.apk
 -vendor/app/ims/ims.apk
@@ -632,6 +587,34 @@ vendor/bin/mm-qcamera-daemon
 vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmjpeg_interface.so
 vendor/lib/libqomx_core.so
+
+# CNE
+vendor/bin/cnd
+vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
+-vendor/lib/com.quicinc.cne.api@1.0.so
+-vendor/lib/com.quicinc.cne.constants@1.0.so
+-vendor/lib/com.quicinc.cne.constants@2.0.so
+-vendor/lib/com.quicinc.cne.server@1.0.so
+-vendor/lib/com.quicinc.cne.server@2.0.so
+-vendor/lib64/com.quicinc.cne.api@1.0.so
+-vendor/lib64/com.quicinc.cne.constants@1.0.so
+-vendor/lib64/com.quicinc.cne.constants@2.0.so
+-vendor/lib64/com.quicinc.cne.server@1.0.so
+-vendor/lib64/com.quicinc.cne.server@2.0.so
 
 # Display
 vendor/bin/mm-pp-dpps
