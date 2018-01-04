@@ -534,7 +534,6 @@ vendor/lib64/lib-imsrcscmservice.so
 vendor/lib64/libimsmedia_jni.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libaudioalsa.so
-vendor/lib64/libuiblur.so
 vendor/lib64/lib-rtpdaemoninterface.so
 vendor/lib64/lib_remote_simlock.so
 vendor/lib64/librcc.so
@@ -648,6 +647,14 @@ vendor/bin/mm-pp-dpps
 vendor/etc/permissions/com.qti.snapdragon.sdk.display.xml
 vendor/lib/libdisp-aba.so
 vendor/lib64/libdisp-aba.so
+vendor/lib/libsdm-disp-apis.so
+vendor/lib64/libsdm-disp-apis.so
+lib/vendor.qti.hardware.qdutils_disp@1.0.so
+lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti
+vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc
+vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
 
 # OMX
 vendor/lib/libOmxAmrDec.so
