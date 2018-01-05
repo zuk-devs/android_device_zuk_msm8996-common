@@ -1,0 +1,1 @@
+allow radio qmuxd_socket:dir search; 

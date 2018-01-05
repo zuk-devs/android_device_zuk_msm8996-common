@@ -1,20 +1,13 @@
-# We have a couple of non-standard NV partitions
-/dev/block/bootdevice/by-name/oem_dycnvbk                       u:object_r:modem_efs_partition_device:s0
-/dev/block/bootdevice/by-name/oem_stanvbk                       u:object_r:modem_efs_partition_device:s0
+# charger
+/dev/dash                                                       u:object_r:input_device:s0
+/sys/devices/soc/.*ssusb/power_supply/usb(/.*)?                 u:object_r:sysfs_usb_supply:s0
+/sys/devices/soc/qpnp-smbcharger-[0-9a-f]+/power_supply/battery(/.*)? u:object_r:sysfs_batteryinfo:s0
 
-/dev/block/mmcblk0p40                       u:object_r:persist_block_device:s0
+# Data files
+/data/decrypt.txt                                               u:object_r:thermal_data_file:s0
+/data/misc/netmgr/log.txt                                       u:object_r:netmgrd_data_file:s0
 
-# FRP partition
-/dev/block/bootdevice/by-name/config                            u:object_r:frp_block_device:s0
-
-/persist/sensors/gyro_sensitity_cal                             u:object_r:sensors_persist_file:s0
-
-/sys/kernel/debug/rmt_storage/rmts                                       u:object_r:qti_debugfs:s0
-
-/persist/rfs(/.*)?                                                       u:object_r:rfs_file:s0
-
-/data/oemnvitems(/.*)?                                          u:object_r:nv_data_file:s0
-
+# fingerprint
 /dev/fpc1020                                                    u:object_r:fpc1020_device:s0
 /data/fpc(/.*)?                                                 u:object_r:fpc_data_file:s0
 /data/fpc_images(/.*)?                                          u:object_r:fpc_images_file:s0
@@ -22,21 +15,57 @@
 /sys/devices/soc/soc:fpc_fpc1020/proximity_state                u:object_r:sysfs_fpc_proximity:s0
 /sys/devices/soc/soc:fpc1020/utouch_disable                     u:object_r:sysfs_fpc_utouch_disable:s0
 
-/dev/dash                                                       u:object_r:input_device:s0
-/sys/devices/soc/.*ssusb/power_supply/usb(/.*)?                 u:object_r:sysfs_usb_supply:s0
+# FRP partition
+/dev/block/bootdevice/by-name/config                            u:object_r:frp_block_device:s0
 
-/sys/devices/soc/qpnp-smbcharger-[0-9a-f]+/power_supply/battery(/.*)? u:object_r:sysfs_batteryinfo:s0
+# fsc
+/dev/block/mmcblk0p35                                           u:object_r:modem_efs_partition_device:s0
 
-/sys/kernel/debug/msm_core(/.*)?                                u:object_r:debugfs_msm_core:s0
-
-/system/bin/readmac                   				u:object_r:readmac_exec:s0
-
-# Data files
-/data/decrypt.txt                     u:object_r:thermal_data_file:s0
-/data/misc/netmgr/log.txt             u:object_r:netmgrd_data_file:s0
+# fsg
+/dev/block/mmcblk0p11                                           u:object_r:modem_efs_partition_device:s0
 
 # legacy paths
-/system/bin/qseecomd            u:object_r:tee_exec:s0
-/system/bin/irsc_util           u:object_r:irsc_util_exec:s0
-/system/bin/rmt_storage         u:object_r:rmt_storage_exec:s0
-/system/bin/sensors.qcom        u:object_r:sensors_exec:s0
+/system/bin/qseecomd                                            u:object_r:tee_exec:s0
+/system/bin/irsc_util                                           u:object_r:irsc_util_exec:s0
+/system/bin/rmt_storage                                         u:object_r:rmt_storage_exec:s0
+/system/bin/sensors.qcom                                        u:object_r:sensors_exec:s0
+/system/bin/adsprpcd                                            u:object_r:adsprpcd_exec:s0
+/system/bin/cnd                                                 u:object_r:cnd_exec:s0
+/system/bin/imsqmidaemon                                        u:object_r:ims_exec:s0
+/system/bin/imsdatadaemon                                       u:object_r:ims_exec:s0
+/system/bin/energy-awareness                                    u:object_r:energyawareness_exec:s0
+/system/bin/tftp_server                                         u:object_r:rfs_access_exec:s0
+/system/bin/port-bridge                                         u:object_r:port-bridge_exec:s0
+/system/bin/netmgrd                                             u:object_r:netmgrd_exec:s0
+/system/bin/pm-service                                          u:object_r:per_mgr_exec:s0
+/system/bin/pm-proxy                                            u:object_r:per_mgr_exec:s0
+/system/bin/time_daemon                                         u:object_r:time_daemon_exec:s0
+/system/bin/cnss-daemon                                         u:object_r:wcnss_service_exec:s0
+
+# modemst1
+/dev/block/mmcblk0p37                                           u:object_r:modem_efs_partition_device:s0
+
+# modemst2
+/dev/block/mmcblk0p38                                           u:object_r:modem_efs_partition_device:s0
+
+# NV partitions
+/dev/block/bootdevice/by-name/oem_dycnvbk                       u:object_r:modem_efs_partition_device:s0
+/dev/block/bootdevice/by-name/oem_stanvbk                       u:object_r:modem_efs_partition_device:s0
+/data/oemnvitems(/.*)?                                          u:object_r:nv_data_file:s0
+
+# persist
+/dev/block/mmcblk0p40                                           u:object_r:persist_block_device:s0
+/persist/rfs(/.*)?                                              u:object_r:rfs_file:s0
+/persist/sensors/gyro_sensitity_cal                             u:object_r:sensors_persist_file:s0
+
+# readmac
+/system/bin/readmac                                             u:object_r:readmac_exec:s0
+
+# ril
+/system/vendor/qcril.db                                         u:object_r:nv_data_file:s0
+
+# ssd
+/dev/block/mmcblk0p36                                           u:object_r:ssd_device:s0
+
+# userdata
+/dev/block/mmcblk0p48                                           u:object_r:userdata_block_device:s0
