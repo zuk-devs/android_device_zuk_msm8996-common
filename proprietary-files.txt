@@ -14,7 +14,6 @@ bin/imsdatadaemon
 bin/pm-service
 bin/wcnss_filter
 bin/time_daemon
-bin/qmuxd
 bin/adsprpcd
 bin/netmgrd
 bin/ims_rtp_daemon
@@ -77,7 +76,6 @@ etc/firmware/cpp_firmware_v1_10_0.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/data/dsi_config.xml
 etc/data/netmgr_config.xml
-etc/data/qmi_config.xml
 etc/cne/wqeclient/ROW/ROW_profile3.xml
 etc/cne/wqeclient/ROW/ROW_profile4.xml
 etc/cne/wqeclient/ROW/ROW_profile5.xml
@@ -95,7 +93,6 @@ etc/cne/wqeclient/VZW/VZW_profile1.xml
 etc/cne/wqeclient/VZW/VZW_profile3.xml
 etc/cne/SwimConfig.xml
 etc/cne/andsfCne.xml
-etc/dhcpcd/dhcpcd.conf
 etc/camera/ov8865_chromatix.xml
 etc/sensors/sensor_def_qcomdev.conf
 etc/permissions/com.quicinc.cne.xml
@@ -161,14 +158,12 @@ vendor/lib/libmmcamera_thread_services.so
 vendor/lib/libslimclient.so
 vendor/lib/libbtnv.so
 vendor/lib/libjpegdmahw.so
-vendor/lib/libqc-opt.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/lib-imsxml.so
 vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera_dbg.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmcamera_eeprom_util.so
-vendor/lib/libcneconn.so
 vendor/lib/libqvop-service.so
 vendor/lib/libdpmtcm.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
@@ -200,7 +195,6 @@ vendor/lib/libvendorconn.so
 vendor/lib/libmmcamera2_q3a_core.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libaudiodevarb.so
-vendor/lib/libNimsWrap.so
 vendor/lib/libsmwrapper.so
 vendor/lib/libmmcamera_ppbase_module.so
 -vendor/lib/libgpustats.so
@@ -423,13 +417,11 @@ vendor/lib64/liblowi_client.so
 vendor/lib64/libslimclient.so
 vendor/lib64/libbtnv.so
 vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libqc-opt.so
 vendor/lib64/libqmi_common_so.so
 vendor/lib64/lib-imsxml.so
 vendor/lib64/libmmcamera_dbg.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/libI420colorconvert.so
-vendor/lib64/libcneconn.so
 vendor/lib64/libqvop-service.so
 vendor/lib64/libdpmtcm.so
 vendor/lib64/libevent_observer.so
@@ -448,7 +440,6 @@ vendor/lib64/libvendorconn.so
 vendor/lib64/libmmcamera2_q3a_core.so
 vendor/lib64/libaudiodevarb.so
 vendor/lib64/librpmb.so
-vendor/lib64/libNimsWrap.so
 vendor/lib64/libconfigdb.so
 -vendor/lib64/libgpustats.so
 vendor/lib64/libthermalclient.so
