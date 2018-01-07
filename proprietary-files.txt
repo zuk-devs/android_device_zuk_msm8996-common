@@ -62,6 +62,8 @@ etc/sensors/sensor_def_qcomdev.conf
 etc/permissions/telephonyservice.xml
 etc/permissions/qti_permissions.xml
 etc/permissions/qcrilhook.xml
+etc/permissions/qcnvitems.xml
+etc/permissions/qti-vzw-ims-internal.xml
 -framework/qcrilhook.jar
 framework/QtiTelephonyServicelibrary.jar
 framework/qti-telephony-common.jar
