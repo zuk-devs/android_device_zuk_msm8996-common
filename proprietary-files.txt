@@ -588,6 +588,9 @@ vendor/lib/libmmjpeg_interface.so
 vendor/lib/libqomx_core.so
 
 # CNE
+framework/com.quicinc.cne.api-V1.0-java.jar
+framework/com.quicinc.cne.jar
+etc/permissions/com.quicinc.cne.xml
 vendor/bin/cnd
 vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
 vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
