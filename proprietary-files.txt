@@ -185,7 +185,6 @@ vendor/lib/libmmcamera_isp_mesh_rolloff44.so
 vendor/lib/libmpbase.so
 vendor/lib/libtm_interface.so
 vendor/lib/lib-dplmedia.so
-vendor/lib/lib-imsvt.so
 vendor/lib/libmmcamera_isp_hdr46.so
 vendor/lib/libmmcamera_isp_color_xform_encoder46.so
 vendor/lib/libmmcamera2_stats_modules.so
@@ -414,7 +413,6 @@ vendor/lib64/libimscamera_jni.so
 vendor/lib64/libSecureUILib.so
 vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/lib-dplmedia.so
-vendor/lib64/lib-imsvt.so
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libsdm-diag.so
 vendor/lib64/lib-imscamera.so
@@ -631,6 +629,10 @@ vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so
+
+# IMS
+lib/lib-imsvt.so
+lib64/lib-imsvt.so
 
 # OMX
 vendor/lib/libOmxAmrDec.so
