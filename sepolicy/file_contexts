@@ -52,7 +52,7 @@
 /system/bin/readmac                                             u:object_r:readmac_exec:s0
 
 # ril
-/system/vendor/qcril.db                                         u:object_r:nv_data_file:s0
+/system/vendor/radio/qcril_database/qcril.db                    u:object_r:nv_data_file:s0
 
 # ssd
 /dev/block/mmcblk0p36                                           u:object_r:ssd_device:s0
