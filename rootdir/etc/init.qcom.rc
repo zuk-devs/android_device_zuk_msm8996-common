@@ -77,7 +77,6 @@ on fs
     restorecon_recursive /persist
 
 on boot
-
     # Secure touch
     chmod 0660 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch_enable
     chmod 0440 /sys/devices/soc/75ba000.i2c/i2c-12/12-004a/secure_touch
@@ -510,6 +509,10 @@ on post-fs-data
     write /data/vendor/radio/db_check_done 0
     chown radio radio /data/vendor/radio/db_check_done
     chmod 0660 /data/vendor/radio/db_check_done
+
+on property:dev.bootcomplete=1
+    # Selinux status in settings
+    chmod 0644 /sys/fs/selinux/enforce
 
 # start camera server as daemon
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
