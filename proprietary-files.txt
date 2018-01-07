@@ -65,6 +65,7 @@ etc/permissions/qcrilhook.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qti-vzw-ims-internal.xml
 -framework/qcrilhook.jar
+-framework/qcnvitems.jar
 framework/QtiTelephonyServicelibrary.jar
 framework/qti-telephony-common.jar
 lib/vendor.display.color@1.0.so
