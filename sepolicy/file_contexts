@@ -31,6 +31,7 @@
 /system/bin/port-bridge                                         u:object_r:port-bridge_exec:s0
 /system/bin/time_daemon                                         u:object_r:time_daemon_exec:s0
 /system/bin/cnss-daemon                                         u:object_r:wcnss_service_exec:s0
+/system/bin/wcnss_filter                                        u:object_r:wcnss_filter_exec:s0
 
 # modemst1
 /dev/block/mmcblk0p37                                           u:object_r:modem_efs_partition_device:s0
