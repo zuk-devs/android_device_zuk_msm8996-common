@@ -571,14 +571,14 @@ service audiod /system/bin/audiod
    user system
    group system
 
-service imsqmidaemon /system/bin/imsqmidaemon
+service imsqmidaemon /vendor/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
     group radio net_raw log diag
     writepid /dev/cpuset/system-background/tasks
 
-service imsdatadaemon /system/bin/imsdatadaemon
+service imsdatadaemon /vendor/bin/imsdatadaemon
     class main
     user system
     socket ims_datad stream 0660 system radio
@@ -600,23 +600,22 @@ on property:persist.sys.pd_enable=0
 on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
 
-service ims_rtp_daemon /system/bin/ims_rtp_daemon
+service ims_rtp_daemon /vendor/bin/ims_rtp_daemon
     class main
     user system
     socket ims_rtpd stream 0660 system radio
     group radio net_raw diag inet log
     disabled
 
-service imscmservice /system/bin/imscmservice
+service imsrcsservice /vendor/bin/imsrcsd
     class main
     user system
-    group radio net_raw diag diag log
-    writepid /dev/cpuset/system-background/tasks
+    group radio diag inet log
     disabled
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
-    start imscmservice
+    start imsrcsservice
 
 service dts_configurator /system/bin/dts_configurator
     class late_start
@@ -742,13 +741,13 @@ service irsc_util /system/bin/irsc_util "/vendor/etc/sec_config"
     user root
     oneshot
 
-service rmt_storage /system/bin/rmt_storage
+service rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     group system wakelock
     writepid /dev/cpuset/system-background/tasks
 
-service tftp_server /system/bin/tftp_server
+service tftp_server /vendor/bin/tftp_server
     class main
     user root
     writepid /dev/cpuset/system-background/tasks
@@ -803,7 +802,7 @@ service port-bridge /system/bin/port-bridge
     group radio system inet
     oneshot
 
-service netmgrd /system/bin/netmgrd
+service netmgrd /vendor/bin/netmgrd
     class main
     group radio system wakelock
     writepid /dev/cpuset/system-background/tasks
