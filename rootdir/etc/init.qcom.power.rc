@@ -138,3 +138,6 @@ on property:dev.bootcomplete=1
     write /dev/cpuset/background/cpus 0
     write /dev/cpuset/system-background/cpus 0-2
     trigger enable-low-power
+
+    # Set ioscheduler
+    setprop sys.io.scheduler "bfq"
