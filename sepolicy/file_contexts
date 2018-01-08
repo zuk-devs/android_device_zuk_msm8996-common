@@ -1,5 +1,4 @@
 # charger
-/dev/dash                                                       u:object_r:input_device:s0
 /sys/devices/soc/.*ssusb/power_supply/usb(/.*)?                 u:object_r:sysfs_usb_supply:s0
 /sys/devices/soc/qpnp-smbcharger-[0-9a-f]+/power_supply/battery(/.*)? u:object_r:sysfs_batteryinfo:s0
 
@@ -18,29 +17,12 @@
 # FRP partition
 /dev/block/bootdevice/by-name/config                            u:object_r:frp_block_device:s0
 
-# fsc
-/dev/block/mmcblk0p35                                           u:object_r:modem_efs_partition_device:s0
-
-# fsg
-/dev/block/mmcblk0p11                                           u:object_r:modem_efs_partition_device:s0
-
 # legacy paths
 /system/bin/sensors.qcom                                        u:object_r:sensors_exec:s0
 /system/bin/port-bridge                                         u:object_r:port-bridge_exec:s0
 /system/bin/time_daemon                                         u:object_r:time_daemon_exec:s0
 /system/bin/cnss-daemon                                         u:object_r:wcnss_service_exec:s0
 /system/bin/wcnss_filter                                        u:object_r:wcnss_filter_exec:s0
-
-# modemst1
-/dev/block/mmcblk0p37                                           u:object_r:modem_efs_partition_device:s0
-
-# modemst2
-/dev/block/mmcblk0p38                                           u:object_r:modem_efs_partition_device:s0
-
-# NV partitions
-/dev/block/bootdevice/by-name/oem_dycnvbk                       u:object_r:modem_efs_partition_device:s0
-/dev/block/bootdevice/by-name/oem_stanvbk                       u:object_r:modem_efs_partition_device:s0
-/data/oemnvitems(/.*)?                                          u:object_r:nv_data_file:s0
 
 # persist
 /dev/block/mmcblk0p40                                           u:object_r:persist_block_device:s0
@@ -52,9 +34,3 @@
 
 # ril
 /system/vendor/radio/qcril_database/qcril.db                    u:object_r:nv_data_file:s0
-
-# ssd
-/dev/block/mmcblk0p36                                           u:object_r:ssd_device:s0
-
-# userdata
-/dev/block/mmcblk0p48                                           u:object_r:userdata_block_device:s0
