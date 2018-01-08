@@ -158,10 +158,6 @@ TARGET_INIT_VENDOR_LIB := libinit_msm8996
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8996
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
-# Lineage Hardware
-BOARD_HARDWARE_CLASS += \
-    $(VENDOR_PATH)/lineagehw
-
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
 
