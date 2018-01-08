@@ -531,8 +531,9 @@ vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
 
+
 # adsp
-bin/adsprpcd
+vendor/bin/adsprpcd
 vendor/lib/rfsa/adsp/libadsp_hvx_zzhdr_RGGB.so
 vendor/lib/rfsa/adsp/libadsp_hvx_skel.so
 vendor/lib/rfsa/adsp/libadsp_hvx_stats.so
@@ -548,6 +549,10 @@ vendor/lib/libadsp_hvx_stub.so
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -vendor/app/imssettings/imssettings.apk
 -vendor/app/ims/ims.apk
+
+# Audio
+vendor/lib/libmdsprpc.so
+vendor/lib64/libmdsprpc.so
 
 # Camera
 lib/libtrueportrait.so
