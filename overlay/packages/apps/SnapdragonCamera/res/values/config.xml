@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2012 The Android Open Source Project
+                   2015 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,11 +15,25 @@
      limitations under the License.
 -->
 
+<!-- Camera app resources that may need to be customized
+     for different hardware or product builds. -->
 <resources>
+    <!-- Enable support for camera api v2 -->
+    <bool name="support_camera_api_v2">false</bool>
+
+    <!-- Opens back camera using openLegacy() and forces api v1 -->
+    <bool name="back_camera_open_legacy">true</bool>
+
+    <!-- Opens front camera using openLegacy() and forces api v1 -->
+    <bool name="front_camera_open_legacy">true</bool>
 
     <!-- Restart preview for back camera onPictureTaken -->
     <bool name="back_camera_restart_preview_onPictureTaken">true</bool>
 
     <!-- Restart preview for front camera onPictureTaken -->
     <bool name="front_camera_restart_preview_onPictureTaken">true</bool>
+
+    <!-- Force use a specific preview-size
+         Example: 1920x1080 -->
+    <string name="preview_size_for_photo">1920x1080</string>
 </resources>
