@@ -5,7 +5,6 @@ bin/cnss-daemon
 bin/wcnss_filter
 bin/time_daemon
 bin/sensors.qcom
-bin/qseecomd
 bin/xtwifi-inet-agent
 etc/xtra_root_cert.pem
 etc/firmware/a225_pm4.fw
@@ -84,7 +83,6 @@ vendor/bin/irsc_util
 vendor/bin/msm_irqbalance
 vendor/bin/xtwifi-client
 vendor/bin/pd-mapper
-vendor/bin/qseeproxydaemon
 vendor/bin/qti
 vendor/bin/thermal-engine
 vendor/bin/hw/vendor.display.color@1.0-service
@@ -661,6 +659,14 @@ vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
 # permgr
 vendor/bin/pm-proxy
 vendor/bin/pm-service
+
+# QSEE
+vendor/bin/qseecomd
+vendor/lib/libStDrvInt.so
+vendor/lib/libcppf.so
+vendor/lib/libqisl.so
+vendor/lib/librpmb.so
+vendor/lib/libssd.so
 
 # Radio
 lib/com.qualcomm.qti.imscmservice@1.0.so

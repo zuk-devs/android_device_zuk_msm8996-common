@@ -25,7 +25,6 @@
 /dev/block/mmcblk0p11                                           u:object_r:modem_efs_partition_device:s0
 
 # legacy paths
-/system/bin/qseecomd                                            u:object_r:tee_exec:s0
 /system/bin/sensors.qcom                                        u:object_r:sensors_exec:s0
 /system/bin/adsprpcd                                            u:object_r:adsprpcd_exec:s0
 /system/bin/port-bridge                                         u:object_r:port-bridge_exec:s0
