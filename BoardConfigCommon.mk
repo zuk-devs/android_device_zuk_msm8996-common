@@ -103,14 +103,6 @@ QCOM_BT_USE_BTNV := true
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
-BOARD_CHARGING_CMDLINE_NAME  := "androidboot.mode"
-BOARD_CHARGING_CMDLINE_VALUE := "usb_chg"
-BACKLIGHT_PATH := "/sys/class/leds/lcd-backlight/brightness"
-BLINK_PATH     := "/sys/class/leds/led:rgb_red/blink"
-RED_LED_PATH   := "/sys/class/leds/led:rgb_red/brightness"
-GREEN_LED_PATH := "/sys/class/leds/led:rgb_green/brightness"
-BLUE_LED_PATH  := "/sys/class/leds/led:rgb_blue/brightness"
 
 # CNE and DPM
 BOARD_USES_QCNE := true
