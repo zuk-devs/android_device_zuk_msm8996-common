@@ -4,7 +4,6 @@ bin/hci_qcomm_init
 bin/cnss-daemon
 bin/wcnss_filter
 bin/time_daemon
-bin/adsprpcd
 bin/sensors.qcom
 bin/qseecomd
 bin/xtwifi-inet-agent
@@ -71,7 +70,6 @@ framework/qti-telephony-common.jar
 lib/vendor.display.color@1.0.so
 lib/libtfa98xx.so
 lib/vendor.display.postproc@1.0.so
-lib/libextmedia_jni.so
 lib/libmm-qcamera.so
 lib64/vendor.display.color@1.0.so
 lib64/libtfa98xx.so
@@ -534,6 +532,17 @@ vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
+
+# adsp
+bin/adsprpcd
+vendor/lib/rfsa/adsp/libadsp_hvx_zzhdr_RGGB.so
+vendor/lib/rfsa/adsp/libadsp_hvx_skel.so
+vendor/lib/rfsa/adsp/libadsp_hvx_stats.so
+vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so
+vendor/lib/rfsa/adsp/libadsp_hvx_zzhdr_BGGR.so
+vendor/lib/rfsa/adsp/libadsp_fd_skel.so
+vendor/lib/libadsp_hvx_callback_skel.so
+vendor/lib/libadsp_hvx_stub.so
 
 # APKs
 -app/QtiTelephonyService/QtiTelephonyService.apk
