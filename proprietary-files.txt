@@ -551,8 +551,12 @@ vendor/lib/libadsp_hvx_stub.so
 -vendor/app/ims/ims.apk
 
 # Audio
+-vendor/lib64/libaudio_log_utils.so
+-vendor/lib/libaudio_log_utils.so
 vendor/lib/libmdsprpc.so
 vendor/lib64/libmdsprpc.so
+vendor/lib/libqtigef.so
+vendor/lib64/libqtigef.so
 
 # Camera
 lib/libtrueportrait.so
