@@ -53,9 +53,6 @@ on enable-low-power
 
     # Online CPU2
     write /sys/devices/system/cpu/cpu2/online 1
-    
-    # Set ioscheduler
-    setprop sys.io.scheduler "noop"
 
     # Configure governor settings for big cluster
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
@@ -143,3 +140,6 @@ on property:dev.bootcomplete=1
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-1
     trigger enable-low-power
+
+    # Set ioscheduler
+    setprop sys.io.scheduler "bfq"
