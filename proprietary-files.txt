@@ -603,8 +603,9 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 -vendor/lib64/com.quicinc.cne.server@2.0.so
 
 # Display
+etc/permissions/com.qti.snapdragon.sdk.display.xml
+framework/com.qti.snapdragon.sdk.display.jar
 vendor/bin/mm-pp-dpps
-vendor/etc/permissions/com.qti.snapdragon.sdk.display.xml
 vendor/lib/libdisp-aba.so
 vendor/lib64/libdisp-aba.so
 vendor/lib/libsdm-disp-apis.so
