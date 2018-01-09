@@ -18,6 +18,9 @@ on boot
     # Enable sched boost
     write /proc/sys/kernel/sched_boost 1
 
+    # Disable nightmode display
+    write /sys/devices/virtual/graphics/fb0/ct_onoff 1
+
 on charger
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
     write /sys/devices/system/cpu/cpu2/online 0
