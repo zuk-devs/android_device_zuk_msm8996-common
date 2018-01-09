@@ -1,4 +1,8 @@
 on boot
+    # Bring back main cores CPU 0,2
+    write /sys/devices/system/cpu/cpu0/online 1
+    write /sys/devices/system/cpu/cpu2/online 1
+
     # Update foreground and background cpusets
     write /dev/cpuset/foreground/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 0-3
@@ -28,7 +32,6 @@ on charger
 
 on enable-low-power
     # Disable thermal hotplug to switch governor
-
     write /sys/module/msm_thermal/core_control/enabled 0
 
     # Enable Adaptive LMK
@@ -42,33 +45,28 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay 19000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 90
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 307200
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 960000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 1
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads 80
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 19000
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 79000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/enable_prediction 1
-
-    # Online CPU2
-    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif 0
 
     # Configure governor settings for big cluster
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/use_sched_load 1
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/use_migration_notif 1
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/above_hispeed_delay "19000 1400000:39000 1700000:19000 2100000:79000"
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/above_hispeed_delay "19000 1400000:39000 1700000:39000"
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/go_hispeed_load 90
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/timer_rate 20000
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/hispeed_freq 307200
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/hispeed_freq 1248000
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/io_is_busy 1
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "85 1500000:90 1800000:70 2100000:95"
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/target_loads "85 1500000:90 1800000:95"
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/min_sample_time 19000
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 79000
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 39000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 307200
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif 1
-    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/enable_prediction 1
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif 0
 
     # Re-enable thermal hotplug
     write /sys/module/msm_thermal/core_control/enabled 1
@@ -79,6 +77,7 @@ on enable-low-power
 
     # Setting b.L scheduler parameters
     write /proc/sys/kernel/sched_boost 0
+    write /proc/sys/kernel/sched_migration_fixup 1
     write /proc/sys/kernel/sched_upmigrate 95
     write /proc/sys/kernel/sched_downmigrate 90
     write /proc/sys/kernel/sched_freq_inc_notify 400000
@@ -116,13 +115,6 @@ on enable-low-power
     # Starting io prefetcher service
     start iop
 
-    # Setting vm parameters
-    write /proc/sys/vm/dirty_ratio 90
-    write /proc/sys/vm/dirty_background_ratio 85
-    write /proc/sys/vm/dirty_writeback_centisecs 900
-    write /proc/sys/vm/dirty_expire_centisecs 10
-    write /proc/sys/vm/vfs_cache_pressure 5
-
 service charger /charger
     class charger
     group log system graphics
@@ -133,12 +125,12 @@ on property:init.svc.recovery=running
     trigger enable-low-power
     
 on property:dev.bootcomplete=1
-    # update cpusets now that boot is complete and we want better load balancing
+    # Update cpusets now that boot is complete and we want better load balancing
     write /dev/cpuset/top-app/cpus 0-3
-    write /dev/cpuset/foreground/boost/cpus 0-1
+    write /dev/cpuset/foreground/boost/cpus 0-2
     write /dev/cpuset/foreground/cpus 0-2
-    write /dev/cpuset/background/cpus 0-1
-    write /dev/cpuset/system-background/cpus 0-1
+    write /dev/cpuset/background/cpus 0
+    write /dev/cpuset/system-background/cpus 0-2
     trigger enable-low-power
 
     # Set ioscheduler
