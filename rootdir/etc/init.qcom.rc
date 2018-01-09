@@ -59,13 +59,17 @@ on early-boot
     setrlimit 8 67108864 67108864
 
     # Allow subsystem (modem etc) debugging
-    write /sys/module/subsystem_restart/parameters/enable_debug ${persist.sys.ssr.enable_debug}
-    write /sys/module/pil_msa/parameters/pbl_mba_boot_timeout_ms ${persist.sys.mba_boot_timeout}
-    write /sys/module/pil_msa/parameters/modem_auth_timeout_ms ${persist.sys.modem_auth_timeout}
-    write /sys/module/peripheral_loader/parameters/proxy_timeout_ms ${persist.sys.pil_proxy_timeout}
     write /sys/kernel/boot_adsp/boot 1
     write /sys/kernel/boot_slpi/boot 1
     chown root audio /sys/kernel/boot_adsp/boot
+
+    # SSR setup
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys4/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys5/restart_level "related"
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -693,16 +697,6 @@ service qcomsysd /system/bin/qcom-system-daemon
     user root
     group root diag
 
-service ssr_setup /system/bin/ssr_setup
-    oneshot
-    disabled
-
-on property:persist.sys.ssr.restart_level=*
-    start ssr_setup
-
-on property:persist.sys.ssr.enable_ramdumps=0
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
-
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
 
@@ -910,12 +904,6 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
     user radio
     group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
-
-service ssr_diag /system/bin/ssr_diag
-    class late_start
-    user system
-    group system
-<!--     disabled -->
 
 service msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     class main
