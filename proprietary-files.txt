@@ -94,7 +94,6 @@ vendor/lib/libmmcamera_paaf_lib.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libmmcamera_isp_color_xform_viewfinder46.so
 vendor/lib/libqti-wl.so
-vendor/lib/libchromatix_ov8865_hfr_60.so
 vendor/lib/libsensor_reg.so
 vendor/lib/libCB.so
 vendor/lib/libadreno_utils.so
@@ -174,7 +173,6 @@ vendor/lib/libwvdrm_L3.so
 vendor/lib/libmmcamera_isp_bg_stats46.so
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libsdm-diag.so
-vendor/lib/libchromatix_ov8865_cpp_video.so
 vendor/lib/libadm.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/libcne.so
@@ -566,6 +564,35 @@ vendor/bin/mm-qcamera-daemon
 vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmjpeg_interface.so
 vendor/lib/libqomx_core.so
+
+# Camera ov8865
+vendor/lib/libchromatix_ov8865_hfr_60.so
+vendor/lib/libchromatix_ov8865_cpp_video.so
+vendor/lib/libchromatix_ov8865_common.so
+vendor/lib/libchromatix_ov8865_cpp_ds_chromatix.so
+vendor/lib/libchromatix_ov8865_cpp_hfr_120.so
+vendor/lib/libchromatix_ov8865_cpp_hfr_60.so
+vendor/lib/libchromatix_ov8865_cpp_hfr_90.so
+vendor/lib/libchromatix_ov8865_cpp_liveshot.so
+vendor/lib/libchromatix_ov8865_cpp_preview.so
+vendor/lib/libchromatix_ov8865_cpp_snapshot.so
+vendor/lib/libchromatix_ov8865_cpp_us_chromatix.so
+vendor/lib/libchromatix_ov8865_cpp_video_full.so
+vendor/lib/libchromatix_ov8865_default_preview_none.so
+vendor/lib/libchromatix_ov8865_default_video.so
+vendor/lib/libchromatix_ov8865_default_video_none.so
+vendor/lib/libchromatix_ov8865_hfr_120.so
+vendor/lib/libchromatix_ov8865_hfr_120_none.so
+vendor/lib/libchromatix_ov8865_hfr_60_none.so
+vendor/lib/libchromatix_ov8865_hfr_90.so
+vendor/lib/libchromatix_ov8865_hfr_90_none.so
+vendor/lib/libchromatix_ov8865_postproc.so
+vendor/lib/libchromatix_ov8865_preview.so
+vendor/lib/libchromatix_ov8865_snapshot.so
+vendor/lib/libchromatix_ov8865_video_full.so
+vendor/lib/libchromatix_ov8865_zsl_preview.so
+vendor/lib/libchromatix_ov8865_zsl_video.so
+vendor/lib/libmmcamera_ov8865.so
 
 # CNE
 framework/com.quicinc.cne.api-V1.0-java.jar
