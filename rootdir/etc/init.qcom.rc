@@ -24,9 +24,9 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-import init.qcom.power.rc
-import init.qcom.usb.rc
-import init.safailnet.rc
+import /vendor/etc/init/hw/init.qcom.power.rc
+import /vendor/etc/init/hw/init.qcom.usb.rc
+import /vendor/etc/init/hw/init.safailnet.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -79,7 +79,7 @@ on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     restorecon_recursive /dev/block/platform/soc/${ro.boot.bootdevice}
-    mount_all fstab.qcom
+    mount_all /vendor/etc/fstab.qcom
 
     # Restorecon
     restorecon_recursive /persist
@@ -709,7 +709,7 @@ on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
 
     # Enable ZRAM on boot_complete
-    swapon_all fstab.qcom
+    swapon_all /vendor/etc/fstab.qcom
 
     # end boot time fs tune
     write /sys/block/sda/queue/read_ahead_kb 128
