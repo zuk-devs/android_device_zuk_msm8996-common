@@ -117,8 +117,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
-    camera.msm8996
+    Snap
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
