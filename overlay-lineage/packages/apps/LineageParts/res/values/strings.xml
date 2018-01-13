@@ -5,6 +5,6 @@
     <string name="hardware_keys_assist_key_title">Long Tap</string>
     <string name="hardware_keys_swipe_left_key_title">Swipe left</string>
     <string name="hardware_keys_swipe_tap_title">Swipe action</string>
-    <string name="hardware_keys_long_tap_title">LongTap action</string>
+    <string name="hardware_keys_long_tap_title">Long Tap action</string>
 
 </resources>
