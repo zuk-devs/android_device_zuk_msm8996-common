@@ -83,7 +83,6 @@ lib/libqti_performance.so
 lib/libtfa98xx.so
 lib/libmm-qcamera.so
 lib/vendor.qti.hardware.qdutils_disp@1.0.so
-lib64/lib_fpc_tac_shared.so
 lib64/com.qualcomm.qti.imscmservice@1.0.so
 lib64/lib-imsvt.so
 lib64/vendor.display.postproc@1.0.so
@@ -552,7 +551,7 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so
 vendor/lib64/libqmi_client_qmux.so
 vendor/lib64/libsmemlog.so
 vendor/lib64/libquipc_os_api.so
-vendor/lib64/hw/fingerprint.msm8996.so
+lib64/hw/fingerprint.qcom.so
 vendor/lib64/hw/gatekeeper.msm8996.so
 vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so
 vendor/lib64/hw/keystore.msm8996.so
