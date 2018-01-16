@@ -114,6 +114,12 @@ on enable-low-power
     # Starting io prefetcher service
     start iop
 
+    # VM
+    write /proc/sys/vm/dirty_background_ratio 20
+    write /proc/sys/vm/dirty_expire_centisecs 100
+    write /proc/sys/vm/swappiness 5
+    write /proc/sys/vm/vfs_cache_pressure 60
+
 service charger /charger
     class charger
     group system graphics
@@ -123,6 +129,9 @@ on property:init.svc.recovery=running
     trigger enable-low-power
     
 on property:dev.bootcomplete=1
+    # Set ioscheduler
+    setprop sys.io.scheduler "bfq"
+
     # Update cpusets now that boot is complete and we want better load balancing
     write /dev/cpuset/top-app/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 0-2
@@ -130,6 +139,3 @@ on property:dev.bootcomplete=1
     write /dev/cpuset/background/cpus 0
     write /dev/cpuset/system-background/cpus 0-2
     trigger enable-low-power
-
-    # Set ioscheduler
-    setprop sys.io.scheduler "bfq"
