@@ -1,2 +1,3 @@
 allow priv_app device:dir { open read };
 allow priv_app { camera_prop proc_interrupts }:file { open read };
+allow priv_app camera_prop:file getattr;
