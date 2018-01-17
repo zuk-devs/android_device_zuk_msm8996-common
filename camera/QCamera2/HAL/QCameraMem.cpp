@@ -1289,7 +1289,7 @@ QCameraVideoMemory::QCameraVideoMemory(camera_request_memory memory,
     mMetaBufCount = 0;
     mBufType = bufType;
     //Set Default color conversion format
-    mUsage = private_handle_t::PRIV_FLAGS_ITU_R_601_FR;
+    mUsage = private_handle_t::PRIV_FLAGS_ITU_R_709;
 
     //Set Default frame format
     mFormat = OMX_COLOR_FormatYUV420SemiPlanar;
