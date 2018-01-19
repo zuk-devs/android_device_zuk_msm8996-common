@@ -520,6 +520,9 @@ vendor/lib/hw/keystore.msm8996.so
 vendor/lib/hw/sound_trigger.primary.msm8996.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
+vendor/lib/vendor.qti.voiceprint@1.0.so
+vendor/lib64/hw/sound_trigger.primary.msm8996.so
+vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Media
 lib64/libextmedia_jni.so
