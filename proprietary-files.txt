@@ -106,11 +106,8 @@ etc/firmware/rampatch_tlv_3.0.tlv
 etc/firmware/rampatch_tlv_3.2.tlv
 
 # Camera
-bin/mm-qcamera-app
-lib/libmm-qcamera.so
 lib/libtrueportrait.so
 vendor/bin/mm-qcamera-daemon
-vendor/lib/hw/camera.vendor.msm8996.so
 vendor/lib/libarcsoft_beautyshot.so
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_pmic.so
@@ -131,7 +128,6 @@ vendor/lib/libmmcamera_hvx_grid_sum.so
 vendor/lib/libmmcamera_hvx_zzHDR.so
 vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
 vendor/lib/libmmcamera_imglib.so
-vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_ov8856.so
 vendor/lib/libmmcamera_paaf_lib.so
 vendor/lib/libmmcamera_pdaf.so
@@ -161,12 +157,10 @@ vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
-vendor/lib/libmmjpeg_interface.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/libmorpho_image_stab4.so
 vendor/lib/libmpbase.so
 vendor/lib/liboptizoom.so
-vendor/lib/libqomx_core.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
