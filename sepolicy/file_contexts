@@ -25,6 +25,11 @@
 /system/bin/wcnss_filter                                        u:object_r:wcnss_filter_exec:s0
 /data/time(/.*)?                                                u:object_r:time_data_file:s0
 
+# lights
+/sys/devices/soc/75b7000\.i2c/i2c-9/9-[0-9a-f]+/leds(/.*)?    u:object_r:sysfs_leds:s0
+/sys/devices/soc/leds-qpnp-[0-9]+/leds(/.*)?                  u:object_r:sysfs_leds:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service.zuk_8996    u:object_r:hal_light_default_exec:s0
+
 # persist
 /dev/block/mmcblk0p40                                           u:object_r:persist_block_device:s0
 /persist/rfs(/.*)?                                              u:object_r:rfs_file:s0
