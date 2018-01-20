@@ -123,9 +123,6 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne \
     services-ext
 
-# Dalvik overrides
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
-
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8996 \
