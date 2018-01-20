@@ -461,7 +461,11 @@
         <item>"/system/framework/arm64/boot-core-libart.vdex"</item>
     </string-array>
 
-    <!-- Should the pinner service pin the Camera application? -->
+    <!-- Time to give to the proximity sensor before toggling the flashlight with the Power button.
+    Set to -1 to disable the proximity sensor check at all-->
+    <integer name="config_flashlightProximityTimeout">3000</integer>
+
+    <!-- True if camera app should be pinned via Pinner Service -->
     <bool name="config_pinnerCameraApp">true</bool>
 
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
