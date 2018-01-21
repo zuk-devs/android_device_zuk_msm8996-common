@@ -30,6 +30,9 @@ on charger
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
 on enable-low-power
+    # Set ioscheduler
+    setprop sys.io.scheduler "bfq"
+
     # Disable thermal hotplug to switch governor
     write /sys/module/msm_thermal/core_control/enabled 0
 
@@ -120,6 +123,13 @@ on enable-low-power
     write /proc/sys/vm/swappiness 5
     write /proc/sys/vm/vfs_cache_pressure 60
 
+    # Update cpusets now that boot is complete and we want better load balancing
+    write /dev/cpuset/top-app/cpus 0-3
+    write /dev/cpuset/foreground/boost/cpus 0-2
+    write /dev/cpuset/foreground/cpus 0-2
+    write /dev/cpuset/background/cpus 0
+    write /dev/cpuset/system-background/cpus 0-2
+
 service charger /charger
     class charger
     group system graphics
@@ -128,14 +138,5 @@ service charger /charger
 on property:init.svc.recovery=running
     trigger enable-low-power
     
-on property:dev.bootcomplete=1
-    # Set ioscheduler
-    setprop sys.io.scheduler "bfq"
-
-    # Update cpusets now that boot is complete and we want better load balancing
-    write /dev/cpuset/top-app/cpus 0-3
-    write /dev/cpuset/foreground/boost/cpus 0-2
-    write /dev/cpuset/foreground/cpus 0-2
-    write /dev/cpuset/background/cpus 0
-    write /dev/cpuset/system-background/cpus 0-2
+on property:sys.boot_completed=1
     trigger enable-low-power
