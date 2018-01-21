@@ -136,7 +136,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/hardware_keys_swipe_left_key_title">
+        android:key="menu_key"
+        android:title="@string/hardware_keys_swipe_right_key_title" >
 
         <ListPreference
             android:key="hardware_keys_menu_press"
@@ -149,11 +150,16 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="menu_key"
-        android:title="@string/hardware_keys_swipe_right_key_title" >
+        android:key="app_switch_key"
+        android:title="@string/hardware_keys_swipe_left_key_title" >
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="app_switch_wake_screen"
+            android:title="@string/button_wake_title"
+            android:defaultValue="false" />
 
         <ListPreference
-            android:key="hardware_keys_menu_press"
+            android:key="hardware_keys_app_switch_press"
             android:dialogTitle="@string/hardware_keys_swipe_tap_title"
             android:title="@string/hardware_keys_swipe_tap_title"
             android:entries="@array/hardware_keys_action_entries"
@@ -170,33 +176,6 @@
             android:key="hardware_keys_assist_press"
             android:dialogTitle="@string/hardware_keys_long_tap_title"
             android:title="@string/hardware_keys_long_tap_title"
-            android:entries="@array/hardware_keys_action_entries"
-            android:entryValues="@array/hardware_keys_action_values"
-            android:persistent="false" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="app_switch_key"
-        android:title="@string/hardware_keys_appswitch_key_title" >
-
-        <lineageos.preference.LineageSystemSettingSwitchPreference
-            android:key="app_switch_wake_screen"
-            android:title="@string/button_wake_title"
-            android:defaultValue="false" />
-
-        <ListPreference
-            android:key="hardware_keys_app_switch_press"
-            android:dialogTitle="@string/hardware_keys_short_press_title"
-            android:title="@string/hardware_keys_short_press_title"
-            android:entries="@array/hardware_keys_action_entries"
-            android:entryValues="@array/hardware_keys_action_values"
-            android:persistent="false" />
-
-        <ListPreference
-            android:key="hardware_keys_app_switch_long_press"
-            android:dialogTitle="@string/hardware_keys_long_press_title"
-            android:title="@string/hardware_keys_long_press_title"
             android:entries="@array/hardware_keys_action_entries"
             android:entryValues="@array/hardware_keys_action_values"
             android:persistent="false" />
