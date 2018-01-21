@@ -33,7 +33,7 @@
 /persist/sensors/gyro_sensitity_cal                             u:object_r:sensors_persist_file:s0
 
 # readmac
-/system/bin/readmac                                             u:object_r:readmac_exec:s0
+/(vendor|system/vendor)/bin/readmac                             u:object_r:readmac_exec:s0
 
 # ril
 /system/vendor/radio/qcril_database/qcril.db                    u:object_r:nv_data_file:s0
