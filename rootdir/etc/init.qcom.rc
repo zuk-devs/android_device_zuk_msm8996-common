@@ -176,55 +176,6 @@ on boot
     chown system system /sys/class/leds/led:rgb_blue/brightness
     chmod 0660 /sys/class/leds/led:rgb_blue/brightness
 
-    chown system system /sys/class/leds/led:rgb_blue/blink
-    chmod 0660 /sys/class/leds/led:rgb_blue/blink
-    chown system system /sys/class/leds/led:rgb_red/blink
-    chmod 0660 /sys/class/leds/led:rgb_red/blink
-    chown system system /sys/class/leds/led:rgb_green/blink
-    chmod 0660 /sys/class/leds/led:rgb_green/blink
-
-    chown system system /sys/class/leds/led:rgb_blue/ramp_step_ms
-    chmod 0660 /sys/class/leds/led:rgb_blue/ramp_step_ms
-    chown system system /sys/class/leds/led:rgb_red/ramp_step_ms
-    chmod 0660 /sys/class/leds/led:rgb_red/ramp_step_ms
-    chown system system /sys/class/leds/led:rgb_green/ramp_step_ms
-    chmod 0660 /sys/class/leds/led:rgb_green/ramp_step_ms
-
-    chown system system /sys/class/leds/led:rgb_blue/pause_hi
-    chmod 0660 /sys/class/leds/led:rgb_blue/pause_hi
-    chown system system /sys/class/leds/led:rgb_red/pause_hi
-    chmod 0660 /sys/class/leds/led:rgb_red/pause_hi
-    chown system system /sys/class/leds/led:rgb_green/pause_hi
-    chmod 0660 /sys/class/leds/led:rgb_green/pause_hi
-
-    chown system system /sys/class/leds/led:rgb_blue/pause_lo
-    chmod 0660 /sys/class/leds/led:rgb_blue/pause_lo
-    chown system system /sys/class/leds/led:rgb_red/pause_lo
-    chmod 0660 /sys/class/leds/led:rgb_red/pause_lo
-    chown system system /sys/class/leds/led:rgb_green/pause_lo
-    chmod 0660 /sys/class/leds/led:rgb_green/pause_lo
-
-    chown system system /sys/class/leds/led:rgb_blue/duty_pcts
-    chmod 0660 /sys/class/leds/led:rgb_blue/duty_pcts
-    chown system system /sys/class/leds/led:rgb_red/duty_pcts
-    chmod 0660 /sys/class/leds/led:rgb_red/duty_pcts
-    chown system system /sys/class/leds/led:rgb_green/duty_pcts
-    chmod 0660 /sys/class/leds/led:rgb_green/duty_pcts
-
-    chown system system /sys/class/leds/led:rgb_blue/start_idx
-    chmod 0660 /sys/class/leds/led:rgb_blue/start_idx
-    chown system system /sys/class/leds/led:rgb_red/start_idx
-    chmod 0660 /sys/class/leds/led:rgb_red/start_idx
-    chown system system /sys/class/leds/led:rgb_green/start_idx
-    chmod 0660 /sys/class/leds/led:rgb_green/start_idx
-
-    chown system system /sys/class/leds/led:rgb_blue/lut_flags
-    chmod 0660 /sys/class/leds/led:rgb_blue/lut_flags
-    chown system system /sys/class/leds/led:rgb_red/lut_flags
-    chmod 0660 /sys/class/leds/led:rgb_red/lut_flags
-    chown system system /sys/class/leds/led:rgb_green/lut_flags
-    chmod 0660 /sys/class/leds/led:rgb_green/lut_flags
-
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
