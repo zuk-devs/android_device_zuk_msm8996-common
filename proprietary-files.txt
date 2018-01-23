@@ -50,8 +50,6 @@ vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
-bin/cnss-daemon
-etc/firmware/bdwlan30.bin
 
 # Audio libraries
 vendor/lib/soundfx/libqcbassboost.so
