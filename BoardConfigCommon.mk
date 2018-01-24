@@ -196,6 +196,13 @@ BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 # Tap to wake node
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
