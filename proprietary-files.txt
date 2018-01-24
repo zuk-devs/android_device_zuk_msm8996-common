@@ -706,7 +706,7 @@ etc/permissions/qti-vzw-ims-internal.xml
 -framework/qcrilhook.jar
 -framework/qcnvitems.jar
 framework/QtiTelephonyServicelibrary.jar
-framework/qti-telephony-common.jar
+framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
 lib64/libparam.so
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/netmgrd
