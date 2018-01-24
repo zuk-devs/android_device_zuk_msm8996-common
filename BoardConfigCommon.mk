@@ -187,6 +187,13 @@ BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 TARGET_INIT_VENDOR_LIB := libinit_msm8996
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8996
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
