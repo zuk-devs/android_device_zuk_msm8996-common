@@ -25,13 +25,11 @@
         android:summary="@string/disable_navkeys_summary"
         android:defaultValue="false" />
 
-    <!--
     <org.lineageos.lineageparts.input.ButtonBacklightBrightness
         android:key="button_backlight"
         android:title="@string/button_backlight_title"
         android:dialogTitle="@string/button_backlight_title"
         android:persistent="false" />
-    -->
 
     <PreferenceCategory
         android:key="navigation_bar_category"
@@ -71,12 +69,10 @@
         android:key="power_key"
         android:title="@string/hardware_keys_power_key_title" >
 
-        <!--
         <PreferenceScreen
             android:key="power_menu"
             android:title="@string/power_menu_title"
             android:fragment="org.lineageos.lineageparts.input.PowerMenuActions" />
-        -->
 
         <SwitchPreference
             android:key="power_end_call"
