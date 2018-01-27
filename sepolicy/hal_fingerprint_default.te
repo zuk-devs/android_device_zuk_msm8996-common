@@ -1,0 +1,2 @@
+allow hal_fingerprint_default system_data_file:dir { add_name create open read remove_name write };
+allow hal_fingerprint_default system_data_file:sock_file { create setattr unlink };
