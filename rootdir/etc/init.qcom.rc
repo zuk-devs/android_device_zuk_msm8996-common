@@ -143,6 +143,16 @@ on boot
     chown system system /sys/class/timed_output/vibrator/vtg_level
     chmod 0664 /sys/class/timed_output/vibrator/vtg_level
 
+    # Allow access to sensors device attributes
+    chown system system /sys/class/sensors/MPU6050-accel/enable
+    chown system system /sys/class/sensors/MPU6050-accel/poll_delay
+    chown system system /sys/class/sensors/MPU6050-gyro/enable
+    chown system system /sys/class/sensors/MPU6050-gyro/poll_delay
+    chown system system /sys/class/sensors/apds9930-light/enable
+    chown system system /sys/class/sensors/apds9930-light/poll_delay
+    chown system system /sys/class/sensors/apds9930-proximity/enable
+    chown system system /sys/class/sensors/apds9930-proximity/poll_delay
+
     # Fingerprint
     chown system system /sys/devices/soc/soc:fpc1020/irq
     chmod 0660 /sys/devices/soc/soc:fpc1020/irq
@@ -309,15 +319,6 @@ on post-fs-data
     mkdir /data/usf 0700 system system
     mkdir /data/misc/qvop 0660 system system
     mkdir /data/misc/audio_pp 0771 media audio
-
-    # Sensors
-    mkdir /data/misc/sensors
-    chmod 0775 /data/misc/sensors
-    chmod 0755 /persist/sensors
-    chmod 0644 /persist/sensors/sensors_settings
-    chmod 0644 /persist/sensors/gyro_sensitity_cal
-    chown system root /persist/sensors/sensors_settings
-    chown system root /persist/sensors/gyro_sensitity_cal
 
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
@@ -787,7 +788,7 @@ service qti /system/vendor/bin/qti
     group radio oem_2901 usb
     writepid /dev/cpuset/system-background/tasks
 
-service sensors /system/bin/sensors.qcom
+service sensors /system/vendor/bin/sensors.qcom
     class core
     user root
     group root wakelock
@@ -847,6 +848,11 @@ service loc_launcher /vendor/bin/loc_launcher
     class late_start
     group gps inet diag wifi
     writepid /dev/cpuset/system-background/tasks
+
+service sensor-sh /vendor/bin/init.qcom.sensors.sh
+    class core
+    user root
+    oneshot
 
 service atfwd /system/bin/ATFWD-daemon
     class late_start
