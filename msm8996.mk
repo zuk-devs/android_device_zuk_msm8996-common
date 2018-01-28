@@ -252,7 +252,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.qcom.bt.sh \
     init.safailnet.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.qcom.sensors.sh
 
 # RIL
 PRODUCT_PACKAGES += \
