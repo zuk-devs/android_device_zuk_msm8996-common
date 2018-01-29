@@ -27,14 +27,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-start_copying_prebuilt_qcril_db()
-{
-    if [ -f /vendor/radio/qcril_database/qcril.db -a ! -f /data/vendor/radio/qcril.db ]; then
-        cp /vendor/radio/qcril_database/qcril.db /data/vendor/radio/qcril.db
-        chown -h radio.radio /data/vendor/radio/qcril.db
-    fi
-}
-
 echo 1 > /proc/sys/net/ipv6/conf/default/accept_ra_defrtr
 
 #Loop through the sysfs nodes and determine the correct sysfs to change the permission and ownership.
@@ -49,12 +41,6 @@ do
              break
         fi
 done
-
-#
-# Copy qcril.db if needed for RIL
-#
-start_copying_prebuilt_qcril_db
-echo 1 > /data/vendor/radio/db_check_done
 
 #
 # Make modem config folder and copy firmware config to that folder for RIL
