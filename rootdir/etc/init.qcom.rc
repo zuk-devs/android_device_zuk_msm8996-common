@@ -157,6 +157,18 @@ on post-fs-data
     mkdir /data/vendor/location/mq 0770 gps gps
     mkdir /data/vendor/location/xtwifi 0770 gps gps
 
+    # SSC/SLPI sensors
+    mkdir /persist/sensors 0775 root system
+    chown root system /persist/sensors/sensors_settings
+    chmod 0664 /persist/sensors/sensors_settings
+    chown root system /persist/sensors/sns.reg
+    chmod 0664 /persist/sensors/sns.reg
+
+    # /dev/sensors only supports an ioctl to get the current SLPI timestamp;
+    # allow the sensors daemon to perform this as non-root
+    chown root system /dev/sensors
+    chmod 0660 /dev/sensors
+
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
     mkdir /data/audio/ 0770 media audio
