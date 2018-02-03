@@ -23,6 +23,7 @@
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/zuk/msm8996-common/msm8996-common-vendor.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 
 # Hidl HALs
 $(call inherit-product, $(LOCAL_PATH)/hidl.mk)
