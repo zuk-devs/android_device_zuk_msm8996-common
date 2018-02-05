@@ -280,10 +280,8 @@ on post-fs-data
     mkdir /persist/qc_senseid 0700 system system
     mkdir /persist/bms 0700 root system
     restorecon_recursive /persist
-    mkdir /data/misc/dts 0770 media audio
     mkdir /data/usf 0700 system system
     mkdir /data/misc/qvop 0660 system system
-    mkdir /data/misc/audio_pp 0771 media audio
 
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
@@ -293,9 +291,6 @@ on post-fs-data
     mkdir /data/vendor/misc/qti_fp/bg_estimation 0770 system system
     mkdir /data/vendor/misc/qti_fp/calib_test 0770 system system
     mkdir /data/vendor/misc/qti_fp/database 0770 system system
-
-    # Create directory for TZ Apps
-    mkdir /data/misc/qsee 0770 system system
 
     # Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera
@@ -332,18 +327,12 @@ on post-fs-data
     mkdir /data/connectivity 0771 system system
     chown system system /data/connectivity
 
-    mkdir /data/dpm/nsrm 0771 system system
-    chown system system /data/dpm/nsrm
-
     # Create directory used by audio subsystem
     mkdir /data/misc/audio 0770 audio audio
 
     # Create directory for audio delta files
     mkdir /data/misc/audio/acdbdata 0770 media audio
     mkdir /data/misc/audio/acdbdata/delta 0770 media audio
-
-    # Create directory used by the DASH client
-    mkdir /data/misc/dash 0770 media audio
 
     # Create directory for radio
     mkdir /data/vendor/radio 0770 system radio
@@ -363,22 +352,10 @@ on post-fs-data
     chown system system /sys/devices/platform/msm_sdcc.3/polling
     chown system system /sys/devices/platform/msm_sdcc.4/polling
 
-    # Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
-    mkdir /data/system 0775 system system
-
-    #symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
     # Create directories for Location services
     mkdir /data/vendor/location 0770 gps gps
     mkdir /data/vendor/location/mq 0770 gps gps
     mkdir /data/vendor/location/xtwifi 0770 gps gps
-
-    # Create directory from IMS services
-    mkdir /data/shared 0755
-    chown system system /data/shared
-
-    # Create directory for FOTA
-    mkdir /data/fota 0771
-    chown system system /data/fota
 
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
@@ -395,14 +372,6 @@ on post-fs-data
     # Create FM dir for patchdownloader
     mkdir /data/misc/fm 0770 system system
     chmod 0770 /data/misc/fm
-
-    # RIDL data
-    mkdir /data/misc/SelfHost/ 0710 system shell
-    mkdir /data/misc/SelfHost/QCLogs/ 2750 system shell
-    mkdir /data/misc/SelfHost/QCLogs/temp/ 0700 system shell
-    mkdir /data/misc/SelfHost/storage/ 0700 system shell
-    mkdir /data/misc/SelfHost/Running/ 2750 system shell
-    mkdir /data/misc/SelfHost/socket/ 2770 system system
 
     #Create PERFD deamon related dirs
     mkdir /data/vendor/perfd 0770 root system
