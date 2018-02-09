@@ -480,4 +480,7 @@
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
+
+    <!-- Enable full screen DT2S in lockscreen -->
+    <bool name="fullScreenDT2S">true</bool>
 </resources>
