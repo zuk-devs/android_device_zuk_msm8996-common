@@ -172,6 +172,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libsdm-disp-apis
 
+# Healthd
+PRODUCT_PACKAGES += \
+    chargeonlymode
 
 # IMS
 PRODUCT_PACKAGES += \
