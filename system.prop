@@ -66,11 +66,6 @@ ro.sf.lcd_density=480
 sdm.debug.disable_skip_validate=1
 sdm.perf_hint_window=50
 
-# GPS
-persist.gps.qc_nlp_in_use=1
-persist.loc.nlp_name=com.qualcomm.location
-ro.gps.agps_provider=1
-
 # Hdmi
 vendor.audio.hw.aac.encoder=true
 
@@ -97,10 +92,6 @@ persist.rild.nitz_short_ons_2=""
 persist.rild.nitz_short_ons_3=""
 
 # Perf
-ro.am.reschedule_service=true
-ro.min_freq_0=307200
-ro.min_freq_4=307200
-ro.sys.fw.bg_apps_limit=60
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
