@@ -113,6 +113,7 @@ on enable-low-power
     write /sys/class/devfreq/soc:qcom,mincpubw/governor "cpufreq"
 
     write /sys/module/lpm_levels/parameters/sleep_disabled "N"
+    start thermal-engine
 
     # Set perfd properties
     setprop sys.post_boot.parsed 1
@@ -133,7 +134,7 @@ on enable-low-power
     write /dev/cpuset/background/cpus 0
     write /dev/cpuset/system-background/cpus 0-2
 
-service charger /charger
+service charger /sbin/chargeonlymode
     class charger
     group system graphics
     seclabel u:r:charger:s0
