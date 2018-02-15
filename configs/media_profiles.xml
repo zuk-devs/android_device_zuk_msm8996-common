@@ -116,8 +116,8 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="156000"
-             sampleRate="48000"
+             bitRate="328000"
+             sampleRate="96000"
              channels="2" />
     </EncoderProfile>
 
@@ -168,8 +168,8 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="156000"
-             sampleRate="48000"
+             bitRate="328000"
+             sampleRate="96000"
              channels="2" />
     </EncoderProfile>
 
@@ -181,8 +181,8 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="156000"
-             sampleRate="48000"
+             bitRate="328000"
+             sampleRate="96000"
              channels="2" />
     </EncoderProfile>
 
@@ -194,8 +194,8 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="156000"
-            sampleRate="48000"
+            bitRate="328000"
+            sampleRate="96000"
             channels="2" />
     </EncoderProfile>
 
@@ -347,8 +347,8 @@
                frameRate="120" />
         <!-- audio setting is ignored -->
         <Audio codec="aac"
-               bitRate="96000"
-               sampleRate="48000"
+               bitRate="382000"
+               sampleRate="96000"
                channels="2" />
     </EncoderProfile>
 
@@ -361,8 +361,8 @@
                frameRate="60" />
         <!-- audio setting is ignored -->
         <Audio codec="aac"
-               bitRate="96000"
-               sampleRate="48000"
+               bitRate="328000"
+               sampleRate="96000"
                channels="2" />
     </EncoderProfile>
 
@@ -374,8 +374,8 @@
                frameRate="120" />
         <!-- audio setting is ignored -->
         <Audio codec="aac"
-               bitRate="96000"
-               sampleRate="48000"
+               bitRate="328000"
+               sampleRate="96000"
                channels="2" />
     </EncoderProfile>
 
@@ -637,7 +637,7 @@
         minBitRate="64000" maxBitRate="42000000"
         minFrameWidth="176" maxFrameWidth="4096"
         minFrameHeight="144" maxFrameHeight="2160"
-        minFrameRate="15" maxFrameRate="30"
+        minFrameRate="15" maxFrameRate="60"
         maxHFRFrameWidth="1920" maxHFRFrameHeight="1080"
         maxHFRMode="120"  />
 
@@ -645,7 +645,7 @@
         minBitRate="64000" maxBitRate="2000000"
         minFrameWidth="176" maxFrameWidth="800"
         minFrameHeight="144" maxFrameHeight="480"
-        minFrameRate="15" maxFrameRate="30"
+        minFrameRate="15" maxFrameRate="60"
         maxHFRFrameWidth="0" maxHFRFrameHeight="0"
         maxHFRMode="0"  />
 
@@ -653,7 +653,7 @@
         minBitRate="64000" maxBitRate="20000000"
         minFrameWidth="176" maxFrameWidth="1920"
         minFrameHeight="144" maxFrameHeight="1088"
-        minFrameRate="15" maxFrameRate="30"
+        minFrameRate="15" maxFrameRate="60"
         maxHFRFrameWidth="0" maxHFRFrameHeight="0"
         maxHFRMode="0"  />
 
@@ -661,22 +661,22 @@
         minBitRate="64000" maxBitRate="100000000"
         minFrameWidth="176" maxFrameWidth="4096"
         minFrameHeight="144" maxFrameHeight="2160"
-        minFrameRate="15" maxFrameRate="30"
+        minFrameRate="15" maxFrameRate="60"
         maxHFRFrameWidth="0" maxHFRFrameHeight="0"
         maxHFRMode="0"  />
 
     <AudioEncoderCap name="aac" enabled="true"
-        minBitRate="8000" maxBitRate="192000"
-        minSampleRate="8000" maxSampleRate="48000"
+        minBitRate="8000" maxBitRate="328000"
+        minSampleRate="8000" maxSampleRate="96000"
         minChannels="1" maxChannels="6" />
 
     <AudioEncoderCap name="heaac" enabled="true"
         minBitRate="8000" maxBitRate="64000"
-        minSampleRate="16000" maxSampleRate="48000"
+        minSampleRate="16000" maxSampleRate="96000"
         minChannels="1" maxChannels="1" />
 
     <AudioEncoderCap name="aaceld" enabled="true"
-        minBitRate="16000" maxBitRate="192000"
+        minBitRate="16000" maxBitRate="328000"
         minSampleRate="16000" maxSampleRate="48000"
         minChannels="1" maxChannels="1" />
 
