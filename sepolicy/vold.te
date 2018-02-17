@@ -1,1 +1,3 @@
 allow vold persist_file:dir read;
+allow vold persist_file:dir open;
+allow vold persist_file:dir ioctl;

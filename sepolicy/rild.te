@@ -10,3 +10,9 @@ allow rild default_android_service:service_manager find;
 
 allow rild radio_data_file:file { create getattr ioctl lock open read unlink write };
 allow rild radio_data_file:dir { add_name getattr open read remove_name search write };
+
+allow rild toolbox_exec:file getattr;
+allow rild toolbox_exec:file execute;
+allow rild toolbox_exec:file { open read };
+allow rild toolbox_exec:file execute_no_trans;
+allow rild vendor_toolbox_exec:file execute_no_trans;
