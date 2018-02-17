@@ -33,9 +33,6 @@ persist.camera.video.ubwc=0
 ro.persist.qcapb=1
 camera.disable_zsl_mode=1
 
-# Charger
-ro.enable_boot_charger_mode=1 
-
 # CNE
 persist.cne.feature=1
 
