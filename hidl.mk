@@ -48,8 +48,8 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     vendor.display.color@1.0-impl \
     vendor.display.color@1.0-service \
-    vendor.display.config@1.0 \
-    vendor.display.config@1.0_vendor
+    vendor.display.config@1.1 \
+    vendor.display.config@1.1_vendor
 
 # DRM
 PRODUCT_PACKAGES += \
