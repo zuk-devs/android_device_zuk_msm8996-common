@@ -1,3 +1,2 @@
-allow charger device:dir read;
-allow charger device:dir open;
+allow charger device:dir { open read };
 allow charger self:capability { dac_override dac_read_search };
