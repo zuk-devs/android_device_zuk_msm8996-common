@@ -50,8 +50,6 @@ vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
-bin/cnss-daemon
-etc/firmware/bdwlan30.bin
 
 # Audio libraries
 vendor/lib/soundfx/libqcbassboost.so
@@ -710,7 +708,7 @@ etc/permissions/qti-vzw-ims-internal.xml
 -framework/qcrilhook.jar
 -framework/qcnvitems.jar
 framework/QtiTelephonyServicelibrary.jar
-framework/qti-telephony-common.jar
+framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
 lib64/libparam.so
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/netmgrd
@@ -779,10 +777,12 @@ vendor/lib64/libthermalioctl.so
 vendor/lib64/libthermalclient.so
 
 # Time service
--vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
+-app/TimeService/TimeService.apk
+bin/time_daemon
+vendor/lib/libTimeService.so
+-vendor/lib/libtime_genoff.so
 vendor/lib64/libTimeService.so
-vendor/lib64/libtime_genoff.so
+-vendor/lib64/libtime_genoff.so
 
 # TUI
 lib/vendor.qti.hardware.tui_comm@1.0.so
