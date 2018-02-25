@@ -813,7 +813,7 @@ service wifi_fccutild /system/bin/wifi_fccutild
     disabled
     oneshot
 
-service cnss-daemon /system/bin/cnss-daemon -n -l
+service cnss-daemon /vendor/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
