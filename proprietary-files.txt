@@ -66,10 +66,6 @@ vendor/bin/wcnss_filter
 vendor/lib64/libbtnv.so
 vendor/lib/libbtnv.so
 
-# Bluetooth firmware
-etc/bluetooth/btfw32.tlv
-etc/bluetooth/btnv32.bin
-
 # Camera
 lib/libtrueportrait.so
 vendor/bin/mm-qcamera-daemon
@@ -419,31 +415,12 @@ vendor/lib/hw/vulkan.msm8996.so
 vendor/lib64/hw/vulkan.msm8996.so
 
 # Graphics firmware
-vendor/firmware/a225_pfp.fw
-vendor/firmware/a225_pm4.fw
-vendor/firmware/a225p5_pm4.fw
-vendor/firmware/a300_pfp.fw
-vendor/firmware/a300_pm4.fw
-vendor/firmware/a330_pfp.fw
-vendor/firmware/a330_pm4.fw
-vendor/firmware/a420_pfp.fw
-vendor/firmware/a420_pm4.fw
-vendor/firmware/a530_gpmu.fw2
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw
-vendor/firmware/a530_zap.b00
-vendor/firmware/a530_zap.b01
 vendor/firmware/a530_zap.b02
-vendor/firmware/a530_zap.elf
 vendor/firmware/a530_zap.mdt
-vendor/firmware/a540_gpmu.fw2
-vendor/firmware/a530v1_pfp.fw
-vendor/firmware/a530v1_pm4.fw
-vendor/firmware/a530v2_seq.fw2
 vendor/firmware/a530v3_gpmu.fw2
 vendor/firmware/a530v3_seq.fw2
-vendor/firmware/leia_pfp_470.fw
-vendor/firmware/leia_pm4_470.fw
 
 # IMS
 -app/ims/ims.apk
