@@ -419,11 +419,6 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     group camera system inet input graphics
     writepid /dev/cpuset/system-background/tasks
 
-service qvop-daemon /system/bin/qvop-daemon
-    class late_start
-    user system
-    group system drmrpc
-
 # start up peripheral manager
 service per_mgr /vendor/bin/pm-service
     class late_start
@@ -449,11 +444,6 @@ service qseecomd /vendor/bin/qseecomd
    user root
    group root
    writepid /dev/cpuset/system-background/tasks
-
-service secotad /system/bin/secotad
-   class late_start
-   user system
-   group system
 
 service thermal-engine /vendor/bin/thermal-engine
    class main
@@ -520,12 +510,6 @@ on property:vendor.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
     start vendor.imsrcsservice
 
-service dts_configurator /system/bin/dts_configurator
-    class late_start
-    user system
-    group system media audio
-    oneshot
-
 service ppd /vendor/bin/mm-pp-dpps
     class late_start
     user system
@@ -551,13 +535,7 @@ on property:init.svc.zygote=running
 on property:init.svc.zygote=restarting
     stop ppd
 
-service tlocd /system/bin/tloc_daemon
-    class late_start
-    user system
-    group drmrpc gps net_raw
-    seclabel u:r:tlocd:s0
-
-service readmac /system/vendor/bin/readmac
+service readmac /vendor/bin/readmac
     class main
     user root
     group root
@@ -568,16 +546,6 @@ service energy-awareness /vendor/bin/energy-awareness
     user root
     group system
     oneshot
-
-service mdtpd /system/vendor/bin/mdtpd
-    class late_start
-    user root
-    group system radio drmrpc
-
-service qcomsysd /system/bin/qcom-system-daemon
-    class main
-    user root
-    group root diag
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
@@ -760,12 +728,6 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-service ptt_socket_app /system/bin/ptt_socket_app -d
-    class main
-    user root
-    group root
-    oneshot
-
 service wifi_fccutild /system/bin/wifi_fccutild
     user system
     group system inet net_admin
@@ -787,11 +749,6 @@ service loc_launcher /vendor/bin/loc_launcher
     group gps inet diag wifi
     writepid /dev/cpuset/system-background/tasks
 
-service atfwd /system/bin/ATFWD-daemon
-    class late_start
-    user system
-    group system radio
-
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
     write /proc/sys/net/ipv4/tcp_adv_win_scale  2
@@ -808,12 +765,6 @@ service msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.
     group root
     disabled
     writepid /dev/cpuset/system-background/tasks
-
-# Seemp health service
-service seemp_healthd /system/vendor/bin/seemp_healthd
-    class late_start
-    user system
-    group system
 
 on charger
     setprop persist.sys.usb.config charging
