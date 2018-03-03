@@ -45,6 +45,15 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.cas</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMediaCasService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.configstore</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -56,15 +65,16 @@
     <hal format="hidl">
         <name>android.hardware.drm</name>
         <transport>hwbinder</transport>
-        <impl level="generic"></impl>
         <version>1.0</version>
         <interface>
             <name>ICryptoFactory</name>
             <instance>default</instance>
+            <instance>widevine</instance>
         </interface>
         <interface>
             <name>IDrmFactory</name>
             <instance>default</instance>
+            <instance>widevine</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -83,6 +93,7 @@
         <interface>
             <name>IGnss</name>
             <instance>default</instance>
+            <instance>gnss_vendor</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -241,6 +252,15 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.usb</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IUsb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.vibrator</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -268,30 +288,30 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>com.qualcomm.qti.imscmservice</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IImsCmService</name>
+            <instance>qti.ims.connectionmanagerservice</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>com.qualcomm.qti.uceservice</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IUceService</name>
+            <instance>com.qualcomm.qti.uceservice</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>com.quicinc.cne.api</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IApiService</name>
             <instance>cnd</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>com.quicinc.cne.server</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IServer</name>
-            <instance>cnd</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.qdutils_disp</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IQdutilsDisp</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -367,12 +387,12 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>com.qualcomm.qti.imscmservice</name>
+        <name>vendor.qti.hardware.qdutils_disp</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IImsCmService</name>
-            <instance>qti.ims.connectionmanagerservice</instance>
+            <name>IQdutilsDisp</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -383,25 +403,6 @@
             <name>IQcRilAudio</name>
             <instance>slot1</instance>
             <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.radio.atcmdfwd</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAtCmdFwd</name>
-            <instance>AtCmdFwdService</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.radio.config</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IConfig</name>
-            <instance>radioconfig0</instance>
-            <instance>radioconfig1</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -421,7 +422,6 @@
         <interface>
             <name>IUimLpa</name>
             <instance>UimLpa0</instance>
-            <instance>UimLpa1</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -483,7 +483,4 @@
             <instance>imsrtpservice</instance>
         </interface>
     </hal>
-    <sepolicy>
-        <version>26.0</version>
-    </sepolicy>
 </manifest>
