@@ -146,8 +146,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.qcom.bt.sh \
-    ueventd.qcom.rc \
-    init.qcom.sensors.sh
+    ueventd.qcom.rc
 
 # Display
 PRODUCT_PACKAGES += \
