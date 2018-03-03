@@ -25,9 +25,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/zuk/msm8996-common/msm8996-common-vendor.mk)
 
-# Hidl HALs
-$(call inherit-product, $(LOCAL_PATH)/hidl.mk)
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -84,6 +81,9 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio.effect@2.0-impl \
     audio.a2dp.default \
     audio.primary.msm8996 \
     audio.r_submix.default \
@@ -115,16 +115,20 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
     camera.msm8996 \
     libmm-qcamera \
     mm-qcamera-app \
     Snap 
 
-# Connectivity Engine support (CNE)
+# CNE
 PRODUCT_PACKAGES += \
     cneapiclient \
     com.quicinc.cne \
@@ -143,6 +147,17 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    vendor.display.color@1.0-impl \
+    vendor.display.color@1.0-service \
+    vendor.display.config@1.1 \
+    vendor.display.config@1.1_vendor
     copybit.msm8996 \
     gralloc.msm8996 \
     hwcomposer.msm8996 \
@@ -160,12 +175,24 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ZukDoze
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service
+
 # For config.fs
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl-qti \
+    android.hardware.gnss@1.0-service-qti \
     libcurl \
     gps.conf \
     libgnss \
@@ -184,7 +211,16 @@ PRODUCT_PACKAGES += \
 
 # Healthd
 PRODUCT_PACKAGES += \
+    android.hardware.health@1.0-convert \
+    android.hardware.health@1.0-impl \
+    android.hardware.health@1.0-service \
     chargeonlymode
+
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0-java
+    android.hidl.manager@1.0
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -199,7 +235,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/msm8996-tasha-mtp-snd-card_Button_Jack.kl:system/usr/keylayout/msm8996-tasha-mtp-snd-card_Button_Jack.kl \
     $(LOCAL_PATH)/keylayout/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl 
 
-# Media
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
@@ -214,6 +249,15 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
     libebtc
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.zuk_8996
 
 # LiveDisplay native
 PRODUCT_PACKAGES += \
@@ -250,6 +294,10 @@ PRODUCT_PACKAGES += \
     libOmxVdecHevc \
     libstagefrighthw
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-service-qti
+
 # QCOM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-oem.xml:system/etc/permissions/privapp-permissions-oem.xml \
@@ -259,7 +307,11 @@ PRODUCT_COPY_FILES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson
-   
+
+# RenderScript
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \
@@ -270,6 +322,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp_policy/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
+
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext
@@ -278,15 +335,29 @@ PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
 
 # VNDK
 PRODUCT_PACKAGES += \
     vndk-sp
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
+
 # WiFi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     hostapd \
     hostapd_cli \
     libqsap_sdk \
@@ -295,10 +366,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
@@ -306,6 +373,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service
 
 # Offline charging
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
