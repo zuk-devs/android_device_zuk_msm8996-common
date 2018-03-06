@@ -1,3 +1,6 @@
+# Adreno
+ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
+
 # Audio
 af.fast_track_multiplier=1
 vendor.audio_hal.period_size=192
@@ -16,10 +19,13 @@ vendor.audio.safx.pbe.enabled=true
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=true
+persist.vendor.bt.enable.splita2dp=false
 ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
 vendor.audio.tunnel.encode=false
 vendor.voice.path.for.pcm.voip=true
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
 
 # Bluetooth
 bt.max.hfpclient.connections=1
@@ -45,9 +51,6 @@ persist.data.netmgrd.qos.enable=true
 ro.use_data_netmgrd=true
 persist.data.iwlan.enable=true
 
-# Device was launched with M
-ro.product.first_api_level=23
-
 # Display (Qualcomm AD)
 ro.qualcomm.cabl=2
 ro.qcom.ad=1
@@ -62,9 +65,11 @@ ro.opa.eligible_device=true
 
 # Graphics
 debug.gralloc.enable_fb_ubwc=1
+debug.sf.latch_unsignaled=1
 persist.hwc.enable_vds=1
 ro.opengles.version=196610
 ro.sf.lcd_density=480
+sdm.debug.disable_skip_validate=1
 sdm.perf_hint_window=50
 
 # GPS
@@ -76,6 +81,7 @@ ro.gps.agps_provider=1
 vendor.audio.hw.aac.encoder=true
 
 # Media
+vendor.vidc.enc.disable.pq=true
 vendor.audio.flac.sw.decoder.24bit=true
 media.aac_51_output_enabled=true
 mm.enable.smoothstreaming=true
@@ -150,3 +156,6 @@ persist.data.df.dev_name=rmnet_usb0
 
 # TimeService
 persist.timed.enable=true
+
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
