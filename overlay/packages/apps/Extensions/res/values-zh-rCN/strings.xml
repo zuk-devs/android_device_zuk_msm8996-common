@@ -19,10 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     
     <!-- Hardware button navigation -->
-    <string name="hardware_keys_home_key_title">Home button</string>
-    <string name="hardware_keys_menu_key_title">Right swipe</string>
-    <string name="hardware_keys_assist_key_title">Long tap</string>
-    <string name="hardware_keys_appswitch_key_title">Left swipe</string>
-    <string name="hardware_keys_back_key_title">Tap</string>
+    <string name="hardware_keys_home_key_title">主页键</string>
+    <string name="hardware_keys_menu_key_title">右滑</string>
+    <string name="hardware_keys_assist_key_title">长轻触</string>
+    <string name="hardware_keys_appswitch_key_title">左滑</string>
+    <string name="hardware_keys_back_key_title">轻触</string>
  
 </resources>
