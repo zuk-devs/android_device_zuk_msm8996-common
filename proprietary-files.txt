@@ -60,6 +60,7 @@ vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so
+vendor/etc/audio_tuning_mixer.txt
 
 # Bluetooth
 vendor/bin/wcnss_filter
