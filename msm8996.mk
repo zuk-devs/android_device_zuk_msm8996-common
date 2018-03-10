@@ -368,11 +368,10 @@ PRODUCT_PACKAGES += \
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
-    hostapd \
-    hostapd_cli \
     libqsap_sdk \
     libQWiFiSoftApCfg \
-    libwifi-hal-qcom \
+    libwpa_client \
+    hostapd \
     readmac \
     wpa_supplicant \
     wpa_supplicant.conf
