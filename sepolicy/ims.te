@@ -1,1 +1,2 @@
 allow ims ims:capability net_raw;
+allow ims ctl_default_prop:property_service set;
