@@ -702,6 +702,14 @@ vendor/lib64/libthermalioctl.so
 vendor/bin/time_daemon
 vendor/lib64/libtime_genoff.so
 
+# TUI - from LA.UM.6.5.r1-04300-8x96.0
+lib/vendor.qti.hardware.tui_comm@1.0.so|85df6c84260eabf1a40dca99ff26ad6cc94bc73f
+lib64/vendor.qti.hardware.tui_comm@1.0.so|e03d63f1d0f0a02dba9b1147ae642e7b55286f87
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|3328d433e889426d16fbae33a3304d783c70c0d5
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so|193bd9cc89f6ff208ec5e5fa62e553e7f797c485
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so|1d948a6c9b1993b8d8543b7a778b27d3f9408fb0
+
 # Widevine DRM
 vendor/bin/hw/android.hardware.drm@1.0-service.widevine
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
