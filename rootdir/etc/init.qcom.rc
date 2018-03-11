@@ -470,7 +470,7 @@ on property:ro.data.large_tcp_window_size=true
     write /proc/sys/net/ipv4/tcp_adv_win_scale  2
 
 service ril-daemon2 /vendor/bin/hw/rild -c 2
-    class main
+    class late_start
     socket rild2 stream 660 root radio
     socket rild-debug2 stream 660 radio system
     user radio
