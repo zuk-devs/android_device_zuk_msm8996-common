@@ -88,6 +88,9 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@2.0-service \
+    android.hardware.soundtrigger@2.0-impl \
+    android.hardware.soundtrigger@2.0-service \
     audio.a2dp.default \
     audio.primary.msm8996 \
     audio.r_submix.default \
@@ -365,11 +368,10 @@ PRODUCT_PACKAGES += \
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
-    hostapd \
-    hostapd_cli \
     libqsap_sdk \
     libQWiFiSoftApCfg \
-    libwifi-hal-qcom \
+    libwpa_client \
+    hostapd \
     readmac \
     wpa_supplicant \
     wpa_supplicant.conf
@@ -392,4 +394,4 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-service
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
+    $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
