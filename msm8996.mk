@@ -209,10 +209,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
 
-# Graphics
-PRODUCT_PACKAGES += \
-    libsdm-disp-apis
-
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@1.0-convert \
