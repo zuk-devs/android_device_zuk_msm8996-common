@@ -160,8 +160,3 @@ persist.timed.enable=true
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
-# USB
-sys.usb.ffs.max_write=524288
-sys.usb.ffs.max_read=524288
-sys.usb.mtp.device_type=3
