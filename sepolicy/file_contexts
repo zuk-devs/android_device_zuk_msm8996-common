@@ -21,6 +21,9 @@
 /sys/devices/soc/leds-qpnp-[0-9]+/leds(/.*)?                  u:object_r:sysfs_leds:s0
 /vendor/bin/hw/android\.hardware\.light@2\.0-service.zuk_8996 u:object_r:hal_light_default_exec:s0
 
+# Neural Networks HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.0-service-hvx   u:object_r:hal_neuralnetworks_hvx_exec:s0
+
 # persist
 /dev/block/platform/soc/(624000\.ufshc|7464900\.sdhci)/by-name/persist  u:object_r:persist_block_device:s0
 /persist/rfs(/.*)?                                                      u:object_r:rfs_file:s0
