@@ -1,2 +1,0 @@
-allow qseeproxy servicemanager:binder { call transfer };
-allow qseeproxy default_android_service:service_manager find;

@@ -1,4 +1,3 @@
 allow location system_data_file:dir { write remove_name };
-allow location system_data_file:sock_file { unlink create setattr };
 allow location system_data_file:dir add_name;
 allow location wcnss_prop:file read;

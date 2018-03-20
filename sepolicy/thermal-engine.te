@@ -7,5 +7,4 @@ allow thermal-engine sysfs_usb_supply:file r_file_perms;
 allow thermal-engine diag_device:chr_file { read write };
 allow thermal-engine diag_device:chr_file open;
 allow thermal-engine diag_device:chr_file ioctl;
-allow thermal-engine socket_device:sock_file { create setattr };
 allow thermal-engine sysfs_uio:dir read;

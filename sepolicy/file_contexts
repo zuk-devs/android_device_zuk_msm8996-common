@@ -9,21 +9,12 @@
 # fingerprint
 /dev/fpc1020                                                    u:object_r:fpc1020_device:s0
 /data/fpc(/.*)?                                                 u:object_r:fpc_data_file:s0
-/data/fpc_images(/.*)?                                          u:object_r:fpc_images_file:s0
 /sys/devices/soc/soc:fpc_fpc1020/irq                            u:object_r:sysfs_fpc_irq:s0
 /sys/devices/soc/soc:fpc_fpc1020/proximity_state                u:object_r:sysfs_fpc_proximity:s0
 /sys/devices/soc/soc:fpc1020/utouch_disable                     u:object_r:sysfs_fpc_utouch_disable:s0
 
 # FRP partition
 /dev/block/bootdevice/by-name/config                            u:object_r:frp_block_device:s0
-
-# legacy paths
-/system/bin/sensors.qcom                                        u:object_r:sensors_exec:s0
-/system/bin/port-bridge                                         u:object_r:port-bridge_exec:s0
-/system/bin/time_daemon                                         u:object_r:time_daemon_exec:s0
-/system/bin/cnss-daemon                                         u:object_r:wcnss_service_exec:s0
-/system/bin/wcnss_filter                                        u:object_r:wcnss_filter_exec:s0
-/data/time(/.*)?                                                u:object_r:time_data_file:s0
 
 # lights
 /sys/devices/soc/75b7000\.i2c/i2c-9/9-[0-9a-f]+/leds(/.*)?    u:object_r:sysfs_leds:s0

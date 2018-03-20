@@ -1,3 +1,1 @@
 allow dpmd dpmd:capability { dac_override dac_read_search chown fsetid };
-allow dpmd socket_device:dir { add_name write };
-allow dpmd socket_device:sock_file { create setattr };
