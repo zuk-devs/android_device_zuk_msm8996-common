@@ -1,3 +1,2 @@
 allow hal_bluetooth_default bluetooth_data_file:dir { search write };
 allow hal_bluetooth_default bluetooth_data_file:file { append getattr open read write };
-allow hal_bluetooth_default wcnss_filter:unix_stream_socket { connectto };

@@ -1,2 +1,0 @@
-allow dataservice_app cnd_socket:sock_file write;
-allow dataservice_app cnd:unix_stream_socket connectto;
