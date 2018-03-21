@@ -712,4 +712,4 @@ vendor/lib/libwvhidl.so|f7288f7a7ed6765bd1d80d639a0aeb0c31eda795
 
 # WiFi
 vendor/bin/cnss-daemon
-etc/firmware/bdwlan30.bin
+vendor/firmware/bdwlan30.bin|45fdad0f323667fa95b88fa054e10a397fc8f0eb
