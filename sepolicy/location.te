@@ -1,3 +1,2 @@
-allow location system_data_file:dir { write remove_name };
-allow location system_data_file:dir add_name;
-allow location wcnss_prop:file read;
+allow location system_data_file:dir { write remove_name add_name };
+allow location wcnss_prop:file { read getattr open };
