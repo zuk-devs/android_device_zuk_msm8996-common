@@ -69,7 +69,7 @@ vendor/lib/libbtnv.so
 
 # Camera
 lib/libtrueportrait.so
-vendor/bin/mm-qcamera-daemon|0ffe963b560222f52e65084cd9de455656a7bc11
+vendor/bin/mm-qcamera-daemon|c0ea4d468ee6693f92460bb76b93880204fb8eda
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
