@@ -17,8 +17,9 @@
 /vendor/bin/readmac   u:object_r:readmac_exec:s0
 
 # HALs
-/vendor/bin/hw/android\.hardware\.light@2\.0-service\.zuk_8996       u:object_r:hal_light_default_exec:s0
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service\.zuk u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.light@2\.0-service\.zuk_8996       		u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service\.zuk 	u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine	u:object_r:hal_drm_widevine_exec:s0
 
 # Misc files on /vendor
 /vendor/usr/idc(/.*)?                                           u:object_r:idc_file:s0
