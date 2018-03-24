@@ -26,7 +26,6 @@
              android:summary="@string/power_menu_title_summary"
 	     android:fragment="org.aospextended.extensions.PowerMenuSettings" />
 
-
     <ListPreference
         android:key="torch_power_button_gesture"
         android:title="@string/torch_power_button_gesture_title"
@@ -34,43 +33,53 @@
         android:entryValues="@array/torch_power_button_gesture_values" />
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="hardware_keys"
-        android:title="@string/hardware_keys_category" >
+    <PreferenceCategory android:key="hardware_keys"
+	android:title="@string/hardware_keys_category">
+	<SwitchPreference android:key="hardware_keys_disable"
+		android:title="@string/hardware_keys_disable_title" />
+    </PreferenceCategory>
 
-        <SwitchPreference
-            android:key="hardware_keys_disable"
-            android:title="@string/hardware_keys_disable_title" />
+    <PreferenceCategory
+        android:key="button_backlight_options_category"
+        android:title="@string/button_backlight_options_category" >
+
+        <org.aospextended.extensions.preference.SystemSettingSwitchPreference
+            android:key="button_backlight_enable"
+            android:title="@string/button_backlight_enable_title"
+            android:defaultValue="true"/>
+
+        <org.aospextended.extensions.preference.SystemSettingSwitchPreference
+            android:key="custom_button_use_screen_brightness"
+            android:title="@string/button_link_brightness"
+            android:summary="@string/button_link_brightness_summary"
+            android:defaultValue="false"
+            android:dependency="button_backlight_enable"
+            android:disableDependentsState="true" />
 
         <org.aospextended.extensions.preference.CustomSeekBarPreference
-            android:key="button_brightness"
-            android:title="@string/button_brightness_title"
+            android:key="button_manual_brightness_new"
+            android:title="@string/button_manual_brightness"
             android:max="255"
-            settings:min="0"
-            settings:units=""
-            android:persistent="false" />
-
-        <SwitchPreference
-            android:key="button_brightness_sw"
-            android:title="@string/button_brightness_sw_title"
-            android:persistent="false" />
-
-        <ListPreference
-            android:dialogTitle="@string/backlight_timeout_title"
-            android:entries="@array/backlight_timeout_entries"
-            android:entryValues="@array/backlight_timeout_values"
-            android:key="backlight_timeout"
+            settings:min="1"
             android:persistent="false"
-            android:title="@string/backlight_timeout_title" />
+            android:dependency="custom_button_use_screen_brightness" />
+
+        <org.aospextended.extensions.preference.CustomSeekBarPreference
+            android:key="button_timeout"
+            android:title="@string/button_timeout_title"
+            android:max="30"
+            settings:min="0"
+            android:persistent="false"
+            android:dependency="button_backlight_enable" />
 
         <org.aospextended.extensions.preference.SystemSettingSwitchPreference
             android:key="button_backlight_on_touch_only"
             android:title="@string/button_backlight_on_touch_only_title"
             android:summary="@string/button_backlight_on_touch_only_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false"
+            android:dependency="button_backlight_enable" />
 
     </PreferenceCategory>
-
     <PreferenceCategory
         android:key="back_key"
         android:title="@string/hardware_keys_back_key_title" >
@@ -92,6 +101,7 @@
             android:summary="@string/hardware_keys_double_tap_summary"
             android:title="@string/hardware_keys_double_tap_title" >
         </org.aospextended.extensions.preference.ActionPreference>
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -162,7 +172,7 @@
         android:key="swap_volume_buttons"
         android:title="@string/swap_volume_buttons_title"
         android:summary="@string/swap_volume_buttons_summary"
-        android:defaultValue="true" />
+        android:defaultValue="false" />
 
     <org.aospextended.extensions.preference.SystemSettingSwitchPreference
         android:key="volume_keys_control_media_stream"
@@ -196,6 +206,5 @@
         android:defaultValue="false" />
 
     </PreferenceCategory>
-
 
 </PreferenceScreen>
