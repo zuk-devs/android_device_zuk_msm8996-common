@@ -68,7 +68,6 @@ vendor/lib64/libbtnv.so
 vendor/lib/libbtnv.so
 
 # Camera
-lib/libtrueportrait.so
 vendor/bin/mm-qcamera-daemon|c0ea4d468ee6693f92460bb76b93880204fb8eda
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_pmic.so
@@ -428,7 +427,6 @@ lib/lib-imscamera.so
 lib/lib-imsvideocodec.so
 lib/lib-imsvtextutils.so
 lib/lib-imsvtutils.so
-lib/libdiag_system.so
 lib/libimscamera_jni.so
 lib/libimsmedia_jni.so
 lib/librcc.so
@@ -439,7 +437,6 @@ lib64/lib-imsvideocodec.so
 lib64/lib-imsvt.so
 lib64/lib-imsvtextutils.so
 lib64/lib-imsvtutils.so
-lib64/libdiag_system.so
 lib64/libimscamera_jni.so
 lib64/libimsmedia_jni.so
 lib64/librcc.so
