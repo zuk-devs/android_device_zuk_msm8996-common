@@ -68,7 +68,7 @@ vendor/lib64/libbtnv.so
 vendor/lib/libbtnv.so
 
 # Camera
-vendor/bin/mm-qcamera-daemon|c0ea4d468ee6693f92460bb76b93880204fb8eda
+vendor/bin/mm-qcamera-daemon
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
