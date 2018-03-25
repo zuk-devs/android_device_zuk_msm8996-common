@@ -89,8 +89,10 @@ on post-fs-data
     # Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
 
-    # Create folder for mm-qcamera-daemon
+    # Create folder for camera
     mkdir /data/misc/camera 0770 camera camera
+
+    # Create folder for mm-qcamera-daemon
     mkdir /data/vendor/camera 0770 camera camera
 
     mkdir /data/media 0770 media_rw media_rw
@@ -311,8 +313,15 @@ on boot
     # Allow access for CCID command/response timeout configuration
     chown system system /sys/module/ccid_bridge/parameters/bulk_msg_timeout
 
-    # change this when HAL3 is working
+    # Enable HAL3 via our camera wrapper.
     setprop persist.camera.HAL3.enabled 1
+
+    # Enable camera read sensors data.
+    setprop persist.camera.gyro.disable 0
+
+    # Our RIL doesn't send multiple RIL_UNSOL_CALL_RING so
+    # without this it may trigger the phone ring tone only once.
+    setprop ro.telephony.call_ring.multiple false
 
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
