@@ -112,7 +112,7 @@ vendor/lib/libmmcamera2_memleak.so
 vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_sensor_modules.so|efe8409a0380e87c68eaf3ad03ed0db3a27c8762
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmjpeg.so
@@ -143,7 +143,7 @@ etc/firmware/cpp_firmware_v1_6_0.fw:vendor/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw:vendor/firmware/cpp_firmware_v1_8_0.fw
 
 # Camera ov8865
-etc/camera/ov8865_chromatix.xml
+etc/camera/ov8865_chromatix.xml:vendor/etc/camera/ov8865_chromatix.xml
 vendor/lib/libchromatix_ov8865_hfr_60.so
 vendor/lib/libchromatix_ov8865_cpp_video.so
 vendor/lib/libchromatix_ov8865_common.so
