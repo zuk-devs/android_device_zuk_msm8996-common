@@ -694,13 +694,13 @@ vendor/lib64/libthermalioctl.so
 vendor/bin/time_daemon|8ea7d65a65c1d50afc6553ad52848b454c62563d
 vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
 
-# TUI - from LA.UM.6.5.r1-04300-8x96.0
-lib/vendor.qti.hardware.tui_comm@1.0.so|85df6c84260eabf1a40dca99ff26ad6cc94bc73f
-lib64/vendor.qti.hardware.tui_comm@1.0.so|e03d63f1d0f0a02dba9b1147ae642e7b55286f87
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|3328d433e889426d16fbae33a3304d783c70c0d5
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so|193bd9cc89f6ff208ec5e5fa62e553e7f797c485
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so|1d948a6c9b1993b8d8543b7a778b27d3f9408fb0
+# TUI
+lib/vendor.qti.hardware.tui_comm@1.0.so
+lib64/vendor.qti.hardware.tui_comm@1.0.so
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
 
 # Widevine DRM - from marlin - OPM1.171019.011
 vendor/bin/hw/android.hardware.drm@1.0-service.widevine|fd6e14710c196fdd4131afe2ce10c4a5be1b309c
@@ -709,4 +709,4 @@ vendor/lib/libwvhidl.so|f7288f7a7ed6765bd1d80d639a0aeb0c31eda795
 
 # WiFi
 vendor/bin/cnss-daemon
-vendor/firmware/bdwlan30.bin|45fdad0f323667fa95b88fa054e10a397fc8f0eb
+etc/firmware/bdwlan30.bin:vendor/firmware/bdwlan30.bin
