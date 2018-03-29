@@ -19,7 +19,7 @@
 # lights
 /sys/devices/soc/75b7000\.i2c/i2c-9/9-[0-9a-f]+/leds(/.*)?    u:object_r:sysfs_leds:s0
 /sys/devices/soc/leds-qpnp-[0-9]+/leds(/.*)?                  u:object_r:sysfs_leds:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service.zuk_8996    u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/android\.hardware\.light@2\.0-service.zuk_8996 u:object_r:hal_light_default_exec:s0
 
 # persist
 /dev/block/mmcblk0p40                                           u:object_r:persist_block_device:s0
@@ -27,10 +27,10 @@
 /persist/sensors/gyro_sensitity_cal                             u:object_r:sensors_persist_file:s0
 
 # readmac
-/(vendor|system/vendor)/bin/readmac                             u:object_r:readmac_exec:s0
+/vendor/bin/readmac                                             u:object_r:readmac_exec:s0
 
 # ril
-/(vendor|system/vendor)/radio/qcril_database/qcril.db                    u:object_r:nv_data_file:s0
+/vendor/radio/qcril_database/qcril.db                           u:object_r:nv_data_file:s0
 
 # audio amplifier
 /dev/tfa9890 							u:object_r:audio_device:s0
