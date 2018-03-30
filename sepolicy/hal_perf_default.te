@@ -1,1 +1,2 @@
-allow hal_perf_default freq_prop:property_service set;
+set_prop(hal_perf_default, freq_prop)
+allow hal_perf_default hal_graphics_composer_default:process signull;
