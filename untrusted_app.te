@@ -1,0 +1,2 @@
+dontaudit untrusted_app_all sysfs_zram:dir search;
+dontaudit untrusted_app_all sysfs_zram:file r_file_perms;

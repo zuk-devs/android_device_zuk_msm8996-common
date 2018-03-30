@@ -1,1 +1,2 @@
 allow cnd cnd:capability { setuid dac_override chown dac_override dac_read_search setgid fsetid net_raw };
+allow cnd system_data_file:dir read;

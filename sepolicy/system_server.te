@@ -2,6 +2,8 @@ allow system_server alarm_boot_prop:file { read open getattr };
 allow system_server persist_file:dir write;
 allow system_server sysfs_fpc_utouch_disable:file rw_file_perms;
 
+allow system_server install_data_file:file getattr;
+
 # /vendor/usr/keylayout
 r_dir_file(system_server, idc_file)
 # /vendor/usr/idc

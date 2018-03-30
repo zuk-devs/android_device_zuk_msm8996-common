@@ -1,2 +1,3 @@
 allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
 allow init debugfs:file write;
+allow init system_data_file:file rename;
