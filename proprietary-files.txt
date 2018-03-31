@@ -31,8 +31,8 @@ vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/us-syncproximity.so
 
 # Audio libraries
-etc/permissions/audiosphere.xml
-framework/audiosphere.jar
+vendor/etc/permissions/audiosphere.xml|02544ed2e42ed99584696ba7b33250528d44d771
+framework/audiosphere.jar:vendor/framework/audiosphere.jar
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -220,14 +220,14 @@ vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_sub_module.so
 
 # CNE
-etc/cne/andsfCne.xml
-etc/cne/SwimConfig.xml
-etc/permissions/cneapiclient.xml
-etc/permissions/com.quicinc.cne.xml
-framework/cneapiclient.jar
-framework/com.quicinc.cne.api-V1.0-java.jar
-framework/com.quicinc.cne.jar
--priv-app/CNEService/CNEService.apk
+etc/cne/andsfCne.xml:vendor/etc/cne/andsfCne.xml
+etc/cne/SwimConfig.xml:vendor/etc/cne/SwimConfig.xml
+vendor/etc/permissions/cneapiclient.xml|49b6844b724867337200120b46dddc7e7266121e
+vendor/etc/permissions/com.quicinc.cne.xml|c05e0e56a0780cc2fc3b6a299a7c4edeb2946cdb
+framework/cneapiclient.jar:vendor/framework/cneapiclient.jar
+framework/com.quicinc.cne.api-V1.0-java.jar:vendor/framework/com.quicinc.cne.api-V1.0-java.jar
+framework/com.quicinc.cne.jar:vendor/framework/com.quicinc.cne.jar
+-vendor/priv-app/CNEService/CNEService.apk|c899980d82ff90781c4cbb4e5c43a2bd1910cccc
 vendor/bin/cnd
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
@@ -304,15 +304,15 @@ vendor/lib64/libssd.so
 vendor/lib/libQSEEComAPI.so
 
 # GPS - from bardock-pro - OPM1.171019.011
-etc/permissions/com.qti.location.sdk.xml|cb68a566bd77dcc75bb7547199d528289fac01cb
-etc/permissions/com.qualcomm.location.xml|e837966b6a1a63430ac7ff648e84b0312cd3a46b
-etc/permissions/izat.xt.srv.xml|a0f460056f27b5495a4d6e959eecf0e429c42a57
-framework/com.qti.location.sdk.jar|f2e9f1d49201e1bad83008445fdafe9541e9b2bd
-framework/izat.xt.srv.jar|e10f1baf6ae0f70c4a529e5711559cebbc3644c9
-lib64/liblocationservice_jni.so|84fddd9ace2be661d26cad1864281c386b709cb2
-lib64/libxt_native.so|900aa51d3d2f731b906a321e25c259fbab656f1c
-lib64/vendor.qti.gnss@1.0.so|716a812a9f4cdb45c57eb0a6fabb17624a91d553
--priv-app/com.qualcomm.location/com.qualcomm.location.apk|397314f080f553489440c63da44d01f482e6b761
+vendor/etc/permissions/com.qti.location.sdk.xml|c9b819e5ffa10e9145accfcfa23cb84a95c5fdcf
+vendor/etc/permissions/com.qualcomm.location.xml|e837966b6a1a63430ac7ff648e84b0312cd3a46b
+vendor/etc/permissions/izat.xt.srv.xml|bdd0ad905244b0b115dec8fa590dee92052e7c56
+vendor/framework/com.qti.location.sdk.jar|f2e9f1d49201e1bad83008445fdafe9541e9b2bd
+vendor/framework/izat.xt.srv.jar|e10f1baf6ae0f70c4a529e5711559cebbc3644c9
+vendor/lib64/liblocationservice_jni.so|84fddd9ace2be661d26cad1864281c386b709cb2
+vendor/lib64/libxt_native.so|900aa51d3d2f731b906a321e25c259fbab656f1c
+vendor/lib64/vendor.qti.gnss@1.0.so|716a812a9f4cdb45c57eb0a6fabb17624a91d553
+-vendor/priv-app/com.qualcomm.location/com.qualcomm.location.apk|397314f080f553489440c63da44d01f482e6b761
 vendor/bin/hw/vendor.qti.gnss@1.0-service|bdf23fe2af07c2afb74721023431446104fd828d
 vendor/bin/loc_launcher|0675f4524d2c9e94f7e978b5e00734c0835ddf15
 vendor/bin/lowi-server|4aa6f305f31ff36fdddc7e3beeb29cf0bf1a9d54
@@ -397,8 +397,8 @@ vendor/lib/libhdr_tm.so|9a7bd05a5ba74e53f3a573c13c9041bb376d309e
 vendor/lib64/libhdr_tm.so|b8d140f6ae4ac8e8c4f4762e7a44b85082b969df
 
 # Graphics (SDM) - from bardock-pro - OPM1.171019.011
-lib64/libsdm-disp-apis.so|0ccaeceb8922a623fd6fba7461db763d03916646
-lib/libsdm-disp-apis.so|52fd2c3bd5d8e7d0181df6b48f367cd7b5e99a17
+vendor/lib64/libsdm-disp-apis.so|0ccaeceb8922a623fd6fba7461db763d03916646
+vendor/lib/libsdm-disp-apis.so|52fd2c3bd5d8e7d0181df6b48f367cd7b5e99a17
 vendor/lib64/libscalar.so|94ebef877b7ea56e94d5749303dd832e3a013145
 vendor/lib64/libsdm-color.so|031e4ee4fd10edaac872aff27ec3ee24b5e16c1a
 vendor/lib64/libsdm-diag.so|e27a62468b4ba69f4b277ba0cde40045a717cd65
@@ -425,27 +425,27 @@ vendor/firmware/a530v3_gpmu.fw2
 vendor/firmware/a530v3_seq.fw2
 
 # IMS
--app/ims/ims.apk
-etc/permissions/qti-vzw-ims-internal.xml
-lib/com.qualcomm.qti.imscmservice@1.0.so
-lib/lib-imscamera.so
-lib/lib-imsvideocodec.so
-lib/lib-imsvtextutils.so
-lib/lib-imsvtutils.so
-lib/libimscamera_jni.so
-lib/libimsmedia_jni.so
-lib/librcc.so
-lib/vendor.qti.imsrtpservice@1.0.so
-lib64/com.qualcomm.qti.imscmservice@1.0.so
-lib64/lib-imscamera.so
-lib64/lib-imsvideocodec.so
-lib64/lib-imsvt.so
-lib64/lib-imsvtextutils.so
-lib64/lib-imsvtutils.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
-lib64/librcc.so
-lib64/vendor.qti.imsrtpservice@1.0.so
+-vendor/app/ims/ims.apk|f3b1b71e174ba2d934eee2e9de9f1e4d1172c0e7
+vendor/etc/permissions/qti-vzw-ims-internal.xml|89409c5f355acbd65a45b13f12e1baafb13baf46
+lib/com.qualcomm.qti.imscmservice@1.0.so:vendor/lib/com.qualcomm.qti.imscmservice@1.0.so:
+lib/lib-imscamera.so:vendor/lib/lib-imscamera.so
+lib/lib-imsvideocodec.so:vendor/lib/lib-imsvideocodec.so
+lib/lib-imsvtextutils.so:vendor/lib/lib-imsvtextutils.so
+lib/lib-imsvtutils.so:vendor/lib/lib-imsvtutils.so
+lib/libimscamera_jni.so:vendor/lib/libimscamera_jni.so
+lib/libimsmedia_jni.so:vendor/lib/libimsmedia_jni.so
+lib/librcc.so:vendor/lib/librcc.so
+lib/vendor.qti.imsrtpservice@1.0.so:vendor/lib/vendor.qti.imsrtpservice@1.0.so
+lib64/com.qualcomm.qti.imscmservice@1.0.so:vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
+lib64/lib-imscamera.so:vendor/lib64/lib-imscamera.so
+lib64/lib-imsvideocodec.so:vendor/lib64/lib-imsvideocodec.so
+lib64/lib-imsvt.so:vendor/lib64/lib-imsvt.so
+lib64/lib-imsvtextutils.so:vendor/lib64/lib-imsvtextutils.so
+lib64/lib-imsvtutils.so:vendor/lib64/lib-imsvtutils.so
+lib64/libimscamera_jni.so:vendor/lib64/libimscamera_jni.so
+lib64/libimsmedia_jni.so:vendor/lib64/libimsmedia_jni.so
+lib64/librcc.so:vendor/lib64/librcc.so
+lib64/vendor.qti.imsrtpservice@1.0.so:vendor/lib64/vendor.qti.imsrtpservice@1.0.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -564,16 +564,16 @@ vendor/lib64/libperipheral_client.so
 vendor/lib/libperipheral_client.so
 
 # Postprocessing - from bardock-pro - OPM1.171019.011
-etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
-framework/com.qti.snapdragon.sdk.display.jar|cc367fe3c3525bc580f0d3ab41e43190dcee60dc
-lib64/libsd_sdk_display.so|8b79762452896eaa9ff97b7ae72646bfcf06423d
-lib64/vendor.display.color@1.0.so|ecd9bfd4e7f416218c172481a7192328f5c2a48f
-lib64/vendor.display.postproc@1.0.so|67e865d2c463d36c8eda8528ef4f36462b973eef
-lib64/vendor.qti.hardware.qdutils_disp@1.0.so|182817148907df624dcea5af27fd8d8256e02442
-lib/libsd_sdk_display.so|35f948fad2633f8cf2c004655e1c24fa4a2b4eaf
-lib/vendor.display.color@1.0.so|3ace5cf91dd9686a2250dfb7c50f883f81f38b74
-lib/vendor.display.postproc@1.0.so|d6069ae2c43121117acf976c79b1ce59735cfe3b
-lib/vendor.qti.hardware.qdutils_disp@1.0.so|a12b9e484ce9f7ab590b3fee91d320cba903badc
+vendor/etc/permissions/com.qti.snapdragon.sdk.display.xml|346b519bb3758fddf9230b89dcecbb4f8cee07f5
+vendor/framework/com.qti.snapdragon.sdk.display.jar|cc367fe3c3525bc580f0d3ab41e43190dcee60dc
+vendor/lib64/libsd_sdk_display.so|8b79762452896eaa9ff97b7ae72646bfcf06423d
+vendor/lib64/vendor.display.color@1.0.so|ecd9bfd4e7f416218c172481a7192328f5c2a48f
+vendor/lib64/vendor.display.postproc@1.0.so|67e865d2c463d36c8eda8528ef4f36462b973eef
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|182817148907df624dcea5af27fd8d8256e02442
+vendor/lib/libsd_sdk_display.so|35f948fad2633f8cf2c004655e1c24fa4a2b4eaf
+vendor/lib/vendor.display.color@1.0.so|3ace5cf91dd9686a2250dfb7c50f883f81f38b74
+vendor/lib/vendor.display.postproc@1.0.so|d6069ae2c43121117acf976c79b1ce59735cfe3b
+vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|a12b9e484ce9f7ab590b3fee91d320cba903badc
 vendor/bin/hw/vendor.display.color@1.0-service|d425553ff762338a67e3d8b6b98db46357099657
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|90992c4c9a036a1964f6b90acd16fb3e5bb050ad
 vendor/bin/mm-pp-dpps|25195ef9f617154420c9ce5d57499e671c4e6d6a
@@ -589,12 +589,12 @@ vendor/lib/vendor.display.postproc@1.0_vendor.so|a710a9d7f93892961ff71420fe222ad
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|04bf21220673630ebaa4c8e7a84adbcdcf08f0dc
 
 # QMI
-etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
-etc/permissions/qti_permissions.xml
-lib/libdiag_system.so
-lib/libqmi_cci_system.so
-lib64/libdiag_system.so
-lib64/libqmi_cci_system.so
+vendor/etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
+etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml
+lib/libdiag_system.so:vendor/lib/libdiag_system.so
+lib/libqmi_cci_system.so:vendor/lib/libqmi_cci_system.so
+lib64/libdiag_system.so:vendor/lib64/libdiag_system.so
+lib64/libqmi_cci_system.so:vendor/lib64/libqmi_cci_system.so
 vendor/bin/irsc_util
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
@@ -700,8 +700,8 @@ vendor/bin/time_daemon|8ea7d65a65c1d50afc6553ad52848b454c62563d
 vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
 
 # TUI
-lib/vendor.qti.hardware.tui_comm@1.0.so
-lib64/vendor.qti.hardware.tui_comm@1.0.so
+lib/vendor.qti.hardware.tui_comm@1.0.so:vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
+lib64/vendor.qti.hardware.tui_comm@1.0.so:vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so
@@ -716,6 +716,6 @@ vendor/lib/libwvhidl.so|f7288f7a7ed6765bd1d80d639a0aeb0c31eda795
 vendor/bin/cnss-daemon
 etc/firmware/bdwlan30.bin:vendor/firmware/bdwlan30.bin
 
-# HIDL - Dummy hidl base and manager blobs for older blobs.
+# HIDL - Dummy HIDL base blob for compatibility with older blobs on GSI ROMs.
 vendor/lib/android.hidl.base@1.0.so|7b695c37dd8f7edde1b3c8b25c46d7b73232e75b
 vendor/lib64/android.hidl.base@1.0.so|88d1bd3bd9853ba6c5b308e1045fc7ac06950d7b
