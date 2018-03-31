@@ -519,10 +519,10 @@ vendor/lib/libvpplibrary.so|da05a8f39c02b3b46d60ccec4ca76a80c64e3f8b
 vendor/lib/libvqzip.so|9e3204e8f742bdadbe3d624acb42599f8a428bed
 
 # Perf
-lib/vendor.qti.hardware.iop@1.0.so
-lib/vendor.qti.hardware.perf@1.0.so
-lib64/vendor.qti.hardware.iop@1.0.so
-lib64/vendor.qti.hardware.perf@1.0.so
+lib/vendor.qti.hardware.iop@1.0.so:vendor/lib/vendor.qti.hardware.iop@1.0.so
+lib/vendor.qti.hardware.perf@1.0.so:vendor/lib/vendor.qti.hardware.perf@1.0.so
+lib64/vendor.qti.hardware.iop@1.0.so:vendor/lib64/vendor.qti.hardware.iop@1.0.so
+lib64/vendor.qti.hardware.perf@1.0.so:vendor/lib64/vendor.qti.hardware.perf@1.0.so
 vendor/bin/energy-awareness
 vendor/bin/hw/vendor.qti.hardware.iop@1.0-service
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
@@ -630,13 +630,13 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 
 # RIL
--app/QtiTelephonyService/QtiTelephonyService.apk
-etc/permissions/qcrilhook.xml
-etc/permissions/telephonyservice.xml
--framework/QtiTelephonyServicelibrary.jar
--framework/qcrilhook.jar
--framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-vendor/app/QtiTelephonyService/QtiTelephonyService.apk|1732537b38df0184d13d8f0c144982c5d717afc3
+vendor/etc/permissions/qcrilhook.xml|cf740b4339659e7a30cabcd1c2fe5066e69b8760
+vendor/etc/permissions/telephonyservice.xml|ff2c9f3456ad73f97adb7ef314fe916fa9cbfb81
+-vendor/framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
+-vendor/framework/qcrilhook.jar|8a1d0edd6fb61b84d5f26140498e5d9a685e99c8
+-vendor/framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
+-vendor/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|1ef9b4925f997a75ebae2cd14775ae46ef99a3d5
 vendor/bin/port-bridge
 vendor/bin/netmgrd
 vendor/bin/qti
