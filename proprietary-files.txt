@@ -253,7 +253,7 @@ vendor/lib/com.quicinc.cne.constants@1.0.so
 vendor/lib/com.quicinc.cne.constants@2.0.so
 vendor/lib/com.quicinc.cne.server@1.0.so
 vendor/lib/com.quicinc.cne.server@2.0.so
-vendor/lib/libcne.so
+vendor/lib/libcne.so|5eb74ae63d60962a2bcffca51c4283938a6e86cf
 vendor/lib/libcneapiclient.so
 vendor/lib/libcneoplookup.so
 vendor/lib/libcneqmiutils.so
@@ -264,7 +264,7 @@ vendor/lib64/com.quicinc.cne.constants@1.0.so
 vendor/lib64/com.quicinc.cne.constants@2.0.so
 vendor/lib64/com.quicinc.cne.server@1.0.so
 vendor/lib64/com.quicinc.cne.server@2.0.so
-vendor/lib64/libcne.so
+vendor/lib64/libcne.so|d869dfb88d0b838d341afbbf8e4178648add64f8
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
