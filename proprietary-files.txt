@@ -412,9 +412,9 @@ vendor/lib/libsdm-diag.so|ac8b0130258ab08354cedfca89f73fb063e67290
 vendor/lib/libsdmextension.so|c8bd2bc2c4f94f409446c0ac1b5f39e63dfeae4b
 vendor/lib/libtinyxml2_1.so|3ee768813f5b351b71bd7dd2367b13a3698a591a
 
-# Graphics (Vulkan) - from op3 - OPR6.170623.013
-vendor/lib/hw/vulkan.msm8996.so|dcd44a4df3234649eb25d5e16dfc16ab4a4284f1
-vendor/lib64/hw/vulkan.msm8996.so|7531d20d0ef872e704ce4949e52ff2a6857c72d8
+# Graphics (Vulkan)
+vendor/lib/hw/vulkan.msm8996.so
+vendor/lib64/hw/vulkan.msm8996.so
 
 # Graphics firmware
 vendor/firmware/a530_pfp.fw
