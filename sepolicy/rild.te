@@ -1,5 +1,5 @@
 allow rild nv_data_file:dir rw_dir_perms;
-allow rild nv_data_file:file create_file_perms;
+allow rild nv_data_file:file { create_file_perms getattr ioctl lock open read };
 
 allow rild { vendor_configs_file vendor_file }:file ioctl;
 
