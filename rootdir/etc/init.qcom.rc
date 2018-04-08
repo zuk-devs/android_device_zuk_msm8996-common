@@ -474,6 +474,11 @@ service loc_launcher /vendor/bin/loc_launcher
     group gps inet diag wifi
     writepid /dev/cpuset/system-background/tasks
 
+service qcom-sh /vendor/bin/init.qcom.sh
+    class late_start
+    user root
+    oneshot
+
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
     write /proc/sys/net/ipv4/tcp_adv_win_scale  2
