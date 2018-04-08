@@ -62,15 +62,13 @@ vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so
 vendor/etc/audio_tuning_mixer.txt
 
-# Bluetooth
-# aptX - from marlin - OPM1.171019.011
-vendor/bin/wcnss_filter
+# Bluetooth - from marlin - OPM2.171019.029
+vendor/bin/wcnss_filter|f88ce6014e45c993cdee1dd66f8adc06bc024b95
 vendor/lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
 vendor/lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
+vendor/lib64/libbtnv.so|3b0b1a8d4408586ca2b18837f3526134473a8fc4
 vendor/lib/libaptX_encoder.so|984739a0bc968e18f75ced205733fe3f51c2d4f0
 vendor/lib/libaptXHD_encoder.so|974c486e4ca03faa0713553d9dfe2995ac93e01c
-vendor/lib64/libbtnv.so
-vendor/lib/libbtnv.so
 
 # Camera
 vendor/bin/mm-qcamera-daemon
@@ -276,9 +274,9 @@ lib64/hw/fingerprint.qcom.so:vendor/lib64/hw/fingerprint.qcom.so
 vendor/lib64/libqvop-service.so
 vendor/lib/libqvop-service.so
 
-# Gatekeeper
-vendor/lib64/hw/gatekeeper.msm8996.so
-vendor/lib/hw/gatekeeper.msm8996.so
+# Gatekeeper - from marlin - OPM2.171019.029
+vendor/lib64/hw/gatekeeper.msm8996.so|59a66e589918e94818748879d9ccf3505c68120f
+vendor/lib/hw/gatekeeper.msm8996.so|59a66e589918e94818748879d9ccf3505c68120f
 
 # DPM
 vendor/bin/dpmQmiMgr
@@ -287,21 +285,21 @@ vendor/lib64/libdpmqmihal.so
 vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so
 vendor/lib/libdpmqmihal.so
 
-# DRM and SEE
-vendor/bin/qseecomd
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/libSecureUILib.so
-vendor/lib64/libStDrvInt.so
-vendor/lib64/libdrmfs.so
-vendor/lib64/libdrmtime.so
-vendor/lib64/libqisl.so
-vendor/lib64/librpmb.so
-vendor/lib64/libsecureui.so
-vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libssd.so
-vendor/lib/libQSEEComAPI.so
+# DRM and SEE - from marlin - OPM2.171019.029
+vendor/bin/qseecomd|2af4fb0cc7e3187b6ce68f94558a935b3ebefce6
+vendor/lib64/libGPreqcancel.so|f1f04f22d2011b23c34cea9be4638a6cbb893da6
+vendor/lib64/libGPreqcancel_svc.so|1903e0a5067590b5230ef45a5367ff40e60aea57
+vendor/lib64/libQSEEComAPI.so|98e07e16445371f20a6552924ac1bd7b79de627a
+vendor/lib64/libSecureUILib.so|7e28c730567393aa18b8b7db0d72631c089fe1e3
+vendor/lib64/libStDrvInt.so|8a96971bfcfd39a16f0c3d52f6d7cd92ed7ada71
+vendor/lib64/libdrmfs.so|f252bba2c0c272432fdde14be2a2f676c6fbe732
+vendor/lib64/libdrmtime.so|35d2df724c31b85f4fb74a91bb2066221f4baea4
+vendor/lib64/libqisl.so|754840107122a4d14b2aea51680af01eaf9e23cd
+vendor/lib64/librpmb.so|d3f8dceb6257b5a0f561d89b1c3aa9a119a65f82
+vendor/lib64/libsecureui.so|f425bf267ee91adf076a68c7264769cccad0aeef
+vendor/lib64/libsecureui_svcsock.so|94f6b8f5fb29a80432338c7ddf55c6e5ed212e35
+vendor/lib64/libssd.so|68bfb89ad347a81a9c6c274a23ec41a555d17fd2
+vendor/lib/libQSEEComAPI.so|91f6c77acff063967df41ed9891c8e528407231f
 
 # GPS - from bardock-pro - OPM1.171019.011
 vendor/etc/permissions/com.qti.location.sdk.xml|c9b819e5ffa10e9145accfcfa23cb84a95c5fdcf
@@ -471,9 +469,9 @@ vendor/lib64/lib-uceservice.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
-# Keystore
-vendor/lib64/hw/keystore.msm8996.so
-vendor/lib/hw/keystore.msm8996.so
+# Keystore - from marlin - OPM2.171019.029
+vendor/lib64/hw/keystore.msm8996.so|517738f42191b7e3a2d284b2daadbca9d2ed282d
+vendor/lib/hw/keystore.msm8996.so|0c30b80f77b46946744ec54a774edec03d60b49e
 
 # Listen
 vendor/lib64/hw/sound_trigger.primary.msm8996.so
@@ -558,11 +556,11 @@ vendor/lib64/libqti-util.so|6411586729d90e0c6a6f94e456f66d376ddb8969
 vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so|adf7501800d87bca5bab14671f376b1c8ef5901f
 vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so|fca94d3e81f9f6453b0cb781c2925be845bb2ddb
 
-# Peripheral manager
-vendor/bin/pm-proxy
-vendor/bin/pm-service
-vendor/lib64/libperipheral_client.so
-vendor/lib/libperipheral_client.so
+# Peripheral manager - from marlin - OPM2.171019.029
+vendor/bin/pm-proxy|c7147ef26ad53a66bd1a645f28def1f7d5650189
+vendor/bin/pm-service|9838a630fd1995900ec7f4e5ba0b027b32e95439
+vendor/lib64/libperipheral_client.so|32af512690ddf1a0701153b8c4d586c975a3cd35
+vendor/lib/libperipheral_client.so|c6691f1d2d9d5f98e14ebddcc7a3bc803d0ffb9e
 
 # Postprocessing - from LA.UM.6.5.r1-06700-8x96.0
 vendor/etc/permissions/com.qti.snapdragon.sdk.display.xml|346b519bb3758fddf9230b89dcecbb4f8cee07f5
@@ -711,7 +709,7 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
 
-# Widevine DRM - from marlin - OPM1.171019.011
+# Widevine DRM - from marlin - OPM2.171019.029
 vendor/bin/hw/android.hardware.drm@1.0-service.widevine|fd6e14710c196fdd4131afe2ce10c4a5be1b309c
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
 vendor/lib/libwvhidl.so|f7288f7a7ed6765bd1d80d639a0aeb0c31eda795
