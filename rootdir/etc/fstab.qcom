@@ -2,7 +2,7 @@
 # The filesystem that contains the filesystem e2fsck binary (typically /system) cannot
 # specify 'check', and must come before any filesystems that do specify 'check'
 
-# NOTE: /system and /vendor (/factory mounted as /vendor) partitions are now early-mounted and the fstab entry is specified in device tree (duplicated below for recovery image purposes only):
+# NOTE: /system and /vendor (/factory renamed as /vendor) partitions are now early-mounted and the fstab entry is specified in device tree (duplicated below for recovery image purposes only):
 #       /proc/device-tree/firmware/android/fstab/system
 #       /proc/device-tree/firmware/android/fstab/vendor
 
@@ -12,7 +12,7 @@
 /dev/block/bootdevice/by-name/userdata                       /data             ext4    nosuid,nodev,noatime,barrier=1,noauto_da_alloc                                                       wait,check,encryptable=footer
 /dev/block/bootdevice/by-name/userdata                       /data             f2fs    nosuid,nodev,noatime,inline_xattr,data_flush                                                         wait,check,encryptable=footer
 /dev/block/bootdevice/by-name/system                         /system           ext4    ro,barrier=1                                                                                         wait,recoveryonly
-/dev/block/bootdevice/by-name/factory                        /vendor           ext4    ro,barrier=1                                                                                         wait,recoveryonly
+/dev/block/bootdevice/by-name/vendor                         /vendor           ext4    ro,barrier=1                                                                                         wait,recoveryonly
 /dev/block/bootdevice/by-name/cache                          /cache            ext4    nosuid,nodev,noatime,barrier=1                                                                       wait,check
 /dev/block/bootdevice/by-name/cache                          /cache            f2fs    nosuid,nodev,noatime,inline_xattr,flush_merge,data_flush                                             wait,check
 /dev/block/bootdevice/by-name/persist                        /persist          ext4    nosuid,nodev,noatime,barrier=1                                                                       wait
