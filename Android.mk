@@ -93,13 +93,4 @@ $(BT_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(BT_FIRMWARE_SYMLINKS)
 
-QTI_TELEPHONY_COMMON := $(TARGET_OUT)/framework/qti-telephony-common.jar
-$(QTI_TELEPHONY_COMMON): $(LOCAL_INSTALLED_MODULE)
-	@echo "qti-telephony-common.jar link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /vendor/framework/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(QTI_TELEPHONY_COMMON)
-
 endif
