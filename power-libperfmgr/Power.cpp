@@ -204,8 +204,8 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
     return Void();
 }
 
-Return<void> Power::setFeature(Feature /*feature*/, bool /*activate*/)  {
-    //Nothing to do
+Return<void> Power::setFeature(Feature feature, bool activate)  {
+    set_feature(static_cast<feature_t>(feature), activate ? 1 : 0);
     return Void();
 }
 
