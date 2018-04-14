@@ -129,6 +129,7 @@ persist.vendor.radio.custom_ecc=1
 persist.radio.data_ltd_sys_ind=1
 persist.radio.flexmap_type=dds
 persist.radio.force_on_dc=true
+persist.radio.sw_mbn_update=1
 persist.radio.hw_mbn_update=1
 persist.radio.multisim.config=dsds
 persist.radio.primarycard=true
