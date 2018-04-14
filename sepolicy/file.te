@@ -10,6 +10,10 @@ type sysfs_msm_subsys, sysfs_type, fs_type;
 type sysfs_msm_subsys_restart, sysfs_type, fs_type;
 type sysfs_net, sysfs_type, fs_type, mlstrustedobject;
 
+# debugfs
+type debugfs_kgsl, debugfs_type, fs_type;
+type debugfs_ion, debugfs_type, fs_type;
+
 # /vendor
 type idc_file, file_type, vendor_file_type;
 type keylayout_file, file_type, vendor_file_type;
