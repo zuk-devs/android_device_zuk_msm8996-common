@@ -1,1 +1,2 @@
 allow system_app sysfs_fpc_proximity:file rw_file_perms;
+allow system_app shell_prop:property_service set;
