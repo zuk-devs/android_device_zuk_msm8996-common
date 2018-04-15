@@ -174,7 +174,8 @@ PRODUCT_PACKAGES += \
     libhwc2on1adapter \
     libgenlock \
     liboverlay \
-    libtinyxml
+    libtinyxml \
+    libqdMetaData.system \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/calib.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/calib.cfg
