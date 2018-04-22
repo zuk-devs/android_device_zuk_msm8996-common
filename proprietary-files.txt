@@ -687,9 +687,10 @@ vendor/etc/thermal-engine.conf
 vendor/lib64/libthermalioctl.so
 -vendor/lib/libthermalclient.so
 
-# Time services - from bardock-pro - OPM1.171019.011
--vendor/app/TimeService/TimeService.apk|5055619766db32fe499cda86b892c9f3081219c5
-vendor/bin/time_daemon|8ea7d65a65c1d50afc6553ad52848b454c62563d
+# Time services - OnePlus5/T - 8.1.0/OPM1.171019.011/04110359
+-vendor/app/TimeService/TimeService.apk|80724e227b40a244f56bbfb02b9793074e22b3d5
+vendor/bin/time_daemon|84c5eb3ba680a56cc740dd8d0796de8ac9f8b283
+vendor/lib/libtime_genoff.so|e0773fb8eb0342889ae74be034357f1e12077e69
 vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
 
 # TUI
