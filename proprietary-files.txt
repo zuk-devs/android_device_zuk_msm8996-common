@@ -62,10 +62,9 @@ vendor/lib/libmdsprpc.so
 vendor/lib/libqtigef.so
 vendor/etc/audio_tuning_mixer.txt
 
-# Bluetooth
-vendor/bin/wcnss_filter
-vendor/lib64/libbtnv.so
-vendor/lib/libbtnv.so
+# Bluetooth - from marlin - OPM2.171019.029
+vendor/bin/wcnss_filter|f88ce6014e45c993cdee1dd66f8adc06bc024b95
+vendor/lib64/libbtnv.so|3b0b1a8d4408586ca2b18837f3526134473a8fc4
 
 # Bluetooth (aptX) - from marlin - OPM2.171019.029
 vendor/lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
@@ -80,6 +79,21 @@ vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
+vendor/lib/libmmcamera2_c2d_module.so
+vendor/lib/libmmcamera2_cpp_module.so
+vendor/lib/libmmcamera2_frame_algorithm.so
+vendor/lib/libmmcamera2_iface_modules.so
+vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_isp_modules.so
+vendor/lib/libmmcamera2_is.so
+vendor/lib/libmmcamera2_mct.so
+vendor/lib/libmmcamera2_memleak.so
+vendor/lib/libmmcamera2_pp_buf_mgr.so
+vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_q3a_core.so
+vendor/lib/libmmcamera2_sensor_modules.so|2d27ced74413e498ca4ba5bab3684e73963ae6a1
+vendor/lib/libmmcamera2_stats_algorithm.so
+vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmcamera_dbg.so
 vendor/lib/libmmcamera_dummyalgo.so
 vendor/lib/libmmcamera_eebinparse.so
@@ -106,35 +120,17 @@ vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_tuning_lookup.so
 vendor/lib/libmmcamera_tuning.so
-vendor/lib/libmmcamera2_c2d_module.so
-vendor/lib/libmmcamera2_cpp_module.so
-vendor/lib/libmmcamera2_frame_algorithm.so
-vendor/lib/libmmcamera2_iface_modules.so
-vendor/lib/libmmcamera2_imglib_modules.so
-vendor/lib/libmmcamera2_is.so
-vendor/lib/libmmcamera2_isp_modules.so
-vendor/lib/libmmcamera2_mct.so
-vendor/lib/libmmcamera2_memleak.so
-vendor/lib/libmmcamera2_pp_buf_mgr.so
-vendor/lib/libmmcamera2_pproc_modules.so
-vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so|2d27ced74413e498ca4ba5bab3684e73963ae6a1
-vendor/lib/libmmcamera2_stats_algorithm.so
-vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/libmpbase.so
+vendor/lib/libmorpho_image_stab4.so
 vendor/lib/liboptizoom.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libseemore.so
-vendor/lib/libtsvideoprocess.so
 vendor/lib/libubifocus.so
-
-# Camera eeproms
-vendor/lib/libmmcamera_gt24c08h_eeprom.so
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw:vendor/firmware/cpp_firmware_v1_1_1.fw
@@ -147,35 +143,6 @@ etc/firmware/cpp_firmware_v1_5_0.fw:vendor/firmware/cpp_firmware_v1_5_0.fw
 etc/firmware/cpp_firmware_v1_5_2.fw:vendor/firmware/cpp_firmware_v1_5_2.fw
 etc/firmware/cpp_firmware_v1_6_0.fw:vendor/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw:vendor/firmware/cpp_firmware_v1_8_0.fw
-
-# Camera ov8865
-etc/camera/ov8865_chromatix.xml:vendor/etc/camera/ov8865_chromatix.xml
-vendor/lib/libchromatix_ov8865_hfr_60.so
-vendor/lib/libchromatix_ov8865_cpp_video.so
-vendor/lib/libchromatix_ov8865_common.so
-vendor/lib/libchromatix_ov8865_cpp_ds_chromatix.so
-vendor/lib/libchromatix_ov8865_cpp_hfr_120.so
-vendor/lib/libchromatix_ov8865_cpp_hfr_60.so
-vendor/lib/libchromatix_ov8865_cpp_hfr_90.so
-vendor/lib/libchromatix_ov8865_cpp_liveshot.so
-vendor/lib/libchromatix_ov8865_cpp_preview.so
-vendor/lib/libchromatix_ov8865_cpp_snapshot.so
-vendor/lib/libchromatix_ov8865_cpp_us_chromatix.so
-vendor/lib/libchromatix_ov8865_cpp_video_full.so
-vendor/lib/libchromatix_ov8865_default_preview_none.so
-vendor/lib/libchromatix_ov8865_default_video.so
-vendor/lib/libchromatix_ov8865_default_video_none.so
-vendor/lib/libchromatix_ov8865_hfr_120.so
-vendor/lib/libchromatix_ov8865_hfr_120_none.so
-vendor/lib/libchromatix_ov8865_hfr_60_none.so
-vendor/lib/libchromatix_ov8865_hfr_90.so
-vendor/lib/libchromatix_ov8865_hfr_90_none.so
-vendor/lib/libchromatix_ov8865_postproc.so
-vendor/lib/libchromatix_ov8865_preview.so
-vendor/lib/libchromatix_ov8865_snapshot.so
-vendor/lib/libchromatix_ov8865_video_full.so
-vendor/lib/libchromatix_ov8865_zsl_preview.so
-vendor/lib/libchromatix_ov8865_zsl_video.so
 
 # Camera sensors
 vendor/lib/libmmcamera_isp_abf47.so
@@ -219,6 +186,38 @@ vendor/lib/libmmcamera_isp_scaler_viewfinder46.so
 vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_sub_module.so
+
+# Camera eeproms
+vendor/lib/libmmcamera_gt24c08h_eeprom.so
+
+# Camera ov8865
+etc/camera/ov8865_chromatix.xml:vendor/etc/camera/ov8865_chromatix.xml
+vendor/lib/libchromatix_ov8865_hfr_60.so
+vendor/lib/libchromatix_ov8865_cpp_video.so
+vendor/lib/libchromatix_ov8865_common.so
+vendor/lib/libchromatix_ov8865_cpp_ds_chromatix.so
+vendor/lib/libchromatix_ov8865_cpp_hfr_120.so
+vendor/lib/libchromatix_ov8865_cpp_hfr_60.so
+vendor/lib/libchromatix_ov8865_cpp_hfr_90.so
+vendor/lib/libchromatix_ov8865_cpp_liveshot.so
+vendor/lib/libchromatix_ov8865_cpp_preview.so
+vendor/lib/libchromatix_ov8865_cpp_snapshot.so
+vendor/lib/libchromatix_ov8865_cpp_us_chromatix.so
+vendor/lib/libchromatix_ov8865_cpp_video_full.so
+vendor/lib/libchromatix_ov8865_default_preview_none.so
+vendor/lib/libchromatix_ov8865_default_video.so
+vendor/lib/libchromatix_ov8865_default_video_none.so
+vendor/lib/libchromatix_ov8865_hfr_120.so
+vendor/lib/libchromatix_ov8865_hfr_120_none.so
+vendor/lib/libchromatix_ov8865_hfr_60_none.so
+vendor/lib/libchromatix_ov8865_hfr_90.so
+vendor/lib/libchromatix_ov8865_hfr_90_none.so
+vendor/lib/libchromatix_ov8865_postproc.so
+vendor/lib/libchromatix_ov8865_preview.so
+vendor/lib/libchromatix_ov8865_snapshot.so
+vendor/lib/libchromatix_ov8865_video_full.so
+vendor/lib/libchromatix_ov8865_zsl_preview.so
+vendor/lib/libchromatix_ov8865_zsl_video.so
 
 # CNE
 etc/cne/SwimConfig.xml
