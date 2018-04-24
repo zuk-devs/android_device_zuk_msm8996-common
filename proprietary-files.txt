@@ -132,6 +132,15 @@ vendor/lib/libqomx_jpegenc.so
 vendor/lib/libseemore.so
 vendor/lib/libubifocus.so
 
+# Camera JNI
+lib64/libjni_makeupV2.so:vendor/lib64/libjni_makeupV2.so
+lib64/libjni_sharpshooter.so:vendor/lib64/libjni_sharpshooter.so
+lib64/libjni_ubifocus.so:vendor/lib64/libjni_ubifocus.so
+lib64/libjni_optizoom.so:vendor/lib64/libjni_optizoom.so
+lib64/libjni_clearsight.so:vendor/lib64/libjni_clearsight.so
+vendor/lib64/libseemore.so
+vendor/lib/libjni_dualcamera.so
+
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw:vendor/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw:vendor/firmware/cpp_firmware_v1_1_6.fw

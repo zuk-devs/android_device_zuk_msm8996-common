@@ -4,3 +4,4 @@ allow priv_app camera_prop:file getattr;
 allow priv_app proc_modules:file { getattr open read };
 allow priv_app adsprpcd_file:filesystem getattr;
 allow priv_app proc_stat:file r_file_perms;
+allow priv_app vendor_file:file { r_file_perms execute };
