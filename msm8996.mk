@@ -83,6 +83,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# Additional native libraries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
