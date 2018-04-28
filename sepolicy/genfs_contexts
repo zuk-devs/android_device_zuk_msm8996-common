@@ -1,1 +1,8 @@
+# sysfs
+genfscon sysfs /devices/soc/600000.qcom,pcie          u:object_r:sysfs_pcie:s0
+genfscon sysfs /devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/wlan0 u:object_r:sysfs_wifi:s0
+genfscon sysfs /devices/soc/2080000.qcom,mss          u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/soc:qcom,kgsl-hyp         u:object_r:sysfs_msm_subsys:s0
+
+# debugfs
 genfscon debugfs /rmt_storage          u:object_r:debugfs_rmt:s0
