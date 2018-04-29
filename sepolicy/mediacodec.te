@@ -1,0 +1,1 @@
+allow mediacodec sysfs_soc:dir search;

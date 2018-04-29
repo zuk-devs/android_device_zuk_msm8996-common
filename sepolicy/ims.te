@@ -1,2 +1,3 @@
-allow ims ims:capability net_raw;
+allow ims sysfs_msm_subsys:dir search;
+allow ims sysfs_soc:dir search;
 allow ims ctl_default_prop:property_service set;

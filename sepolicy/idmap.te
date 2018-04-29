@@ -1,1 +1,0 @@
-allow idmap install_data_file:file rw_file_perms;

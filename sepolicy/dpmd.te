@@ -1,1 +1,0 @@
-allow dpmd dpmd:capability { dac_override dac_read_search chown fsetid };

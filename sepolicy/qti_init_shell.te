@@ -1,5 +1,0 @@
-allow qti_init_shell sysfs:file rw_file_perms; 
-
-allow qti_init_shell kmsg_device:chr_file { open write };
-
-allow qti_init_shell sensors_persist_file:dir { add_name create write };

@@ -1,0 +1,1 @@
+allow netd sysfs_net:file rw_file_perms;

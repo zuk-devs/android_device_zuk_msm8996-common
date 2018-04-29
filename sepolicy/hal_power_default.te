@@ -1,1 +1,1 @@
-allow hal_power_default sysfs:file { write open };
+allow hal_power_default sysfs:file rw_file_perms;

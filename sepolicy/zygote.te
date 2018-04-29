@@ -1,2 +1,0 @@
-allow zygote cgroup:file create; 
-allow zygote system_data_file:dir write;

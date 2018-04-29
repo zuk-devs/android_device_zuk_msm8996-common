@@ -193,14 +193,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service
 
-PRODUCT_PACKAGES += \
-    mkshrc_vendor \
-    sh_vendor \
-    toybox_vendor
-
-PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0
-
 # For config.fs
 PRODUCT_PACKAGES += \
     fs_config_files

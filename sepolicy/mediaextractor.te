@@ -1,2 +1,1 @@
-allow mediaextractor sdcardfs:file { getattr read } ;
-allow mediaextractor fuse:file read;
+allow mediaextractor sdcardfs:file r_file_perms;

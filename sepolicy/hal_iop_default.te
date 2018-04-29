@@ -1,0 +1,1 @@
+allow hal_iop_default sysfs_soc:dir search;

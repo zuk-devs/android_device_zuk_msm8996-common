@@ -1,2 +1,4 @@
-allow mm-qcamerad sysfs:file { read open };
-allow mm-qcamerad sysfs_graphics:file read;
+allow mm-qcamerad sysfs_camera:dir search;
+allow mm-qcamerad sysfs_camera:file r_file_perms;
+allow mm-qcamerad sysfs_video:dir search;
+allow mm-qcamerad sysfs_video:file r_file_perms;

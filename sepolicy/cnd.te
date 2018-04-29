@@ -1,2 +1,2 @@
-allow cnd cnd:capability { setuid dac_override chown dac_override dac_read_search setgid fsetid net_raw };
-allow cnd system_data_file:dir read;
+allow cnd sysfs_msm_subsys:dir search;
+allow cnd sysfs_soc:dir search;

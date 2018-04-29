@@ -1,2 +1,0 @@
-allow radio vendor_file:file { execute getattr open read };
-allow radio system_app_data_file:dir getattr;

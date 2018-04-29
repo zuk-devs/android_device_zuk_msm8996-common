@@ -1,2 +1,3 @@
-allow location system_data_file:dir { write remove_name add_name };
-allow location wcnss_prop:file { read getattr open };
+allow location sysfs_msm_subsys:dir search;
+allow location sysfs_soc:dir search;
+allow location wcnss_prop:file r_file_perms;

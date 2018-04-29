@@ -1,0 +1,6 @@
+allow wcnss_service sysfs_msm_subsys:dir search;
+allow wcnss_service sysfs_pcie:dir search;
+allow wcnss_service sysfs_pcie:file rw_file_perms;
+allow wcnss_service sysfs_wifi:dir search;
+allow wcnss_service sysfs_wifi:file rw_file_perms;
+allow wcnss_service sysfs_soc:dir search;

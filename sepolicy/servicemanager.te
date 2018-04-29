@@ -1,4 +1,0 @@
-allow servicemanager { init per_mgr rild qseeproxy }:dir search;
-allow servicemanager { per_mgr qseeproxy }:process getattr;
-allow servicemanager { per_mgr rild qseeproxy }:file { read open };
-allow servicemanager rild:process getattr;
