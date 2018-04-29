@@ -115,9 +115,6 @@ on enable-low-power
     # Set perfd properties
     setprop sys.post_boot.parsed 1
 
-    # Starting io prefetcher service
-    start iop
-
     # VM
     write /proc/sys/vm/dirty_background_ratio 20
     write /proc/sys/vm/dirty_expire_centisecs 100
