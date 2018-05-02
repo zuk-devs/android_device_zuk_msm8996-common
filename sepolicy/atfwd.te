@@ -1,0 +1,1 @@
+allow atfwd sysfs_msm_subsys:dir search;

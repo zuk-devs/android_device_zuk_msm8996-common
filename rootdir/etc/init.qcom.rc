@@ -405,6 +405,12 @@ service port-bridge /vendor/bin/port-bridge
     disabled
     oneshot
 
+service atfwd /vendor/bin/ATFWD-daemon
+    class late_start
+    user system
+    group system radio
+    writepid /dev/cpuset/system-background/tasks
+
 service netmgrd /vendor/bin/netmgrd
     class main
     user root

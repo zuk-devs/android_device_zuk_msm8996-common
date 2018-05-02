@@ -623,6 +623,7 @@ etc/permissions/telephonyservice.xml
 -framework/qcrilhook.jar
 -framework/qti-telephony-common.jar|cdf8c78a495edda081c4a6014df6bd0c32a741e6
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
 vendor/bin/qti
 vendor/bin/rmt_storage
