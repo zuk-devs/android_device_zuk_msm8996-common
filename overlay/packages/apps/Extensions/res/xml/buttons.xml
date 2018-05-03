@@ -37,6 +37,12 @@
 	android:title="@string/hardware_keys_category">
 	<SwitchPreference android:key="hardware_keys_disable"
 		android:title="@string/hardware_keys_disable_title" />
+
+        <org.aospextended.extensions.preference.SystemSettingSwitchPreference
+            android:key="anbi_enabled"
+            android:title="@string/anbi_title"
+            android:summary="@string/anbi_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
