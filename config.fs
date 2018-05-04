@@ -1,13 +1,13 @@
 [AID_QTI_DIAG]
 value:2901 
 
-[system/bin/wcnss_filter]
+[vendor/bin/wcnss_filter]
 mode: 0755
 user: AID_BLUETOOTH
 group: AID_BLUETOOTH
 caps: BLOCK_SUSPEND
 
-[system/bin/cnss-daemon]
+[vendor/bin/cnss-daemon]
 mode: 0755
 user: AID_BLUETOOTH
 group: AID_BLUETOOTH
@@ -44,12 +44,6 @@ group: AID_SYSTEM
 caps: NET_BIND_SERVICE BLOCK_SUSPEND NET_ADMIN
 
 [vendor/bin/slim_daemon]
-mode: 0755
-user:  AID_GPS
-group: AID_GPS
-caps: NET_BIND_SERVICE
-
-[system/vendor/bin/slim_daemon]
 mode: 0755
 user:  AID_GPS
 group: AID_GPS

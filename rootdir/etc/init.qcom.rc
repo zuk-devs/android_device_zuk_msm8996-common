@@ -522,7 +522,7 @@ service imsdatadaemon /vendor/bin/imsdatadaemon
     writepid /dev/cpuset/system-background/tasks
     disabled
 
-service pd_mapper /system/vendor/bin/pd-mapper
+service pd_mapper /vendor/bin/pd-mapper
     class core
     disabled
 
@@ -589,7 +589,7 @@ service tlocd /system/bin/tloc_daemon
     group drmrpc gps net_raw
     seclabel u:r:tlocd:s0
 
-service readmac /system/vendor/bin/readmac
+service readmac /vendor/bin/readmac
     class main
     user root
     group root
@@ -601,7 +601,7 @@ service energy-awareness /vendor/bin/energy-awareness
     group system
     oneshot
 
-service mdtpd /system/vendor/bin/mdtpd
+service mdtpd /vendor/bin/mdtpd
     class late_start
     user root
     group system radio drmrpc
@@ -702,7 +702,7 @@ on property:wc_transport.start_hci=true
 on property:wc_transport.start_hci=false
     stop start_hci_filter
 
-service start_hci_filter /system/bin/wcnss_filter
+service start_hci_filter /vendor/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth diag system wakelock
@@ -715,7 +715,7 @@ on property:wc_transport.start_root=true
 on property:wc_transport.start_root=false
     stop hci_filter_root
 
-service hci_filter_root /system/bin/wcnss_filter
+service hci_filter_root /vendor/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth diag system
@@ -727,7 +727,7 @@ on property:wc_transport.start_root=true
 on property:wc_transport.start_root=false
     stop hci_filter_root
 
-service hci_filter_root /system/bin/wcnss_filter
+service hci_filter_root /vendor/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth diag system
@@ -741,7 +741,7 @@ service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     disabled
     oneshot
 
-service port-bridge /system/bin/port-bridge
+service port-bridge /vendor/bin/port-bridge
     class main
     user radio system
     group radio system inet
@@ -753,19 +753,19 @@ service netmgrd /vendor/bin/netmgrd
     group root wifi wakelock radio inet
     writepid /dev/cpuset/system-background/tasks
 
-service ipacm /system/vendor/bin/ipacm
+service ipacm /vendor/bin/ipacm
     class main
     user radio
     group radio inet
     writepid /dev/cpuset/system-background/tasks
 
-service qti /system/vendor/bin/qti
+service qti /vendor/bin/qti
     class main
     user radio
     group radio oem_2901 usb
     writepid /dev/cpuset/system-background/tasks
 
-service sensors /system/vendor/bin/sensors.qcom
+service sensors /vendor/bin/sensors.qcom
     class core
     user root
     group root wakelock
@@ -785,9 +785,9 @@ on property:sys.sysctl.tcp_adv_win_scale=*
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
-    -I/system/vendor/etc/wifi/p2p_supplicant_overlay.conf -N \
+    -I/vendor/etc/wifi/p2p_supplicant_overlay.conf -N \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
-    -I/system/vendor/etc/wifi/wpa_supplicant_overlay.conf \
+    -I/vendor/etc/wifi/wpa_supplicant_overlay.conf \
     -O/data/misc/wifi/sockets -puse_p2p_group_interface=1 -dd \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
 #   we will start as root and wpa_supplicant will switch to user wifi
@@ -812,7 +812,7 @@ service wifi_fccutild /system/bin/wifi_fccutild
     disabled
     oneshot
 
-service cnss-daemon /system/bin/cnss-daemon -n -l
+service cnss-daemon /vendor/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
@@ -861,7 +861,7 @@ service wfdservice /system/bin/wfdservice
     #graphics net_bt net_bt_admin bluetooth
 
 # Seemp health service
-service seemp_healthd /system/vendor/bin/seemp_healthd
+service seemp_healthd /vendor/bin/seemp_healthd
     class late_start
     user system
     group system

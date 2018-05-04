@@ -798,5 +798,5 @@ vendor/lib/libwvdrm_L3.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # WiFi
-bin/cnss-daemon
+vendor/bin/cnss-daemon
 etc/firmware/bdwlan30.bin

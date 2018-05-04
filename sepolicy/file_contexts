@@ -22,9 +22,9 @@
 
 # legacy paths
 /system/bin/sensors.qcom                                        u:object_r:sensors_exec:s0
-/system/bin/port-bridge                                         u:object_r:port-bridge_exec:s0
+/vendor/bin/port-bridge                                         u:object_r:port-bridge_exec:s0
 /system/bin/time_daemon                                         u:object_r:time_daemon_exec:s0
-/system/bin/cnss-daemon                                         u:object_r:wcnss_service_exec:s0
+/vendor/bin/cnss-daemon                                         u:object_r:wcnss_service_exec:s0
 /system/bin/wcnss_filter                                        u:object_r:wcnss_filter_exec:s0
 
 # lights
