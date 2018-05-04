@@ -1,9 +1,11 @@
-# Android fstab file.
-# The filesystem that contains the filesystem checker binary (typically /system) cannot
-# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-#TODO: Add 'check' as fs_mgr_flags with data partition.
-# Currently we dont have e2fsck compiled. So fs check would failed.
+# Android fstab file.
+# The filesystem that contains the filesystem e2fsck binary (typically /system) cannot
+# specify 'check', and must come before any filesystems that do specify 'check'
+
+# NOTE: /system and /vendor partitions are now early-mounted and the fstab entry is specified in device tree:
+#       /proc/device-tree/firmware/android/fstab/system
+#       /proc/device-tree/firmware/android/fstab/vendor
 
 #<src>                                                       <mnt_point>       <type>  <mnt_flags and options>                                                                              <fs_mgr_flags>
 /dev/block/bootdevice/by-name/boot                           /boot             emmc    defaults                                                                                             defaults
@@ -17,6 +19,7 @@
 /dev/block/bootdevice/by-name/modem                          /firmware         vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0         wait
 /dev/block/bootdevice/by-name/bluetooth                      /bt_firmware      vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=222,fmask=333,context=u:object_r:bt_firmware_file:s0      wait
 /dev/block/bootdevice/by-name/misc                           /misc             emmc    defaults                                                                                             defaults
-/dev/block/zram0                             none               swap    defaults                                                    zramsize=536870912,max_comp_streams=4
+/dev/block/zram0                                             none              swap    defaults                                                                                             zramsize=536870912,max_comp_streams=4
+/dev/block/bootdevice/by-name/frp                            /frp              emmc    defaults                                                                                             defaults
 
-/devices/soc/6a00000.ssusb/6a00000.dwc3/xhci-hcd.0.auto/usb* auto              auto    defaults                                                                                             voldmanaged=usbdisk:auto
+/devices/soc/6a00000.ssusb/6a00000.dwc3/xhci-hcd.0.auto/usb* auto              auto    defaults  
