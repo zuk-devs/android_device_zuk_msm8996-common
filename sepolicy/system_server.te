@@ -4,6 +4,8 @@ allow system_server sysfs_fingerprint:file rw_file_perms;
 
 allow system_server install_data_file:file getattr;
 
+allow system_server zygote:process getpgid;
+
 # /vendor/usr/keylayout
 r_dir_file(system_server, idc_file)
 # /vendor/usr/idc

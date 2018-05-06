@@ -1,3 +1,5 @@
+typeattribute hal_fingerprint_default socket_between_core_and_vendor_violators;
+
 r_dir_file(hal_fingerprint_default, firmware_file)
 allow hal_fingerprint_default tee_device:chr_file ioctl;
 allow hal_fingerprint_default fpc_data_file:dir rw_dir_perms;
@@ -5,4 +7,5 @@ allow hal_fingerprint_default sysfs_fingerprint:dir r_dir_perms;
 allow hal_fingerprint_default sysfs_fingerprint:file rw_file_perms;
 allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
 allow hal_fingerprint_default firmware_file:file r_file_perms;
-allow hal_fingerprint_default system_data_file:dir rw_dir_perms;
+allow hal_fingerprint_default fpc_data_file:dir create_dir_perms;
+allow hal_fingerprint_default fpc_data_file:sock_file { create setattr unlink };
