@@ -1,0 +1,2 @@
+allow hal_audio_default sysfs:dir { open read };
+allow hal_audio_default thermal_socket:sock_file write;
