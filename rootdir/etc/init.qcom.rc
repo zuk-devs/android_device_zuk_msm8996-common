@@ -324,10 +324,6 @@ on post-fs-data
     mkdir /data/vendor/netmgr 0770 radio radio
     chmod 0770 /data/vendor/netmgr
 
-    # Create ipacm log dir
-    mkdir /data/vendor/ipa 0770 radio radio
-    chmod 0770 /data/vendor/ipa
-
     # Create the directories used by CnE subsystem
     mkdir /data/connectivity 0771 system system
     chown system system /data/connectivity
@@ -602,11 +598,6 @@ service energy-awareness /vendor/bin/energy-awareness
     group system
     oneshot
 
-service mdtpd /vendor/bin/mdtpd
-    class late_start
-    user root
-    group system radio drmrpc
-
 service qcomsysd /system/bin/qcom-system-daemon
     class main
     user root
@@ -760,12 +751,6 @@ service netmgrd /vendor/bin/netmgrd
     group root wifi wakelock radio inet
     writepid /dev/cpuset/system-background/tasks
 
-service ipacm /vendor/bin/ipacm
-    class main
-    user radio
-    group radio inet
-    writepid /dev/cpuset/system-background/tasks
-
 service qti /vendor/bin/qti
     class main
     user radio
@@ -866,12 +851,6 @@ service wfdservice /system/bin/wfdservice
     group audio camera inet net_bt_stack drmrpc media_rw media input net_admin
     # removed these because of limit of 12 groups
     #graphics net_bt net_bt_admin bluetooth
-
-# Seemp health service
-service seemp_healthd /vendor/bin/seemp_healthd
-    class late_start
-    user system
-    group system
 
 on charger
     setprop persist.sys.usb.config charging
