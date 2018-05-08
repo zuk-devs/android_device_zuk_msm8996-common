@@ -133,6 +133,9 @@ on enable-low-power
 on property:sys.boot_completed=1
     trigger enable-low-power
 
+    # Set the default IRQ affinity to the silver cluster.
+    write /proc/irq/default_smp_affinity f
+
     # Set I/O scheduler
     setprop sys.io.scheduler bfq
 
