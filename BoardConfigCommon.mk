@@ -190,7 +190,6 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # QCOM Power
 TARGET_HAS_NO_WIFI_STATS := true
-TARGET_USES_INTERACTION_BOOST := true
 
 # Tap to wake node
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
