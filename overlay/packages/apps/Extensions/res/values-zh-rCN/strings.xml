@@ -19,7 +19,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     
     <!-- Hardware button navigation -->
-    <string name="hardware_keys_home_key_title">Home 键</sinUg>
+    <string name="hardware_keys_home_key_title">Home 键</string>
     <string name="hardware_keys_menu_key_title">右滑</string>
     <string name="hardware_keys_assist_key_title">长轻触</string>
     <string name="hardware_keys_appswitch_key_title">左滑</string>
