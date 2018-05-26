@@ -168,7 +168,7 @@ BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
-TARGET_HAS_NO_WIFI_STATS := true
+TARGET_WLAN_POWER_STAT  := "/d/wlan_wcnss/power_stats"
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
 
 # QCOM
