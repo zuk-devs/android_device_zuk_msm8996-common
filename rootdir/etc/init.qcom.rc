@@ -595,13 +595,6 @@ on property:init.svc.vendor.hwcomposer-2-1=running
 on property:init.svc.vendor.hwcomposer-2-1=restarting
     stop vendor.ppd
 
-service vendor.energy-awareness /vendor/bin/energy-awareness
-    class main
-    user root
-    group system
-    oneshot
-    writepid /dev/cpuset/system-background/tasks
-
 on property:init.svc.surfaceflinger=restarting
     stop hwcomposer-2-1
     start hwcomposer-2-1
