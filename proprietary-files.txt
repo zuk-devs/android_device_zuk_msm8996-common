@@ -561,7 +561,6 @@ lib/libqti-perfd-client_system.so|fdc85399bb9a9e5c4bf34e000b2f3567c248e8db
 lib/vendor.qti.hardware.iop@1.0.so|f2b5c17ce9690569d2a74f5b01a345e383f0c20d
 lib/vendor.qti.hardware.iop@2.0.so|767246e2fc7fafe9c61c86a939f2fa99504c359e
 lib/vendor.qti.hardware.perf@1.0.so|0ed43b650fba00e97feef696827391b6d3b75425
-vendor/bin/energy-awareness|85400bd358530f794fa57f346942a9a7c38df545
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|b1632ad0a65f6acb29971c100e09fc1cea843838
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
 vendor/lib64/libfeedbackhandler.so|0777f880226f565b7f9ac359d969aee7c67d63d5
