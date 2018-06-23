@@ -1,7 +1,7 @@
 #define LOG_TAG "zuk_readmac"
 #define LOG_NDEBUG 0
 
-#include <cutils/log.h>
+#include <log/log.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
