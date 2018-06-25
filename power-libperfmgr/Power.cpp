@@ -214,12 +214,14 @@ Return<void> Power::powerHintAsync_1_2(PowerHint_1_2 hint, int32_t data) {
             }
             break;
         case PowerHint_1_2::AUDIO_STREAMING:
-            if (data) {
-                mHintManager->DoHint("AUDIO_STREAMING");
-                ALOGD("AUDIO STREAMING ON");
-            } else {
-                mHintManager->EndHint("AUDIO_STREAMING");
-                ALOGD("AUDIO STREAMING OFF");
+            if (!mSustainedPerfModeOn) {
+                if (data) {
+                    mHintManager->DoHint("AUDIO_STREAMING");
+                    ALOGD("AUDIO STREAMING ON");
+                } else {
+                    mHintManager->EndHint("AUDIO_STREAMING");
+                    ALOGD("AUDIO STREAMING OFF");
+                }
             }
             break;
         default:
