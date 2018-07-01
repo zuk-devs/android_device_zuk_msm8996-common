@@ -676,9 +676,6 @@ vendor/bin/thermal-engine|40990b4c75dcb7d354e9bd768b387224bfe79bfd
 vendor/lib64/libthermalioctl.so|96cdd452d6ca70256b8621ec5ae8ac2ba0292260
 -vendor/lib/libthermalclient.so|5e77723f69df323a85360c39722b8da00297ba9a
 
-# Thermal conf
-vendor/etc/thermal-engine.conf
-
 # Time services - from bardock-pro - OPM1.171019.019
 -vendor/app/TimeService/TimeService.apk|5055619766db32fe499cda86b892c9f3081219c5
 vendor/bin/time_daemon|8ea7d65a65c1d50afc6553ad52848b454c62563d
