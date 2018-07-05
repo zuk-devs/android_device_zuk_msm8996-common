@@ -527,12 +527,6 @@ vendor/lib/hw/sound_trigger.primary.msm8996.so|af935e760c7e11c5e0673e188a91a28c0
 vendor/lib/libadpcmdec.so|7c12a153200fd2e9f1f6139fcf40beee1a96f48d
 vendor/lib/libsmwrapper.so|45be75b414f7a8bc3f4807dfab37a9ef9ce91426
 
-# Machine learning
--vendor/etc/lm/ReferenceFeature.xml
-vendor/lib64/liblearningmodule.so
-vendor/lib64/libmeters.so
-vendor/lib64/libreffeature.so
-
 # Media - from bardock-pro - OPM1.171019.026
 -vendor/lib64/libgpustats.so|a50ee23f3990405a8be9141108a400d8d22334fe
 -vendor/lib/libgpustats.so|30ab66c16c7e4a6b3c1920835a326c4ed4bb4a82
