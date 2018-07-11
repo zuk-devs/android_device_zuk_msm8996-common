@@ -1,9 +1,0 @@
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
-    <string name="hardware_keys_swipe_right_key_title">Ruch w prawo</string>
-    <string name="hardware_keys_swipe_left_key_title">Ruch w lewo</string>
-    <string name="hardware_keys_long_tap_key_title">długi dotyk</string>
-    <string name="hardware_keys_swipe_tap_title">akcja ruszania</string>
-    <string name="hardware_keys_long_tap_title">Akcja długiego dotyku</string>
-
-</resources> 
