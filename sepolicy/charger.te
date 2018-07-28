@@ -1,2 +1,4 @@
-allow charger device:dir r_dir_perms;
-allow charger self:capability { dac_override dac_read_search };
+allow charger persist_file:dir create_dir_perms;
+allow charger persist_file:file create_file_perms;
+allow charger rtc_device:chr_file r_file_perms;
+allow charger self:capability dac_override;
