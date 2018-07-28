@@ -15,7 +15,6 @@
 
 # HALs
 /vendor/bin/hw/android\.hardware\.light@2\.0-service.zuk_8996       u:object_r:hal_light_default_exec:s0
-/vendor/bin/hw/android\.hardware\.neuralnetworks@1\.0-service-hvx   u:object_r:hal_neuralnetworks_hvx_exec:s0
 
 # Misc files on /vendor
 /vendor/usr/idc(/.*)?                                           u:object_r:idc_file:s0
