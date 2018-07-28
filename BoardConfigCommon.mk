@@ -160,7 +160,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USES_MKE2FS := true
 
 # Power
-TARGET_HAS_NO_WIFI_STATS := true
+TARGET_WLAN_POWER_STAT  := "/d/wlan_wcnss/power_stats"
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
 TARGET_USES_INTERACTION_BOOST := true
 
