@@ -162,7 +162,6 @@ TARGET_USES_MKE2FS := true
 # Power
 TARGET_WLAN_POWER_STAT  := "/d/wlan_wcnss/power_stats"
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
-TARGET_USES_INTERACTION_BOOST := true
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
