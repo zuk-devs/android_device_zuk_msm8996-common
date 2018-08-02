@@ -110,10 +110,6 @@ on post-fs-data
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
-    # Create port-bridge log dir
-    mkdir /data/vendor/port_bridge 0770 radio radio
-    chmod 0770 /data/vendor/port_bridge
-
     # Create netmgr log dir
     mkdir /data/vendor/netmgr 0770 radio radio
     chmod 0770 /data/vendor/netmgr
@@ -398,13 +394,6 @@ service hci_filter_root /vendor/bin/wcnss_filter
     group bluetooth oem_2901 system
     seclabel u:r:wcnss_filter:s0
     disabled
-
-service port-bridge /vendor/bin/port-bridge
-    class main
-    user radio system
-    group radio system inet
-    disabled
-    oneshot
 
 service atfwd /vendor/bin/ATFWD-daemon
     class late_start
