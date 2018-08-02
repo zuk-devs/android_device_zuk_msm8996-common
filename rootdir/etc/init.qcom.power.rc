@@ -36,10 +36,6 @@ on init
     chmod 0444 /sys/module/msm_performance/parameters/cpu_max_freq
 
 on boot
-    # Bring back main cores CPU 0,2
-    write /sys/devices/system/cpu/cpu0/online 1
-    write /sys/devices/system/cpu/cpu2/online 1
-
     # Update foreground and background cpusets
     write /dev/cpuset/foreground/cpus 0-3
     write /dev/cpuset/background/cpus 0-3
@@ -77,9 +73,6 @@ on charger
     start thermal-engine
 
 on enable-low-power
-    # Set ioscheduler
-    setprop sys.io.scheduler "bfq"
-
     # Disable thermal hotplug to switch governor
     write /sys/module/msm_thermal/core_control/enabled 0
 
@@ -104,6 +97,10 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 79000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 307200
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif 0
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/enable_prediction 1
+
+    # Bring CPU2 online
+    write /sys/devices/system/cpu/cpu2/online 1
 
     # Configure governor settings for big cluster
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "interactive"
@@ -119,17 +116,17 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/max_freq_hysteresis 39000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq 307200
     write /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif 0
+    write /sys/devices/system/cpu/cpu2/cpufreq/interactive/enable_prediction 1
 
     # Re-enable thermal hotplug
     write /sys/module/msm_thermal/core_control/enabled 1
 
-    # Input boost configuration
+    # Input boost config
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800 2:1324800"
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
-    # Setting b.L scheduler parameters
+    # Set big.LITTLE scheduler parameters
     write /proc/sys/kernel/sched_boost 0
-    write /proc/sys/kernel/sched_migration_fixup 1
     write /proc/sys/kernel/sched_upmigrate 95
     write /proc/sys/kernel/sched_downmigrate 90
     write /proc/sys/kernel/sched_freq_inc_notify 400000
@@ -170,25 +167,25 @@ on enable-low-power
     # Set perfd properties
     setprop sys.post_boot.parsed 1
 
-    # VM
-    write /proc/sys/vm/dirty_background_ratio 20
-    write /proc/sys/vm/dirty_expire_centisecs 100
-    write /proc/sys/vm/swappiness 5
-    write /proc/sys/vm/vfs_cache_pressure 60
+on property:sys.boot_completed=1
+    trigger enable-low-power
 
-    # Update cpusets now that boot is complete and we want better load balancing
-    write /dev/cpuset/top-app/cpus 0-3
-    write /dev/cpuset/foreground/cpus 0-2
-    write /dev/cpuset/background/cpus 0
-    write /dev/cpuset/system-background/cpus 0-2
+    # Set I/O squeduler
+    setprop sys.io.scheduler "bfq"
+
+    # Start I/O prefetcher service
+    start iop
+
+on property:init.svc.recovery=running
+    trigger enable-low-power
 
 service charger /sbin/chargeonlymode
     class charger
     group system graphics
     seclabel u:r:charger:s0
 
-on property:init.svc.recovery=running
-    trigger enable-low-power
-    
-on property:sys.boot_completed=1
-    trigger enable-low-power
+service energy-awareness /vendor/bin/energy-awareness
+    class main
+    user root
+    group system
+    oneshot
