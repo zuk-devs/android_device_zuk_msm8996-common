@@ -350,6 +350,7 @@ service dpmQmiMgr /vendor/bin/dpmQmiMgr
     class main
     user system
     group radio system
+    writepid /dev/cpuset/system-background/tasks
 
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
@@ -380,6 +381,7 @@ service start_hci_filter /vendor/bin/wcnss_filter
     user bluetooth
     group bluetooth oem_2901
     seclabel u:r:wcnss_filter:s0
+    writepid /dev/cpuset/system-background/tasks
     disabled
 
 on property:wc_transport.start_root=true
@@ -394,6 +396,7 @@ service hci_filter_root /vendor/bin/wcnss_filter
     group bluetooth oem_2901 system
     seclabel u:r:wcnss_filter:s0
     disabled
+    writepid /dev/cpuset/system-background/tasks
 
 service atfwd /vendor/bin/ATFWD-daemon
     class late_start
@@ -460,6 +463,7 @@ service cnss-daemon /vendor/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
+    writepid /dev/cpuset/system-background/tasks
 
 on property:sys.powerctl=*
     stop cnss-daemon
@@ -484,6 +488,7 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
     user radio
     group radio cache inet misc audio log readproc wakelock oem_2901
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+    writepid /dev/cpuset/system-background/tasks
 
 service qseecomd /vendor/bin/qseecomd
     class core
@@ -502,7 +507,7 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
-    writepid /dev/cpuset/system-background/tasks
+    writepid /dev/cpuset/camera-daemon/tasks
 
 # Start up peripheral manager
 service per_mgr /vendor/bin/pm-service
@@ -547,6 +552,7 @@ service adsprpcd /vendor/bin/adsprpcd
     class main
     user media
     group media
+    writepid /dev/cpuset/system-background/tasks
 
 service imsqmidaemon /vendor/bin/imsqmidaemon
     class main
@@ -570,6 +576,7 @@ service ims_rtp_daemon /vendor/bin/ims_rtp_daemon
     class main
     user system
     group radio diag inet log
+    writepid /dev/cpuset/system-background/tasks
     disabled
 
 service vendor.imsrcsservice /vendor/bin/imsrcsd
