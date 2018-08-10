@@ -136,13 +136,12 @@ $(WCNSS_MAC_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_INI_SYMLINK) $(WCNSS_MAC_SYMLINK)
 
-BT_FIRMWARE := btfw32.tlv btnv32.bin btnv32.b15
-BT_FIRMWARE_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(BT_FIRMWARE)))
+BT_FIRMWARE_SYMLINKS := $(TARGET_ROOT_OUT)/bt_firmware/image
 $(BT_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating BT firmware symlink: $@"
-	@mkdir -p $(dir $@)
+	@mkdir -p $@
 	@rm -rf $@
-	$(hide) ln -sf /bt_firmware/image/$(notdir $@) $@
+	$(hide) ln -sf /vendor/firmware $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(BT_FIRMWARE_SYMLINKS)
 
