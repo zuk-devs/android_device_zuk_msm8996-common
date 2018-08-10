@@ -67,11 +67,15 @@ vendor/bin/wcnss_filter|68cc5d856e778446ae8753bcbf6e346f917754d7
 vendor/lib/libbtnv.so|33673920d11a1221d24f7ca89f3559946959ccfb
 vendor/lib64/libbtnv.so|198cc0d7129441bf8468ed92066fff179f79856c
 
-# Bluetooth (aptX) - from marlin - OPM2.171019.029
+# Bluetooth (aptX) - from marlin - PPR1.180610.009
 vendor/lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
 vendor/lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 vendor/lib/libaptX_encoder.so|984739a0bc968e18f75ced205733fe3f51c2d4f0
 vendor/lib/libaptXHD_encoder.so|974c486e4ca03faa0713553d9dfe2995ac93e01c
+
+# Bluetooth (firmware) - from marlin - PPR1.180610.009
+vendor/firmware/btfw32.tlv|46767a06a44a313c6775acfb6e59f73414ca66d1
+vendor/firmware/btnv32.bin|d527fc24cab04168fb9c4d009eb1c0132718abee
 
 # Camera
 vendor/bin/mm-qcamera-daemon
