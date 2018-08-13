@@ -127,20 +127,6 @@
         <item>40</item>
     </integer-array>
 
-    <!-- Hardware keys present on the device, stored as a bit field.
-         This integer should equal the sum of the corresponding value for each
-         of the following keys present:
-             1 - Home
-             2 - Back
-             4 - Menu
-             8 - Assistant (search)
-            16 - App switch
-            32 - Camera
-            64 - Volume rocker
-         For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
-    <integer name="config_deviceHardwareKeys">95</integer>
-
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
@@ -433,18 +419,11 @@
         <item>"/system/framework/arm64/boot-core-libart.vdex"</item>
     </string-array>
 
-    <!-- Time to give to the proximity sensor before toggling the flashlight with the Power button.
-    Set to -1 to disable the proximity sensor check at all-->
-    <integer name="config_flashlightProximityTimeout">3000</integer>
-
     <!-- True if camera app should be pinned via Pinner Service -->
     <bool name="config_pinnerCameraApp">true</bool>
 
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
-
-    <!-- Enable full screen DT2S in lockscreen -->
-    <bool name="fullScreenDT2S">true</bool>
 
 </resources>
