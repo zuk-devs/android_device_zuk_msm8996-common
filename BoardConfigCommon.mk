@@ -171,6 +171,9 @@ TARGET_WLAN_POWER_STAT  := "/d/wlan_wcnss/power_stats"
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
 TARGET_USES_INTERACTION_BOOST := true
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_USE_SDCLANG := true
