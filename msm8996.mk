@@ -176,7 +176,6 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libtinyxml \
     libqdMetaData.system \
-    libvulkan
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/calib.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/calib.cfg
@@ -348,7 +347,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    vndk_package
+    vndk-sp
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss@1.0.so:system/lib64/android.hardware.gnss@1.0-v27.so
