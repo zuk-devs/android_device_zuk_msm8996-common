@@ -1,0 +1,16 @@
+cc_binary {
+    name: "android.hardware.biometrics.fingerprint@2.0-service.zuk",
+    relative_install_path: "hw",
+    init_rc: ["android.hardware.biometrics.fingerprint@2.0-service.zuk.rc"],
+    srcs: ["service.cpp", "BiometricsFingerprint.cpp"],
+    shared_libs: [
+        "libutils",
+        "liblog",
+        "libhidlbase",
+        "libhidltransport",
+        "libhardware",
+        "libhwbinder",
+        "android.hardware.biometrics.fingerprint@2.1",
+    ],
+    proprietary: true,
+}
