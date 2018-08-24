@@ -3,3 +3,4 @@ allow init debugfs_ipc:dir relabelfrom;
 allow init debugfs_ipc:file relabelfrom;
 allow init proc_kernel_sched:file write;
 allow init sysfs_scsi_devices_0000:dir write;
+allow init sysfs_lowmemorykiller:dir write;
