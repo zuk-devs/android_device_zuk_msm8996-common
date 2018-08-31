@@ -179,7 +179,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
-TARGET_RIL_VARIANT := caf
 
 # SELinux
 #include device/qcom/sepolicy/sepolicy.mk
