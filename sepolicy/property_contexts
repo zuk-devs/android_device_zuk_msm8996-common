@@ -1,6 +1,9 @@
 # Camera
 persist.camera.                                               u:object_r:camera_prop:s0
 
+# BootParsed
+sys.post_boot.parsed       u:object_r:vendor_mpctl_prop:s0
+
 # Netmgrd
 persist.net.doxlat                                            u:object_r:vendor_xlat_prop:s0
 
