@@ -361,7 +361,7 @@ service rmt_storage /vendor/bin/rmt_storage
     group system wakelock
     shutdown critical
     ioprio rt 0
-    writepid /dev/cpuset/system-background/tasks
+    writepid /dev/cpuset/background/tasks
 
 service tftp_server /vendor/bin/tftp_server
     class core
