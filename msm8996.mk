@@ -137,7 +137,7 @@ PRODUCT_PACKAGES += \
     camera.msm8996 \
     libmm-qcamera \
     mm-qcamera-app \
-    Snap \
+    SnapdragonCamera \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor
 
