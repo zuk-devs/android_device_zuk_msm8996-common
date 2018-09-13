@@ -706,9 +706,6 @@ vendor/bin/hw/android.hardware.drm@1.0-service.widevine|fd6e14710c196fdd4131afe2
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
 vendor/lib/libwvhidl.so|f7288f7a7ed6765bd1d80d639a0aeb0c31eda795
 
-# WiFi - from bardock-pro - OPM1.171019.026
-vendor/bin/cnss-daemon|58fd958b2f66f3335722d0905b3bb1e70dc1c762
-
 # WiFi firmware - from marlin - PPR1.180610.009
 vendor/firmware/bdwlan30.b80|ecaab9a00454eeafdb9c3ca226ead0113b14227a
 vendor/firmware/bdwlan30.b81|da39a3ee5e6b4b0d3255bfef95601890afd80709
