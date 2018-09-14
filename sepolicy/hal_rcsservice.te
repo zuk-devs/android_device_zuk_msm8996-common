@@ -1,1 +1,2 @@
 allow hal_rcsservice sysfs_msm_subsys:dir search;
+allow hal_rcsservice sysfs_msm_subsys:file { open read };

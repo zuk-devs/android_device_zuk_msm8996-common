@@ -1,1 +1,5 @@
 allow hal_audio_default sysfs_soc:dir search;
+allow hal_audio_default vendor_data_file:file { append getattr open read };
+allow hal_audio_default thermal_socket:sock_file write;
+allow hal_audio_default thermal-engine:unix_stream_socket connectto;
+
