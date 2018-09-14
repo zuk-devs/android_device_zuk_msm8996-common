@@ -1,1 +1,0 @@
-allow per_mgr sysfs_msm_subsys:dir search;
