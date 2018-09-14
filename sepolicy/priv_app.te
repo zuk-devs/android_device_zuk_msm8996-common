@@ -14,7 +14,6 @@ allow priv_app keylayout_file:dir r_file_perms;
 allow priv_app mac_perms_file:file r_file_perms;
 allow priv_app mnt_media_rw_file:dir r_dir_perms;
 allow priv_app nonplat_service_contexts_file:file r_file_perms;
-allow priv_app persist_file:dir r_dir_perms;
 allow priv_app proc_stat:file r_file_perms;
 allow priv_app radio_data_file:dir r_dir_perms;
 allow priv_app seapp_contexts_file:file r_file_perms;
