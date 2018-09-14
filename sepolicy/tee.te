@@ -1,0 +1,1 @@
+allow tee fingerprintd_data_file:file { open read };
