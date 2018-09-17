@@ -1,4 +1,4 @@
-type fpc_data_file, data_file_type, file_type;
+type fpc_data_file, core_data_file_type, data_file_type, file_type;
 type thermal_data_file, data_file_type, file_type;
 
 # /sys
