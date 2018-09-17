@@ -1,3 +1,4 @@
+typeattribute thermal-engine data_between_core_and_vendor_violators;
 allow thermal-engine sysfs_msm_subsys:dir search;
 
 allow thermal-engine sysfs_usb_supply:dir search;

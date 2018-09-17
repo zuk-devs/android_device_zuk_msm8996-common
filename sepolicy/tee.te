@@ -1,1 +1,2 @@
+typeattribute tee data_between_core_and_vendor_violators;
 allow tee fingerprintd_data_file:file { open read };
