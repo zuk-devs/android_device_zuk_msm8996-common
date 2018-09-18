@@ -99,6 +99,10 @@ on post-fs-data
     mkdir /data/tombstones/wcnss 0771 system system
     mkdir /data/tombstones/dsps 0771 system system
 
+    # Create directories for thermal-engine
+    mkdir /data/thermal 0771 system system
+    mkdir /data/thermal/config 0771 system system
+
     # Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
 
