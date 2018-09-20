@@ -2,4 +2,5 @@ allow netmgrd sysfs_net:dir search;
 allow netmgrd sysfs_net:file rw_file_perms;
 allow netmgrd property_socket:sock_file write;
 allow netmgrd init:unix_stream_socket connectto;
-allow netmgrd sysfs:file { open read };
+
+set_prop(netmgrd, vendor_xlat_prop)
