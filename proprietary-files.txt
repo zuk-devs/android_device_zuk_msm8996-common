@@ -632,12 +632,12 @@ vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
 
 # RIL
--app/QtiTelephonyService/QtiTelephonyService.apk
+-app/QtiTelephonyService/QtiTelephonyService.apk|8df5a9d03d141a762656d8f5aa1a304b57fdc204
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
-framework/QtiTelephonyServicelibrary.jar
+framework/QtiTelephonyServicelibrary.jar|5af50f654d6174a726c0a57b5f32254e1a9d3016
 framework/qcrilhook.jar
-framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
+framework/qti-telephony-common.jar|5af50f654d6174a726c0a57b5f32254e1a9d3016
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
