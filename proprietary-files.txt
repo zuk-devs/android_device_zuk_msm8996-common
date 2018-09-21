@@ -632,7 +632,7 @@ vendor/lib/libqmiservices.so
 vendor/lib/libsmemlog.so
 
 # RIL
--app/QtiTelephonyService/QtiTelephonyService.apk|8df5a9d03d141a762656d8f5aa1a304b57fdc204
+-app/QtiTelephonyService/QtiTelephonyService.apk
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
 framework/QtiTelephonyServicelibrary.jar|5af50f654d6174a726c0a57b5f32254e1a9d3016
