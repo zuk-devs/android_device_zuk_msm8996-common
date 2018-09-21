@@ -706,14 +706,8 @@ vendor/bin/hw/android.hardware.drm@1.0-service.widevine|fd6e14710c196fdd4131afe2
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
 vendor/lib/libwvhidl.so|f7288f7a7ed6765bd1d80d639a0aeb0c31eda795
 
-# WiFi firmware - from marlin - PPR1.180610.009
-vendor/firmware/bdwlan30.b80|ecaab9a00454eeafdb9c3ca226ead0113b14227a
-vendor/firmware/bdwlan30.b81|da39a3ee5e6b4b0d3255bfef95601890afd80709
-vendor/firmware/bdwlan30.b82|f1fa441d1516eca65fb487f4dd2b3a7b9ac1d25e
-vendor/firmware/bdwlan30.bin|2d80ebbe4ac0808c621987d15ae6a4b30d970860
-vendor/firmware/otp30.bin|6d71901049ac25f584d3bf7b9b612a54b9fa9049
-vendor/firmware/qwlan30.bin|16739e1d5711a496bd53a5e3d5cc83b121992ce6
-vendor/firmware/utf30.bin|38b22386f6519bfc43b5838cead726ae02b6f65e
+# WiFi firmware
+etc/firmware/bdwlan30.bin:vendor/firmware/bdwlan30.bin
 
 # HIDL - Dummy HIDL base blob for compatibility with older blobs on GSI ROMs.
 vendor/lib/android.hidl.base@1.0.so|7b695c37dd8f7edde1b3c8b25c46d7b73232e75b
