@@ -30,11 +30,13 @@ vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/us-syncproximity.so
 
-# ANT+
-lib64/com.qualcomm.qti.ant@1.0.so
--lib64/libantradio.so
-lib/com.qualcomm.qti.ant@1.0.so
--lib/libantradio.so
+# ANT+ (system) - from enchilada - PKQ1.180716.001
+lib64/com.qualcomm.qti.ant@1.0.so|199481b290856fb63f5c5bf6def426b43309becb
+-lib64/libantradio.so|fb958cb68c99c71455f969afdf96225f5110f0df
+lib/com.qualcomm.qti.ant@1.0.so|fcd6a7130c480bfe4e4d9cc00702ed8444cddc82
+-lib/libantradio.so|7506f2577f2f1068688b623ca85e432be9c3dac9
+
+# ANT+ (vendor)
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
 
@@ -252,7 +254,7 @@ etc/permissions/com.quicinc.cne.xml
 framework/cneapiclient.jar
 framework/com.quicinc.cne.api-V1.0-java.jar
 framework/com.quicinc.cne.jar
-# -priv-app/CNEService/CNEService.apk
+-priv-app/CNEService/CNEService.apk|cd015cf0e96e4fe3c62f840131f5af890f453d65
 vendor/bin/cnd
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
@@ -424,9 +426,9 @@ vendor/lib/libsdm-diag.so|340c59c6fc3374ae4aa11c7874e6f4d41ababb4f
 vendor/lib/libsdmextension.so|1b957523a31b14b68b98a4626fc5ef7d7527d1ff
 vendor/lib/libtinyxml2_1.so|3ee768813f5b351b71bd7dd2367b13a3698a591a
 
-# Graphics (Vulkan)
-vendor/lib/hw/vulkan.msm8996.so
-vendor/lib64/hw/vulkan.msm8996.so
+# Graphics (Vulkan) - from marlin - PPR2.180905.006
+vendor/lib/hw/vulkan.msm8996.so|1e62d0727748c40269f7cb6b432bd03b56c7323d
+vendor/lib64/hw/vulkan.msm8996.so|1297229c8109c218737c9493b00a6904ce62c06b
 
 # Graphics firmware
 vendor/firmware/a530_gpmu.fw2
@@ -441,7 +443,7 @@ vendor/firmware/a530v3_gpmu.fw2
 vendor/firmware/a530v3_seq.fw2
 
 # IMS
--app/ims/ims.apk
+-app/ims/ims.apk|3806a916da8adc1e1787ec45a074a55968a0e752
 -app/uceShimService/uceShimService.apk
 etc/permissions/com.qualcomm.qti.imscmservice.xml
 etc/permissions/qti-vzw-ims-internal.xml
@@ -633,9 +635,9 @@ vendor/lib/libsmemlog.so
 -app/QtiTelephonyService/QtiTelephonyService.apk
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
-framework/QtiTelephonyServicelibrary.jar
+framework/QtiTelephonyServicelibrary.jar|5af50f654d6174a726c0a57b5f32254e1a9d3016
 framework/qcrilhook.jar
-framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
+framework/qti-telephony-common.jar|5af50f654d6174a726c0a57b5f32254e1a9d3016
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
@@ -704,17 +706,8 @@ vendor/bin/hw/android.hardware.drm@1.0-service.widevine|fd6e14710c196fdd4131afe2
 vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
 vendor/lib/libwvhidl.so|f7288f7a7ed6765bd1d80d639a0aeb0c31eda795
 
-# WiFi - from bardock-pro - OPM1.171019.026
-vendor/bin/cnss-daemon|58fd958b2f66f3335722d0905b3bb1e70dc1c762
-
-# WiFi firmware - from marlin - PPR1.180610.009
-vendor/firmware/bdwlan30.b80|ecaab9a00454eeafdb9c3ca226ead0113b14227a
-vendor/firmware/bdwlan30.b81|da39a3ee5e6b4b0d3255bfef95601890afd80709
-vendor/firmware/bdwlan30.b82|f1fa441d1516eca65fb487f4dd2b3a7b9ac1d25e
-vendor/firmware/bdwlan30.bin|2d80ebbe4ac0808c621987d15ae6a4b30d970860
-vendor/firmware/otp30.bin|6d71901049ac25f584d3bf7b9b612a54b9fa9049
-vendor/firmware/qwlan30.bin|16739e1d5711a496bd53a5e3d5cc83b121992ce6
-vendor/firmware/utf30.bin|38b22386f6519bfc43b5838cead726ae02b6f65e
+# WiFi firmware
+etc/firmware/bdwlan30.bin:vendor/firmware/bdwlan30.bin
 
 # HIDL - Dummy HIDL base blob for compatibility with older blobs on GSI ROMs.
 vendor/lib/android.hidl.base@1.0.so|7b695c37dd8f7edde1b3c8b25c46d7b73232e75b
