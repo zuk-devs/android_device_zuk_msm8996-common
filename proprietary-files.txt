@@ -702,10 +702,10 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so|cdb0454905bcd5124ccb6e69df6f8256ce203250
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so|359b87c1daad8c430005c86c451a7b095a934d91
 
-# Widevine DRM - from marlin - OPM2.171019.029
-vendor/bin/hw/android.hardware.drm@1.0-service.widevine|fd6e14710c196fdd4131afe2ce10c4a5be1b309c
-vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
-vendor/lib/libwvhidl.so|f7288f7a7ed6765bd1d80d639a0aeb0c31eda795
+# Widevine DRM - from LA.UM.7.2.r1-04000-sdm660.0
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine|abdfb842a9b540f6540094d649072961ff7eff75
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|5a01d337c1d375ee24a6c8992ba91f54afb7637e
+vendor/lib/libwvhidl.so|f9b7d65c3face1d07687415ea4cdaea2cd37f7c9
 
 # WiFi firmware
 etc/firmware/bdwlan30.bin:vendor/firmware/bdwlan30.bin
