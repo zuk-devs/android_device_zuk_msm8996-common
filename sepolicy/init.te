@@ -1,3 +1,4 @@
+typeattribute init data_between_core_and_vendor_violators;
 allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
 allow init debugfs_ipc:dir relabelfrom;
 allow init debugfs_ipc:file relabelfrom;
@@ -10,3 +11,4 @@ allow init tee_device:chr_file write;
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init sysfs_fingerprint:file { open read write };
 allow init system_server:binder call;
+allow init sysfs:file { open read write };
