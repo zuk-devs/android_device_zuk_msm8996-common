@@ -8,5 +8,7 @@ init_daemon_domain(readmac)
 allow readmac mnt_vendor_file:dir rw_dir_perms;
 allow readmac mnt_vendor_file:file create_file_perms;
 
+allow readmac self:capability dac_override;
+
 allow readmac diag_device:chr_file rw_file_perms;
 allow readmac sysfs:file r_file_perms;
