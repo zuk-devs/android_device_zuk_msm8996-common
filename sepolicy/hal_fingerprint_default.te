@@ -11,3 +11,7 @@ allow hal_fingerprint_default firmware_file:file r_file_perms;
 
 allow hal_fingerprint_default fpc_data_file:dir create_dir_perms;
 allow hal_fingerprint_default fpc_data_file:sock_file { create setattr unlink };
+allow hal_fingerprint_default fingerprintd_data_file:dir rw_dir_perms;
+allow hal_fingerprint_default fingerprintd_data_file:file create_file_perms;
+allow hal_fingerprint_default vfat:dir { read search };
+allow hal_fingerprint_default vfat:file { getattr open read setattr };
