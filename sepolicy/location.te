@@ -2,3 +2,4 @@ allow location sysfs_msm_subsys:dir search;
 allow location sysfs_soc:dir search;
 allow location wcnss_prop:file r_file_perms;
 allow location sysfs_msm_subsys:file { open read };
+allow location location_data_file:sock_file unlink;
