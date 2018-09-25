@@ -1,2 +1,2 @@
 allow atfwd sysfs_msm_subsys:dir search;
-allow atfwd sysfs_msm_subsys:file { open read };
+allow atfwd sysfs_msm_subsys:file { getattr open read setattr };
