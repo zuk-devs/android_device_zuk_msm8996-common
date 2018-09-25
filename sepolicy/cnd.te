@@ -1,7 +1,5 @@
-typeattribute cnd data_between_core_and_vendor_violators;
 allow cnd sysfs_msm_subsys:dir search;
 allow cnd sysfs_msm_subsys:file { getattr open read setattr };
 allow cnd sysfs_soc:dir search;
 allow cnd system_data_file:dir read;
 allow cnd system_data_file:file { getattr ioctl open read };
-allow cnd default_android_hwservice:hwservice_manager add;
