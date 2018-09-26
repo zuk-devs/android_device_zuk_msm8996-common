@@ -222,8 +222,7 @@ PRODUCT_COPY_FILES += \
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
-    android.hardware.health@2.0-service \
-    chargeonlymode
+    android.hardware.health@2.0-service
 
 # HIDL
 PRODUCT_PACKAGES += \
