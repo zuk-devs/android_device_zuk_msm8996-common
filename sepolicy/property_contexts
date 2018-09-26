@@ -4,5 +4,9 @@ persist.camera.                                               u:object_r:camera_
 # Netmgrd
 persist.net.doxlat                                            u:object_r:vendor_xlat_prop:s0
 
+# Perf
+ro.min_freq_0                 u:object_r:freq_prop:s0
+ro.min_freq_4                 u:object_r:freq_prop:s0
+
 # Qseecomd
 sys.listeners.registered                                      u:object_r:vendor_tee_listener_prop:s0
