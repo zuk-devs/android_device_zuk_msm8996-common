@@ -74,7 +74,6 @@ vendor/etc/audio_tuning_mixer.txt
 
 # Bluetooth - from LA.UM.7.2.r1-04000-sdm660.0 - B2N_sprout:9/PPR1.180610.011/00WW_3_22C
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|3144e709a358b8b5a4930d6e1206c07f126b8e1d
-vendor/bin/wcnss_filter|4b068a2c1d5957524dd2efd2a8c8214b3f739ed0
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|f3b8f2f7fa25ba9692909c5c07d34ac30ffc47c1
 vendor/lib64/libbtnv.so|6dce5418587127591fe02ae95e5d983a923c208c
