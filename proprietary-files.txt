@@ -522,13 +522,13 @@ lib64/vendor.qti.hardware.perf@1.0.so|0f77a1573ea5ebc95673b71567d5776e2c44e5a0
 lib/vendor.qti.hardware.iop@1.0.so|f2b5c17ce9690569d2a74f5b01a345e383f0c20d
 lib/vendor.qti.hardware.iop@2.0.so|767246e2fc7fafe9c61c86a939f2fa99504c359e
 lib/vendor.qti.hardware.perf@1.0.so|0ed43b650fba00e97feef696827391b6d3b75425
-vendor/bin/energy-awareness|1332493146dd005021c2b5c4f135d02f34dc6556
+vendor/bin/energy-awareness|85400bd358530f794fa57f346942a9a7c38df545
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|b1632ad0a65f6acb29971c100e09fc1cea843838
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
 vendor/lib64/libfeedbackhandler.so|0777f880226f565b7f9ac359d969aee7c67d63d5
 vendor/lib64/libperfgluelayer.so|84edb959f5d4dfe9ac545705567f88464b7f06ea
 vendor/lib64/libqti-iopd-client.so|958a377fb3ceca0f3584e82bcb7dbe184fd52762
-vendor/lib64/libqti-perfd.so|dfde4bbf44480731421743e4e9d145ab035ba639
+vendor/lib64/libqti-perfd.so|8d17323f56a0671ba459a1e9518a10ce7fa13f13
 vendor/lib64/libqti-perfd-client.so|27fb8594f18ef41489b836d23a61eda4739424a7
 vendor/lib64/libqti-util.so|0748431ddec60192b582c621ff4e52ccacf2569a
 vendor/lib64/vendor.qti.hardware.perf@1.0.so|de76b041137697356a03fdd28e488b34b6f890e6
@@ -536,7 +536,7 @@ vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|1193d3aee67698aefd163d593ddb
 vendor/lib/libfeedbackhandler.so|d4bc91a920272e63921482b3fffcd6a5ef2c7a41
 vendor/lib/libperfgluelayer.so|29e04a0aa60f1b1731c1a1030570e015ede883e4
 vendor/lib/libqti-iopd-client.so|5c0128bd1fe93ec69b0a1231a0a54ec29d26cffe
-vendor/lib/libqti-perfd.so|bb8698bd4aaced9201637fe7c64564a0bc09292f
+vendor/lib/libqti-perfd.so|a42443911b5a5213eb1deb10cc7f25dd4c85db55
 vendor/lib/libqti-perfd-client.so|1d42cdbbca693a637862d25644108ac0894bab7d
 vendor/lib/libqti-util.so|c3da1d3749e5a3010cdfecac92c462f5da4cb6cd
 vendor/lib/vendor.qti.hardware.perf@1.0.so|e4d5d3c38defbd72676820d3f73a58396bca4371
