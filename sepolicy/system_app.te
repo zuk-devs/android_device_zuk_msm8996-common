@@ -2,6 +2,7 @@ allow system_app sysfs_fingerprint:file rw_file_perms;
 allow system_app shell_prop:property_service set;
 
 binder_call(system_app, wificond);
+binder_call(system_app, perfprofd);
 
 dontaudit system_app netd_service:service_manager find;
 dontaudit system_app installd_service:service_manager find;
