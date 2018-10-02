@@ -638,9 +638,9 @@ vendor/lib/libsmemlog.so
 -app/QtiTelephonyService/QtiTelephonyService.apk
 etc/permissions/qcrilhook.xml
 etc/permissions/telephonyservice.xml
-framework/QtiTelephonyServicelibrary.jar|5af50f654d6174a726c0a57b5f32254e1a9d3016
+framework/QtiTelephonyServicelibrary.jar|c2635709e7f9c57ff339dfd99f253ba0d4d9cc35
 framework/qcrilhook.jar
-framework/qti-telephony-common.jar|5af50f654d6174a726c0a57b5f32254e1a9d3016
+framework/qti-telephony-common.jar|3095732632274738a978f8b26332c7e98f85f112
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
