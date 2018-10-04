@@ -49,6 +49,10 @@ on init
 
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
+    # Hack for oreo camera blobs
+    mount none /system/lib/libbinder.so /system/lib/vndk-28/libbinder.so bind
+    mount none /system/lib/libcutils.so /system/lib/vndk-sp-28/libcutils.so bind
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
