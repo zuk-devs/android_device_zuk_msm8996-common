@@ -90,11 +90,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480 \
     vendor.display.disable_rotator_downscale=1
 
-# IMS
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1
-
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable.pq=true \
@@ -110,18 +105,36 @@ PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     ril.subscription.types=NV,RUIM \
-    ro.telephony.call_ring.multiple=false \
-    ro.telephony.default_cdma_sub=0 \
-    ro.telephony.default_network=20,20 \
-    persist.data.qmi.adb_logmask=0 \
-    persist.net.doxlat=true \
-    persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.force_on_dc=true \
-    persist.radio.multisim.config=dsds \
-    persist.radio.redir_party_num=1 \
+    ro.telephony.default_network=10 \
+    telephony.lteOnCdmaDevice=1 \
+    android.telephony.apn-restore=24000 \
+    persist.vendor.qti.telephony.vt_cam_interface=1 \
+    persist.radio.sw_mbn_update=1 \
+    persist.radio.sw_mbn_volte=1 \
+    persist.radio.sw_mbn_openmkt=1 \
+    persist.radio.hw_mbn_update=1 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
     persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.process_sups_ind=1 \
+    persist.radio.multisim.config=dsds \
+    persist.vendor.radio.sw_mbn_update=1 \
+    persist.vendor.radio.sw_mbn_volte=1 \
+    persist.vendor.radio.sw_mbn_openmkt=1 \
+    persist.vendor.radio.hw_mbn_update=1 \
+    persist.radio.primarycard=true \
+    persist.radio.flexmap_type=dds \
+    persist.vendor.radio.add_power_save=1 \
     persist.vendor.radio.rat_on=combine \
-    persist.vendor.radio.sib16_support=1
+    persist.radio.nodisplaytext=true \
+    persist.vendor.radio.ignore_dom_time=10 \
+    persist.logd.size.radio=2M \
+    persist.radio.data_ltd_sys_ind=1 \
+    persist.radio.multisim.config=dsds \
+    persist.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.sib16_support=1 \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.rat_on=combine
 
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
