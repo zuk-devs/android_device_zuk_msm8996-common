@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<style name="Theme.Settings" parent="@android:style/Theme.Material.Settings">
+  <item name="android:actionBarStyle">@style/Theme.ActionBar</item>
+  <item name="android:colorAccent">#ff4285f4</item>
+</style>
+
+<style name="Theme.ActionBar" parent="@android:style/Widget.DeviceDefault.Light.ActionBar.Solid">
+  <item name="android:titleTextStyle">@style/Theme.Actionbar.Title</item>
+</style>
+
+<style name="Theme.Actionbar.Title" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
+  <item name="android:textColor">#ff4285f4</item>
+</style>
+
+</resources>
+
+

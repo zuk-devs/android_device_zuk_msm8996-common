@@ -296,3 +296,6 @@
 
 # Kmsg device
 /dev/kmsg                                               0620   root       system
+
+# kcal
+/sys/devices/platform/kcal_ctrl.0/* 0666 system system

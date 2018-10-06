@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+            android:title="@string/graphics_title">
+
+        <PreferenceScreen
+                android:key="kcal"
+                android:fragment="com.lineageos.settings.zukpref.DisplayCalibration"
+                android:summary="@string/kcal_summary"
+                android:title="@string/kcal_title" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
