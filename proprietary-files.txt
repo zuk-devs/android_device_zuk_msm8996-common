@@ -520,9 +520,13 @@ vendor/lib/libvpplibrary.so|1b74559eeaa6cb55e0dac65b94bae08279098b90
 vendor/lib/libvqzip.so|70451e720fb3d5697cf440432c430e3e39e0ad71
 
 # Perf - from LA.UM.7.2.r1-04000-sdm660.0 - B2N_sprout:9/PPR1.180610.011/00WW_3_22C
+lib64/libqti_performance.so|3860e9a08c8b98a99a1b800c365328683db5cfb3
+lib64/libqti-perfd-client_system.so|0b472757d5f2155a6a9ddff95b40bd3e967f90c0
 lib64/vendor.qti.hardware.iop@1.0.so|501927195163a1128abfe0ea8fedf7d15c7c5652
 lib64/vendor.qti.hardware.iop@2.0.so|13a9554d8097e4459692cd71e14c86ce14993415
 lib64/vendor.qti.hardware.perf@1.0.so|de76b041137697356a03fdd28e488b34b6f890e6
+lib/libqti_performance.so|89ad01747faa787ecdcb68841fa9b379bf6a6b90
+lib/libqti-perfd-client_system.so|fdc85399bb9a9e5c4bf34e000b2f3567c248e8db
 lib/vendor.qti.hardware.iop@1.0.so|f2b5c17ce9690569d2a74f5b01a345e383f0c20d
 lib/vendor.qti.hardware.iop@2.0.so|767246e2fc7fafe9c61c86a939f2fa99504c359e
 lib/vendor.qti.hardware.perf@1.0.so|0ed43b650fba00e97feef696827391b6d3b75425
@@ -586,7 +590,6 @@ vendor/lib/libdisp-aba.so|187f1f29436cddec20139d29f102e43bc031851e
 vendor/lib/vendor.display.color@1.0_vendor.so|7ca706d322a38084ea2e6b103efe1acd33183400
 vendor/lib/vendor.display.postproc@1.0_vendor.so|a710a9d7f93892961ff71420fe222add0bfcf57e
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|04bf21220673630ebaa4c8e7a84adbcdcf08f0dc
-
 
 # Power-off alarm - from gemini - OPR1.170623.032
 etc/permissions/vendor-qti-hardware-alarm.xml:vendor/etc/permissions/vendor-qti-hardware-alarm.xml|99ea2b3abffc975fb9875b5b3befabfb6eead7b9
