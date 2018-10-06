@@ -64,8 +64,8 @@ on late-fs
     start servicemanager
     start surfaceflinger
     start bootanim
-    start configstore-hal-1-0
-    start gralloc-2-0
+    start vendor.configstore-hal
+    start vendor.gralloc-2-0
 
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.qcom --late
@@ -586,11 +586,28 @@ on property:vendor.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
     start vendor.imsrcsservice
 
-service ppd /vendor/bin/mm-pp-dpps
-    class hal
+service vendor.ppd /vendor/bin/mm-pp-dpps
+    class late_start
     user system
     group system graphics
     socket pps stream 0660 system system
+    disabled
+    writepid /dev/cpuset/system-background/tasks
+
+on property:init.svc.vendor.hwcomposer-2-1=stopped
+    stop vendor.ppd
+
+on property:init.svc.vendor.hwcomposer-2-1=running
+    start vendor.ppd
+
+on property:init.svc.vendor.hwcomposer-2-1=restarting
+    stop vendor.ppd
+
+service vendor.energy-awareness /vendor/bin/energy-awareness
+    class main
+    user root
+    group system
+    oneshot
     writepid /dev/cpuset/system-background/tasks
 
 on property:init.svc.surfaceflinger=restarting
