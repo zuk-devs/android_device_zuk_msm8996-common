@@ -21,6 +21,10 @@ allow priv_app sepolicy_file:file r_file_perms;
 allow priv_app service_contexts_file:file r_file_perms;
 allow priv_app vendor_file:file rx_file_perms;
 allow priv_app vndservice_contexts_file:file r_file_perms;
+allow priv_app device:dir open;
+allow priv_app proc:file { getattr open };
+allow priv_app proc_interrupts:file open;
+allow priv_app proc_modules:file { getattr open };
 
 r_dir_file(priv_app, sysfs_type)
 
