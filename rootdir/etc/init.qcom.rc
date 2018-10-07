@@ -327,7 +327,7 @@ on boot
     # Allow access for CCID command/response timeout configuration
     chown system system /sys/module/ccid_bridge/parameters/bulk_msg_timeout
 
-    # Enable HAL3 via our camera wrapper.
+    # Enable HAL3 thanks to OSS camera HAL
     setprop persist.camera.HAL3.enabled 1
 
     # Enable camera read sensors data.
