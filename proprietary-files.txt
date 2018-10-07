@@ -648,8 +648,8 @@ framework/qti-telephony-common.jar|3095732632274738a978f8b26332c7e98f85f112
 vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
 vendor/bin/qti
-vendor/bin/rmt_storage
-vendor/bin/tftp_server
+vendor/bin/rmt_storage|5a9b6be26167b804d003e90115d43d24ee150713
+vendor/bin/tftp_server|234a6a3e6801a38d3510ed9a007f1d64ba23e9e5
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/lib64/libconfigdb.so
@@ -657,6 +657,8 @@ vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libqcmaputils.so
+vendor/lib64/libqrtr.so|3336428d3c46068e949cc1e222abf6668e044b3e
+vendor/lib64/libqsocket.so|ca5fc00c81aa3e8c741fbc7589d31d97234c01c0
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/libril-qc-radioconfig.so
