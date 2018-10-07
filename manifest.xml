@@ -65,7 +65,7 @@
     <hal format="hidl">
         <name>android.hardware.drm</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>ICryptoFactory</name>
             <instance>default</instance>
@@ -385,6 +385,11 @@
             <name>IAlarm</name>
             <instance>default</instance>
         </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.iop</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
