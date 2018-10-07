@@ -20,9 +20,6 @@ binder_call(system_app, perfprofd);
 # ReadMac
 allow readmac self:capability dac_override;
 
-# RFS
-allow rfs_access self:capability { dac_override dac_read_search };
-
 # SystemServer
 allow system_server dalvikcache_data_file:file { execute write };
 allow system_server vendor_camera_prop:file { getattr open read };
