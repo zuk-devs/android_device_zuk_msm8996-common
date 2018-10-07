@@ -17,18 +17,6 @@ allow netmgrd vendor_xlat_prop:property_service set;
 # Perf
 binder_call(system_app, perfprofd);
 
-# Priv-app
-allow priv_app device:dir open;
-allow priv_app proc:file { getattr open };
-allow priv_app proc_interrupts:file open;
-allow priv_app proc_modules:file { getattr open };
-
-# Qti init
-allow qti_init_shell self:capability { dac_override dac_read_search };
-allow qti_init_shell system_data_file:dir { add_name write remove_name };
-allow qti_init_shell system_data_file:file { create getattr open read rename setattr unlink write };
-allow qti_init_shell file_contexts_file:file { getattr open read };
-
 # ReadMac
 allow readmac self:capability dac_override;
 
