@@ -9,6 +9,7 @@ allow ims default_android_hwservice:hwservice_manager find;
 
 # Init
 binder_call(init, system_server);
+allow init sysfs:file { open read write };
 
 # Netmgrd
 allow netmgrd vendor_xlat_prop:property_service set;
