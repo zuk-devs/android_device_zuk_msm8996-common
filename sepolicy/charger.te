@@ -1,1 +1,5 @@
+allow charger mnt_vendor_file:dir create_dir_perms;
+allow charger mnt_vendor_file:file create_file_perms;
 allow charger rtc_device:chr_file r_file_perms;
+allow charger self:capability dac_override;
+allow charger sysfs_battery_supply:file read;
