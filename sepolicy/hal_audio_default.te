@@ -1,6 +1,8 @@
 allow hal_audio_default sysfs_soc:dir search;
 allow hal_audio_default vendor_audio_data_file:file create_file_perms;
 allow hal_audio_default vendor_audio_data_file:dir rw_dir_perms;
+allow hal_audio_default vendor_data_file:file rw_file_perms;
+allow hal_audio_default vendor_data_file:dir rw_dir_perms;
 allow hal_audio_default thermal_socket:sock_file write;
 allow hal_audio_default thermal-engine:unix_stream_socket connectto;
 
