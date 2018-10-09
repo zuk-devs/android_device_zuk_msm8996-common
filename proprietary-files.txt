@@ -675,7 +675,7 @@ vendor/lib/libmdmdetect.so
 vendor/radio/qcril_database/qcril.db
 
 # Sensors
-vendor/bin/sensors.qcom
+vendor/bin/sensors.qcom:vendor/bin/sensors.qti
 vendor/lib64/hw/activity_recognition.msm8996.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
