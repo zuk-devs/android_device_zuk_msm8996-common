@@ -15,3 +15,5 @@ allow hal_fingerprint_default fingerprintd_data_file:dir rw_dir_perms;
 allow hal_fingerprint_default fingerprintd_data_file:file create_file_perms;
 allow hal_fingerprint_default vfat:dir { read search };
 allow hal_fingerprint_default vfat:file { getattr open read setattr };
+allow hal_fingerprint_default system_data_file:dir { add_name create open read remove_name write };
+allow hal_fingerprint_default system_data_file:sock_file { create setattr unlink };
