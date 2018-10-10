@@ -1,3 +1,8 @@
+# Charger
+allow charger mnt_vendor_file:dir create_dir_perms;
+allow charger mnt_vendor_file:file create_file_perms;
+allow charger self:capability dac_override;
+
 # CND
 allow cnd default_android_hwservice:hwservice_manager add;
 
@@ -10,6 +15,7 @@ allow ims default_android_hwservice:hwservice_manager find;
 # Init
 binder_call(init, system_server);
 allow init sysfs:file { open read write };
+allow init sysfs_scsi_devices_0000:file { open setattr write };
 
 # Netmgrd
 allow netmgrd vendor_xlat_prop:property_service set;
