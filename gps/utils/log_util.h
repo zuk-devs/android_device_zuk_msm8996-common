@@ -30,22 +30,23 @@
 #ifndef __LOG_UTIL_H__
 #define __LOG_UTIL_H__
 
-#ifndef USE_GLIB
+#if defined (USE_ANDROID_LOGGING) || defined (ANDROID)
+// Android and LE targets with logcat support
 #include <utils/Log.h>
-#endif /* USE_GLIB */
 
-#ifdef USE_GLIB
-
+#elif defined (USE_GLIB)
+// LE targets with no logcat support
 #include <stdio.h>
+#include <string.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <cutils/log.h>
 
 #ifndef LOG_TAG
 #define LOG_TAG "GPS_UTILS"
+#endif /* LOG_TAG */
 
-#endif  // LOG_TAG
-
-#endif /* USE_GLIB */
+#endif /* #if defined (USE_ANDROID_LOGGING) || defined (ANDROID) */
 
 #ifdef __cplusplus
 extern "C"
@@ -140,6 +141,7 @@ extern char* get_timestamp(char* str, unsigned long buf_size);
 #define LOC_LOG_HEAD(fmt) "%s:%d] " fmt
 #define LOC_LOGv(fmt,...) LOC_LOGV(LOC_LOG_HEAD(fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
 #define LOC_LOGw(fmt,...) LOC_LOGW(LOC_LOG_HEAD(fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define LOC_LOGi(fmt,...) LOC_LOGI(LOC_LOG_HEAD(fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
 #define LOC_LOGd(fmt,...) LOC_LOGD(LOC_LOG_HEAD(fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
 #define LOC_LOGe(fmt,...) LOC_LOGE(LOC_LOG_HEAD(fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__)
 
@@ -158,13 +160,13 @@ extern char* get_timestamp(char* str, unsigned long buf_size);
 
 
 // Used for logging callflow from Android Framework
-#define ENTRY_LOG_CALLFLOW() LOG_V(FROM_AFW, __FUNCTION__, %s, "")
+#define ENTRY_LOG_CALLFLOW() LOG_I(FROM_AFW, __FUNCTION__, %s, "")
 // Used for logging callflow to Modem
-#define EXIT_LOG_CALLFLOW(SPEC, VAL) LOG_V(TO_MODEM, __FUNCTION__, SPEC, VAL)
+#define EXIT_LOG_CALLFLOW(SPEC, VAL) LOG_I(TO_MODEM, __FUNCTION__, SPEC, VAL)
 // Used for logging callflow from Modem(TO_MODEM, __FUNCTION__, %s, "")
-#define MODEM_LOG_CALLFLOW(SPEC, VAL) LOG_V(FROM_MODEM, __FUNCTION__, SPEC, VAL)
+#define MODEM_LOG_CALLFLOW(SPEC, VAL) LOG_I(FROM_MODEM, __FUNCTION__, SPEC, VAL)
 // Used for logging callflow to Android Framework
-#define CALLBACK_LOG_CALLFLOW(CB, SPEC, VAL) LOG_V(TO_AFW, CB, SPEC, VAL)
+#define CALLBACK_LOG_CALLFLOW(CB, SPEC, VAL) LOG_I(TO_AFW, CB, SPEC, VAL)
 
 #ifdef __cplusplus
 }
