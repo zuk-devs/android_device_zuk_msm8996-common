@@ -72,13 +72,13 @@ vendor/lib/libmdsprpc.so
 vendor/lib/libqtigef.so
 vendor/etc/audio_tuning_mixer.txt
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/bin/wcnss_filter
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/libbtnv.so
-vendor/lib64/libbt-hidlclient.so
+# Bluetooth - from LA.UM.7.2.r1-04000-sdm660.0 - B2N_sprout:9/PPR1.180610.011/00WW_3_22C
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|3144e709a358b8b5a4930d6e1206c07f126b8e1d
+vendor/bin/wcnss_filter|4b068a2c1d5957524dd2efd2a8c8214b3f739ed0
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|f3b8f2f7fa25ba9692909c5c07d34ac30ffc47c1
+vendor/lib64/libbtnv.so|6dce5418587127591fe02ae95e5d983a923c208c
+vendor/lib64/libbt-hidlclient.so|4aab6f9497aa55f452915437dd8b2b6636413bb2
 
 # Bluetooth (aptX) - from marlin - OPM2.171019.029
 vendor/lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
@@ -86,8 +86,8 @@ vendor/lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 vendor/lib/libaptX_encoder.so|984739a0bc968e18f75ced205733fe3f51c2d4f0
 vendor/lib/libaptXHD_encoder.so|974c486e4ca03faa0713553d9dfe2995ac93e01c
 
-# Bluetooth (shared dependencies)
-vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
+# Bluetooth (shared dependencies) - from LA.UM.7.2.r1-04000-sdm660.0 - B2N_sprout:9/PPR1.180610.011/00WW_3_22C
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|0d7b0bd70ec6e68f1e3ee27af2fa0a8ce91280db
 
 # Camera
 vendor/bin/mm-qcamera-daemon
