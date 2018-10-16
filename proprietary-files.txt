@@ -494,11 +494,11 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 vendor/lib64/hw/keystore.msm8996.so
 vendor/lib/hw/keystore.msm8996.so
 
-# Listen
-vendor/lib64/hw/sound_trigger.primary.msm8996.so
-vendor/lib/hw/sound_trigger.primary.msm8996.so
-vendor/lib/libadpcmdec.so
-vendor/lib/libsmwrapper.so
+# Listen - from LA.UM.7.2.r1-04000-sdm660.0 - B2N_sprout:9/PPR1.180610.011/00WW_3_22C
+vendor/lib64/hw/sound_trigger.primary.msm8996.so|eccf860f30cf7e06e0eb39231765055a21451c42
+vendor/lib/hw/sound_trigger.primary.msm8996.so|af935e760c7e11c5e0673e188a91a28c0cd41514
+vendor/lib/libadpcmdec.so|7c12a153200fd2e9f1f6139fcf40beee1a96f48d
+vendor/lib/libsmwrapper.so|45be75b414f7a8bc3f4807dfab37a9ef9ce91426
 
 # Machine learning
 -vendor/etc/lm/ReferenceFeature.xml
