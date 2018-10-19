@@ -65,14 +65,3 @@ if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_versio
 fi
 chmod g-w /data/vendor/modem_config
 setprop ro.vendor.ril.mbn_copy_completed 1
-
-MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-MemTotal=${MemTotalStr:16:8}
-
-if [ $MemTotal -lt 5242880 ]; then
-    echo never > /sys/kernel/mm/transparent_hugepage/enabled
-    echo never > /sys/kernel/mm/transparent_hugepage/defrag
-else
-    echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
-    echo madvise > /sys/kernel/mm/transparent_hugepage/defrag
-fi
