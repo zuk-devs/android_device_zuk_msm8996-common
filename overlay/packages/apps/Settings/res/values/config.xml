@@ -32,4 +32,5 @@
          a fixed set of led colors -->
     <bool name="config_has_multi_color_led">false</bool>
 
+    <bool name="config_enableManualSubProvisioning">true</bool>
 </resources>
