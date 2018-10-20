@@ -655,9 +655,3 @@ on property:vold.decrypt=trigger_restart_min_framework
 
 on property:vold.decrypt=trigger_restart_framework
     start audio-hal-2-0
-
-# Volte fix
-on property:persist.volte.fix=1
-   exec ./vendor/bin/init.volte.sh
-  
-on property:persist.volte.fix=1

@@ -12,14 +12,4 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="volte_pref"
-        android:title="@string/volte_pref_title" >
-        <SwitchPreference
-            android:key="persist.volte.fix"
-            android:defaultValue="false"
-            android:title="@string/volte_fix_title"
-            android:summary="@string/volte_fix_summary" />
-     </PreferenceCategory>
-
 </PreferenceScreen>
