@@ -42,9 +42,8 @@ import com.lineageos.settings.zukpref.R;
 public class ZukPrefSettings extends PreferenceActivity implements OnPreferenceChangeListener {
 	private static final boolean DEBUG = false;
 	private static final String TAG = "ZukPref";
-        private static final String SYSTEM_PROPERTY_VOLTE_FIX = "persist.volte.fix";
+
         private Preference mKcalPref;
-	private SwitchPreference mVolteFix;
 
     private Context mContext;
     private SharedPreferences mPreferences;
@@ -63,13 +62,6 @@ public class ZukPrefSettings extends PreferenceActivity implements OnPreferenceC
                      }
                 });
         mContext = getApplicationContext();
-
-        mVolteFix = (SwitchPreference) findPreference(SYSTEM_PROPERTY_VOLTE_FIX);
-        if( mVolteFix != null ) {
-            mVolteFix.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_VOLTE_FIX, false));
-            mVolteFix.setOnPreferenceChangeListener(this);
-        }
-
 }
 
     private void setEnable(String key, boolean value) {
