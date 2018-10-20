@@ -161,7 +161,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
-
-#volte hack
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.volte.fix=1

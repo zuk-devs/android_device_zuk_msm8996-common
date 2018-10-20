@@ -32,9 +32,4 @@
     <string name="menu_reset">Reset</string>
     <string name="kcal_color_temp">Color temperature (K)</string>	
 
-    <!-- Volte -->
-    <string name="volte_pref_title">VoLTE Hack</string>
-    <string name="volte_fix_title">Enable VoLTE</string>
-    <string name="volte_fix_summary">requires reboot,sim settings resets after every reboot</string>
-
 </resources>

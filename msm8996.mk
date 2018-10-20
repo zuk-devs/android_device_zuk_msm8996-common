@@ -154,8 +154,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.power.rc \
     init.qcom.usb.rc \
-    ueventd.qcom.rc \
-    init.volte.sh
+    ueventd.qcom.rc
 
 # Display
 PRODUCT_PACKAGES += \
