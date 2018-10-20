@@ -35,6 +35,6 @@
     <!-- Volte -->
     <string name="volte_pref_title">VoLTE Hack</string>
     <string name="volte_fix_title">Enable VoLTE</string>
-    <string name="volte_fix_summary">This requires a system reboot to enable VoLTE hack, also remember that the Data Selection Dialog will pop up every reboot after you enable this. Keep in mind that this is the hack how VoLTE works for now.</string>
+    <string name="volte_fix_summary">requires reboot,sim settings resets after every reboot</string>
 
 </resources>
