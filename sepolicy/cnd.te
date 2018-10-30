@@ -1,5 +1,4 @@
-allow cnd sysfs_msm_subsys:dir search;
+allow cnd { sysfs_msm_subsys sysfs_soc }:dir search;
 allow cnd sysfs_msm_subsys:file { getattr open read setattr };
-allow cnd sysfs_soc:dir search;
 allow cnd system_data_file:dir read;
 allow cnd system_data_file:file { getattr ioctl open read };
