@@ -14,7 +14,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string name="zukpref_title">ZUK Extras</string>
-    <string name="zuk_gestures_summary">Display color calibration, VoLTE hack toggle</string>
+    <string name="zuk_gestures_summary">Display color calibration</string>
 	
     <!-- Category title -->
     <string name="graphics_title">Graphics</string>
