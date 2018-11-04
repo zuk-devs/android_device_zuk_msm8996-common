@@ -6,3 +6,4 @@ allow charger sysfs_battery_supply:file { getattr open read };
 allow charger sysfs_usb_supply:file { getattr open read };
 allow charger sysfs:file { getattr open read write };
 allow charger device:dir { open read };
+allow charger sysfs_graphics:file { open read write };
