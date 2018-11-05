@@ -304,6 +304,9 @@ on boot
     # Enable default router information in RA
     write /proc/sys/net/ipv6/conf/default/accept_ra_defrtr 1
 
+    # Set permissions so radio can read
+    chmod 0444 /proc/cmdline
+
     # To prevent out of order acknowledgements from making
     # connection tracking to treat them as not belonging to
     # the connection they belong to.
