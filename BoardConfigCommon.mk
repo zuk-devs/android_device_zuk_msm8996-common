@@ -53,6 +53,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 # KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linaro-7.3/bin
 TARGET_KERNEL_SOURCE := kernel/zuk/msm8996
+TARGET_KERNEL_VERSION := 4.9
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8996
