@@ -134,6 +134,8 @@ on enable-low-power
 on property:sys.boot_completed=1
     trigger enable-low-power
 
+    write /proc/sys/kernel/sched_boost 0
+
     # Set I/O scheduler
     setprop sys.io.scheduler bfq
 
