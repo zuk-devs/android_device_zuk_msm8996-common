@@ -514,6 +514,9 @@ vendor/lib/libOmxWmaDec.so|afeba1eb1da8992ba8cec897c7372e77f1e60a4b
 vendor/lib/libvpplibrary.so|1b74559eeaa6cb55e0dac65b94bae08279098b90
 vendor/lib/libvqzip.so|70451e720fb3d5697cf440432c430e3e39e0ad71
 
+# msm_irqbalance - from sailfish - PPR2.181005.003
+vendor/bin/msm_irqbalance|3f7a923d9d01dbfda40ebdfdd27a62167df69c13
+
 # Perf - from LA.UM.7.2.r1-04000-sdm660.0 - B2N_sprout:9/PPR1.180610.011/00WW_3_22C
 lib64/libqti_performance.so|3860e9a08c8b98a99a1b800c365328683db5cfb3
 lib64/libqti-perfd-client_system.so|0b472757d5f2155a6a9ddff95b40bd3e967f90c0
