@@ -35,6 +35,11 @@ on init
     # Drop write bit from cpu_max_freq so that libqti-perfd can't set it
     chmod 0444 /sys/module/msm_performance/parameters/cpu_max_freq
 
+    # Set default schedTune value for foreground/top-app (only affects EAS)
+    write /dev/stune/foreground/schedtune.prefer_idle 1
+    write /dev/stune/top-app/schedtune.boost 10
+    write /dev/stune/top-app/schedtune.prefer_idle 1
+
 on boot
     # Update foreground and background cpusets
     write /dev/cpuset/foreground/cpus 0-3
@@ -82,6 +87,16 @@ on enable-low-power
 
     # Set sync wakee policy tunable
     write /proc/sys/kernel/sched_prefer_sync_wakee_to_waker 1
+
+    # Configure governor settings for little cluster (only affects EAS)
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "schedutil"
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
+
+    # Configure governor settings for big cluster (only affects EAS)
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "schedutil"
+    write /sys/devices/system/cpu/cpu2/cpufreq/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu2/cpufreq/schedutil/down_rate_limit_us 20000
 
     # Configure governor settings for little cluster
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
