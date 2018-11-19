@@ -598,14 +598,13 @@ vendor/lib/vendor.display.color@1.0_vendor.so|7ca706d322a38084ea2e6b103efe1acd33
 vendor/lib/vendor.display.postproc@1.0_vendor.so|a710a9d7f93892961ff71420fe222add0bfcf57e
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|04bf21220673630ebaa4c8e7a84adbcdcf08f0dc
 
-# Power-off alarm - from gemini - OPR1.170623.032
-etc/permissions/vendor-qti-hardware-alarm.xml:vendor/etc/permissions/vendor-qti-hardware-alarm.xml|99ea2b3abffc975fb9875b5b3befabfb6eead7b9
--vendor/app/PowerOffAlarm/PowerOffAlarm.apk|a89b137e860506a9f0ec219822c0920795717b34
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|9e33f8c80c15d8bdbca978e097a5ca9d3be60b56
+# Power-off alarm - from jasmine_sprout:9/PKQ1.180904.001/V10.0.1.0.PDIMIFJ
+framework/vendor.qti.hardware.alarm-V1.0-java.jar|050a7b600dcda221c5d275f581bfd89770a66b22
+-vendor/app/PowerOffAlarm/PowerOffAlarm.apk|c6ac3bd60b196cbc69fd51a532fcbcf2f4521a67
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|1300f2aacbcd159a2587abc1f38031d9c1f1beed
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
-vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar|784888b337c4a69acdc29fcc56028f1d9eea1790
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|149d5050710a41120f9cfe63d6902e6aa2b06ede
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|0d5f2b64acaf88a439f2783fb7560073d5a35cba
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|7d163c35a9deee2801070ed50c6625709c3e0b65
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|1594b679eb1c791e0f4e0dbb9115b599a8553401
 
 # QMI
 etc/permissions/qti_libpermissions.xml|ef3c88495f2f61a2d16e1445113a9d80f8db0e0a
