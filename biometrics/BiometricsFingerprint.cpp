@@ -32,6 +32,9 @@ namespace fingerprint {
 namespace V2_1 {
 namespace implementation {
 
+// Supported fingerprint HAL version
+static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 1);
+
 using RequestStatus =
         android::hardware::biometrics::fingerprint::V2_1::RequestStatus;
 
@@ -41,7 +44,7 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
     sInstance = this; // keep track of the most recent instance
     mDevice = openHal();
     if (!mDevice) {
-        ALOGE("Can't open Zuk HAL module");
+        ALOGE("Can't open HAL module");
     }
 }
 
@@ -142,6 +145,7 @@ FingerprintAcquiredInfo BiometricsFingerprint::VendorAcquiredFilter(
 
 Return<uint64_t> BiometricsFingerprint::setNotify(
         const sp<IBiometricsFingerprintClientCallback>& clientCallback) {
+    std::lock_guard<std::mutex> lock(mClientCallbackMutex);
     mClientCallback = clientCallback;
     // This is here because HAL 2.1 doesn't have a way to propagate a
     // unique token for its driver. Subsequent versions should send a unique
@@ -257,6 +261,12 @@ fingerprint_device_t* BiometricsFingerprint::openHal() {
         return nullptr;
     }
 
+    if (kVersion != device->version) {
+        // enforce version on new devices because of HIDL@2.1 translation layer
+        ALOGE("Wrong fp version. Expected %d, got %d", kVersion, device->version);
+        return nullptr;
+    }
+
     fingerprint_device_t* fp_device =
         reinterpret_cast<fingerprint_device_t*>(device);
 
@@ -272,6 +282,7 @@ fingerprint_device_t* BiometricsFingerprint::openHal() {
 void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
     BiometricsFingerprint* thisPtr = static_cast<BiometricsFingerprint*>(
             BiometricsFingerprint::getInstance());
+    std::lock_guard<std::mutex> lock(thisPtr->mClientCallbackMutex);
     if (thisPtr == nullptr || thisPtr->mClientCallback == nullptr) {
         ALOGE("Receiving callbacks before the client callback is registered.");
         return;
@@ -357,4 +368,4 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
 }  // namespace fingerprint
 }  // namespace biometrics
 }  // namespace hardware
-} // namespace android
+}  // namespace android
