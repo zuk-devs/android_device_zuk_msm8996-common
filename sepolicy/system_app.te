@@ -10,3 +10,6 @@ allow system_app apk_data_file:file { create unlink write };
 allow system_app sysfs:file write;
 allow system_app default_prop:property_service set;
 allow system_app dalvikcache_data_file:file { setattr write };
+allow system_app proc_pagetypeinfo:file { getattr open read };
+allow system_app sysfs_zram:dir search;
+allow system_app sysfs_zram:file { getattr open read };

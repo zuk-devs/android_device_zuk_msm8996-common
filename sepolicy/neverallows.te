@@ -4,6 +4,9 @@ allow cnd default_android_hwservice:hwservice_manager add;
 # Dataservice
 allow dataservice_app default_android_hwservice:hwservice_manager find;
 
+# Drmserver
+allow drmserver sdcardfs:dir read;
+
 # IMS
 allow ims default_android_hwservice:hwservice_manager find;
 
@@ -19,6 +22,9 @@ binder_call(system_app, perfprofd);
 
 # ReadMac
 allow readmac self:capability dac_override;
+
+# SystemApp
+binder_call(system_app, netd);
 
 # SystemServer
 allow system_server dalvikcache_data_file:file { execute write };
