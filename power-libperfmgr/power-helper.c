@@ -51,9 +51,7 @@
 #define WLAN_POWER_STAT "/d/wlan0/power_stats"
 #endif
 
-#ifndef TAP_TO_WAKE_NODE
-#define TAP_TO_WAKE_NODE "/proc/touchpanel/double_tap_enable"
-#endif
+#define TAP_TO_WAKE_NODE "/sys/devices/virtual/touch/tp_dev/gesture_on"
 
 #define ARRAY_SIZE(x) (sizeof((x))/sizeof((x)[0]))
 #define LINE_SIZE 128
