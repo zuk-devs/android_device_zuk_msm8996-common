@@ -55,7 +55,6 @@ enum stats_type {
 
 enum subsystem_type {
     SUBSYSTEM_WLAN = 0,
-    SUBSYSTEM_EASEL,
 
     //Don't add any lines after this line
     SUBSYSTEM_COUNT
@@ -95,7 +94,6 @@ struct stat_pair {
 
 int extract_platform_stats(uint64_t *list);
 int extract_wlan_stats(uint64_t *list);
-int get_easel_state(unsigned long *current_state);
 void set_device_specific_feature(feature_t feature, int state);
 void set_feature(feature_t feature, int state);
 
