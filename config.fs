@@ -13,6 +13,9 @@ value:2904
 [AID_VENDOR_ADPL_ODL]
 value:2905
 
+[AID_VENDOR_QRTR]
+value:2906
+
 [vendor/bin/pm-service]
 mode: 0755
 user: AID_SYSTEM
