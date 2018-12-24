@@ -92,7 +92,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0 \
     ro.opengles.version=196610 \
     ro.sf.lcd_density=480 \
-    vendor.display.disable_rotator_downscale=1
+    vendor.display.disable_rotator_downscale=1 \
+    vendor.gralloc.disable_wb_ubwc=1 \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.nohdcp=1 \
+    debug.sf.enable_hwc_vds=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
