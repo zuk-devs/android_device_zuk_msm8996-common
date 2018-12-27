@@ -6,7 +6,7 @@ LOCAL_MODULE             := readmac
 LOCAL_MODULE_TAGS        := optional
 LOCAL_PROPRIETARY_MODULE := true
 LOCAL_SRC_FILES          := zuk_readmac.c
-LOCAL_CFLAGS             += -Wall
+LOCAL_CFLAGS             += -Wall -Werror
 LOCAL_SHARED_LIBRARIES   := libc libcutils libutils liblog
 include $(BUILD_EXECUTABLE)
 endif
