@@ -40,7 +40,7 @@ static int check_wlan_mac_bin_file()
 
 int main()
 {
-    int i, wlan_addr3, wlan_addr4, wlan_addr5, ret;
+    int i, wlan_addr3, wlan_addr4, wlan_addr5;
 
     // First 6 hex number are fix 
     unsigned char wlan_addr[] = { 0xd8, 0x9a, 0x34 };
