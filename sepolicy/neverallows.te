@@ -3,29 +3,5 @@ allow charger mnt_vendor_file:dir create_dir_perms;
 allow charger mnt_vendor_file:file create_file_perms;
 allow charger self:capability dac_override;
 
-# CND
-allow cnd default_android_hwservice:hwservice_manager add;
-
-# Dataservice
-allow dataservice_app default_android_hwservice:hwservice_manager find;
-
-# IMS
-allow ims default_android_hwservice:hwservice_manager find;
-
-# Init
-binder_call(init, system_server);
-allow init sysfs:file { open read write };
-allow init sysfs_scsi_devices_0000:file { open setattr write };
-
-# Netmgrd
-allow netmgrd vendor_xlat_prop:property_service set;
-
-# Perf
-binder_call(system_app, perfprofd);
-
 # ReadMac
 allow readmac self:capability dac_override;
-
-# SystemServer
-allow system_server dalvikcache_data_file:file { execute write };
-allow system_server vendor_camera_prop:file { getattr open read };
