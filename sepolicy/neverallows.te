@@ -1,7 +1,5 @@
-# Charger
-allow charger mnt_vendor_file:dir create_dir_perms;
-allow charger mnt_vendor_file:file create_file_perms;
-allow charger self:capability dac_override;
+# Healthd
+allow healthd healthd:capability dac_override;
 
 # ReadMac
 allow readmac self:capability dac_override;
