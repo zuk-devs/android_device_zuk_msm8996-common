@@ -42,8 +42,12 @@ on init
 on boot
     # set up schedtune
     write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.boost 1
+    write /dev/stune/top-app/schedtune.boost 0
     write /dev/stune/top-app/schedtune.prefer_idle 1
+    write /dev/stune/rt/schedtune.boost 0
+    write /dev/stune/rt/schedtune.prefer_idle 1
+
+    write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 5
 
     # Update foreground and background cpusets
     write /dev/cpuset/foreground/cpus 0-3
