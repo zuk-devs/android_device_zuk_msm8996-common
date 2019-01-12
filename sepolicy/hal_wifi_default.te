@@ -1,1 +1,2 @@
 allow hal_wifi_default debugfs_wlan:dir search;
+allow hal_wifi_default kernel:system module_request;

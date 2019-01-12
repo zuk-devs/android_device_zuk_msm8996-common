@@ -11,5 +11,5 @@ allow init sysfs_fingerprint:file { open read setattr write };
 allow init sysfs:file setattr;
 allow init tee_device:chr_file write;
 allow init hidl_base_hwservice:hwservice_manager add;
-allow init vendor_file:file execute_no_trans;
 allow init sysfs_graphics:lnk_file read;
+allow init hal_wifi_supplicant_default:process noatsecure;

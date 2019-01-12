@@ -24,6 +24,16 @@ allow priv_app proc_interrupts:file r_file_perms;
 allow priv_app proc_modules:file r_file_perms;
 allow priv_app proc:file r_file_perms;
 allow priv_app device:dir open;
+allow priv_app bg_boot_complete_prop:file read;
+allow priv_app bg_daemon_prop:file read;
+allow priv_app boottime_prop:file read;
+allow priv_app cnd_vendor_prop:file read;
+allow priv_app console_silent_prop:file read;
+allow priv_app configfs:lnk_file getattr;
+allow priv_app mnt_product_file:dir { getattr open read };
+allow priv_app proc_version:file { getattr open };
+allow priv_app system_app_data_file:dir getattr;
+allow priv_app wifi_prop:file { getattr open };
 
 r_dir_file(priv_app, sysfs_type);
 binder_call(priv_app, hal_memtrack_default);

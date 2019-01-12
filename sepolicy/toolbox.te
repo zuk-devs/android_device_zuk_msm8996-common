@@ -1,4 +1,4 @@
 allow toolbox file_contexts_file:file { getattr open read };
-allow toolbox self:capability { chown dac_override dac_read_search };
+allow toolbox self:capability chown;
 allow toolbox system_data_file:dir { add_name remove_name write };
-allow toolbox system_data_file:file { create getattr open read rename setattr unlink write };
+allow toolbox system_data_file:file { getattr open read };
