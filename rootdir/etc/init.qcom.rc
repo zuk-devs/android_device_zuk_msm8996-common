@@ -59,6 +59,7 @@ on fs
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     mkdir /persist/bluetooth 0770 bluetooth bluetooth
+    mkdir /mnt/vendor/persist/alarm 0770 system system
     mkdir /mnt/vendor/persist/bms 0700 root system
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/display 0770 system graphics
@@ -262,7 +263,6 @@ on boot
 
     mkdir /persist/drm 0770 system system
     mkdir /persist/misc 0770 system system
-    mkdir /persist/alarm 0770 system system
     mkdir /persist/data 0700 system system
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
