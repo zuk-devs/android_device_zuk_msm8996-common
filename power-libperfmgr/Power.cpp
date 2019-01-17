@@ -202,32 +202,7 @@ Return<void> Power::powerHintAsync_1_2(PowerHint_1_2 hint, int32_t data) {
     if (!isSupportedGovernor() || !mReady) {
         return Void();
     }
-
-    switch(hint) {
-        case PowerHint_1_2::AUDIO_LOW_LATENCY:
-            if (data) {
-                mHintManager->DoHint("AUDIO_LOW_LATENCY");
-                ALOGD("AUDIO LOW LATENCY ON");
-            } else {
-                mHintManager->EndHint("AUDIO_LOW_LATENCY");
-                ALOGD("AUDIO LOW LATENCY OFF");
-            }
-            break;
-        case PowerHint_1_2::AUDIO_STREAMING:
-            if (!mSustainedPerfModeOn) {
-                if (data) {
-                    mHintManager->DoHint("AUDIO_STREAMING");
-                    ALOGD("AUDIO STREAMING ON");
-                } else {
-                    mHintManager->EndHint("AUDIO_STREAMING");
-                    ALOGD("AUDIO STREAMING OFF");
-                }
-            }
-            break;
-        default:
-            return powerHint(static_cast<PowerHint_1_0>(hint), data);
-    }
-    return Void();
+    return powerHint(static_cast<PowerHint_1_0>(hint), data);
 }
 
 }  // namespace implementation
