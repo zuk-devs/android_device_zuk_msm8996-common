@@ -177,5 +177,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wi-Fi Display
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0 \
-    video.disable.ubwc=1
+    persist.sys.wfd.virtual=0
