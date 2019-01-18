@@ -401,11 +401,3 @@ PRODUCT_COPY_FILES += \
 #Zuk Extras
 PRODUCT_PACKAGES += \
     ZukPref	
-
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libaacwrapper \
-    libnl
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
