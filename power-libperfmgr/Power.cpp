@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.power@1.2-service.zuk-libperfmgr"
+#define LOG_TAG "android.hardware.power@1.2-service.zuk_msm8996-libperfmgr"
 
 #include <android-base/file.h>
 #include <android-base/logging.h>
