@@ -114,7 +114,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     ril.subscription.types=NV,RUIM \
-    ro.telephony.default_network=10 \
+    ro.telephony.default_network=10,10 \
     telephony.lteOnCdmaDevice=1 \
     android.telephony.apn-restore=24000 \
     persist.vendor.qti.telephony.vt_cam_interface=1 \
@@ -143,7 +143,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.rat_on=combine
+    persist.vendor.radio.rat_on=combine \
+    persist.volte_enalbed_by_hw=1 \
+    persist.vendor.radio.data_ltd_sys_ind=1 \
+    persist.radio.VT_ENABLE=1 \
+    persist.radio.ROTATION_ENABLE=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.vendor.radio.apm_sim_not_pwdn=1
 
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
