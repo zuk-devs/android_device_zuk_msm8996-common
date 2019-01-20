@@ -144,7 +144,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.rat_on=combine \
-    persist.volte_enalbed_by_hw=1 \
     persist.vendor.radio.data_ltd_sys_ind=1 \
     persist.radio.VT_ENABLE=1 \
     persist.radio.ROTATION_ENABLE=1 \
