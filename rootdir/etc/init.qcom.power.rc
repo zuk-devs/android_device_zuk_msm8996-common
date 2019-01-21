@@ -62,9 +62,6 @@ on boot
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
 
-    # Enable sched boost
-    write /proc/sys/kernel/sched_boost 1
-
 on charger
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     # Enable UFS powersaving
