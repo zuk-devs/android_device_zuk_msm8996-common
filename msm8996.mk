@@ -137,7 +137,8 @@ PRODUCT_PACKAGES += \
     camera.msm8996 \
     mm-qcamera-app \
     Snap \
-    libmm-qcamera
+    libmm-qcamera \
+    libyuv
 
 # CNE
 PRODUCT_PACKAGES += \
@@ -266,7 +267,10 @@ PRODUCT_PACKAGES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service
+    android.hardware.keymaster@3.0-service \
+    libkeymaster_messages \
+    libkeymaster_portable \
+    libpuresoftkeymasterdevice
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -305,6 +309,7 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libOmxVdecHevc \
     libstagefrighthw \
+    libminijail \
     libmm-omxcore
 
 # Power
@@ -337,7 +342,9 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.0 \
+    android.hardware.radio.deprecated@1.0 \
     android.hardware.secure_element@1.0 \
+    android.hardware.radio@1.1 \
     librmnetctl \
     libxml2
 
@@ -370,7 +377,9 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.control@1.0 \
     android.hardware.wifi@1.0-service \
+    libnl \
     libqsap_sdk \
     libQWiFiSoftApCfg \
     libwpa_client \
