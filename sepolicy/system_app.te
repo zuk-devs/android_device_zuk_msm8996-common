@@ -9,3 +9,4 @@ allow system_app apk_data_file:dir { add_name remove_name };
 allow system_app proc_pagetypeinfo:file { getattr open read };
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file { getattr open read };
+allow system_app sysfs:file { getattr open }; 

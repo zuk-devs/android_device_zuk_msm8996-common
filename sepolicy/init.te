@@ -13,3 +13,4 @@ allow init tee_device:chr_file write;
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init sysfs_graphics:lnk_file read;
 allow init hal_wifi_supplicant_default:process noatsecure;
+allow init system_file:file mounton;

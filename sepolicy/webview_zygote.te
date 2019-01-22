@@ -1,1 +1,2 @@
 allow webview_zygote zygote:unix_dgram_socket write;
+allow webview_zygote theme_data_file:dir search;
