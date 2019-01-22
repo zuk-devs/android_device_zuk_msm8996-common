@@ -46,14 +46,13 @@ genfscon sysfs /devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.
 genfscon sysfs /devices/soc/0.qcom,rmtfs_sharedmem    u:object_r:sysfs_rmtfs:s0
 genfscon sysfs /devices/soc/84000000.qcom,rmtfs_rtel_sharedmem u:object_r:sysfs_rmtfs:s0
 genfscon sysfs /module/lpm_levels/parameters          u:object_r:sysfs_power_management:s0
-genfscon sysfs /devices/soc/qpnp-fg-17/power_supply/bms/capacity             u:object_r:sysfs_batteryinfo:s0
-genfscon sysfs /devices/soc/qpnp-smbcharger-16/power_supply/battery/capacity u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/virtual/timed_output/vibrator/voltage_level   u:object_r:sysfs_vibrator:s0
 genfscon sysfs /module/diagchar/parameters/timestamp_switch           u:object_r:sysfs_timestamp_switch:s0
-genfscon sysfs /devices/soc/qpnp-smbcharger-16/power_supply/battery/system_temp_level u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/soc/624000.ufshc/host0/target0:0:0/0:0:0:0    u:object_r:sysfs_scsi_devices_0000:s0
 genfscon sysfs /devices/soc/624000.ufshc/health                       u:object_r:sysfs_scsi_devices_0000:s0
 genfscon sysfs /module/diagchar                       u:object_r:sysfs_diag:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,fg/power_supply              u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,qpnp-smbcharger/power_supply u:object_r:sysfs_batteryinfo:s0
 
 # debugfs
 genfscon debugfs /wlan_wcnss               u:object_r:debugfs_wlan:s0
