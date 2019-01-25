@@ -86,11 +86,20 @@ vendor/lib/libaptX_encoder.so|984739a0bc968e18f75ced205733fe3f51c2d4f0
 vendor/lib/libaptXHD_encoder.so|974c486e4ca03faa0713553d9dfe2995ac93e01c
 
 # Bluetooth (shared dependencies)
+lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
 
 # Camera
+lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so
+lib64/libclearsight.so:vendor/lib64/libclearsight.so
+lib64/libfiltergenerator.so:vendor/lib64/libfiltergenerator.so
+lib64/liboptizoom.so:vendor/lib64/liboptizoom.so
+lib64/libtrueportrait.so:vendor/lib64/libtrueportrait.so
+lib64/libts_face_beautify_hal.so:vendor/lib64/libts_face_beautify_hal.so
+lib64/libubifocus.so:vendor/lib64/libubifocus.so
 vendor/bin/mm-qcamera-daemon
 vendor/lib/libchromaflash.so
+vendor/lib/libdualcameraddm.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
@@ -299,7 +308,6 @@ vendor/lib64/libcneoplookup.so|86c694067e735b86efa04871fde8a9a7a81161d8
 vendor/lib64/libcneqmiutils.so|cf5b5620754c28002d081d795e89c1aa50b96032
 vendor/lib64/libwms.so|57d9f33071f4ae42ac77c98fb82f4e1fe8ac4754
 vendor/lib64/libwqe.so|47afecb9615f1dcad01e2d36f47a08229f5c43aa
-vendor/lib64/libxml.so|dba175d291e1adc004bf1463db091cde95a0d92d
 vendor/lib64/vendor.qti.data.factory@1.0.so|648517a078dcc8a3810f10fc977ca38db509aa91
 vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|618e11074d4b2351f96e15c4c6897b0fe424cc03
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|7204cf8f2dcf8c88b531b86b0da0e643f1de6487
@@ -309,8 +317,6 @@ vendor/lib64/vendor.qti.latency@2.0.so|15e50ce40e210993343406947dd2c959920f40c8
 
 # Fingerprint
 lib64/hw/fingerprint.qcom.so:vendor/lib64/hw/fingerprint.qcom.so
-vendor/lib64/libqvop-service.so
-vendor/lib/libqvop-service.so
 
 # DPM - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
 bin/dpmd|1b38829a7faf33d5cbdc195d703f99384c20c9f4
@@ -559,6 +565,7 @@ vendor/lib/libsmwrapper.so
 -vendor/lib/libgpustats.so|83d8856717923ab389aecf17445e33fc21b90afc
 vendor/lib/libI420colorconvert.so|eed42cd41b14f8921d668eca1a798aae76cfebe1
 vendor/lib/libmm-color-convertor.so|37baa4587bbbc8b83ee1b1aa94e8818ccfaaf3a0
+vendor/lib/libmmosal_proprietary.so|dfa0b9751df0a52ffd69e00af463ad65f54c01e5
 vendor/lib/libOmxAacDec.so|364628180f938a005c6c9bc9db56d2a9e414f263
 vendor/lib/libOmxAlacDec.so|6a7a88d3f107cd2823b728967158c541a9426cef
 vendor/lib/libOmxAlacDecSw.so|3b4ef8fd510e91df8c440447c03a8a42bac23752
@@ -573,6 +580,8 @@ vendor/lib/libOmxVpp.so|48ef129f20bd75e060ad66feef8f4ebf4a1c899f
 vendor/lib/libOmxWmaDec.so|3fd1e369ccc027535eb5bc2be1f5fbea50049758
 vendor/lib/libvpplibrary.so|bb818a5b8d62c236963fc094d0c2627bc78c00ef
 vendor/lib/libvqzip.so|0b906db131e99cd5460b8a72d05e86721243de95
+vendor/lib/libwfdcommonutils_proprietary.so|d190dd29efbb601933a32dbc0f1f1df00384f077
+vendor/lib/libwfdmmservice.so|a99c38be9f6a6ce4a2767fb066191c2017fcb341
 
 # Perf - from LA.UM.7.2.r1-04000-sdm660.0 - B2N_sprout:9/PPR1.180610.011/00WW_3_22C
 lib64/libqti_performance.so|3860e9a08c8b98a99a1b800c365328683db5cfb3
@@ -720,6 +729,7 @@ vendor/lib64/libril-qcril-hook-oem.so|159f6addcb48e2e02ddba6278e05bc5a312d8136
 vendor/lib64/librilqmiservices.so|016b9067304df4707006a635ca471c23bcd6bebf
 vendor/lib64/libsettings.so|e974e5c777a0d2d303a907797c4c33b5f8ca388b
 vendor/lib64/libsystem_health_mon.so|a8a8e75cd251f4f8d8d054d75cea1238e654f7d0
+vendor/lib64/libxml.so|dba175d291e1adc004bf1463db091cde95a0d92d
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so|ef6d56f7aa6ff13866ccb0c31c8ef96de503c17c
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|8ad1c06563a4e5cd57eec16ade2509e9647fc8fb
 vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so|da51d4af0363ddca76292dde82857fb4862f4cd2
@@ -743,6 +753,7 @@ vendor/lib/libnlnetmgr.so|348c8e22bf05deab3302a3e7966e70493c154d20
 vendor/lib/libqcmaputils.so|e5224fadabec3cf6db2f373f0d35b3070162adcf
 vendor/lib/libqrtr.so|238905ba5034d6c73c6077c164650a2dda09ab70
 vendor/lib/libqsocket.so|144d81b9087d9e4390f8e1952ffd29ab335925a3
+vendor/lib/libxml.so|9a23d0f93b7ba00f88f3b8c708494fbc030c88a5
 vendor/lib/vendor.qti.hardware.radio.am@1.0.so|9c8ec1cdcc576258966fcd9d2bc18cb273d242b2
 vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0.so|6615d40643bac10c4d25be704727bd771b7e2a9a
 vendor/lib/vendor.qti.hardware.radio.ims@1.0.so|a3c3a76b1d49d58429dda812f57878749ed27c92
