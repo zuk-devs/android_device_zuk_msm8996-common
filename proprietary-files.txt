@@ -93,10 +93,8 @@ vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
 lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so
 lib64/libclearsight.so:vendor/lib64/libclearsight.so
 lib64/libfiltergenerator.so:vendor/lib64/libfiltergenerator.so
-lib64/liboptizoom.so:vendor/lib64/liboptizoom.so
 lib64/libtrueportrait.so:vendor/lib64/libtrueportrait.so
 lib64/libts_face_beautify_hal.so:vendor/lib64/libts_face_beautify_hal.so
-lib64/libubifocus.so:vendor/lib64/libubifocus.so
 vendor/bin/mm-qcamera-daemon
 vendor/lib/libchromaflash.so
 vendor/lib/libdualcameraddm.so
@@ -156,6 +154,9 @@ vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libseemore.so
 vendor/lib/libubifocus.so
+vendor/lib64/liboptizoom.so
+vendor/lib64/libseemore.so
+vendor/lib64/libubifocus.so
 
 # Camera JNI
 lib64/libjni_makeupV2.so:vendor/lib64/libjni_makeupV2.so
@@ -165,7 +166,6 @@ lib64/libjni_optizoom.so:vendor/lib64/libjni_optizoom.so
 lib64/libjni_clearsight.so:vendor/lib64/libjni_clearsight.so
 lib64/libjni_trueportrait.so:vendor/lib64/libjni_trueportrait.so
 lib64/libjni_filtergenerator.so:vendor/lib64/libjni_filtergenerator.so
-vendor/lib64/libseemore.so
 vendor/lib/libjni_dualcamera.so
 
 # Camera firmware
