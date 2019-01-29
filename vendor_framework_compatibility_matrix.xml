@@ -83,6 +83,18 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.radio.uim</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IUim</name>
+            <instance>Uim0</instance>
+            <instance>Uim1</instance>
+        </interface>
+        <fqname>@1.1::IUim/Uim0</fqname>
+        <fqname>@1.1::IUim/Uim1</fqname>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.factory</name>
         <version>1.0</version>
         <interface>
