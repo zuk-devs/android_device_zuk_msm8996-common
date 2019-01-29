@@ -64,4 +64,12 @@ if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
     extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC" "$SECTION"
 fi
 
+BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/msm8996-common/proprietary
+
+# Patch blobs for VNDK
+sed -i "s|libgui.so|libfui.so|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_ppeiscore.so
+sed -i "s|libgui.so|libfui.so|g" "$BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
+patchelf --remove-needed libandroid.so "$BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
+patchelf --remove-needed libandroid.so "$BLOB_ROOT"/vendor/lib/libmpbase.so
+
 "$MY_DIR"/setup-makefiles.sh
