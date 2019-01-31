@@ -72,6 +72,12 @@ sed -i "s|libgui.so|libfui.so|g" "$BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modu
 patchelf --remove-needed libandroid.so "$BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
 patchelf --remove-needed libandroid.so "$BLOB_ROOT"/vendor/lib/libmpbase.so
 
+# Load full libbinder and cutils
+sed -i "s|libcutils.so|libfutils.so|g" "$BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
+patchelf --add-needed libfinder.so "$BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
+patchelf --add-needed libfinder.so "$BLOB_ROOT"/vendor/bin/mm-qcamera-daemon
+patchelf --add-needed libfutils.so "$BLOB_ROOT"/vendor/bin/mm-qcamera-daemon
+
 #
 # Hax libaudcal.so to store acdbdata in new path
 #
