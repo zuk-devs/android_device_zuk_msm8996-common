@@ -4,12 +4,14 @@ vendor/lib64/libadsprpc.so|fe4a7c28a2284ab95c068ad3ffaf256705cf9a02
 vendor/lib64/libadsp_default_listener.so|f7ea94537c66dfa11e1235064d43c8f56c3b3c51
 vendor/lib64/libfastcvadsp_stub.so|ad72fe745a7a8f4b3a355cc0aaf177c29301f29f
 vendor/lib64/libfastcvopt.so|8a5bc4a2f5b2b14c421eac5f7e828146ac0f0119
+vendor/lib64/libmdsprpc.so|1b11f9ee7a61d3b8f599f60a9d749d5829a750e6
 vendor/lib/libadsprpc.so|a2ff69f96a9242d4be0fe5cae2475c23294f937a
 vendor/lib/libadsp_default_listener.so|d9de89d55eba2d35a7583584b51335a663705fa7
 vendor/lib/libadsp_hvx_callback_skel.so|23e99c81afe6ecaf655aaa93298d65e8d7dfa36a
 vendor/lib/libadsp_hvx_stub.so|bf3348cb891da176a159102b5ef9522a6a26c170
 vendor/lib/libfastcvadsp_stub.so|6b50fd7d53811b51e06fedd87c12a794d0c2f645
 vendor/lib/libfastcvopt.so|be6d462207dcc238a734d324c479d1022a324c16
+vendor/lib/libmdsprpc.so|42d996c1d7b37f218ade5cd4b5ef0df37f93475f
 
 # ADSP modules
 vendor/lib/rfsa/adsp/libadsp_fd_skel.so
@@ -44,7 +46,6 @@ vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
 vendor/lib64/libaudioalsa.so
-vendor/lib64/libmdsprpc.so
 vendor/lib64/libqtigef.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libqcbassboost.so
@@ -58,7 +59,6 @@ vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libaudioalsa.so
-vendor/lib/libmdsprpc.so
 vendor/lib/libqtigef.so
 vendor/etc/audio_tuning_mixer.txt
 

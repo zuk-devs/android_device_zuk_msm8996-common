@@ -76,4 +76,15 @@ patchelf --remove-needed libandroid.so "$BLOB_ROOT"/vendor/lib/libmpbase.so
 sed -i "s|/data/vendor/misc/audio/acdbdata/delta/|/data/vendor/audio/acdbdata/delta/\x00\x00\x00\x00\x00|g" "$BLOB_ROOT"/vendor/lib/libaudcal.so
 sed -i "s|/data/vendor/misc/audio/acdbdata/delta/|/data/vendor/audio/acdbdata/delta/\x00\x00\x00\x00\x00|g" "$BLOB_ROOT"/vendor/lib64/libaudcal.so
 
+# Hex edit /firmware/image to /vendor/firmware_mnt to delete the outdated rootdir symlinks
+sed -i "s|/firmware/image|/vendor/f/image|g" "$BLOB_ROOT"/vendor/lib/hw/keystore.msm8996.so
+sed -i "s|/firmware/image|/vendor/f/image|g" "$BLOB_ROOT"/vendor/lib/hw/gatekeeper.msm8996.so
+sed -i "s|/firmware/image|/vendor/f/image|g" "$BLOB_ROOT"/vendor/lib64/hw/fingerprint.qcom.so
+sed -i "s|/firmware/image|/vendor/f/image|g" "$BLOB_ROOT"/vendor/lib64/hw/keystore.msm8996.so
+sed -i "s|/firmware/image|/vendor/f/image|g" "$BLOB_ROOT"/vendor/lib64/hw/gatekeeper.msm8996.so
+sed -i "s|/firmware/image|/vendor/f/image|g" "$BLOB_ROOT"/vendor/lib64/libSecureUILib.so
+
+# Hex edit /bt_firmware to /vendor/btfw to delete the outdated rootdir symlinks
+sed -i "s|/bt_firmware|/vendor/btfw|g" "$BLOB_ROOT"/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+
 "$MY_DIR"/setup-makefiles.sh
