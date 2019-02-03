@@ -32,7 +32,7 @@ echo 1 > /proc/sys/net/ipv6/conf/default/accept_ra_defrtr
 #Loop through the sysfs nodes and determine the correct sysfs to change the permission and ownership.
 for count in 0 1 2 3 4 5 6 7 8 9 10
 do
-        dir="/sys/devices/soc/75ba000.i2c/i2c-12/12-0020/input/input"$count
+        dir="/sys/devices/platform/soc/75ba000.i2c/i2c-12/12-0020/input/input"$count
         if [ -d "$dir" ]; then
              chmod 0660 $dir/secure_touch_enable
              chmod 0440 $dir/secure_touch
