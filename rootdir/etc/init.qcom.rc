@@ -114,7 +114,7 @@ on post-fs-data
     mkdir /data/vendor/tombstones 0771 system system
 
     # Create folder for mm-qcamera-daemon
-    mkdir /data/vendor/camera 0770 camera camera
+    mkdir /data/vendor/qcam 0770 camera camera
 
     mkdir /data/vendor/ramdump 0771 root system
     mkdir /data/vendor/bluetooth 0770 bluetooth bluetooth
