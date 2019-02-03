@@ -1,5 +1,0 @@
-# Healthd
-allow healthd healthd:capability dac_override;
-
-# ReadMac
-allow readmac self:capability dac_override;
