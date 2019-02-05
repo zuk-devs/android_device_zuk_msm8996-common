@@ -78,14 +78,6 @@ patchelf --add-needed libfinder.so "$BLOB_ROOT"/vendor/lib/libmmcamera2_stats_mo
 patchelf --add-needed libfinder.so "$BLOB_ROOT"/vendor/bin/mm-qcamera-daemon
 patchelf --add-needed libfutils.so "$BLOB_ROOT"/vendor/bin/mm-qcamera-daemon
 
-#
-# Hax libaudcal.so to store acdbdata in new path
-#
-sed -i "s|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g" \
-    "$BLOB_ROOT"/vendor/lib/libaudcal.so
-sed -i "s|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g" \
-    "$BLOB_ROOT"/vendor/lib64/libaudcal.so
-
 # Hex edit /firmware/image to /vendor/firmware_mnt to delete the outdated rootdir symlinks
 sed -i "s|/firmware/image|/vendor/f/image|g" "$BLOB_ROOT"/vendor/lib/hw/keystore.msm8996.so
 sed -i "s|/firmware/image|/vendor/f/image|g" "$BLOB_ROOT"/vendor/lib/hw/gatekeeper.msm8996.so
@@ -96,5 +88,9 @@ sed -i "s|/firmware/image|/vendor/f/image|g" "$BLOB_ROOT"/vendor/lib64/libSecure
 
 # Hex edit /bt_firmware to /vendor/btfw to delete the outdated rootdir symlinks
 sed -i "s|/bt_firmware|/vendor/btfw|g" "$BLOB_ROOT"/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+
+# Hex edit libaudcal.so to store acdbdata in new path
+sed -i "s|/data/vendor/misc/audio/acdbdata/delta/|/data/vendor/audio/acdbdata/delta/\x00\x00\x00\x00\x00|g" "$BLOB_ROOT"/vendor/lib/libaudcal.so
+sed -i "s|/data/vendor/misc/audio/acdbdata/delta/|/data/vendor/audio/acdbdata/delta/\x00\x00\x00\x00\x00|g" "$BLOB_ROOT"/vendor/lib64/libaudcal.so
 
 "$MY_DIR"/setup-makefiles.sh
