@@ -9,3 +9,5 @@ allow thermal-engine sysfs_msm_core:file r_file_perms;
 allow thermal-engine sysfs_rmtfs:dir search;
 allow thermal-engine system_data_file:dir { add_name remove_name write };
 allow thermal-engine system_data_file:file open;
+allow thermal-engine sysfs_batteryinfo:dir { open read search write };
+allow thermal-engine sysfs_batteryinfo:file { open read write };

@@ -1,0 +1,2 @@
+allow vendor_per_mgr vfat:dir search;
+allow vendor_per_mgr vfat:file { open read };

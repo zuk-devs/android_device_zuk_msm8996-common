@@ -34,7 +34,7 @@ binder_call(system_app, perfprofd);
 allow priv_app bluetooth_data_file:dir getattr;
 allow priv_app bluetooth_prop:file read;
 allow priv_app bootloader_boot_reason_prop:file read;
-allow priv_app mnt_vendor_file:dir { getattr open read };
+allow priv_app mnt_vendor_file:dir { getattr open read search };
 allow priv_app mnt_vendor_file:file getattr;
 allow priv_app persist_bluetooth_file:dir getattr;
 allow priv_app persist_drm_file:dir getattr;
