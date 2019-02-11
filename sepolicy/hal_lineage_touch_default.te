@@ -1,0 +1,2 @@
+allow hal_lineage_touch_default sysfs_fingerprint:dir search;
+allow hal_lineage_touch_default sysfs_fingerprint:file rw_file_perms;
