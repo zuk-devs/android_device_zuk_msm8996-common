@@ -20,7 +20,7 @@
     
     <!-- Hardware button navigation -->
     <string name="hardware_keys_home_key_title">Tasto Home</string>
-    <string name="hardware_keys_menu_key_title">Swipe a destra</string>
+    <string name="hardware_keys_menu_key_title">Swipe</string>
     <string name="hardware_keys_assist_key_title">Long tap</string>
     <string name="hardware_keys_appswitch_key_title">Swipe a sinistra</string>
     <string name="hardware_keys_back_key_title">Tap</string>
