@@ -248,8 +248,6 @@ vendor/lib/libchromatix_ov8865_zsl_video.so
 
 # Camera vndk hax - from Lineage 16.0 build
 vendor/lib/libfui.so|21d012ec9dabe6e62e023780eac1e3a476eb298e
-vendor/lib/libfinder.so|42232c482c6bb6c5c47aaa609c4e1ca69dd2798d
-vendor/lib/libfutils.so|12e4c03f62a8780cfd0d3e76176dcb718d391ddb
 
 # CNE - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
 etc/permissions/cneapiclient.xml|15831adf0e80243042b90c734eea0a68eb8ae9c9
@@ -449,23 +447,19 @@ vendor/lib/libRSDriver_adreno.so|26de2b456a064d9d3ea68b8ceacf26f4a866c067
 vendor/lib/libhdr_tm.so|8060a5d9ed0283c7b89716165ba8af4b86ef0210
 vendor/lib64/libhdr_tm.so|df15d487e73560f81017bcf4a73c28c9697b1ed9
 
-# Graphics (SDM) - from LA.UM.7.4.r1-04100-8x98.0
-lib64/libsdm-disp-apis.so|c6681b458123832bb6f4015fd3e24032d5b2eff8
-lib/libsdm-disp-apis.so|5c7e946cfa654f533d481970da9b3d2e0c181161
-vendor/lib64/libscalar.so|61c059ca3b9da6a36bdf112e8fbe26a252ad1234
-vendor/lib64/libsdedrm.so|dfc54b03ea50147b7143966a5c1a4df2710d2205
-vendor/lib64/libsdm-color.so|1a9b68e5f2f09d37c2fa83907a6a70c7adb081f5
-vendor/lib64/libsdm-diag.so|87a4f764e894f16246c9a0d6e3f5885df76b750b
--vendor/lib64/libsdm-disp-vndapis.so|8ac59a32a2601a8a4b0d3b097ed02f1279f3c6b7
-vendor/lib64/libsdmextension.so|c4a416cb8c0f5dc87bee8494d70247cf049224b9
-vendor/lib64/libtinyxml2_1.so|b225b16e689e7e4c26fc6144637f6b0c416063f8
+# Graphics (SDM) - from LA.UM.7.5.r1-03700-8x96.0
 vendor/lib/libscalar.so|cad128a6e71195b4ad38494bc0382bf80e1fb0b2
-vendor/lib/libsdedrm.so|14659302ccd3df6929debd931a1a7258739ca144
-vendor/lib/libsdm-color.so|8e083bb2a20ecf76bf96e303134cbaa9ce46be81
+vendor/lib/libsdm-color.so|b13ab5f965f5bb8f40207879415cb1adbb55da42
 vendor/lib/libsdm-diag.so|e2e3a0fba39190c58bafa0568e8cd51b391b71b6
--vendor/lib/libsdm-disp-vndapis.so|f81628ddf7fff00f5e316956ed3b50941932c7de
-vendor/lib/libsdmextension.so|3104df6a013e53b972227ed132aa683ec7303746
+-vendor/lib/libsdm-disp-vndapis.so|6c4233ea3676643bc9658c25cfad7edd45c49362
+vendor/lib/libsdmextension.so|a8659e7e0df5f1e20266ede1331da0660e0fe260
 vendor/lib/libtinyxml2_1.so|3882fddae942997be6ad6af789cf209fa45e61b3
+vendor/lib64/libscalar.so|490cc7447863b3279771ad99e92a5625525db055
+vendor/lib64/libsdm-color.so|9bb3f5147c277eae08c7f918e7de3bd2fccf1f74
+vendor/lib64/libsdm-diag.so|7ab5d2a980029ac9bd20fe68656823b21e483e11
+-vendor/lib64/libsdm-disp-vndapis.so|6ae24866bbd413ed112778650c8fd7a2631cb1a9
+vendor/lib64/libsdmextension.so|e91aaf852df780e42bb083c3089f5b42c87c49f7
+vendor/lib64/libtinyxml2_1.so|b743b93bbb47bb2d80322fcfb985b7b8c696fa1b
 
 # Graphics (Vulkan) - from google/marlin/marlin:9/PPR2.180905.006/4945130:user/release-keys
 vendor/lib/hw/vulkan.msm8996.so|6259874ee4fe1a414b5e2109ec63af55a70d3733
@@ -516,23 +510,7 @@ vendor/bin/ims_rtp_daemon|174be7387753db4b72fa4de305edaa80fe79b6a9
 vendor/bin/imsdatadaemon|56e1ab6f6f6679261bcd36dd218097632da866b6
 vendor/bin/imsqmidaemon|0e5cf08e7cbd4e34fb69e6644a8c7d5e6715c306
 vendor/bin/imsrcsd|a79f373ccb1af6ac4877801191a4b8fed1b2f488
-vendor/lib/com.qualcomm.qti.imscmservice@1.0.so|3f85ff059bffe0c7c38d96ceaae1e41f61902e4d
-vendor/lib/com.qualcomm.qti.imscmservice@2.0.so|3a07377505e1fb6911581658075e09be69ff72e4
-vendor/lib/com.qualcomm.qti.imscmservice@2.1.so|fd1c213eb0ae826900d06ac8b633ed8b4667a9ef
 vendor/lib/com.qualcomm.qti.uceservice@2.0.so|e0e23b4f10d714a5663cb39cd80a4aa92d2646f2
-vendor/lib/lib-imsSDP.so|b62fc5d0d5a3adac26dad20d2f10d8f340e46d5d
-vendor/lib/lib-imscmservice.so|136666a2b27fd8ad54a18280477c197536dd8317
-vendor/lib/lib-imsdpl.so|d587810c6616636cea9363b5decfdcb7aa070ab0
-vendor/lib/lib-imsqimf.so|fe6730a3fafa4c0bb16bd6d92b3d301e0ef2d110
-vendor/lib/lib-imsrcs-v2.so|917db38fdb323d4588d3598a13e77e1df33d68ae
-vendor/lib/lib-imsrcsbaseimpl.so|2970183271fdbaa7b64afb3b3e45380ee8282034
-vendor/lib/lib-imsxml.so|286ab846366082568e1da5d3095ea480be444ecc
-vendor/lib/lib-rtpcommon.so|09735671c926980bf717f0c9707a2d7e19f6a5ce
-vendor/lib/lib-siputility.so|6c5559378733dea9c252de8095a94449b773be3c
-vendor/lib/lib-uceservice.so|ab337316cef3ac1df6cb2b0847b5b5cb19b4f94a
-vendor/lib/vendor.qti.ims.callinfo@1.0.so|160e6ba3acf419f4e21bda8de0e29632ece3aebe
-vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so|a21386d1f0de417c153514047c1e2f93a84e4d45
-vendor/lib/vendor.qti.imsrtpservice@1.0.so|af72b35525652ac96f6985c9ee64cef393e31c9d
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so|fef99d1e4e599b438c38d6a31b15dd55f9f9d391
 vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so|c14157e35f83b2481b83ca35d4925fcb135325aa
 vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so|56310782689ac800060cf045534c7d7cbac6a95a
@@ -580,13 +558,10 @@ vendor/lib/libOmxApeDec.so|60ae5d351b511ea25912ed8d95230893d51376da
 vendor/lib/libOmxApeDecSw.so|5a8bbc06b9cf680f1c5012660c82f37331559f77
 vendor/lib/libOmxEvrcDec.so|6a50e069ae8b769c7c97bf0398557112d105b183
 vendor/lib/libOmxQcelp13Dec.so|c094a365bd872d93e553d50fd65dc3d93ef1f486
-vendor/lib/libOmxVideoDSMode.so|e553e97cd36c23549d74231758fa061ea3bbd74b
 vendor/lib/libOmxVpp.so|48ef129f20bd75e060ad66feef8f4ebf4a1c899f
 vendor/lib/libOmxWmaDec.so|3fd1e369ccc027535eb5bc2be1f5fbea50049758
 vendor/lib/libvpplibrary.so|bb818a5b8d62c236963fc094d0c2627bc78c00ef
 vendor/lib/libvqzip.so|0b906db131e99cd5460b8a72d05e86721243de95
-vendor/lib/libwfdcommonutils_proprietary.so|d190dd29efbb601933a32dbc0f1f1df00384f077
-vendor/lib/libwfdmmservice.so|a99c38be9f6a6ce4a2767fb066191c2017fcb341
 
 # msm_irqbalance - from sailfish - PPR2.181005.003
 vendor/bin/msm_irqbalance|3f7a923d9d01dbfda40ebdfdd27a62167df69c13
@@ -633,6 +608,9 @@ vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|b7f648c81773214202aaa3620863
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|df138b77fb116a1a786a70c9c76b69d61b5c04d2
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|5761eae471e8dcd94ce139e831a1aa5b23f133c6
+
+# Power-off charging daemon
+-sbin/charger:sbin/chargeonlymode;rootfs|664dfa548b81cac348f1699222160f8d2b4d247c
 
 # QMI - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
 etc/permissions/qti_libpermissions.xml:vendor/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
@@ -729,11 +707,6 @@ vendor/lib/libqsocket.so|144d81b9087d9e4390f8e1952ffd29ab335925a3
 vendor/lib/libxml.so|9a23d0f93b7ba00f88f3b8c708494fbc030c88a5
 vendor/lib/vendor.qti.hardware.radio.am@1.0.so|9c8ec1cdcc576258966fcd9d2bc18cb273d242b2
 vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0.so|6615d40643bac10c4d25be704727bd771b7e2a9a
-vendor/lib/vendor.qti.hardware.radio.ims@1.0.so|a3c3a76b1d49d58429dda812f57878749ed27c92
-vendor/lib/vendor.qti.hardware.radio.ims@1.1.so|1c6cd4557f5370fd513440d9eda02d5e0b9fa953
-vendor/lib/vendor.qti.hardware.radio.ims@1.2.so|2b18ca26b290a1eab08bdaf519062d5ecd10a3dc
-vendor/lib/vendor.qti.hardware.radio.ims@1.3.so|2ac54e5b1baa7e7de3f9e01133a56f2677f5c5a4
-vendor/lib/vendor.qti.hardware.radio.ims@1.4.so|fa024c25c0e6b6ea51f306d183c5d61d1bd00b55
 vendor/lib/vendor.qti.hardware.radio.lpa@1.0.so|b5daf92447b8ea4930d6acbe0e4857da1ec7d7bb
 vendor/lib/vendor.qti.hardware.radio.qcrilhook@1.0.so|17ef9c7be46a266f7d203327199519e18dbfb608
 vendor/lib/vendor.qti.hardware.radio.qtiradio@1.0.so|e7793ee4c0189175e11a8bcb5cb20cfda40ddb56
@@ -745,7 +718,7 @@ vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so|a62c40faae77f80b5b
 vendor/radio/qcril_database/qcril.db|f25a9215fcc2445e73d1aa0b7ef9bdbd97e33f56
 
 # Sensors
-vendor/bin/sensors.qcom
+vendor/bin/sensors.qcom:vendor/bin/sensors.qti
 vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
 vendor/lib64/hw/activity_recognition.msm8996.so
 vendor/lib64/libsensor1.so|8fe6e21f4d3d5bccbdbfff21e856b016c58d6180
