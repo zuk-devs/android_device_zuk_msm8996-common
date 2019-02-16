@@ -114,7 +114,7 @@ vendor/lib/libmmcamera2_memleak.so
 vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so|95d78291dbd25e251ebcc3b4391102a9f7a5be7b
+vendor/lib/libmmcamera2_sensor_modules.so|027cb767713f8c6b4f3f27951d29146a45fd817c
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmcamera_dbg.so
