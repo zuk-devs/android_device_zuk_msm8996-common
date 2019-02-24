@@ -27,7 +27,7 @@
 
 #include "InteractionHandler.h"
 
-#define FB_IDLE_PATH "/sys/class/drm/card0/device/idle_state"
+#define FB_IDLE_PATH "/sys/class/graphics/fb0/idle_state"
 #define MAX_LENGTH 64
 
 #define MSINSEC 1000L
