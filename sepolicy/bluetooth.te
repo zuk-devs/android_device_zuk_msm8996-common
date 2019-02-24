@@ -1,3 +1,1 @@
-# Bluetooth app depend on /vendor/lib64/libaptX_encoder.so
-
 allow bluetooth vendor_file:file r_file_perms;
