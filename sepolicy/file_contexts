@@ -11,9 +11,6 @@
 /data/decrypt\.txt                    u:object_r:thermal_data_file:s0
 /data/vendor/qcam(/.*)?               u:object_r:vendor_camera_data_file:s0
 
-# Binaries
-/vendor/bin/readmac   u:object_r:readmac_exec:s0
-
 # HALs
 /vendor/bin/hw/android\.hardware\.light@2\.0-service\.zuk_8996       		u:object_r:hal_light_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service\.zuk 	u:object_r:hal_fingerprint_default_exec:s0
