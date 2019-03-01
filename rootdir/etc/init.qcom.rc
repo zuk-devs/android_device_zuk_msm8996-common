@@ -527,12 +527,6 @@ on property:init.svc.vendor.per_mgr=running
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
-service readmac /vendor/bin/readmac
-    class main
-    user root
-    group root oem_2901
-    oneshot
-
 service thermal-engine /vendor/bin/thermal-engine -c /vendor/etc/thermal-engine.conf
     class main
     user root

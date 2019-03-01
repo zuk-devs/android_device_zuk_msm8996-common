@@ -1,3 +1,8 @@
+# Charger
+allow charger self:capability dac_override ;
+allow charger mnt_vendor_file:dir { add_name create getattr read search write };
+allow charger mnt_vendor_file:file { append create getattr read setattr write open };
+
 # CND
 allow cnd default_android_hwservice:hwservice_manager add;
 
@@ -13,19 +18,52 @@ allow ims default_android_hwservice:hwservice_manager find;
 # Init
 binder_call(init, system_server);
 allow init sysfs:file { open read write };
+allow init vendor_file:file execute_no_trans;
 
 # Netmgrd
 allow netmgrd vendor_xlat_prop:property_service set;
 
+# Platform_app
+allow platform_app bluetooth_prop:file read;
+allow platform_app bootloader_boot_reason_prop:file read;
+
 # Perf
 binder_call(system_app, perfprofd);
 
-# ReadMac
-allow readmac self:capability dac_override;
+# Priv_app
+allow priv_app bluetooth_data_file:dir getattr;
+allow priv_app bluetooth_prop:file read;
+allow priv_app bootloader_boot_reason_prop:file read;
+allow priv_app mnt_vendor_file:dir { getattr open read search };
+allow priv_app mnt_vendor_file:file getattr;
+allow priv_app persist_bluetooth_file:dir getattr;
+allow priv_app persist_drm_file:dir getattr;
+allow priv_app persist_usf_file:dir getattr;
+allow priv_app sensors_persist_file:dir getattr;
 
 # SystemApp
 binder_call(system_app, netd);
+allow system_app apk_data_file:dir write;
+allow system_app apk_data_file:file { create unlink write };
+allow system_app default_prop:property_service set;
+allow system_app dalvikcache_data_file:file { setattr write };
+allow system_app sysfs:file write;
 
 # SystemServer
 allow system_server dalvikcache_data_file:file { execute write };
 allow system_server vendor_camera_prop:file { getattr open read };
+
+# Thermal-engine
+allow thermal-engine self:capability dac_override;
+allow thermal-engine system_data_file:file { create rename setattr unlink write };
+
+# Toolbox
+allow toolbox self:capability { dac_override dac_read_search };
+allow toolbox system_data_file:file { create rename setattr unlink write };
+
+# Untrasted_app
+allow untrusted_app runtime_event_log_tags_file:file read;
+allow untrusted_app proc_vmstat:file open ;
+
+# Vold
+allow vold mnt_vendor_file:dir { open read };
