@@ -94,7 +94,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480 \
     vendor.display.disable_rotator_downscale=1 \
     vendor.display.disable_skip_validate=1 \
-    vendor.gralloc.enable_fb_ubwc=1
+    vendor.gralloc.enable_fb_ubwc=1 \
+    debug.cpurend.vsync=false
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
