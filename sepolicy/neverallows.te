@@ -41,10 +41,6 @@ allow priv_app persist_drm_file:dir getattr;
 allow priv_app persist_usf_file:dir getattr;
 allow priv_app sensors_persist_file:dir getattr;
 
-
-# ReadMac
-allow readmac self:capability dac_override;
-
 # SystemApp
 binder_call(system_app, netd);
 allow system_app apk_data_file:dir write;
