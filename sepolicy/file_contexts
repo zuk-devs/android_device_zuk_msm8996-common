@@ -1,6 +1,10 @@
 # Partitions
 /dev/block/platform/soc/(624000\.ufshc|7464900\.sdhci)/by-name/persist       u:object_r:persist_block_device:s0
 
+# Binaries
+/vendor/bin/wcg_mac_tool    u:object_r:wcg_mac_exec:s0
+/vendor/bin/init.wlan.sh    u:object_r:qti_init_shell_exec:s0
+
 # Devices
 /dev/fpc1020                          u:object_r:fpc1020_device:s0
 /dev/tfa9890                          u:object_r:audio_device:s0
