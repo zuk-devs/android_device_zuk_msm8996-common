@@ -3,3 +3,9 @@ allow qti_init_shell vendor_radio_data_file:dir { getattr open read search setat
 allow qti_init_shell vfat:file { getattr open read setattr };
 allow qti_init_shell vfat:dir { open read search };
 allow qti_init_shell file_contexts_file:file { getattr open read };
+
+# Allow qti_init_shell to fully access wlan_mac.bin persist file
+allow qti_init_shell mnt_vendor_file:dir rw_dir_perms;
+allow qti_init_shell mnt_vendor_file:file create_file_perms;
+
+get_prop(qti_init_shell, wcg_prop)
