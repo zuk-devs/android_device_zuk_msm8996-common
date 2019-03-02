@@ -44,3 +44,4 @@ allow shell hidl_base_hwservice:hwservice_manager find;
 allow shell system_net_netd_hwservice:hwservice_manager find;
 allow shell system_wifi_keystore_hwservice:hwservice_manager find;
 
+get_prop(shell, wcg_prop)
