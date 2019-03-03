@@ -1,7 +1,4 @@
-allow netmgrd sysfs_msm_subsys:dir search;
-allow netmgrd sysfs_msm_subsys:file { getattr open read setattr };
 allow netmgrd sysfs_net:dir search;
 allow netmgrd sysfs_net:file rw_file_perms;
-allow netmgrd sysfs_soc:dir search;
 allow netmgrd property_socket:sock_file write;
 allow netmgrd init:unix_stream_socket connectto;

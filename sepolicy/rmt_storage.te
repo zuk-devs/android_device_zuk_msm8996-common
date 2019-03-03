@@ -1,4 +1,2 @@
 allow rmt_storage debugfs_rmt:dir search;
 allow rmt_storage debugfs_rmt:file rw_file_perms;
-allow rmt_storage { sysfs_msm_subsys sysfs_rmtfs }:dir search;
-allow rmt_storage sysfs_msm_subsys:file r_file_perms;
