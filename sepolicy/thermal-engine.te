@@ -1,5 +1,3 @@
-typeattribute thermal-engine data_between_core_and_vendor_violators;
-
-allow thermal-engine { sysfs_batteryinfo sysfs_msm_core sysfs_msm_subsys sysfs_usb_supply }:file r_file_perms;
+allow thermal-engine { sysfs_batteryinfo sysfs_usb_supply }:file r_file_perms;
 allow thermal-engine sysfs_batteryinfo:file write;
-allow thermal-engine { sysfs_batteryinfo sysfs_soc sysfs_msm_core sysfs_rmtfs sysfs_msm_subsys sysfs_usb_supply }:dir search;
+allow thermal-engine { sysfs_batteryinfo sysfs_usb_supply }:dir search;

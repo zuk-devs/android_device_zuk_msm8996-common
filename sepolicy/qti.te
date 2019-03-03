@@ -1,3 +1,0 @@
-allow qti sysfs_msm_subsys:dir search;
-allow qti sysfs_msm_subsys:file { getattr open read setattr };
-allow qti sysfs_soc:dir search;

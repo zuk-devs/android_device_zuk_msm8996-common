@@ -1,1 +1,0 @@
-allow hal_graphics_composer_default { sysfs_camera sysfs_video }:dir search;

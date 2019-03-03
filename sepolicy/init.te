@@ -1,9 +1,3 @@
-typeattribute init data_between_core_and_vendor_violators;
-
-allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
-allow init debugfs_ipc:dir relabelfrom;
-allow init debugfs_ipc:file relabelfrom;
-allow init proc_kernel_sched:file write;
 allow init { ion_device tee_device }:chr_file ioctl;
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init sysfs_fingerprint:file { open read setattr write };

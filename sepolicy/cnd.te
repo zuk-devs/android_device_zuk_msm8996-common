@@ -1,5 +1,3 @@
-allow cnd { sysfs_msm_subsys sysfs_soc }:dir search;
-allow cnd sysfs_msm_subsys:file { getattr open read setattr };
 allow cnd system_data_file:file { getattr ioctl read };
 
 add_hwservice(cnd, hal_cne_hwservice)

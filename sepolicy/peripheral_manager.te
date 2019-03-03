@@ -1,3 +1,2 @@
-allow vendor_per_mgr { sysfs_msm_subsys vfat }:dir search;
-allow vendor_per_mgr sysfs_msm_subsys:file { getattr open read setattr };
+allow vendor_per_mgr vfat:dir search;
 allow vendor_per_mgr vfat:file { open read };

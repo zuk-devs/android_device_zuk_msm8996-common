@@ -1,4 +1,4 @@
-allow system_app { sysfs_fpc_proximity sysfs_fingerprint }:file rw_file_perms;
+allow system_app sysfs_fingerprint:file rw_file_perms;
 allow system_app sysfs_fingerprint:dir search;
 allow system_app shell_prop:property_service set;
 
