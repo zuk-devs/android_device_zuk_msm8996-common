@@ -405,7 +405,6 @@ vendor/lib64/libadreno_utils.so|a87e0e67b0c33f505ecbc48087fd37b00c952f48
 vendor/lib64/libbccQTI.so|dad14c838bec4dd153a09f2b3d01e01875377ba6
 vendor/lib64/libC2D2.so|6e48cf41fe85fdedd8648873b8451c2e264eed57
 vendor/lib64/libc2d30_bltlib.so|2029bc033c176ca48bcd2027d1ebd25d7cac4d53
-vendor/lib64/libc2dcolorconvert.so|503f7474255cfe07bf2668192e83af9f860c81d6
 vendor/lib64/libCB.so|c34b7c049fbd54f8fcab77f47031f3438b676966
 vendor/lib64/libgsl.so|877e8bc5062951ef450533fd9f07a530a771e93c
 vendor/lib64/libllvm-glnext.so|ad571ceb8f1fd505ee29d4c320423f46e836b611
@@ -425,7 +424,6 @@ vendor/lib/libadreno_utils.so|f6fd2917558a00aef9196ee815fd8f9b33b91ab5
 vendor/lib/libbccQTI.so|2876950b59585cf4ed60141c87b5f42bc84184aa
 vendor/lib/libC2D2.so|1a555aae15adb00b0cc0b43e14136956c0cd2c87
 vendor/lib/libc2d30_bltlib.so|55f4a13ce639973c9acf6cda4f682b531766b11b
-vendor/lib/libc2dcolorconvert.so|4fbd9e892e6d0441694280a2aa83f67671a17955
 vendor/lib/libCB.so|c0d96d6a9608e03856a296a06f4316418fd3a376
 vendor/lib/libgsl.so|b9e2b05df65e005aa2670f096f15bbb530d4ef24
 vendor/lib/libllvm-glnext.so|587d59054979d43957fd7aeaa0571f29720f372e
