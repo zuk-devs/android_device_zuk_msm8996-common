@@ -1,3 +1,2 @@
-allow kernel debugfs_ipc:dir search;
-allow kernel vfat:dir { open search };
+allow kernel vfat:dir search;
 allow kernel vfat:file open;

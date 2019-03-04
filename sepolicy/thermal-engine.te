@@ -1,13 +1,3 @@
-typeattribute thermal-engine data_between_core_and_vendor_violators;
-allow thermal-engine sysfs_msm_subsys:dir search;
-allow thermal-engine sysfs_msm_subsys:file { getattr open read setattr };
-allow thermal-engine sysfs_usb_supply:dir search;
-allow thermal-engine sysfs_usb_supply:file r_file_perms;
-allow thermal-engine sysfs_soc:dir search;
-allow thermal-engine sysfs_msm_core:dir search;
-allow thermal-engine sysfs_msm_core:file r_file_perms;
-allow thermal-engine sysfs_rmtfs:dir search;
-allow thermal-engine system_data_file:dir { add_name remove_name write };
-allow thermal-engine system_data_file:file open;
-allow thermal-engine sysfs_batteryinfo:dir { open read search write };
-allow thermal-engine sysfs_batteryinfo:file { open read write };
+allow thermal-engine { sysfs_batteryinfo sysfs_usb_supply }:file r_file_perms;
+allow thermal-engine sysfs_batteryinfo:file write;
+allow thermal-engine { sysfs_batteryinfo sysfs_usb_supply }:dir search;

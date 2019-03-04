@@ -1,2 +1,0 @@
-allow hal_sensors_default sysfs_msm_subsys:dir search;
-allow hal_sensors_default sysfs_msm_subsys:file  { getattr open read setattr };

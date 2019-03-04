@@ -1,18 +1,11 @@
 # Camera
-persist.camera.                                               u:object_r:camera_prop:s0
+persist.camera.                                  u:object_r:camera_prop:s0
 
 # BootParsed
-sys.post_boot.parsed       u:object_r:vendor_mpctl_prop:s0
-
-# Netmgrd
-persist.net.doxlat                                            u:object_r:vendor_xlat_prop:s0
-
-# Perf
-ro.min_freq_0                 u:object_r:freq_prop:s0
-ro.min_freq_4                 u:object_r:freq_prop:s0
+sys.post_boot.parsed                             u:object_r:vendor_mpctl_prop:s0
 
 # Qseecomd
-sys.listeners.registered                                      u:object_r:vendor_tee_listener_prop:s0
+sys.listeners.registered                         u:object_r:vendor_tee_listener_prop:s0
 
 # WCG
 sys.wifimac                                      u:object_r:wcg_prop:s0

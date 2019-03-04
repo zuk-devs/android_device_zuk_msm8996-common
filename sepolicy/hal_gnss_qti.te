@@ -1,3 +1,0 @@
-allow hal_gnss_qti sysfs_msm_subsys:dir search;
-allow hal_gnss_qti sysfs_soc:dir search;
-allow hal_gnss_qti sysfs_msm_subsys:file { getattr open read setattr };

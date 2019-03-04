@@ -1,4 +1,0 @@
-allow platform_app bg_boot_complete_prop:file read;
-allow platform_app bg_daemon_prop:file read;
-allow platform_app boottime_prop:file read;
-allow platform_app radio_data_file:dir getattr;
