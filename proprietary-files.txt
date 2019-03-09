@@ -332,25 +332,25 @@ vendor/bin/dpmQmiMgr|31e019a02d25a959a2edfe2c9a04ab958562bb67
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|2af88934e4039edaac842576a1861cbdfe39838b
 vendor/lib64/libdpmqmihal.so|4254cc9f10f6f3d990958c17f4e43d8e9e09c382
 
-# DRM and SEE
-vendor/bin/qseecomd
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/libSecureUILib.so
-vendor/lib64/libStDrvInt.so
-vendor/lib64/libdrmfs.so
-vendor/lib64/libdrmtime.so
-vendor/lib64/libqisl.so
-vendor/lib64/librpmb.so
-vendor/lib64/libsecureui.so
-vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libssd.so
-vendor/lib/libQSEEComAPI.so
+# DRM and SEE - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
+vendor/bin/qseecomd|8ba233a028eec55d2f57ed7c85c6751e8f5c5d16
+vendor/lib64/libGPreqcancel.so|942e96e6c1706b52e0b2f898c5947f16f8612994
+vendor/lib64/libGPreqcancel_svc.so|699c1d86af3a0fe58ff3b9cc927f001ed10ee745
+vendor/lib64/libQSEEComAPI.so|1e695dcc9197c685c294d426822d2cb4e4c9c592
+vendor/lib64/libSecureUILib.so|d1bb44ffb30ab0efbc9d05ad729bac8b71dc28f5
+vendor/lib64/libStDrvInt.so|61eb3821f61fb5b8e5a23f961111f09c93208918
+vendor/lib64/libdrmfs.so|e20cc71ac84a7998626e600f4dd9dfe356a1436a
+vendor/lib64/libdrmtime.so|4efeb1449809aa172e68fe5bf5aa68be0f21387d
+vendor/lib64/libqisl.so|54d0ba8662dcc8bb664c2acc7315fb9bfffc773f
+vendor/lib64/librpmb.so|ba775205529284dc5d2233f11462037538f763af
+vendor/lib64/libsecureui.so|66befbd91628d464b71e1cd523eb111d517a5b84
+vendor/lib64/libsecureui_svcsock.so|ab9ec06666c6c63e4a30b2fe503e6088aab3629d
+vendor/lib64/libssd.so|0e988e6ef7b1d356f4b92a26a61b96a840de1d20
+vendor/lib/libQSEEComAPI.so|3a4de1c673d0e196c553fbfcec0ee4a3275915af
 
-# Gatekeeper
-vendor/lib64/hw/gatekeeper.msm8996.so
-vendor/lib/hw/gatekeeper.msm8996.so
+# Gatekeeper - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
+vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8996.so|c1b386547234815a0d6116b5e4756de66075cd3f
+vendor/lib/hw/gatekeeper.msm8953.so:vendor/lib/hw/gatekeeper.msm8996.so|fb3693904e3b26250157ab5be21ef977971a3382
 
 # GPS - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
 lib64/vendor.qti.gnss@1.0.so|90b465adc4542f16fbdd935d0592df73d778909b
@@ -523,9 +523,9 @@ vendor/lib64/vendor.qti.ims.callinfo@1.0.so|5862ab34c0d040dba63eced727146dd233cf
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|f4eef520bbf98e6e1ac8697ef7eef0109487dba1
 vendor/lib64/vendor.qti.imsrtpservice@1.0.so|559a2dbf409d86746ed4303f2e0089256bb91a07
 
-# Keystore
-vendor/lib64/hw/keystore.msm8996.so
-vendor/lib/hw/keystore.msm8996.so
+# Keystore - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
+vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8996.so|f71f1439c9c356ce05d88b876253b4e3dcb10f4b
+vendor/lib/hw/keystore.msm8953.so:vendor/lib/hw/keystore.msm8996.so|fdfa414efe6205bfd7750726ae730e4bd3c1ba00
 
 # Media - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
 -vendor/lib64/libgpustats.so|35eaab728b21fe7cd33b821bf5cf13ea1117cd90
@@ -722,13 +722,13 @@ vendor/bin/time_daemon|d67f1c50583b5efca0f5baea00a51056a798b7f8
 vendor/lib/libtime_genoff.so|24f6064818bc53c5ea17a3608766e3cc1e889f64
 vendor/lib64/libtime_genoff.so|8f4c1f9ace6af463b241b130d6872b5d39cc7b2a
 
-# TUI - from bardock-pro - OPM1.171019.026
-lib/vendor.qti.hardware.tui_comm@1.0.so|21e76b9d6e0aba4b601a24ec38e81a30e6d2f319
-lib64/vendor.qti.hardware.tui_comm@1.0.so|23259afec43beef5d2314ae814e00475ee34232e
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|df9b713b1f04917646f40d37f1900f013e346ad8
+# TUI - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
+lib/vendor.qti.hardware.tui_comm@1.0.so|c0e0c4c9e186d2fcfbb234bf8fcb72091cc78c02
+lib64/vendor.qti.hardware.tui_comm@1.0.so|acbbf758ec18b79b7fa0b557a55fd700fa76d577
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|86c327a8310fcc42f69c85ec0868c630903c7d79
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so|cdb0454905bcd5124ccb6e69df6f8256ce203250
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so|359b87c1daad8c430005c86c451a7b095a934d91
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|c0e0c4c9e186d2fcfbb234bf8fcb72091cc78c02
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|acbbf758ec18b79b7fa0b557a55fd700fa76d577
 
 # wcg_mac_tool
 -sbin/wcg_mac_tool:vendor/bin/wcg_mac_tool|390a5a2425fab861c753743b1df3808acb1ee7d6
