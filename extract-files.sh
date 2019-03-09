@@ -76,8 +76,17 @@ function blob_fixup() {
         ;;
 
     # Hex edit /firmware/image to /vendor/firmware_mnt to delete the outdated rootdir symlinks
-    vendor/lib/hw/keystore.msm8996.so | vendor/lib/hw/gatekeeper.msm8996.so | vendor/lib64/hw/fingerprint.qcom.so | vendor/lib64/hw/keystore.msm8996.so | vendor/lib64/hw/gatekeeper.msm8996.so | vendor/lib64/libSecureUILib.so)
+    vendor/lib64/hw/fingerprint.qcom.so)
         sed -i "s|/firmware/image|/vendor/f/image|g" "${2}"
+        ;;
+
+    # Hex edit msm8953 hals to msm8996
+    vendor/lib/hw/gatekeeper.msm8996.so | vendor/lib64/hw/gatekeeper.msm8996.so)
+        sed -i "s|gatekeeper.msm8953.so|gatekeeper.msm8996.so|g" "${2}"
+        ;;
+
+    vendor/lib/hw/keystore.msm8996.so | vendor/lib64/hw/keystore.msm8996.so)
+        sed -i "s|keystore.msm8953.so|keystore.msm8996.so|g" "${2}"
         ;;
 
     # Hex edit /bt_firmware to /vendor/btfw to delete the outdated rootdir symlinks
