@@ -163,18 +163,6 @@
         android:key="volume_category"
         android:title="@string/volume_category">
 
-     <org.aospextended.extensions.preference.SystemSettingSwitchPreference
-        android:key="volume_button_music_control"
-        android:summary="@string/volume_rocker_music_controls_summary"
-        android:title="@string/volume_rocker_music_controls_title"
-        android:defaultValue="false" />
-
-     <Preference
-        android:key="vol_steps"
-        android:fragment="org.aospextended.extensions.fragments.VolumeStepsFragment"
-        android:title="@string/volume_steps_fragment_title"
-        android:summary="@string/volume_steps_summary" />
-
     <!-- Audio Panel view  -->
     <PreferenceScreen
         android:key="volume_panel"
@@ -183,11 +171,10 @@
         android:summary="@string/audio_panel_view_summary"
         android:fragment="org.aospextended.extensions.fragments.VolumePanel" />
 
-    <!-- Volume keys control media stream -->
-    <org.aospextended.extensions.preference.SystemSettingSwitchPreference
-        android:key="volume_keys_control_ring_tone"
-        android:title="@string/volume_keys_control_ring_tone_title"
-        android:summary="@string/volume_keys_control_ring_tone_summary"
+     <org.aospextended.extensions.preference.SystemSettingSwitchPreference
+        android:key="volume_button_music_control"
+        android:summary="@string/volume_rocker_music_controls_summary"
+        android:title="@string/volume_rocker_music_controls_title"
         android:defaultValue="false" />
 
     <ListPreference
