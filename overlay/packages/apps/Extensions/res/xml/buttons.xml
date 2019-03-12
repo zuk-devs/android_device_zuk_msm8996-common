@@ -169,6 +169,12 @@
         android:title="@string/volume_rocker_music_controls_title"
         android:defaultValue="false" />
 
+     <Preference
+        android:key="vol_steps"
+        android:fragment="org.aospextended.extensions.fragments.VolumeStepsFragment"
+        android:title="@string/volume_steps_fragment_title"
+        android:summary="@string/volume_steps_summary" />
+
     <!-- Volume keys control media stream -->
     <org.aospextended.extensions.preference.SystemSettingSwitchPreference
         android:key="volume_keys_control_ring_tone"
