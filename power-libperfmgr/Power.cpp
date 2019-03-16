@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.power@1.3-service.crosshatch-libperfmgr"
+#define LOG_TAG "android.hardware.power@1.3-service.zuk_8996-libperfmgr"
 
 #include <android-base/file.h>
 #include <android-base/logging.h>

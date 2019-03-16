@@ -28,7 +28,7 @@
  */
 
 #define LOG_NIDEBUG 0
-#define LOG_TAG "android.hardware.power@1.3-service.crosshatch-libperfmgr"
+#define LOG_TAG "android.hardware.power@1.3-service.zuk_8996-libperfmgr"
 
 #include <errno.h>
 #include <inttypes.h>
