@@ -6,3 +6,4 @@ allow init tee_device:chr_file write;
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init sysfs_graphics:lnk_file read;
 allow init system_file:file mounton;
+allow init hal_vibrator_default:process noatsecure;
