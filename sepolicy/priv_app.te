@@ -10,3 +10,9 @@ binder_call(priv_app, hal_memtrack_default);
 dontaudit priv_app device:dir read;
 dontaudit priv_app proc_interrupts:file read;
 dontaudit priv_app proc_modules:file read;
+
+allow priv_app sysfs:dir open;
+allow priv_app sysfs_pcie:file { open read };
+allow priv_app sysfs_wifi:file { open read };
+allow priv_app sysfs_android_usb:file open;
+allow priv_app system_app_data_file:dir getattr;

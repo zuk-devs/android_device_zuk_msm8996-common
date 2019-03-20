@@ -1,0 +1,1 @@
+allow sensors sysfs:file { open read };

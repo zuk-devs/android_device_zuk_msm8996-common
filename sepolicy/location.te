@@ -1,1 +1,2 @@
 allow location location_data_file:sock_file unlink;
+allow location sysfs:file { open read };
