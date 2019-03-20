@@ -1,0 +1,1 @@
+allow hal_rcsservice sysfs:file { open read };

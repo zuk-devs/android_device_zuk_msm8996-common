@@ -1,2 +1,3 @@
 allow rmt_storage debugfs_rmt:dir search;
 allow rmt_storage debugfs_rmt:file rw_file_perms;
+allow rmt_storage sysfs:file { open read };

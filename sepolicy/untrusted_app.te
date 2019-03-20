@@ -1,2 +1,4 @@
 dontaudit untrusted_app_all sysfs_zram:dir search;
 dontaudit untrusted_app_all sysfs_zram:file r_file_perms;
+allow untrusted_app vendor_camera_prop:file { getattr open read };
+allow untrusted_app proc_vmstat:file getattr;
