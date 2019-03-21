@@ -6,7 +6,8 @@ allow hal_power_default device_latency:chr_file rw_file_perms;
 allow hal_power_default sysfs_devfreq:dir search;
 allow hal_power_default sysfs_devfreq:file { open write };
 allow hal_power_default sysfs_kgsl:file { open write };
-allow hal_power_default sysfs_kgsl:lnk_file { open read write };
 
 # To get/set powerhal state property
 set_prop(hal_power_default, power_prop)
+
+allow hal_power_default device_latency:chr_file { open write };

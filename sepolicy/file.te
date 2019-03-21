@@ -5,9 +5,6 @@ type thermal_data_file, core_data_file_type, data_file_type, file_type;
 # debugfs
 type debugfs_rmt, debugfs_type, fs_type;
 
-# msm_irqbalance
-type proc_irq, fs_type, proc_type;
-
 # /sys
 type sysfs_fingerprint, sysfs_type, fs_type;
 type sysfs_pcie, sysfs_type, fs_type, mlstrustedobject;
