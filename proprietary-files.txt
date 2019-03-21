@@ -349,8 +349,8 @@ vendor/lib64/libssd.so|0e988e6ef7b1d356f4b92a26a61b96a840de1d20
 vendor/lib/libQSEEComAPI.so|3a4de1c673d0e196c553fbfcec0ee4a3275915af
 
 # Gatekeeper - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
-vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8996.so|c1b386547234815a0d6116b5e4756de66075cd3f
-vendor/lib/hw/gatekeeper.msm8953.so:vendor/lib/hw/gatekeeper.msm8996.so|fb3693904e3b26250157ab5be21ef977971a3382
+vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8996.so|99caa2bf2818a6228afc17e9bba4d135f1958e6b
+vendor/lib/hw/gatekeeper.msm8953.so:vendor/lib/hw/gatekeeper.msm8996.so|01d46ffc309686c0f1cc2b680f72e1bf020581b9
 
 # GPS - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
 lib64/vendor.qti.gnss@1.0.so|90b465adc4542f16fbdd935d0592df73d778909b
@@ -524,8 +524,8 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|f4eef520bbf98e6e1ac869
 vendor/lib64/vendor.qti.imsrtpservice@1.0.so|559a2dbf409d86746ed4303f2e0089256bb91a07
 
 # Keystore - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
-vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8996.so|f71f1439c9c356ce05d88b876253b4e3dcb10f4b
-vendor/lib/hw/keystore.msm8953.so:vendor/lib/hw/keystore.msm8996.so|fdfa414efe6205bfd7750726ae730e4bd3c1ba00
+vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8996.so|455b7f9ec7b5c7acd6ada0789a529468e71f6f45
+vendor/lib/hw/keystore.msm8953.so:vendor/lib/hw/keystore.msm8996.so|bf2f1c779cf88ff5ab69b3044b45dcb8974d0b47
 
 # Media - from LA.UM.7.6.r1-02800-89xx.0 - daisy 9/PKQ1.180917.001/V10.0.1.0PDLMIFJ
 -vendor/lib64/libgpustats.so|35eaab728b21fe7cd33b821bf5cf13ea1117cd90
