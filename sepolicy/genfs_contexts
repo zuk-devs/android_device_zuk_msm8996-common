@@ -1,5 +1,3 @@
-genfscon proc /irq                         u:object_r:proc_irq:s0
-
 # debugfs
 genfscon debugfs /rmt_storage              u:object_r:debugfs_rmt:s0
 
