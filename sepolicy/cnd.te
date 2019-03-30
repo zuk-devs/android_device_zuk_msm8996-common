@@ -1,5 +1,3 @@
 allow cnd system_data_file:file { getattr ioctl read };
 
-add_hwservice(cnd, hal_cne_hwservice)
-
 allow cnd sysfs:file { open read };
