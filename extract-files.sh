@@ -106,6 +106,11 @@ function blob_fixup() {
     vendor/bin/mm-qcamera-daemon)
         sed -i "s|/data/vendor/camera/cam_socket%d|/data/vendor/qcam/camer_socket%d|g" "${2}"
         ;;
+
+	# Remove libmedia.so dependency from lib-dplmedia.so
+    vendor/lib64/lib-dplmedia.so)
+        patchelf --remove-needed libmedia.so "${2}"
+        ;;
     esac
 }
 
