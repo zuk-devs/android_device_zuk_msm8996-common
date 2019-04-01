@@ -1,3 +1,2 @@
 dontaudit vold proc_irq:dir read;
 allow vold sysfs_scsi_devices_0000:file w_file_perms;
-allow vold mnt_vendor_file:dir { open read };

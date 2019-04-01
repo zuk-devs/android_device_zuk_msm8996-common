@@ -1,1 +1,0 @@
-allow energyawareness sysfs_soc:dir search;

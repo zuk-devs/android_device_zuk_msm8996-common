@@ -1,4 +1,1 @@
-allow ims sysfs_msm_subsys:dir search;
-allow ims sysfs_msm_subsys:file { getattr open read setattr };
-allow ims sysfs_soc:dir search;
 allow ims ctl_default_prop:property_service set;

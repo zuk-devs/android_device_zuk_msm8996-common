@@ -1,9 +1,2 @@
 allow charger rtc_device:chr_file r_file_perms;
-allow charger mnt_vendor_file:dir { add_name create getattr read search write };
-allow charger mnt_vendor_file:file { append create getattr read setattr write open };
-allow charger self:capability { chown dac_override };
-allow charger sysfs_battery_supply:file { getattr open read };
-allow charger sysfs_usb_supply:file { getattr open read };
-allow charger sysfs:file { getattr open read write };
-allow charger device:dir { open read };
-allow charger sysfs_graphics:file { open read write };
+allow charger sysfs_battery_supply:file read;

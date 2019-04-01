@@ -1,4 +1,1 @@
-allow location sysfs_msm_subsys:dir search;
-allow location sysfs_soc:dir search;
-allow location sysfs_msm_subsys:file { getattr open read setattr };
 allow location location_data_file:sock_file unlink;

@@ -1,3 +1,0 @@
-allow hal_dpmQmiMgr { sysfs_msm_subsys sysfs_soc }:dir search;
-allow hal_dpmQmiMgr sysfs_msm_subsys:file { getattr open read setattr };
-allow hal_dpmQmiMgr sysfs_soc:dir search;
