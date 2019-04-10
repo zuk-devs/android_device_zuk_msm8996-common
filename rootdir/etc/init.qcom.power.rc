@@ -164,7 +164,7 @@ on property:sys.boot_completed=1
     trigger enable-low-power
 
     # Set I/O squeduler
-    setprop sys.io.scheduler "bfq"
+    setprop sys.io.scheduler "cfq"
 
     # update cpusets now that boot is complete and we want better load balancing
     write /dev/cpuset/top-app/cpus 0-3
