@@ -1,9 +1,6 @@
 # Camera
 persist.camera.                                  u:object_r:camera_prop:s0
 
-# BootParsed
-sys.post_boot.parsed                             u:object_r:vendor_mpctl_prop:s0
-
 # OEM unlocking
 ro.oem_unlock_supported                          u:object_r:oem_unlock_prop:s0
 
