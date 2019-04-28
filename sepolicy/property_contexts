@@ -1,9 +1,6 @@
 # Camera
 persist.camera.                                  u:object_r:camera_prop:s0
 
-# BootParsed
-sys.post_boot.parsed                             u:object_r:vendor_mpctl_prop:s0
-
 # Qseecomd
 sys.listeners.registered                         u:object_r:vendor_tee_listener_prop:s0
 
