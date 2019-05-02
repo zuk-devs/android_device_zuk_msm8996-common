@@ -13,6 +13,7 @@ type sysfs_fingerprint, sysfs_type, fs_type;
 type sysfs_pcie, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_wifi, sysfs_type, fs_type, mlstrustedobject;
 type sysfs_scsi_devices_0000, sysfs_type, fs_type;
+type sysfs_doubletap, sysfs_type, fs_type;
 
 # /vendor
 type idc_file, file_type, vendor_file_type;

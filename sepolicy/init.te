@@ -1,11 +1,7 @@
 allow init { ion_device tee_device }:chr_file ioctl;
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init sysfs_fingerprint:file { open read setattr write };
-allow init sysfs:file setattr;
 allow init tee_device:chr_file write;
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init sysfs_graphics:lnk_file read;
-allow init system_file:file mounton;
-allow init hal_vibrator_default:process noatsecure;
-allow init sysfs_scsi_devices_0000:dir relabelfrom;
-allow init sysfs_scsi_devices_0000:file relabelfrom;
+allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };

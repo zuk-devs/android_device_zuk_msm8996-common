@@ -4,4 +4,3 @@ allow hal_audio_default vendor_data_file:file create_file_perms;
 allow hal_audio_default vendor_data_file:dir rw_dir_perms;
 allow hal_audio_default thermal_socket:sock_file write;
 allow hal_audio_default thermal-engine:unix_stream_socket connectto;
-allow hal_audio_default sysfs:dir { open read };

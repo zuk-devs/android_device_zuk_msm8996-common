@@ -1,2 +1,2 @@
-allow snap_app vendor_camera_prop:file { getattr open };
+allow snap_app vendor_camera_prop:file { getattr open read };
 allow snap_app system_app_data_file:dir getattr;

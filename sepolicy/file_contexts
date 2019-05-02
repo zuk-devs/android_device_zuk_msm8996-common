@@ -1,7 +1,6 @@
 # Binaries
 /(vendor|system/vendor)/bin/init.bt.sh                u:object_r:qti_init_shell_exec:s0
-/vendor/bin/init.wlan.sh              u:object_r:qti_init_shell_exec:s0
-/vendor/bin/msm_irqbalance            u:object_r:irqbalance_exec:s0
+/(vendor|system/vendor)/bin/init.wlan.sh              u:object_r:qti_init_shell_exec:s0
 
 # Data files
 /data/fpc(/.*)?                       u:object_r:fpc_data_file:s0
@@ -13,12 +12,11 @@
 /dev/tfa9890                          u:object_r:audio_device:s0
 
 # HALs
-/vendor/bin/hw/android\.hardware\.light@2\.0-service\.zuk_8996       		                    u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service\.zuk_msm8996-libperfmgr	u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.zuk_8996       		    	u:object_r:hal_light_default_exec:s0
 
 # Misc files on /vendor
-/vendor/usr/idc(/.*)?                                u:object_r:idc_file:s0
-/vendor/usr/keylayout(/.*)?                          u:object_r:keylayout_file:s0
+/(vendor|system/vendor)/usr/idc(/.*)?                                u:object_r:idc_file:s0
+/(vendor|system/vendor)/usr/keylayout(/.*)?                          u:object_r:keylayout_file:s0
 
 # Sys files
 /sys/devices/soc/soc:fpc1020(/.*)?                   u:object_r:sysfs_fingerprint:s0

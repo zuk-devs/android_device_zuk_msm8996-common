@@ -1,6 +1,4 @@
 allow system_server vendor_alarm_boot_prop:file r_file_perms;
-allow system_server install_data_file:file getattr;
-allow system_server zygote:process getpgid;
 allow system_server sysfs_vibrator:file read;
 
 # /vendor/usr/keylayout
