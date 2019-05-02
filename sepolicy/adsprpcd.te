@@ -1,1 +1,1 @@
-allow adsprpcd_file self:filesystem { associate getattr };
+allow adsprpcd_file self:filesystem associate;

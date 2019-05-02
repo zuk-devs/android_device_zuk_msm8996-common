@@ -1,2 +1,0 @@
-allow hal_bluetooth_qti vfat:dir create_dir_perms;
-allow hal_bluetooth_qti vfat:file create_file_perms;

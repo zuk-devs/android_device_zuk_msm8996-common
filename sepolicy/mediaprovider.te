@@ -1,1 +1,0 @@
-allow mediaprovider{ cache_private_backup_file cache_recovery_file }:dir r_dir_perms;
