@@ -152,6 +152,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.rat_on=combine
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.protected_contents=true
+
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.rmnet.data.enable=true \
