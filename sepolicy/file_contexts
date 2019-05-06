@@ -2,6 +2,10 @@
 /(vendor|system/vendor)/bin/init.wlan.sh              u:object_r:qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/wcg_mac_tool              u:object_r:wcg_mac_exec:s0
 
+# Bluetooth
+/sys/devices/vendor/vendor:bt_qca6174/extldo                        u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/vendor/vendor:bt_qca6174/rfkill/rfkill0/state          u:object_r:sysfs_bluetooth_writable:s0
+
 # Data files
 /data/fpc(/.*)?                       u:object_r:fpc_data_file:s0
 /data/decrypt\.txt                    u:object_r:thermal_data_file:s0
