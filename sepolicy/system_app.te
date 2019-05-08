@@ -7,8 +7,4 @@ binder_call(system_app, wificond);
 dontaudit system_app netd_service:service_manager find;
 dontaudit system_app installd_service:service_manager find;
 
-userdebug_or_eng(`
-	permissive system_app;
-')
-
 allow system_app sysfs:file getattr;
