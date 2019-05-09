@@ -5,4 +5,8 @@ allow qti_init_shell file_contexts_file:file { getattr open read };
 allow qti_init_shell mnt_vendor_file:dir rw_dir_perms;
 allow qti_init_shell mnt_vendor_file:file create_file_perms;
 
+# Allow qti_init_shell to read cmdline
+allow qti_init_shell proc_cmdline:file { getattr open read };
+
 get_prop(qti_init_shell, wcg_prop)
+set_prop(qti_init_shell, oem_unlock_prop)

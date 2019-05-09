@@ -284,10 +284,6 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     netutils-wrapper-1.0
 
-# OEM Unlock reporting
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=1
-
 # OMX
 PRODUCT_PACKAGES += \
     libextmedia_jni \
