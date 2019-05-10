@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2016 The CyanogenMod Project
- * Copyright (c) 2018 The LineageOS Project
+ *               2018-2019 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,9 +25,17 @@ import android.content.IntentFilter;
 import android.os.IBinder;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PocketModeService extends Service {
     private static final String TAG = "PocketModeService";
     private static final boolean DEBUG = false;
+
+    private static final String CUST_INTENT = "org.lineageos.settings.device.CUST_UPDATE";
+    private static final String CUST_INTENT_EXTRA = "pocketmode_service";
+
+    private static List<BroadcastReceiver> receivers = new ArrayList<BroadcastReceiver>();
 
     private ProximitySensor mProximitySensor;
 
@@ -36,9 +44,8 @@ public class PocketModeService extends Service {
         if (DEBUG) Log.d(TAG, "Creating service");
         mProximitySensor = new ProximitySensor(this);
 
-        IntentFilter screenStateFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
-        screenStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
-        registerReceiver(mScreenStateReceiver, screenStateFilter);
+        IntentFilter custFilter = new IntentFilter(CUST_INTENT);
+        registerReceiver(mUpdateReceiver, custFilter);
     }
 
     @Override
@@ -51,7 +58,10 @@ public class PocketModeService extends Service {
     public void onDestroy() {
         if (DEBUG) Log.d(TAG, "Destroying service");
         super.onDestroy();
-        this.unregisterReceiver(mScreenStateReceiver);
+        if (receivers.contains(mScreenStateReceiver)) {
+            this.unregisterReceiver(mScreenStateReceiver);
+        }
+        this.unregisterReceiver(mUpdateReceiver);
         mProximitySensor.disable();
     }
 
@@ -77,6 +87,22 @@ public class PocketModeService extends Service {
                 onDisplayOn();
             } else if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
                 onDisplayOff();
+            }
+        }
+    };
+
+    private BroadcastReceiver mUpdateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getBooleanExtra(CUST_INTENT_EXTRA, false)) {
+                IntentFilter screenStateFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
+                screenStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
+                registerReceiver(mScreenStateReceiver, screenStateFilter);
+                receivers.add(mScreenStateReceiver);
+            } else if (receivers.contains(mScreenStateReceiver)) {
+                unregisterReceiver(mScreenStateReceiver);
+                receivers.remove(mScreenStateReceiver);
+                mProximitySensor.disable();
             }
         }
     };
