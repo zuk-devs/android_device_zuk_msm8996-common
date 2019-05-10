@@ -70,10 +70,7 @@ public class Startup extends BroadcastReceiver {
     }
 
     static boolean hasButtonProcs() {
-        return (FileUtils.fileExists(Constants.CYTTSP_BUTTON_SWAP_NODE) ||
-                FileUtils.fileExists(Constants.FP_HOME_KEY_NODE) ||
-                FileUtils.fileExists(Constants.FP_WAKEUP_NODE) ||
-                FileUtils.fileExists(Constants.TOUCHPANEL_BUTTON_SWAP_NODE));
+        return (FileUtils.fileExists(Constants.FP_WAKEUP_NODE));
     }
 
     private void disableComponent(Context context, String component) {

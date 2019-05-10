@@ -83,9 +83,7 @@ public class ConfigPanelSearchIndexablesProvider extends SearchIndexablesProvide
         if (!PackageManagerUtils.isAppInstalled(context, "org.lineageos.pocketmode")) {
             keys.add(Constants.FP_POCKETMODE_KEY);
         }
-        if (!FileUtils.fileExists(Constants.FP_HOME_KEY_NODE) &&
-                !FileUtils.fileExists(Constants.FP_WAKEUP_NODE)) {
-            keys.add(Constants.FP_HOME_KEY);
+        if (!FileUtils.fileExists(Constants.FP_WAKEUP_NODE)) {
             keys.add(Constants.FP_WAKEUP_KEY);
         }
         return keys;

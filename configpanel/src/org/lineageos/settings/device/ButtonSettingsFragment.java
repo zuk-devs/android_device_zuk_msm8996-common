@@ -117,8 +117,7 @@ public class ButtonSettingsFragment extends PreferenceFragment
         }
 
         // Hide fingerprint features if the device doesn't support them
-        if (!FileUtils.fileExists(Constants.FP_HOME_KEY_NODE) &&
-                !FileUtils.fileExists(Constants.FP_WAKEUP_NODE)) {
+        if (!FileUtils.fileExists(Constants.FP_WAKEUP_NODE)) {
             getPreferenceScreen().removePreference(fingerprintCategory);
         }
     }

@@ -17,19 +17,9 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
-        android:key="button_swap"
-        android:title="@string/button_swap_title"
-        android:summary="@string/button_swap_summary" />
-
     <PreferenceCategory
         android:key="fp_key"
         android:title="@string/fingerprint_title" >
-
-        <SwitchPreference
-            android:key="fp_home"
-            android:title="@string/fingerprint_as_home_title"
-            android:summary="@string/fingerprint_as_home_summary" />
 
         <SwitchPreference
             android:key="fp_wakeup"
