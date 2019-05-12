@@ -48,9 +48,6 @@ endif
 $(BT_FIRMWARE_MOUNT_POINT):
 	@echo "Creating $(BT_FIRMWARE_MOUNT_POINT)"
 	@mkdir -p $(TARGET_OUT_VENDOR)/bt_firmware
-ifneq ($(TARGET_MOUNT_POINTS_SYMLINKS),false)
-	@ln -sf /vendor/bt_firmware $(TARGET_OUT_VENDOR)/btfw
-endif
 
 $(DSP_MOUNT_POINT):
 	@echo "Creating $(DSP_MOUNT_POINT)"

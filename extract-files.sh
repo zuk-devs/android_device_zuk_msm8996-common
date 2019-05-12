@@ -80,20 +80,6 @@ function blob_fixup() {
         sed -i "s|/firmware/image|/vendor/f/image|g" "${2}"
         ;;
 
-    # Hex edit msm8953 hals to msm8996
-    vendor/lib/hw/gatekeeper.msm8996.so | vendor/lib64/hw/gatekeeper.msm8996.so)
-        sed -i "s|gatekeeper.msm8953.so|gatekeeper.msm8996.so|g" "${2}"
-        ;;
-
-    vendor/lib/hw/keystore.msm8996.so | vendor/lib64/hw/keystore.msm8996.so)
-        sed -i "s|keystore.msm8953.so|keystore.msm8996.so|g" "${2}"
-        ;;
-
-    # Hex edit /bt_firmware to /vendor/btfw to delete the outdated rootdir symlinks
-    vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so)
-        sed -i "s|/bt_firmware|/vendor/btfw|g" "${2}"
-        ;;
-
     # Hex edit libaudcal.so to store acdbdata in new paths
     vendor/lib/libaudcal.so | vendor/lib64/libaudcal.so)
         sed -i "s|/data/vendor/misc/audio/acdbdata/delta/|/data/vendor/audio/acdbdata/delta/\x00\x00\x00\x00\x00|g" "${2}"
