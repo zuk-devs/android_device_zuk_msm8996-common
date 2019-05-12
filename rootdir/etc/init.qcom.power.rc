@@ -65,12 +65,6 @@ on charger
     write /sys/module/msm_thermal/parameters/enabled "N"
     start thermal-engine
 
-on property:sys.post_boot.parsed=1
-    # Setup permission for powerHAL
-    chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
-    chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
-    chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length
-
 on enable-low-power
     # Disable thermal hotplug to switch governor
     write /sys/module/msm_thermal/core_control/enabled 0
@@ -163,7 +157,7 @@ on enable-low-power
 on property:sys.boot_completed=1
     trigger enable-low-power
 
-    # Set I/O squeduler
+    # Set I/O scheduler
     setprop sys.io.scheduler "cfq"
 
     # update cpusets now that boot is complete and we want better load balancing
