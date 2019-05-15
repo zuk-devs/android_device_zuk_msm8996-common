@@ -17,8 +17,8 @@
 #
 
 # Set the proper hardware based wlan mac
-if [[ ! -f /persist/wlan_mac.bin ]] || [[ $(cat /persist/wlan_mac.bin | grep Intf0MacAddress | sed 's/Intf0MacAddress=//') != $(getprop sys.wifimac | sed 's/://g') ]]; then
-    wifi_mac=$(getprop sys.wifimac | sed 's/://g');
+wifi_mac=$(xxd -p /proc/mac_wifi | tr '[:lower:]' '[:upper:]');
+if [[ ! -f /persist/wlan_mac.bin ]] || [[ $(cat /persist/wlan_mac.bin | grep Intf0MacAddress | sed 's/Intf0MacAddress=//') != $(echo $wifi_mac) ]]; then
 echo "Intf0MacAddress=$wifi_mac
 END" > /persist/wlan_mac.bin
 fi;

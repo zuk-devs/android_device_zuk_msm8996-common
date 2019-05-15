@@ -17,9 +17,11 @@
 #
 
 # Set the proper hardware based BT mac address
+bt_mac=$(xxd -p /proc/mac_bt | tr '[:lower:]' '[:upper:]' | sed 's/.\{2\}/&:/g' | sed 's/.$//');
 bt_mac_path="/data/vendor/bluetooth/bdaddr"
-bt_mac=$(getprop sys.bt.address);
-if [[ ! -f $bt_mac_path ]] || [[ $(echo $bt_mac) != $(cat /data/vendor/bluetooth/bdaddr) ]]; then
+if [[ ! -f $bt_mac_path ]] || [[ $(echo $bt_mac) != $(cat $bt_mac_path) ]]; then
     echo $bt_mac > $bt_mac_path
+    chmod 0644 $bt_mac_path
+    chown bluetooth $bt_mac_path
+    chgrp bluetooth $bt_mac_path
 fi;
-setprop ro.vendor.bt.bdaddr_path $bt_mac_path

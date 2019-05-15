@@ -12,6 +12,4 @@ allow qti_init_shell vendor_bt_data_file:file { create getattr open read write }
 # Allow qti_init_shell to read cmdline
 allow qti_init_shell proc_cmdline:file { getattr open read };
 
-get_prop(qti_init_shell, wcg_prop)
 set_prop(qti_init_shell, oem_unlock_prop)
-set_prop(qti_init_shell, bt_mac_prop)
