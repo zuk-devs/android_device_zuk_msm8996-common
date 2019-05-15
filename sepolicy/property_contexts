@@ -6,19 +6,3 @@ persist.camera.                                  u:object_r:camera_prop:s0
 
 # Qseecomd
 sys.listeners.registered                         u:object_r:vendor_tee_listener_prop:s0
-
-# WCG
-sys.wifimac                                      u:object_r:wcg_prop:s0
-sys.bt.address                                   u:object_r:wcg_prop:s0
-persist.bt.max.hs.connections                    u:object_r:wcg_prop:s0
-gsm.sn1                                          u:object_r:wcg_prop:s0
-sys.customsn.showcode                            u:object_r:wcg_prop:s0
-cdma.meid                                        u:object_r:wcg_prop:s0
-gsm.imei1                                        u:object_r:wcg_prop:s0
-gsm.imei2                                        u:object_r:wcg_prop:s0
-persist.cdma.meid                                u:object_r:wcg_prop:s0
-persist.gsm.imei1                                u:object_r:wcg_prop:s0
-persist.gsm.imei2                                u:object_r:wcg_prop:s0
-gsm.hwid                                         u:object_r:wcg_prop:s0
-gsm.station                                      u:object_r:wcg_prop:s0
-persist.gsm.qlogd.on                             u:object_r:wcg_prop:s0

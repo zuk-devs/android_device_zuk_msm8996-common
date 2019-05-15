@@ -567,13 +567,6 @@ service vendor.ppd /vendor/bin/mm-pp-dpps
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service wcg_mac_tool /vendor/bin/wcg_mac_tool
-    class late_start
-    group root
-    user root
-    disabled
-    oneshot
-
 service wlan-sh /vendor/bin/init.wlan.sh
     class late_start
     user root
@@ -589,7 +582,6 @@ service bt-sh /vendor/bin/init.bt.sh
     oneshot
 
 on property:sys.boot_completed=1
-    start wcg_mac_tool
     start wlan-sh
     start bt-sh
 

@@ -2,7 +2,6 @@
 /(vendor|system/vendor)/bin/init.bt.sh                u:object_r:qti_init_shell_exec:s0
 /vendor/bin/init.wlan.sh              u:object_r:qti_init_shell_exec:s0
 /vendor/bin/msm_irqbalance            u:object_r:irqbalance_exec:s0
-/vendor/bin/wcg_mac_tool              u:object_r:wcg_mac_exec:s0
 
 # Data files
 /data/fpc(/.*)?                       u:object_r:fpc_data_file:s0
