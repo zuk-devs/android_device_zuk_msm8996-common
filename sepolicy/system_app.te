@@ -3,6 +3,7 @@ allow system_app sysfs_fingerprint:dir search;
 allow system_app shell_prop:property_service set;
 
 binder_call(system_app, wificond);
+get_prop(system_app, bt_mac_prop);
 
 dontaudit system_app netd_service:service_manager find;
 dontaudit system_app installd_service:service_manager find;

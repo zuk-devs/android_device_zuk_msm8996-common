@@ -8,4 +8,9 @@ allow qti_init_shell file_contexts_file:file { getattr open read };
 allow qti_init_shell mnt_vendor_file:dir rw_dir_perms;
 allow qti_init_shell mnt_vendor_file:file create_file_perms;
 
+# Allow qti_init_shell to write and read /data/vendor/bluetooth/bdaddr
+allow qti_init_shell vendor_bt_data_file:dir { add_name create search write };
+allow qti_init_shell vendor_bt_data_file:file { create getattr open read write };
+
 get_prop(qti_init_shell, wcg_prop)
+set_prop(qti_init_shell, bt_mac_prop)

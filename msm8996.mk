@@ -149,6 +149,7 @@ PRODUCT_PACKAGES += \
 # Common init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.bt.sh \
     init.msm.usb.configfs.rc \
     init.qcom.rc \
     init.qcom.sh \

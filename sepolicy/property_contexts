@@ -1,3 +1,6 @@
+# Bluetooth
+ro.vendor.bt.bdaddr_path                 	 u:object_r:bt_mac_prop:s0
+
 # Camera
 persist.camera.                                  u:object_r:camera_prop:s0
 

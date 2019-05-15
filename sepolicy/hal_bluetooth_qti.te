@@ -1,2 +1,4 @@
-allow hal_bluetooth_qti vfat:dir create_dir_perms;
-allow hal_bluetooth_qti vfat:file create_file_perms;
+allow hal_bluetooth_qti vfat:file { getattr open read };
+allow hal_bluetooth_qti vfat:dir search;
+allow hal_bluetooth_qti sysfs_bluetooth_writable:file rw_file_perms;
+get_prop(hal_bluetooth_qti, bt_mac_prop)

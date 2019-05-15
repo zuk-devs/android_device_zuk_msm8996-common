@@ -581,9 +581,22 @@ service wlan-sh /vendor/bin/init.wlan.sh
     disabled
     oneshot
 
+service bt-sh /vendor/bin/init.bt.sh
+    class late_start
+    user bluetooth
+    group bluetooth
+    disabled
+    oneshot
+
 on property:sys.boot_completed=1
     start wcg_mac_tool
     start wlan-sh
+    start bt-sh
+
+on property:ro.vendor.bt.bdaddr_path=/data/vendor/bluetooth/bdaddr
+    # Correct perms for bdaddr
+    chmod 0644  /data/vendor/bluetooth/bdaddr
+    chown bluetooth bluetooth /data/vendor/bluetooth/bdaddr
 
 on property:init.svc.vendor.hwcomposer-2-1=stopped
     stop vendor.ppd
