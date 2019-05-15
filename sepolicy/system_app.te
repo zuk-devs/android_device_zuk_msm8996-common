@@ -4,3 +4,4 @@ allow system_app shell_prop:property_service set;
 
 binder_call(system_app, wificond);
 get_prop(system_app, oem_unlock_prop);
+get_prop(system_app, bt_mac_prop);
