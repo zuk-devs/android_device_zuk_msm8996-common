@@ -1,7 +1,6 @@
 # Binaries
 /(vendor|system/vendor)/bin/init.bt.sh                u:object_r:qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/init.wlan.sh              u:object_r:qti_init_shell_exec:s0
-/(vendor|system/vendor)/bin/wcg_mac_tool              u:object_r:wcg_mac_exec:s0
 
 # Bluetooth
 /sys/devices/vendor/vendor:bt_qca6174/extldo                        u:object_r:sysfs_bluetooth_writable:s0
