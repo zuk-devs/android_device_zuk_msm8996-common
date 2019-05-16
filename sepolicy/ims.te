@@ -1,2 +1,1 @@
-allow ims ctl_default_prop:property_service set;
-allow ims sysfs:file { open read };
+set_prop(ims, ctl_stop_prop)
