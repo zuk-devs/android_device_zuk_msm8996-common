@@ -17,11 +17,21 @@
 #
 
 # Set the proper hardware based BT mac address
-bt_mac=$(xxd -p /proc/mac_bt | tr '[:lower:]' '[:upper:]' | sed 's/.\{2\}/&:/g' | sed 's/.$//');
+proc_bt="/proc/mac_bt"
 bt_mac_path="/data/vendor/bluetooth/bdaddr"
-if [[ ! -f $bt_mac_path ]] || [[ $(echo $bt_mac) != $(cat $bt_mac_path) ]]; then
+if [[ $(xxd -p $proc_bt) == "000000000000" ]] || [[ $(xxd -p $proc_bt) == "666666666666" ]] || [[ ! -f $proc_bt ]]; then
+    ran1=$(xxd -l 1 -p /dev/urandom)
+    ran2=$(xxd -l 1 -p /dev/urandom)
+    ran3=$(xxd -l 1 -p /dev/urandom)
+    ran4=$(xxd -l 1 -p /dev/urandom)
+    ran5=$(xxd -l 1 -p /dev/urandom)
+    ran6=$(xxd -l 1 -p /dev/urandom)
+
+    bt_mac=$(echo "$ran1$ran2$ran3$ran4$ran5$ran6" | tr '[:lower:]' '[:upper:]' | sed 's/.\{2\}/&:/g' | sed 's/.$//');
+else
+    bt_mac=$(xxd -p $proc_bt | tr '[:lower:]' '[:upper:]' | sed 's/.\{2\}/&:/g' | sed 's/.$//');
+fi;
+
+if [[ ! -f $bt_mac_path ]] || [[ $(cat $bt_mac_path) == "" ]] || [[ $(cat $bt_mac_path) == "000000000000" ]] || [ $(cat $bt_mac_path) == "666666666666" ]]; then
     echo $bt_mac > $bt_mac_path
-    chmod 0644 $bt_mac_path
-    chown bluetooth $bt_mac_path
-    chgrp bluetooth $bt_mac_path
 fi;

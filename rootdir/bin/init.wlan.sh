@@ -17,8 +17,21 @@
 #
 
 # Set the proper hardware based wlan mac
-wifi_mac=$(xxd -p /proc/mac_wifi | tr '[:lower:]' '[:upper:]');
-if [[ ! -f /persist/wlan_mac.bin ]] || [[ $(cat /persist/wlan_mac.bin | grep Intf0MacAddress | sed 's/Intf0MacAddress=//') != $(echo $wifi_mac) ]]; then
-echo "Intf0MacAddress=$wifi_mac
-END" > /persist/wlan_mac.bin
+proc_wifi="/proc/mac_wifi"
+wifi_mac_persist=$(cat /persist/wlan_mac.bin | grep Intf0MacAddress | sed 's/Intf0MacAddress=//')
+if [[ $(xxd -p $proc_wifi) == "000000000000" ]] || [[ $(xxd -p $proc_wifi) == "555555555555" ]] || [[ ! -f $proc_wifi ]]; then
+    ran1=$(xxd -l 1 -p /dev/urandom)
+    ran2=$(xxd -l 1 -p /dev/urandom)
+    ran3=$(xxd -l 1 -p /dev/urandom)
+    ran4=$(xxd -l 1 -p /dev/urandom)
+    ran5=$(xxd -l 1 -p /dev/urandom)
+    ran6=$(xxd -l 1 -p /dev/urandom)
+
+    wifi_mac=$(echo "$ran1$ran2$ran3$ran4$ran5$ran6" | tr '[:lower:]' '[:upper:]')
+else
+    wifi_mac=$(xxd -p $proc_wifi | tr '[:lower:]' '[:upper:]');
+fi;
+if [[ ! -f /persist/wlan_mac.bin ]] || [[ $(echo $wifi_mac_persist) == "000000000000" ]] || [[ $(echo $wifi_mac_persist) == "555555555555" ]]; then
+    echo "Intf0MacAddress=$wifi_mac" > /persist/wlan_mac.bin
+    echo "END" >> /persist/wlan_mac.bin
 fi;
