@@ -1,3 +1,1 @@
-set_prop(hal_perf_default, freq_prop)
-dontaudit hal_perf_default { hal_perf_default self }:capability { dac_override dac_read_search };
-allow hal_perf_default vendor_mpctl_prop:property_service set;
+set_prop(hal_perf_default, vendor_mpctl_prop)
