@@ -18,7 +18,7 @@
 
 # Set the proper hardware based BT mac address
 proc_bt="/proc/mac_bt"
-bt_mac_path="/data/vendor/bluetooth/bdaddr"
+bt_mac_path="/mnt/vendor/persist/bluetooth/bt_mac"
 if [[ $(xxd -p $proc_bt) == "000000000000" ]] || [[ $(xxd -p $proc_bt) == "666666666666" ]] || [[ ! -f $proc_bt ]]; then
     ran1=$(xxd -l 1 -p /dev/urandom)
     ran2=$(xxd -l 1 -p /dev/urandom)
@@ -32,6 +32,6 @@ else
     bt_mac=$(xxd -p $proc_bt | tr '[:lower:]' '[:upper:]' | sed 's/.\{2\}/&:/g' | sed 's/.$//');
 fi;
 
-if [[ ! -f $bt_mac_path ]] || [[ $(cat $bt_mac_path) == "" ]] || [[ $(cat $bt_mac_path) == "000000000000" ]] || [ $(cat $bt_mac_path) == "666666666666" ]]; then
+if [[ ! -f $bt_mac_path ]] || [[ $(cat $bt_mac_path) == "" ]] || [[ $(cat $bt_mac_path) == "000000000000" ]] || [[ $(cat $bt_mac_path) == "666666666666" ]]; then
     echo $bt_mac > $bt_mac_path
 fi;

@@ -18,7 +18,8 @@
 
 # Set the proper hardware based wlan mac
 proc_wifi="/proc/mac_wifi"
-wifi_mac_persist=$(cat /persist/wlan_mac.bin | grep Intf0MacAddress | sed 's/Intf0MacAddress=//')
+wifi_mac_path="/mnt/vendor/persist/wlan_mac.bin"
+wifi_mac_persist=$(cat $wifi_mac_path | grep Intf0MacAddress | sed 's/Intf0MacAddress=//')
 if [[ $(xxd -p $proc_wifi) == "000000000000" ]] || [[ $(xxd -p $proc_wifi) == "555555555555" ]] || [[ ! -f $proc_wifi ]]; then
     ran1=$(xxd -l 1 -p /dev/urandom)
     ran2=$(xxd -l 1 -p /dev/urandom)
@@ -31,7 +32,7 @@ if [[ $(xxd -p $proc_wifi) == "000000000000" ]] || [[ $(xxd -p $proc_wifi) == "5
 else
     wifi_mac=$(xxd -p $proc_wifi | tr '[:lower:]' '[:upper:]');
 fi;
-if [[ ! -f /persist/wlan_mac.bin ]] || [[ $(echo $wifi_mac_persist) == "000000000000" ]] || [[ $(echo $wifi_mac_persist) == "555555555555" ]]; then
-    echo "Intf0MacAddress=$wifi_mac" > /persist/wlan_mac.bin
-    echo "END" >> /persist/wlan_mac.bin
+if [[ ! -f $wifi_mac_path ]] || [[ $(echo $wifi_mac_persist) == "000000000000" ]] || [[ $(echo $wifi_mac_persist) == "555555555555" ]]; then
+    echo "Intf0MacAddress=$wifi_mac" > $wifi_mac_path
+    echo "END" >> $wifi_mac_path
 fi;
