@@ -46,7 +46,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.btconfig.vendor=qcom \
     ro.btconfig.chip=QCA6164 \
     ro.btconfig.dev=/dev/ttyHS0 \
-    ro.vendor.bt.bdaddr_path=/data/vendor/bluetooth/bdaddr
+    ro.vendor.bt.bdaddr_path=/mnt/vendor/persist/bluetooth/bt_mac
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
