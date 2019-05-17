@@ -5,3 +5,5 @@ allow init tee_device:chr_file write;
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init sysfs_graphics:lnk_file read;
 allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
+allow init proc:file getattr;
+allow init vendor_file:file execute;

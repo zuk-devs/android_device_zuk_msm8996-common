@@ -1,1 +1,2 @@
+allow ims sysfs:file { open read };
 set_prop(ims, ctl_stop_prop)
