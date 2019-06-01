@@ -24,8 +24,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
 
-import org.lineageos.internal.util.FileUtils;
-
 public class ProximitySensor implements SensorEventListener {
 
     private static final boolean DEBUG = false;
