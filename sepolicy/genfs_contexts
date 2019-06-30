@@ -9,6 +9,7 @@ genfscon sysfs /devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.
 genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,fg/power_supply              u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,qpnp-smbcharger/power_supply u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:bcl@4200/power_supply             u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/7411000.qusb/power_supply                                                                            u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-03/400f000.qcom,spmi:qcom,pmi8994@3:qcom,haptics@c000/leds            u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-00/400f000.qcom,spmi:qcom,pm8994@0:qcom,pm8994_rtc/rtc                u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/virtual/touch/tp_dev/gesture_on                                                                          u:object_r:sysfs_doubletap:s0
