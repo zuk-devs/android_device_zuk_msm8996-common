@@ -22,9 +22,11 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.FileUtils;
 import android.util.Log;
 
-import org.lineageos.internal.util.FileUtils;
+
+import java.io.IOException;
 
 public class ProximitySensor implements SensorEventListener {
 
@@ -47,8 +49,10 @@ public class ProximitySensor implements SensorEventListener {
     @Override
     public void onSensorChanged(SensorEvent event) {
         boolean isNear = event.values[0] < mSensor.getMaximumRange();
-        if (FileUtils.isFileWritable(FP_PROX_NODE)) {
-            FileUtils.writeLine(FP_PROX_NODE, isNear ? "1" : "0");
+        try {
+            FileUtils.stringToFile(FP_PROX_NODE, isNear ? "1" : "0");
+        } catch (IOException e) {
+            Log.e(TAG, "Failed to write to " + FP_PROX_NODE, e);
         }
     }
 
