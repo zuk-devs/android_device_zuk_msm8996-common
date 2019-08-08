@@ -63,13 +63,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Data modules
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.iwlan.enable=true \
-    persist.data.mode=concurrent \
+    persist.vendor.data.mode=concurrent \
+    persist.radio.aosp_usr_pref_sel=true \
     persist.data.netmgrd.qos.enable=true \
-    ro.use_data_netmgrd=true
+    ro.vendor.use_data_netmgrd=true
 
 # Display (Qualcomm AD)
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qualcomm.cabl=0 \
+    ro.qualcomm.cabl=2 \
+    ro.vendor.display.cabl=2 \
     ro.qcom.ad=1 \
     ro.qcom.ad.calib.data=/vendor/etc/calib.cfg \
     ro.qcom.ad.sensortype=2
