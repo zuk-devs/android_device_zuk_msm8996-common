@@ -229,12 +229,12 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0
 
 # IMS
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    telephony-ext
+# PRODUCT_PACKAGES += \
+#     ims-ext-common \
+#     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+# PRODUCT_BOOT_JARS += \
+#     telephony-ext
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -406,5 +406,5 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+# PRODUCT_BOOT_JARS += \
+#     WfdCommon
