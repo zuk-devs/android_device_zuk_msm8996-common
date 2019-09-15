@@ -251,7 +251,7 @@ framework/vendor.qti.hardware.data.latency-V1.0-java.jar|319c79ec3b8dffc73d19d1a
 framework/vendor.qti.hardware.data.qmi-V1.0-java.jar|94c3e0efe3bc51358fe9145ed1ff0708c262380d
 framework/vendor.qti.latency-V2.0-java.jar|9d4912be5c77d8c9683b3a81901dcc644adb8ea7
 lib64/com.quicinc.cne.server@2.3.so:vendor/lib64/com.quicinc.cne.server@2.3.so|4a71140030b0187ffdaffe7d2f0d08b5749c340c
--priv-app/CNEService/CNEService.apk|c317748aca88d8acf9f611a0c11ac380c8ff622d
+-priv-app/CNEService/CNEService.apk|d8579ab4633111f5473b3be8c9da487504908167
 vendor/bin/cnd|4c138e031025719562b10fa5e951e7a58663b6d2
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
