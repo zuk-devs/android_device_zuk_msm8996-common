@@ -229,7 +229,7 @@ vendor/lib/libchromatix_ov8865_zsl_preview.so
 vendor/lib/libchromatix_ov8865_zsl_video.so
 
 # Camera vndk hax - from Lineage 16.0 build
-vendor/lib/libfui.so|21d012ec9dabe6e62e023780eac1e3a476eb298e
+vendor/lib/libfui.so|caca4e5a117958ee6b424b66ba4ba8ffd9d41ea0
 
 # CNE - from LA.UM.7.5.r1-04800-8x96.0
 etc/permissions/cneapiclient.xml|15831adf0e80243042b90c734eea0a68eb8ae9c9
