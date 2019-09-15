@@ -173,4 +173,4 @@ on property:init.svc.recovery=running
 service charger /charger
     class charger
     group system graphics
-    seclabel u:r:healthd:s0
+#    seclabel u:r:healthd:s0
