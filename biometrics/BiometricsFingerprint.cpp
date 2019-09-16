@@ -177,8 +177,30 @@ Return<RequestStatus> BiometricsFingerprint::cancel() {
     return ErrorFilter(mDevice->cancel(mDevice));
 }
 
+#define MAX_FINGERPRINTS 100
+
+typedef int (*enumerate_2_0)(struct fingerprint_device *dev, fingerprint_finger_id_t *results,
+        uint32_t *max_size);
+
 Return<RequestStatus> BiometricsFingerprint::enumerate()  {
-    return ErrorFilter(mDevice->enumerate(mDevice));
+    fingerprint_finger_id_t results[MAX_FINGERPRINTS];
+    uint32_t n = MAX_FINGERPRINTS;
+    enumerate_2_0 enumerate = (enumerate_2_0) mDevice->enumerate;
+    int ret = enumerate(mDevice, results, &n);
+
+    if (ret == 0 && mClientCallback != nullptr) {
+        ALOGD("Got %d enumerated templates", n);
+        for (uint32_t i = 0; i < n; i++) {
+            const uint64_t devId = reinterpret_cast<uint64_t>(mDevice);
+            const auto& fp = results[i];
+            ALOGD("onEnumerate(fid=%d, gid=%d)", fp.fid, fp.gid);
+            if (!mClientCallback->onEnumerate(devId, fp.fid, fp.gid, n - i - 1).isOk()) {
+                ALOGE("failed to invoke fingerprint onEnumerate callback");
+            }
+        }
+    }
+
+    return ErrorFilter(ret);
 }
 
 Return<RequestStatus> BiometricsFingerprint::remove(uint32_t gid, uint32_t fid) {
@@ -336,6 +358,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
             }
             break;
         case FINGERPRINT_TEMPLATE_ENUMERATING:
+#if 0
             ALOGD("onEnumerate(fid=%d, gid=%d, rem=%d)",
                 msg->data.enumerated.finger.fid,
                 msg->data.enumerated.finger.gid,
@@ -346,6 +369,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                     msg->data.enumerated.remaining_templates).isOk()) {
                 ALOGE("failed to invoke fingerprint onEnumerate callback");
             }
+#endif
             break;
     }
 }
