@@ -231,12 +231,8 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0
 
 # IMS
-# PRODUCT_PACKAGES += \
-#     ims-ext-common \
-#     telephony-ext
-
-# PRODUCT_BOOT_JARS += \
-#     telephony-ext
+PRODUCT_PACKAGES += \
+    ims-ext-common_system
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -359,6 +355,7 @@ PRODUCT_PACKAGES += \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
+    ims-ext-common_system \
     telephony-ext
 
 # TextClassifier
