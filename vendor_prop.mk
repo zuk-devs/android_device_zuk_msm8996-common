@@ -68,6 +68,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.netmgrd.qos.enable=true \
     ro.use_data_netmgrd=true
 
+# Dalvik
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapgrowthlimit=256m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heaptargetutilization=0.75
+
 # Display (Qualcomm AD)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.cabl=0 \
