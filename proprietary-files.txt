@@ -733,7 +733,3 @@ vendor/lib/libwfdhaldsmanager.so|35da424420ce754a95400910fb7642a8d6da444d
 vendor/lib/libwfdhdcpcp.so|fdc871821a96c2768b880a7eb7f611632756f10c
 vendor/lib/libwfdmmservice.so|a41f27cbc0cb857d47eb967b1889783d3c85b7f3
 vendor/lib/libwfdmodulehdcpsession.so|0817a7dc5d116d7cf936090141fab09c7788e886
-
-# HIDL - Dummy HIDL base blob for compatibility with older blobs on GSI ROMs.
-vendor/lib/android.hidl.base@1.0.so|7b695c37dd8f7edde1b3c8b25c46d7b73232e75b
-vendor/lib64/android.hidl.base@1.0.so|88d1bd3bd9853ba6c5b308e1045fc7ac06950d7b
