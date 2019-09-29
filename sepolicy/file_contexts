@@ -24,8 +24,8 @@
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.zuk_8996                    u:object_r:hal_lineage_touch_default_exec:s0
 
 # Misc files on /vendor
-/(vendor|system/vendor)/usr/idc(/.*)?                                u:object_r:idc_file:s0
-/(vendor|system/vendor)/usr/keylayout(/.*)?                          u:object_r:keylayout_file:s0
+/(vendor|system/vendor)/usr/idc(/.*)?                                u:object_r:vendor_idc_file:s0
+/(vendor|system/vendor)/usr/keylayout(/.*)?                          u:object_r:vendor_keylayout_file:s0
 
 # Sys files
 /sys/devices/soc/soc:fpc1020(/.*)?                   u:object_r:sysfs_fingerprint:s0
