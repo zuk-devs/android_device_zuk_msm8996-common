@@ -20,8 +20,9 @@
 /bt_firmware                                                  u:object_r:bt_firmware_file:s0
 
 # HALs
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.zuk_8996       		    u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.zuk_8996                    u:object_r:hal_lineage_touch_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.zuk_msm8996   u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.zuk_8996                        u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.zuk_8996                          u:object_r:hal_lineage_touch_default_exec:s0
 
 # Misc files on /vendor
 /(vendor|system/vendor)/usr/idc(/.*)?                                u:object_r:vendor_idc_file:s0
