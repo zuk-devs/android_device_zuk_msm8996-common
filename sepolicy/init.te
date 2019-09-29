@@ -1,7 +1,6 @@
-allow init { ion_device tee_device }:chr_file ioctl;
+allow init ion_device:chr_file ioctl;
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init sysfs_fingerprint:file { open read setattr write };
-allow init tee_device:chr_file write;
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init sysfs_graphics:lnk_file read;
 allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
