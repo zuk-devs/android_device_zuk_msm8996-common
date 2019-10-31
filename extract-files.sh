@@ -115,4 +115,4 @@ if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
             "${KANG}" --section "${SECTION}"
 fi
 
-source "${MY_DIR}/setup-makefiles.sh"
+"${MY_DIR}/setup-makefiles.sh"
