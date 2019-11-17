@@ -97,6 +97,11 @@ function blob_fixup() {
     vendor/lib64/lib-dplmedia.so)
         patchelf --remove-needed libmedia.so "${2}"
         ;;
+
+    # Rename vulkan.msm8953
+    vendor/lib/hw/vulkan.msm8996.so | vendor/lib64/hw/vulkan.msm8996.so)
+        patchelf --set-soname "vulkan.msm8996.so" "${2}"
+        ;;
     esac
 }
 
