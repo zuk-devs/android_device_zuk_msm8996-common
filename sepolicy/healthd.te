@@ -1,5 +1,0 @@
-allow healthd device:dir r_dir_perms;
-
-userdebug_or_eng(`
-	permissive healthd;
-')
