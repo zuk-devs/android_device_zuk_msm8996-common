@@ -134,7 +134,8 @@ PRODUCT_PACKAGES += \
     camera.msm8996 \
     mm-qcamera-app \
     Snap \
-    libmm-qcamera
+    libmm-qcamera \
+    libfui
 
 # CNE
 PRODUCT_PACKAGES += \
