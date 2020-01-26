@@ -137,7 +137,8 @@ PRODUCT_PACKAGES += \
     mm-qcamera-app \
     Snap \
     libmm-qcamera \
-    libyuv
+    libyuv \
+    libfui
 
 # Codec2 modules
 PRODUCT_PACKAGES += \
