@@ -194,7 +194,7 @@ on early-boot
     # Set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
     start vendor.qseecomd
-    wait_for_prop vendor.sys.listeners.registered true
+    wait_for_prop sys.listeners.registered true
     write /dev/ipa 1
 
     # Allow subsystem (modem etc) debugging
@@ -471,9 +471,9 @@ service vendor.qseecomd /vendor/bin/qseecomd
     group root
     writepid /dev/cpuset/system-background/tasks
 
-on property:vendor.sys.listeners.registered=*
-    setprop sys.keymaster.loaded ${vendor.sys.listeners.registered}
-    setprop vendor.sys.keymaster.loaded ${vendor.sys.listeners.registered}
+on property:sys.listeners.registered=*
+    setprop sys.keymaster.loaded ${sys.listeners.registered}
+    setprop vendor.sys.keymaster.loaded ${sys.listeners.registered}
 
 service time_daemon /vendor/bin/time_daemon
     class main
