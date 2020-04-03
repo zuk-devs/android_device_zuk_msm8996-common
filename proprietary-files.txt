@@ -66,19 +66,24 @@ vendor/lib/libaudioalsa.so
 vendor/lib/libqtigef.so
 vendor/etc/audio_tuning_mixer.txt
 
-# Bluetooth - from daisy - PKQ1.180917.001.V10.0.16.0.PDLMIXM
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|9178856dc8651b499d1b155825b6115a486ee05e
+# Bluetooth - from OnePlus5 - PKQ1.180716.001 2002242003
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|9f0bbbbc45cd57eed0175c1ff06b83473ea5c392
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|20e66aaca57c6ba6df8009404abdfacb608dc341
-vendor/lib64/libbtnv.so|136dc47f7d16a841e9c6ad909753e96a41392534
-vendor/lib64/libbt-hidlclient.so|0b0b69ef9787e3cd5409f0050cad03698dd6ce26
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|758254b82f17d788d9753bf68a116e287523e6d2
+vendor/lib64/libbtnv.so|a37eef43cbac2be29281e1a6cbdcc14ca64c863c
+vendor/lib64/libbt-hidlclient.so|185432ad48e32b1f9d49a6b974f2a5e1ed1a355f
 
-# Bluetooth ANT+ (vendor) - from daisy - PKQ1.180917.001.V10.0.16.0.PDLMIXM
-vendor/lib64/com.qualcomm.qti.ant@1.0.so|b35afe2c22970170a2164be199c65bb328a17383
+# Bluetooth ANT+ - from OnePlus5 - PKQ1.180716.001 2002242003
+-lib/libantradio.so|d41385a586a43d1c1ed1e315b65fa26bd2393411
+lib64/com.qualcomm.qti.ant@1.0.so|29ecc1a9134dd2146f358e65c830059d3fa6c6d9
+-lib64/libantradio.so|68dd86841ef99508967f3bc28103bda402cee915
 
-# Bluetooth (shared dependencies) - from daisy - PKQ1.180917.001.V10.0.16.0.PDLMIXM
-lib64/vendor.qti.hardware.fm@1.0.so|32dd637f377d18e862ad24be7086a71a5fe52f71
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|32dd637f377d18e862ad24be7086a71a5fe52f71
+# Bluetooth ANT+ (vendor) - from OnePlus5 - PKQ1.180716.001 2002242003
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|50056005be5fe5a8420599dd70e4266abf6a9866
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|05e6190e6feb2f23b86e1ce4517b73712465bb2d
+
+# Bluetooth (shared dependencies) - from OnePlus5 - PKQ1.180716.001 2002242003
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|db3afdb3dcc6e39effed66e6397131a1dafd86a1
 
 # Camera
 lib/libmm-qcamera.so:vendor/lib/libmm-qcamera.so
