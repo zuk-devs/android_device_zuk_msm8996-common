@@ -579,4 +579,6 @@
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
 
+    <bool name="config_liveDisplayAvailable">true</bool>
+
 </resources>
