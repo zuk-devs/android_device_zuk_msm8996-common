@@ -98,8 +98,8 @@ PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library
 
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
+#PRODUCT_COPY_FILES += \
+#    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -162,8 +162,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # ConfigPanel
-PRODUCT_PACKAGES += \
-    ConfigPanel
+#PRODUCT_PACKAGES += \
+#    ConfigPanel
 
 # Display
 PRODUCT_PACKAGES += \
@@ -194,8 +194,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/calib.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/calib.cfg
 
 # Doze mode
-PRODUCT_PACKAGES += \
-    ZukDoze
+#PRODUCT_PACKAGES += \
+#    ZukDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -239,8 +239,8 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service
 
 # HW crypto
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+#PRODUCT_PACKAGES += \
+#    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -288,8 +288,8 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.zuk_8996
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -382,12 +382,12 @@ PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
 # Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.zuk_8996
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.touch@1.0-service.zuk_8996
 
 # Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
