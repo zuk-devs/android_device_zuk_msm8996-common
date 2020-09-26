@@ -143,6 +143,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
     persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.mt_sms_ack=30 \
     persist.vendor.radio.process_sups_ind=1 \
     persist.radio.multisim.config=dsds \
     persist.vendor.radio.sw_mbn_update=1 \
