@@ -19,8 +19,6 @@ BOARD_VENDOR := zuk
 
 VENDOR_PATH := device/zuk/msm8996-common
 
-TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
