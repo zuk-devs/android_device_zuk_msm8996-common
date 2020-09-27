@@ -24,6 +24,9 @@
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.zuk_8996                          u:object_r:hal_lineage_touch_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service.widevine                           u:object_r:hal_drm_widevine_exec:s0
 
+# Persist
+/persist(/.*)?        u:object_r:mnt_vendor_file:s0
+
 # Sys files
 /sys/devices/soc/soc:fpc1020(/.*)?                   u:object_r:sysfs_fingerprint:s0
 /sys/devices/soc/soc:fpc1020/enable_wakeup           u:object_r:sysfs_fingerprint:s0
