@@ -10,6 +10,7 @@
 /data/fpc(/.*)?                       u:object_r:fpc_data_file:s0
 /data/decrypt\.txt                    u:object_r:thermal_data_file:s0
 /data/vendor/qcam(/.*)?               u:object_r:vendor_camera_data_file:s0
+/data/vendor/misc/audio/acdbdata/delta(/.*)?       u:object_r:acdbdelta_vendor_data_file:s0
 
 # Devices
 /dev/fpc1020                          u:object_r:fpc1020_device:s0
