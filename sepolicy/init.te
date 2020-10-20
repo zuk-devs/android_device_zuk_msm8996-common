@@ -4,3 +4,4 @@ allow init sysfs_fingerprint:file { open read setattr write };
 allow init hidl_base_hwservice:hwservice_manager add;
 allow init sysfs_graphics:lnk_file read;
 allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
+allow init socket_device:sock_file { unlink setattr create };
