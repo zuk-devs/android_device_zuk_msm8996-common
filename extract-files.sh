@@ -79,7 +79,7 @@ function blob_fixup() {
     vendor/lib/libmmcamera2_stats_modules.so)
         sed -i "s|libgui.so|libfui.so|g" "${2}"
         sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "${2}"
-        patchelf --remove-needed libandroid.so "${2}"
+        "${PATCHELF}" --remove-needed libandroid.so "${2}"
         ;;
 
     # Patch blobs for VNDK
@@ -87,7 +87,7 @@ function blob_fixup() {
         sed -i "s|libgui.so|libfui.so|g" "${2}"
         ;;
     vendor/lib/libmpbase.so)
-        patchelf --remove-needed libandroid.so "${2}"
+        "${PATCHELF}" --remove-needed libandroid.so "${2}"
         ;;
 
     # Hex edit /firmware/image to /vendor/firmware_mnt to delete the outdated rootdir symlinks
@@ -110,11 +110,11 @@ function blob_fixup() {
 
 	# Remove libmedia.so dependency from lib-dplmedia.so
     vendor/lib64/lib-dplmedia.so)
-        patchelf --remove-needed libmedia.so "${2}"
+        "${PATCHELF}" --remove-needed libmedia.so "${2}"
         ;;
 
     vendor/lib64/libsettings.so)
-        patchelf --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v28.so" "${2}"
+        "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v28.so" "${2}"
         ;;
 
     vendor/lib64/libwvhidl.so)
@@ -143,7 +143,7 @@ function blob_fixup() {
 
     # Rename vulkan.msm8953
     vendor/lib/hw/vulkan.msm8996.so | vendor/lib64/hw/vulkan.msm8996.so)
-        patchelf --set-soname "vulkan.msm8996.so" "${2}"
+        "${PATCHELF}" --set-soname "vulkan.msm8996.so" "${2}"
         ;;
     esac
 }
