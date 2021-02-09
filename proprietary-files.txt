@@ -534,12 +534,10 @@ vendor/lib64/libperfgluelayer.so|627a324616de86ba90889a7c8dd7a05c46a30aaa
 vendor/lib64/libqti-perfd.so|68c995a76cad4c8b0af1c4743a5157b70dad1dd1
 vendor/lib64/libqti-perfd-client.so|a95a2577c8c129dffe1fd07cd965cb1efb06b9ad
 vendor/lib64/libqti-util.so|0c34c7cbb07197841e9f097925fe961f3226e621
-vendor/lib64/vendor.qti.hardware.perf@1.0.so|b754b5b75f2f5f3ea0019489b9ce46537c649531
 vendor/lib/libperfgluelayer.so|3850d4ea3dbead227b622fcc47fcec29955fcc63
 vendor/lib/libqti-perfd.so|2a2077cf455d5a6b03c0bb2b6eeca554ee28a363
 vendor/lib/libqti-perfd-client.so|e9d26690a2ca0b1de82011d863188a0c52ffc38f
 vendor/lib/libqti-util.so|d65f3ef240cebea73bd1ba8b1132a7e639aa05bb
-vendor/lib/vendor.qti.hardware.perf@1.0.so|96857d2a07b14c6d7456fc216560cb330d131279
 
 # Peripheral manager
 vendor/bin/pm-proxy
