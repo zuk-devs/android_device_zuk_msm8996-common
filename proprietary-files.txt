@@ -701,7 +701,7 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
 
-# Widevine DRM - from daisy 9/PKQ1.180917.001/V10.0.7.0.PDLMIXM
+# Widevine DRM - from daisy QKQ1.191002.002 V11.0.2.0.QDLMIXM
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine|e130b8f1c8d46d8a185b00cba5ff8a2a871ee94c
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|68767969f86126ada017fc09af151e299db651d5
 vendor/lib64/libwvhidl.so|d02a20d8e95e64c391e0af86a32dad869ceeb3b4
