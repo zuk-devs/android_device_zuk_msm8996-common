@@ -110,6 +110,10 @@ function blob_fixup() {
         "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v28.so" "${2}"
         ;;
 
+    vendor/etc/permissions/qti_libpermissions.xml)
+        sed -i 's|"android.hidl.manager-V1.0-java"|"android.hidl.manager@1.0-java"|' ${2}
+        ;;
+
     # Rename vulkan.msm8953
     vendor/lib/hw/vulkan.msm8996.so | vendor/lib64/hw/vulkan.msm8996.so)
         patchelf --set-soname "vulkan.msm8996.so" "${2}"
