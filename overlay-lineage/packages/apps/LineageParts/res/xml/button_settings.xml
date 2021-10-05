@@ -25,6 +25,12 @@
         android:summary="@string/disable_navkeys_summary"
         android:defaultValue="false" />
 
+    <SwitchPreference
+        android:key="swap_capacitive_keys"
+        android:title="@string/swap_capacitive_keys_title"
+        android:summary="@string/swap_capacitive_keys_summary"
+        android:defaultValue="false" />
+
     <org.lineageos.lineageparts.input.ButtonBacklightBrightness
         android:key="button_backlight"
         android:title="@string/button_backlight_title"
@@ -44,7 +50,16 @@
         <lineageos.preference.SecureSettingSwitchPreference
                 android:key="sysui_nav_bar_inverse"
                 android:title="@string/navigation_bar_invert_layout_title"
+                android:summary="@string/navigation_bar_invert_layout_summary"
                 android:defaultValue="false" />
+
+        <ListPreference
+            android:key="navigation_back_long_press"
+            android:dialogTitle="@string/navigation_bar_back_long_press_title"
+            android:title="@string/navigation_bar_back_long_press_title"
+            android:entries="@array/hardware_keys_action_entries"
+            android:entryValues="@array/hardware_keys_action_values"
+            android:persistent="false" />
 
         <ListPreference
             android:key="navigation_home_long_press"
@@ -147,13 +162,48 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="back_key"
+        android:title="@string/hardware_keys_back_key_title" >
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="back_wake_screen"
+            android:title="@string/button_wake_title"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="menu_key"
         android:title="@string/hardware_keys_swipe_right_key_title" >
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="menu_wake_screen"
+            android:title="@string/button_wake_title"
+            android:defaultValue="false" />
 
         <ListPreference
             android:key="hardware_keys_menu_press"
             android:dialogTitle="@string/hardware_keys_swipe_tap_title"
             android:title="@string/hardware_keys_swipe_tap_title"
+            android:entries="@array/hardware_keys_action_entries"
+            android:entryValues="@array/hardware_keys_action_values"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="assist_key"
+        android:title="@string/hardware_keys_long_tap_key_title" >
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="assist_wake_screen"
+            android:title="@string/button_wake_title"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="hardware_keys_assist_press"
+            android:dialogTitle="@string/hardware_keys_long_tap_title"
+            android:title="@string/hardware_keys_long_tap_title"
             android:entries="@array/hardware_keys_action_entries"
             android:entryValues="@array/hardware_keys_action_values"
             android:persistent="false" />
@@ -173,20 +223,6 @@
             android:key="hardware_keys_app_switch_press"
             android:dialogTitle="@string/hardware_keys_swipe_tap_title"
             android:title="@string/hardware_keys_swipe_tap_title"
-            android:entries="@array/hardware_keys_action_entries"
-            android:entryValues="@array/hardware_keys_action_values"
-            android:persistent="false" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="assist_key"
-        android:title="@string/hardware_keys_long_tap_key_title" >
-
-        <ListPreference
-            android:key="hardware_keys_assist_press"
-            android:dialogTitle="@string/hardware_keys_long_tap_title"
-            android:title="@string/hardware_keys_long_tap_title"
             android:entries="@array/hardware_keys_action_entries"
             android:entryValues="@array/hardware_keys_action_values"
             android:persistent="false" />
@@ -267,6 +303,12 @@
             <intent
                 android:action="org.lineageos.settings.device.ADDITIONAL_BUTTONS_SETTINGS" />
         </lineageos.preference.RemotePreference>
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="click_partial_screenshot"
+            android:title="@string/click_partial_screenshot_title"
+            android:summary="@string/click_partial_screenshot_summary"
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 
