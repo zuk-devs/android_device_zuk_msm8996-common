@@ -34,6 +34,9 @@ source "${HELPER}"
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
+SECTION=
+KANG=
+
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
         -n | --no-cleanup )
