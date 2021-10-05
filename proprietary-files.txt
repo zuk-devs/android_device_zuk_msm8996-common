@@ -342,20 +342,20 @@ vendor/lib64/hw/gatekeeper.msm8996.so
 vendor/lib/hw/gatekeeper.msm8996.so
 
 # GPS - from daisy 9/PKQ1.180917.001/V10.0.7.0.PDLMIXM
-lib64/vendor.qti.gnss@1.0.so|4dfa66f66b406c1aff3d32bb44382898beaaa39a
-lib64/vendor.qti.gnss@1.1.so|a622c409e1d20d2799904e47d8fb07753e830d7a
-lib64/vendor.qti.gnss@1.2.so|104f245c358ab202a57211f99898406cd5ad8e0e
-lib64/vendor.qti.gnss@2.0.so|b3f7ae76d4db00edce0c4f5a7084d7abeac0180a
-lib64/vendor.qti.gnss@2.1.so|eb908fd65d8b9d1f9cac629815f7adfb48361d16
+lib64/vendor.qti.gnss@1.0.so|4557a490b9aa4d441a3be56d457cbd08474ba6c6
+lib64/vendor.qti.gnss@1.1.so|bf52242012898264f90fff83691cfa2b65a72eb4
+lib64/vendor.qti.gnss@1.2.so|cd35adf4ae28884ec3f43a20a0ad7917225bcee0
+lib64/vendor.qti.gnss@2.0.so|d2c5cc47018ac4180db0354a35538395e5567fdd
+lib64/vendor.qti.gnss@2.1.so|d010ee5f2f3f76c6f9b9772f15869a558fed96b5
 vendor/bin/hw/vendor.qti.gnss@1.0-service|049201d8e22064b87eb52df208d8cda7066d140a
 vendor/bin/loc_launcher|23a4470552c0c418662a7d91fa7f593bee767459
 vendor/bin/lowi-server|f83f6ab9b978c618c87d2b5c66854533d0e3a66f
-vendor/bin/slim_daemon|0346d3721c2a0471559d0728c329888e5bad8452
+vendor/bin/slim_daemon|fff41764be57da61384fc9fea26078cc917c3c55
 vendor/bin/xtra-daemon|f4fdd2d7fc56472066b05899340eb19ff67d54b4
 vendor/etc/cacert_location.pem|6a05f324e7d9ff584811e62aabeb6d89a5239bbe
 vendor/etc/init/vendor.qti.gnss@1.0-service.rc|98655e2adc2158a052b0ecf06b065535f0a2aac7
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
-vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so|78aebfe0d1e551b183c4e2beada0d1264e0fb9d4
+vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so|49db1e537a2f37014790864a4cf3ae535c177bdd
 vendor/lib64/libdataitems.so|60f312e84762cd2493a6ac4aa2f8cd715fca7099
 vendor/lib64/libdrplugin_client.so|ba6de3e6a872ec53d7b4e11bd5b9371428a26909
 vendor/lib64/libDRPlugin.so|d60dffb3751b5095ead2747610c6d022d052a560
@@ -369,7 +369,7 @@ vendor/lib64/liblbs_core.so|35bec57afe24f18fedad5ed6b02eaa76a6323419
 vendor/lib64/libloc_api_v02.so|81ab9d291d14f8ad3e094019f36fb0fa65cb0cdb
 vendor/lib64/libloc_ds_api.so|9d0094be7bdef2dd65bac05ba3ca77c1c90fc9a0
 vendor/lib64/liblocationservice_glue.so|a70dcf2912346d4a5f07fe84025404fe866e3d09
-vendor/lib64/liblocationservice.so|ec5ad361788b6e72ba4d8d9ae72732fbd9872d56
+vendor/lib64/liblocationservice.so|4cbbfaa7cdc62435a52ff942b96a7525a6047850
 vendor/lib64/liblowi_client.so|34f65f866c950733c72d5a4f0de00580d2ac3cf5
 vendor/lib64/liblowi_wifihal.so|cdb5477319b7acf35978eaae741192392d2c875f
 vendor/lib64/libquipc_os_api.so|0dd27d3164e69f076563b48c3945bcac66833783
@@ -377,10 +377,10 @@ vendor/lib64/libslimclient.so|e92942e916eb8863e1689106dd5d7932c9dcda70
 vendor/lib64/libulp2.so|3456c76c42681ec40f6d158f8d516158bb43c5b1
 vendor/lib64/libxtadapter.so|d404e8c5c6e14a556926ba772ca99aa51cbd6a36
 vendor/lib64/libxtwifi_ulp_adaptor.so|58b20fbdbb500add11784acce0808c7198c96c34
-vendor/lib64/vendor.qti.gnss@1.0.so|4dfa66f66b406c1aff3d32bb44382898beaaa39a
-vendor/lib64/vendor.qti.gnss@1.1.so|a622c409e1d20d2799904e47d8fb07753e830d7a
-vendor/lib64/vendor.qti.gnss@1.2.so|104f245c358ab202a57211f99898406cd5ad8e0e
-vendor/lib64/vendor.qti.gnss@2.0.so|b3f7ae76d4db00edce0c4f5a7084d7abeac0180a
+vendor/lib64/vendor.qti.gnss@1.0.so|4557a490b9aa4d441a3be56d457cbd08474ba6c6
+vendor/lib64/vendor.qti.gnss@1.1.so|bf52242012898264f90fff83691cfa2b65a72eb4
+vendor/lib64/vendor.qti.gnss@1.2.so|cd35adf4ae28884ec3f43a20a0ad7917225bcee0
+vendor/lib64/vendor.qti.gnss@2.0.so|d2c5cc47018ac4180db0354a35538395e5567fdd
 
 # Graphics - from daisy - QKQ1.191002.002 V11.0.2.0.QDLMIXM
 vendor/lib64/egl/eglSubDriverAndroid.so|8edb19893decd259ba43d752b48e0a69c5788db4
