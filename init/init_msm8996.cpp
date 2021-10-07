@@ -32,12 +32,17 @@
 #include <sys/sysinfo.h>
 
 #include <android-base/properties.h>
+#include <android-base/file.h>
+#include <android-base/strings.h>
 
 #include "property_service.h"
 #include "vendor_init.h"
 
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
+
+using android::base::ReadFileToString;
+using android::base::Split;
 
 char const *heapminfree;
 char const *heapmaxfree;
@@ -70,9 +75,35 @@ void property_override(char const prop[], char const value[], bool add = true)
 	}
 }
 
+void import_kernel_cmdline(const std::function<void(const std::string&, const std::string&)>& fn) {
+	std::string cmdline;
+	android::base::ReadFileToString("/proc/cmdline", &cmdline);
+
+	for (const auto& entry : android::base::Split(android::base::Trim(cmdline), " ")) {
+		std::vector<std::string> pieces = android::base::Split(entry, "=");
+		if (pieces.size() == 2) {
+			fn(pieces[0], pieces[1]);
+		}
+	}
+}
+
+static void init_setup_lock(const std::string& key, const std::string& value)
+{
+	if (key.empty()) return;
+
+	if (key == "androidboot.lock") {
+		if (value.find("unlocked") != std::string::npos) {
+			property_override("ro.oem_unlock_supported", "0");
+		} else {
+			property_override("ro.oem_unlock_supported", "1");
+		}
+	}
+}
+
 void vendor_load_properties() 
 {
 	check_device();
+	import_kernel_cmdline(init_setup_lock);
 
 	property_override("dalvik.vm.heapstartsize", "8m");
 	property_override("dalvik.vm.heapgrowthlimit", "256m");
