@@ -53,7 +53,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.profile.a2dp.source.enabled=true \
     bluetooth.profile.avrcp.target.enabled=true \
     bluetooth.profile.bap.broadcast.assist.enabled=true \
-    bluetooth.profile.bap.unicast.server.enabled=true \
+    bluetooth.profile.bap.unicast.client.enabled=true \
     bluetooth.profile.bas.client.enabled=true \
     bluetooth.profile.csip.set_coordinator.enabled=true \
     bluetooth.profile.gatt.enabled=true \
@@ -68,8 +68,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.profile.pan.panu.enabled=true \
     bluetooth.profile.pbap.server.enabled=true \
     bluetooth.profile.sap.server.enabled=true \
-    bluetooth.profile.tbs.server.enabled=true \
-    bluetooth.profile.vc.server.enabled=true
+    bluetooth.profile.cpp.server.enabled=true \
+    bluetooth.profile.vpc.controller.enabled=true
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
