@@ -49,6 +49,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.bt.bdaddr_path=/mnt/vendor/persist/bluetooth/bt_mac
 
 PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.device.class_of_device=90,2,12 \
     bluetooth.hardware.power.operating_voltage_mv=3300 \
     bluetooth.profile.a2dp.source.enabled?=true \
     bluetooth.profile.avrcp.target.enabled?=true \
