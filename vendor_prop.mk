@@ -48,6 +48,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.btconfig.dev=/dev/ttyHS0 \
     ro.vendor.bt.bdaddr_path=/mnt/vendor/persist/bluetooth/bt_mac
 
+# BPF
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.kernel.ebpf.supported=true
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.preview.ubwc=0 \
