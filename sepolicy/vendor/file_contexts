@@ -7,6 +7,7 @@
 /sys/devices/vendor/vendor:bt_qca6174/rfkill/rfkill0/state          u:object_r:sysfs_bluetooth_writable:s0
 
 # Data files
+/data/fpc(/.*)?                       u:object_r:fpc_data_file:s0
 /data/decrypt\.txt                    u:object_r:thermal_data_file:s0
 /data/vendor/qcam(/.*)?               u:object_r:vendor_camera_data_file:s0
 /data/vendor/misc/audio/acdbdata/delta(/.*)?       u:object_r:acdbdelta_vendor_data_file:s0
