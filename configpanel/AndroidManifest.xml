@@ -27,9 +27,7 @@
     <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
 
     <application
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/device_settings_app_name"
-        android:theme="@style/Theme.Main"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
 
@@ -47,6 +45,7 @@
 
         <activity
             android:name=".ButtonSettingsActivity"
+            android:theme="@style/Theme.SubSettingsBase"
             android:label="@string/button_panel_title"
             android:exported="false" >
             <intent-filter>
