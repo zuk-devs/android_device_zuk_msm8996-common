@@ -239,10 +239,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
 
-# HW crypto
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
