@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2008 The Android Open Source Project
+<!--
+     Copyright (C) 2016 The CyanogenMod Project
+                   2017-2021 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -40,6 +42,10 @@
     <PreferenceCategory
         android:key="navigation_bar_category"
         android:title="@string/navigation_bar_category" >
+
+        <SwitchPreference
+                android:key="enable_taskbar"
+                android:title="@string/navigation_bar_enable_taskbar_title" />
 
         <lineageos.preference.LineageSystemSettingSwitchPreference
                 android:key="navigation_bar_menu_arrow_keys"
@@ -99,7 +105,7 @@
         android:key="power_key"
         android:title="@string/hardware_keys_power_key_title" >
 
-        <PreferenceScreen
+        <Preference
             android:key="power_menu"
             android:title="@string/power_menu_title"
             android:fragment="org.lineageos.lineageparts.input.PowerMenuActions" />
@@ -197,6 +203,14 @@
             android:entryValues="@array/hardware_keys_action_values"
             android:persistent="false" />
 
+        <ListPreference
+            android:key="hardware_keys_menu_long_press"
+            android:dialogTitle="@string/hardware_keys_long_press_title"
+            android:title="@string/hardware_keys_long_press_title"
+            android:entries="@array/hardware_keys_action_entries"
+            android:entryValues="@array/hardware_keys_action_values"
+            android:persistent="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -216,6 +230,14 @@
             android:entryValues="@array/hardware_keys_action_values"
             android:persistent="false" />
 
+        <ListPreference
+            android:key="hardware_keys_assist_long_press"
+            android:dialogTitle="@string/hardware_keys_long_press_title"
+            android:title="@string/hardware_keys_long_press_title"
+            android:entries="@array/hardware_keys_action_entries"
+            android:entryValues="@array/hardware_keys_action_values"
+            android:persistent="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -231,6 +253,14 @@
             android:key="hardware_keys_app_switch_press"
             android:dialogTitle="@string/hardware_keys_swipe_tap_title"
             android:title="@string/hardware_keys_swipe_tap_title"
+            android:entries="@array/hardware_keys_action_entries"
+            android:entryValues="@array/hardware_keys_action_values"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="hardware_keys_app_switch_long_press"
+            android:dialogTitle="@string/hardware_keys_long_press_title"
+            android:title="@string/hardware_keys_long_press_title"
             android:entries="@array/hardware_keys_action_entries"
             android:entryValues="@array/hardware_keys_action_values"
             android:persistent="false" />
