@@ -209,7 +209,8 @@
             android:title="@string/hardware_keys_long_press_title"
             android:entries="@array/hardware_keys_action_entries"
             android:entryValues="@array/hardware_keys_action_values"
-            android:persistent="false" />
+            android:persistent="false"
+            android:enabled="false" />
 
     </PreferenceCategory>
 
@@ -236,7 +237,8 @@
             android:title="@string/hardware_keys_long_press_title"
             android:entries="@array/hardware_keys_action_entries"
             android:entryValues="@array/hardware_keys_action_values"
-            android:persistent="false" />
+            android:persistent="false"
+            android:enabled="false" />
 
     </PreferenceCategory>
 
@@ -263,7 +265,8 @@
             android:title="@string/hardware_keys_long_press_title"
             android:entries="@array/hardware_keys_action_entries"
             android:entryValues="@array/hardware_keys_action_values"
-            android:persistent="false" />
+            android:persistent="false"
+            android:enabled="false" />
 
     </PreferenceCategory>
 
