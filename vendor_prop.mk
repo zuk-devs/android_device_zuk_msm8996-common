@@ -113,7 +113,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=1 \
-    debug.renderengine.backend=threaded \
+    debug.renderengine.backend=skiaglthreaded \
     debug.sf.hw=1 \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
