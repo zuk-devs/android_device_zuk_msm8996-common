@@ -15,13 +15,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
-    persist.vendor.bt.enable.splita2dp=false \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_steps=7 \
     ro.vendor.audio.sdk.fluencetype=fluence \
     ro.vendor.audio.sdk.ssr=false \
-    vendor.audio.dolby.ds2.enabled=false \
-    vendor.audio.dolby.ds2.hardbypass=false \
     vendor.audio_hal.period_size=192 \
     vendor.audio.hw.aac.encoder=true \
     vendor.audio.offload.buffer.size.kb=64 \
@@ -37,16 +34,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    bt.max.hfpclient.connections=1 \
-    vendor.qcom.bluetooth.soc=rome \
-    ro.bluetooth.dun=true \
-    ro.bluetooth.hfp.ver=1.7 \
-    ro.bluetooth.sap=true \
-    ro.btconfig.if=uart \
-    ro.btconfig.vendor=qcom \
-    ro.btconfig.chip=QCA6164 \
-    ro.btconfig.dev=/dev/ttyHS0 \
-    ro.vendor.bt.bdaddr_path=/mnt/vendor/persist/bluetooth/bt_mac
+    vendor.qcom.bluetooth.soc=rome
 
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.device.class_of_device=90,2,12 \
@@ -94,13 +82,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.netmgrd.qos.enable=true \
     ro.vendor.use_data_netmgrd=true
 
-# Display (Qualcomm AD)
+# Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.cabl=2 \
-    ro.vendor.display.cabl=2 \
-    ro.qcom.ad=1 \
-    ro.qcom.ad.calib.data=/vendor/etc/calib.cfg \
-    ro.qcom.ad.sensortype=2
+    ro.vendor.display.cabl=2
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -117,7 +102,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
-    persist.hwc.enable_vds=1 \
     persist.sys.wfd.virtual=0 \
     ro.opengles.version=196610 \
     ro.sf.lcd_density=480 \
@@ -132,17 +116,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.vidc.enc.disable.pq=true \
-    vidc.enc.dcvs.extra-buff-count=2
-
-# Memory optimizations
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.sys.fw.bservice_enable=true
+    vendor.vidc.enc.disable.pq=true
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so \
-    ro.vendor.qti.sys.fw.bg_apps_limit=60
+    ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -193,8 +171,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.agg.dl_pkt=10 \
     persist.data.df.agg.dl_size=4096 \
     persist.data.df.mux_count=8 \
-    persist.data.df.iwlan_mux=9 \
-    persist.data.df.dev_name=rmnet_usb0
+    persist.data.df.iwlan_mux=9
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -212,11 +189,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.max_virtual_display_dimension=4096
-
-# TimeService
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true \
-    persist.delta_time.enable=true
 
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
