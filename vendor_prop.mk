@@ -114,6 +114,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.nohdcp=1 \
     debug.sf.enable_hwc_vds=1
 
+# IMS
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.telephony.block_binder_thread_on_incoming_calls=false
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable.pq=true
