@@ -181,6 +181,10 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
 TARGET_INIT_VENDOR_LIB := //$(VENDOR_PATH):libinit_msm8996
 TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8996
 
+# Verity
+# Only needed for signing
+BOARD_AVB_ENABLE := false
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
