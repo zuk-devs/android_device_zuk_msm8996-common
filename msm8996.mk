@@ -243,10 +243,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
     android.hidl.base@1.0 \
-    android.hidl.base@1.0_system \
+    android.hidl.base@1.0.vendor \
     android.hidl.manager@1.0-java \
     android.hidl.manager@1.0 \
-    android.hidl.manager@1.0_system \
+    android.hidl.manager@1.0.vendor \
     android.hidl.memory@1.0.vendor \
     libhidltransport \
     libhwbinder \
